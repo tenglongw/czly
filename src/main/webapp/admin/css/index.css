@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document 公共样式 */
+
+.topbar{ height: 30px; line-height: 30px; background-color: #3b73b9; color: #fff;}
+.welcome{ padding: 0px 15px 0px; font-style: italic;}
+.header{ height: 82px;}
+.nav_bdr_r{ border-right: solid 1px #dddddd;}
+
+/* 大版块标题 */
+.section_title{ text-align: center;}
+.section_title h3{ margin: 0px; padding-top: 60px; font-size: 32px; color: #005eb8;}
+.section_title p{ line-height: 24px; color: #777; font-size: 14px; margin-top: 10px;}
+
+/* 更多产品服务 */
+.productService{ height: 540px; background: #e9e9e9 url(../images/productService_bg.png) center center no-repeat;}
+.proSer_con{ width: 1050px; margin-left: auto; margin-right: auto;}
+.proSer_item{ width: 201px; float: left; position: relative;}
+.proSer_item ul{ line-height: 32px; font-size: 16px; text-align: center;}
+.proSer_item ul a{ color: #444;}
+.proSer_item ul a:hover{ color: #666;}
+.proSer_item p{ line-height: 26px; text-align: justify; font-size: 13px; padding: 0px 5px; color: #444;}
+
+/* 解决方案 */
+.solution{ height: 960px; background: url(../images/solution_bg.jpg) center center no-repeat;}
+.sol_con{ width: 1200px; margin-right: auto; margin-left: auto; }
+.sol_item{ width: 300px; height: 230px; float: left; position: relative; color: #fff; text-align: center; line-height: 230px; font-size: 20px;}
+.sol_item:hover{ opacity: 0.9;}
+.sol_item img{ display: block;}
+.sol_bg01{ background-color: #1968b3;}
+.sol_bg02{ background-color: #3d3a49;}
+.sol_bg03{ background-color: #a59a8b;}
+.sol_bg04{ background-color: #55b416;}
+.sol_bg05{ background-color: #939ba5;}
+.sol_add{ background-color: #f2efeb; width: 600px; color: #94918b;}
+
+/* GE 4S店 */
+.GE4S{ height: 650px; background: #2b2b2b url(../images/GE4S_bg.png) center bottom no-repeat;}
+.GE4S .section_title h3, .GE4S .section_title p{ color: #fff;}
+.GE4S_cities{ width: 580px; height: 36px; margin: 15px auto 30px; text-align: center; border-radius: 18px; background-color: #005eb8; line-height: 36px; font-size: 14px;}
+.GE4S_cities a{ color: #fff; margin: 5px; opacity: 0.9;}
+.GE4S_cities a:hover{ color: #fff; margin: 5px; opacity: 1;}
+
+
+/* bootstrap reset */
+.navbar{ border: none;}
+
+/* 顶部蓝色区域导航列表 */
+#topnav.navbar{ height: 30px; min-height: 30px; margin-bottom: 0px;}
+#topnav .navbar-nav > li{ border-right: solid 1px #6591c8; padding-top: 5px;}
+#topnav .navbar-nav > li > a{ padding-top: 0px; padding-bottom: 0px; color: #fff;}
+#topnav .nav > li > a:hover, #topnav .nav > li > a:focus{ background-color: transparent; color: #fff; opacity: 0.9;}
+#topnav .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{ background: transparent;}
+
+.topnav_ico{ float: left; position: relative; display: inline-block; width: 20px; height: 20px; margin-right: 2px;}
+.ico_mic{ background: url(../images/ico_topbar.png) 0px 0px no-repeat;}
+.ico_cloud{ background: url(../images/ico_topbar.png) -30px 0px no-repeat;}
+.ico_list{ background: url(../images/ico_topbar.png) -60px 0px no-repeat;}
+.ico_setting{ background: url(../images/ico_topbar.png) -90px 0px no-repeat;}
+
+/* 网页主导航列表 */
+.navi.navbar{ margin-bottom: 0px; border: none;}
+.navi .navbar-nav > li{ height: 26px; line-height: 26px; margin: 28px 12px; font-size: 14px;}
+.navi .navbar-nav > li > a{ padding: 0px 18px; margin: 0px; color: #222;}
+.navi .navbar-nav > li > .search_ico{ display: block; width: 26px; height: 26px; padding: 0px; background: url(../images/icons.png) 0px 0px no-repeat;}
+.navi .navbar-nav > li > .menu_ico{ display: block; width: 26px; height: 26px; padding: 0px; background: url(../images/icons.png) -30px 0px no-repeat;}
+.navi .nav > li > a:hover, .nav > li > a:focus{ background-color: transparent; color: #216aaf; opacity: 0.8;}
+
+/* 大图轮播 */
+#myCarousel01 .carousel-indicators{ border-top: solid 1px #fff; width: 1000px; }
+#myCarousel01 .carousel-indicators li{ width: 200px; height: 60px; line-height: 60px; border:none; border-radius: 0px; margin: 0px; float: left; position: relative; text-indent: 0px; text-align: center; font-size: 18px; color: #fff;}
+#myCarousel01 .carousel-indicators li.active{ width: 200px; height: 60px; background-color: transparent; border-top: solid 2px #23a0dd; margin-top: -2px;}
+.carousel_wrap{ width: 100%; height: 100%; position: absolute; left: 0px;  top: 0px;}
+.carousel_info{ width: 800px; margin: 100px auto 0px; color: #fff; opacity: 0.9;}
+.carousel_info span{ font-size: 40px;}
+.carousel_info p{ font-size: 24px;}
+.carousel_info p.btn_con{ margin-top: 20px;}
+
+/* 底部轮播 */
+#myCarousel02 .carousel-control.left,
+#myCarousel02 .carousel-control.right{ width: 80px; background-image: none; padding-top: 100px; cursor: pointer;}
+#myCarousel02 .carousel-inner{ width: 85%; margin: 0px auto;}
+#myCarousel02 .carousel-inner > .item > img, #myCarousel02 .carousel-inner > .item > a > img{ margin-left: 32px; width: 327px; height: 320px; cursor: pointer;}
+
+/* 底部蓝色帮助条 */
+.help_wrap{ height: 95px; background-color: #005eb8; color: #fff; font-size: 18px;}
+.help_wrap div{ height: 30px; line-height: 30px;}
+.help_wrap .ico_arr{ float: left;}
+.help_wrap li{ height: 30px; float: left; position: relative; padding:0px 20px; border-left: solid 1px #7daddb;}
+.help_wrap li:first-child{ border: none;}
+.help_wrap li i, .help_wrap .ico_arr{ display: inline-block; width: 30px; height: 30px; margin-right: 5px;}
+.help_wrap li i,
+.help_wrap li span{ float: left; position: relative;}
+.help_wrap a{ display: inline-block; height: 30px; line-height: 30px; color: #fff; font-size: 16px; opacity: 0.9;}
+.help_wrap a:hover{ opacity: 1;}
+.ico_arr{ background: url(../images/ico_helpwrap.png) 0px 0px no-repeat;}
+.ico_phone{ background: url(../images/ico_helpwrap.png) -40px 0px no-repeat;}
+.ico_email{ background: url(../images/ico_helpwrap.png) -80px 0px no-repeat;}
+.ico_online{ background: url(../images/ico_helpwrap.png) -120px 0px no-repeat;}
+
+/* footer */
+.footer{ height: 370px; padding-top: 50px; background-color: #dededd;}
+.footer_left{ width: 760px; }
+.footer_tit{ font-size: 20px; line-height: 32px; color: #000; border-bottom: dotted 1px #a3a3a3;}
+.olympicGE{ height: 44px; line-height: 44px; padding-left: 100px; background: url(../images/olympicGE_bg.png) left center no-repeat;}
+.footer_left p{ line-height: 20px; margin-top: 15px; color: #666;}
+.footer_right{ width: 420px; padding-top: 33px;}
+.footer_right ul li{ width: 175px; height: 36px; line-height: 36px; border-top: dotted 1px #a3a3a3; border-bottom: dotted 1px #a3a3a3; margin-left: 30px; float: left; position: relative; margin-top: -1px;}
+.copyright{ color: #666;}
+
+
+
+

@@ -1,0 +1,69 @@
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+       <label>
+          <input class="simpleslider " type="range" min="0" max="500" value="250" />
+        </label>
+
+<script type="text/javascript">
+require(['jquery','simpleslider'], function ($) {$('.simpleslider').simpleslider({});});
+</script>
+
+
+      </td>
+      <td class="description" id="ss-simple-slider">Simple Slider</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">&lt;input class="simpleslider" type="range" min="0" max="500" value="250" /&gt;</pre>
+        <p>Events:</p>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>change</code></td>
+              <td>
+                Dispatched when the slider is dragged or when the increment buttons are pressed.
+                Contains an <code>Array</code> of additonal data with <code>value</code>,
+                <code>percent</code>, <code>min</code> and <code>max</code>.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>simpleslider</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <label>
+
+          <input class="simpleslider mega" type="range" min="0" max="500" value="250" />
+        </label>
+      </td>
+      <td class="description" id="ss-mega-slider">Mega slider</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">&lt;input class="simpleslider mega" type="range" min="0" max="500" value="250" /&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>simpleslider</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

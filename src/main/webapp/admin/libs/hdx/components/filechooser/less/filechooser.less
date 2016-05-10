@@ -1,0 +1,33 @@
+// Dependencies
+// --------------------------------------------------
+
+
+@import "variables.less";
+
+// Styles
+// --------------------------------------------------
+
+// File input
+.filechooser {
+	position: relative;
+	width: @width;
+
+	label {
+		position: absolute;
+		line-height: @baseLineHeight;
+		height: @baseLineHeight;
+		top: 50%;
+		margin-top: @labelMarginTop;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	input {
+		display: block;
+		position: absolute;
+		top: 0;
+		.opacity(0);
+		z-index: 1;
+	}
+}

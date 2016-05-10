@@ -1,0 +1,770 @@
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <div class="data-container labs">
+          <span class="title">PTT</span>
+          <ul class="result">
+            <li class="unknown"></li>
+            <li class="unknown"></li>
+            <li class="unknown"></li>
+          </ul>
+        </div>
+        <div class="data-container labs">
+          <span class="title">PTT</span>
+          <ul class="result">
+            <li class="ok"></li>
+            <li class="empty"></li>
+            <li class="empty"></li>
+          </ul>
+        </div>
+        <div class="data-container labs">
+          <span class="title">PTT</span>
+          <ul class="result">
+            <li class="ok"></li>
+            <li class="ok"></li>
+            <li class="empty"></li>
+          </ul>
+        </div>
+        <div class="data-container labs">
+          <span class="title">PTT</span>
+          <ul class="result">
+            <li class="ok"></li>
+            <li class="ok"></li>
+            <li class="ok"></li>
+          </ul>
+        </div>
+        <div class="data-container labs">
+          <span class="title">PTT</span>
+          <ul class="result">
+            <li class="warning"></li>
+            <li class="empty"></li>
+            <li class="empty"></li>
+          </ul>
+          <i class="labs-status icon-warning-sign"></i>
+        </div>
+        <div class="data-container labs">
+          <span class="title">PTT</span>
+          <ul class="result">
+            <li class="ok"></li>
+            <li class="warning"></li>
+            <li class="empty"></li>
+          </ul>
+          <i class="labs-status icon-time"></i>
+        </div>
+      </td>
+      <td class="description" id="datacomp-lab-results">Lab results</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container labs"&gt;
+  &lt;span class="title"&gt;PTT&lt;/span&gt;
+  &lt;ul class="result"&gt;
+    &lt;li class="unknown"&gt;&lt;/li&gt;
+    &lt;li class="unknown"&gt;&lt;/li&gt;
+    &lt;li class="unknown"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="data-container labs"&gt;
+  &lt;span class="title"&gt;PTT&lt;/span&gt;
+  &lt;ul class="result"&gt;
+    &lt;li class="ok"&gt;&lt;/li&gt;
+    &lt;li class="empty"&gt;&lt;/li&gt;
+    &lt;li class="empty"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+...
+&lt;div class="data-container labs"&gt;
+  &lt;span class="title"&gt;PTT&lt;/span&gt;
+  &lt;ul class="result"&gt;
+    &lt;li class="warning"&gt;&lt;/li&gt;
+    &lt;li class="empty"&gt;&lt;/li&gt;
+    &lt;li class="empty"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;i class="labs-status icon-time"&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class="data-container labs warning"&gt;
+  &lt;span class="title"&gt;PTT&lt;/span&gt;
+  &lt;ul class="result"&gt;
+    &lt;li class="unknown"&gt;&lt;/li&gt;
+    &lt;li class="unknown"&gt;&lt;/li&gt;
+    &lt;li class="unknown"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;i class="labs-status icon-warning-sign"&gt;&lt;/i&gt;
+&lt;/div&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="data-container fishbone">
+          <div class="fishbone-label left">CBC</div>
+          <div class="fishbone-label right">14:25</div>
+          <div class="values">
+            <div class="tail-left">7.2</div>
+            <ul class="segments">
+              <li class="segment">
+                <span class="value top">10.8</span>
+                <span class="value bottom">31.1</span>
+              </li>
+            </ul>
+            <div class="tail-right"><span class="value">302</span></div>
+          </div>
+        </div>
+      </td>
+      <td class="description" id="datacomp-fishbone">Fishbone container</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container fishbone"&gt;
+  &lt;div class="fishbone-label left"&gt;CBC&lt;/div&gt;
+  &lt;div class="fishbone-label right"&gt;14:25&lt;/div&gt;
+  &lt;ul class="segments"&gt;
+    &lt;li class="tail-left"&gt;7.2&lt;/li&gt;
+    &lt;li class="segment"&gt;
+      &lt;span class="value top"&gt;10.8&lt;/span&gt;
+      &lt;span class="value bottom"&gt;31.1&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="tail-right"&gt;&lt;span class="value"&gt;302&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="data-container fishbone with-status">
+          <i class="status warning icon-warning-sign"></i>
+          <div class="fishbone-label left">CBC</div>
+          <div class="fishbone-label right">14:25</div>
+          <div class="values">
+            <div class="tail-left warning">7.2</div>
+            <ul class="segments">
+              <li class="segment">
+                <span class="value top">10.8</span>
+                <span class="value bottom">31.1</span>
+              </li>
+            </ul>
+            <div class="tail-right"><span class="value">302</span></div>
+          </div>
+        </div>
+      </td>
+      <td class="description" id="datacomp-fishbone-w-warn">Fishbone container w/ warning value</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container fishbone with-status"&gt;
+  &lt;div class="fishbone-label left"&gt;CBC&lt;/div&gt;
+  &lt;div class="fishbone-label right"&gt;14:25&lt;/div&gt;
+  &lt;ul class="segments"&gt;
+    &lt;li class="tail-left warning"&gt;7.2&lt;/li&gt;
+    &lt;li class="segment"&gt;
+      &lt;span class="value top"&gt;10.8&lt;/span&gt;
+      &lt;span class="value bottom"&gt;31.1&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="tail-right"&gt;&lt;span class="value"&gt;302&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+        <td class="example">
+          <div class="data-container fishbone">
+            <div class="fishbone-label left">BMP</div>
+            <div class="fishbone-label right">11:08</div>
+            <div class="values">
+              <ul class="segments">
+                <li class="segment">
+                  <span class="value top">131</span>
+                  <span class="value bottom">3.6</span>
+                </li>
+                <li class="segment">
+                  <span class="value top">102</span>
+                  <span class="value bottom">31</span>
+                </li>
+                <li class="segment">
+                  <span class="value top">18</span>
+                  <span class="value bottom">0.9</span>
+                </li>
+              </ul>
+              <div class="tail-right"><span class="value">140</span></div>
+            </div>
+          </div>
+      </td>
+      <td class="description" id="datacomp-fishbone-no-left-tail">Fishbone container without left tail</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container fishbone"&gt;
+&lt;div class="fishbone-label left"&gt;BMP&lt;/div&gt;
+  &lt;div class="fishbone-label right"&gt;11:08&lt;/div&gt;
+  &lt;ul class="segments"&gt;
+    &lt;li class="segment"&gt;
+      &lt;span class="value top"&gt;131&lt;/span&gt;
+      &lt;span class="value bottom"&gt;3.6&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="segment"&gt;
+      &lt;span class="value top"&gt;102&lt;/span&gt;
+      &lt;span class="value bottom"&gt;31&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="segment"&gt;
+      &lt;span class="value top"&gt;18&lt;/span&gt;
+      &lt;span class="value bottom"&gt;0.9&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="tail-right"&gt;&lt;span class="value"&gt;140&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="data-container sparkline">
+          <div class="sparkline-label">TPR</div>
+          <div class="sparkline-value">98.2</div>
+          <ul class="sparkline">
+            <li>
+              <ul data-type="bar" data-min="0" data-max="1">
+                <li>0.47</li>
+                <li>0.4</li>
+                <li>0.5</li>
+                <li>0.4</li>
+                <li>0.4</li>
+                <li>0.38</li>
+                <li>0.4</li>
+                <li>0.48</li>
+                <li>0.32</li>
+                <li>0.45</li>
+                <li>0.52</li>
+                <li>0.47</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="data-container sparkline">
+          <i class="status warning icon-warning-sign"></i>
+          <div class="sparkline-label warning">TPR</div>
+          <div class="sparkline-value warning">99.8</div>
+          <ul class="sparkline">
+            <li>
+              <ul data-type="bar" data-min="0" data-max="1" data-threshold-critical="0.6">
+                <li>0.47</li>
+                <li>0.4</li>
+                <li>0.5</li>
+                <li>0.4</li>
+                <li>0.4</li>
+                <li>0.38</li>
+                <li>0.4</li>
+                <li>0.48</li>
+                <li>0.32</li>
+                <li>0.5</li>
+                <li>0.62</li>
+                <li>0.67</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td class="description" id="datacomp-sparkline">Sparkline container</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container sparkline"&gt;
+  &lt;div class="sparkline-label"&gt;TPR&lt;/div&gt;
+  &lt;div class="sparkline-value"&gt;98.2&lt;/div&gt;
+  &lt;ul class="sparkline"&gt;
+    &lt;li&gt;
+      &lt;ul data-type="bar" data-min="0" data-max="1"&gt;
+        &lt;li&gt;0.87&lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <p>In a warning state:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container sparkline"&gt;
+  &lt;i class="status warning icon-warning-sign"&gt;&lt;/i&gt;
+  &lt;div class="sparkline-label warning"&gt;TPR&lt;/div&gt;
+  &lt;div class="sparkline-value warning"&gt;99.8&lt;/div&gt;
+  &lt;ul class="sparkline"&gt;
+    &lt;li&gt;
+      &lt;ul data-type="bar" data-min="0" data-max="1" data-threshold-critical="0.9"&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="data-container sparkline stacked">
+          <div class="sparkline-label">142-97</div>
+          <div class="sparkline-label">150-89</div>
+          <ul class="sparkline stacked">
+            <li>
+              <ul data-type="area" data-min="0" data-max="1">
+                <li>0.87</li>
+                <li>0.8</li>
+                <li>0.9</li>
+                <li>0.8</li>
+                <li>0.8</li>
+                <li>0.68</li>
+                <li>0.8</li>
+                <li>0.68</li>
+                <li>0.62</li>
+                <li>0.85</li>
+                <li>0.92</li>
+                <li>0.77</li>
+              </ul>
+              <ul data-type="area" data-min="0" data-max="1">
+                <li>0.8</li>
+                <li>0.68</li>
+                <li>0.8</li>
+                <li>0.92</li>
+                <li>0.8</li>
+                <li>0.87</li>
+                <li>0.8</li>
+                <li>0.9</li>
+                <li>0.68</li>
+                <li>0.62</li>
+                <li>0.85</li>
+                <li>0.77</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="data-container sparkline stacked">
+          <i class="status warning icon-warning-sign"></i>
+          <div class="sparkline-label"><span class="warning">157</span>-72</div>
+          <div class="sparkline-label">150-75</div>
+          <ul class="sparkline stacked">
+            <li>
+              <ul data-type="area" data-min="0" data-max="1">
+                <li>0.8</li>
+                <li>0.68</li>
+                <li>0.8</li>
+                <li>0.92</li>
+                <li>0.8</li>
+                <li>0.87</li>
+                <li>0.8</li>
+                <li>0.9</li>
+                <li>0.68</li>
+                <li>0.62</li>
+                <li>0.85</li>
+                <li>0.77</li>
+              </ul>
+              <ul data-type="area" data-min="0" data-max="1"  data-threshold-critical="0.85">
+                <li>0.87</li>
+                <li>0.8</li>
+                <li>0.77</li>
+                <li>0.8</li>
+                <li>0.8</li>
+                <li>0.68</li>
+                <li>0.8</li>
+                <li>0.68</li>
+                <li>0.85</li>
+                <li>0.87</li>
+                <li>0.9</li>
+                <li>0.92</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td class="description" id="datacomp-sparkline-stacked">Sparkline container, stacked</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container sparkline stacked"&gt;
+  &lt;div class="sparkline-label"&gt;142-97&lt;/div&gt;
+  &lt;div class="sparkline-label"&gt;150-89&lt;/div&gt;
+  &lt;ul class="sparkline stacked"&gt;
+    &lt;li&gt;
+      &lt;ul data-type="area" data-min="0" data-max="1"&gt;
+        ...
+      &lt;/ul&gt;
+      &lt;ul data-type="area" data-min="0" data-max="1"&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <p>In a warning state:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="data-container sparkline stacked"&gt;
+  &lt;i class="status warning icon-warning-sign"&gt;&lt;/i&gt;
+  &lt;div class="sparkline-label"&gt;&lt;span class="warning"&gt;157&lt;/span&gt;-72&lt;/div&gt;
+  &lt;div class="sparkline-label"&gt;150-75&lt;/div&gt;
+  &lt;ul class="sparkline stacked"&gt;
+    &lt;li&gt;
+      &lt;ul data-type="area" data-min="0" data-max="1"&gt;
+        ...
+      &lt;/ul&gt;
+      &lt;ul data-type="area" data-min="0" data-max="1"  data-threshold-critical="0.85"&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <span class="patient-acuity critical">1</span>
+        <span class="patient-acuity warning">2</span>
+        <span class="patient-acuity attention">3</span>
+        <span class="patient-acuity stable">4</span>
+        <span class="patient-acuity improving">5</span>
+      </td>
+      <td class="description" id="datacomp-patient-acuity">Patient Acuity Level</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;span class="patient-acuity critical"&gt;1&lt;/span&gt;
+&lt;span class="patient-acuity warning"&gt;2&lt;/span&gt;
+&lt;span class="patient-acuity attention"&gt;3&lt;/span&gt;
+&lt;span class="patient-acuity stable"&gt;4&lt;/span&gt;
+&lt;span class="patient-acuity improving"&gt;5&lt;/span&gt;</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <ul class="sparkline" style="width:50px;height:30px;">
+          <li>
+            <ul data-type="bar" data-min="0" data-max="1">
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.85</li>
+              <li>0.92</li>
+              <li>0.77</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td class="description" id="sparklines-bar-graph">Bar graph</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;ul class="sparkline" style="width:50px;height:30px;"&gt;
+  &lt;li&gt;
+    &lt;ul data-type="bar" data-min="0" data-max="1"&gt;
+      &lt;li&gt;0.87&lt;/li&gt;
+      &lt;li&gt;0.8&lt;/li&gt;
+      &lt;li&gt;0.9&lt;/li&gt;
+      &lt;li&gt;0.8&lt;/li&gt;
+      &lt;li&gt;0.8&lt;/li&gt;
+      &lt;li&gt;0.68&lt;/li&gt;
+      &lt;li&gt;0.8&lt;/li&gt;
+      &lt;li&gt;0.68&lt;/li&gt;
+      &lt;li&gt;0.62&lt;/li&gt;
+      &lt;li&gt;0.85&lt;/li&gt;
+      &lt;li&gt;0.92&lt;/li&gt;
+      &lt;li&gt;0.77&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <ul class="sparkline" style="width:50px;height:30px;">
+          <li>
+            <ul data-type="bar" data-min="0" data-max="1" data-threshold-attention="0.7" data-threshold-warning="0.8" data-threshold-critical="0.9">
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.85</li>
+              <li>0.92</li>
+              <li>0.77</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td class="description" id="sparklines-bar-graph-color">Bar graph with value-based coloring</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;ul class="sparkline" style="width:50px;height:30px;"&gt;
+  &lt;li&gt;
+    &lt;ul
+      data-type="bar"
+      data-min="0"
+      data-max="1"
+      data-threshold-attention="0.7"
+      data-threshold-warning="0.8"
+      data-threshold-critical="0.9"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <ul class="sparkline stacked" style="width:50px;height:30px;">
+          <li>
+            <ul data-type="bar" data-min="0" data-max="1">
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.85</li>
+              <li>0.92</li>
+              <li>0.77</li>
+            </ul>
+          </li>
+          <li>
+            <ul data-type="bar" data-min="0" data-max="1">
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.85</li>
+              <li>0.8</li>
+              <li>0.77</li>
+              <li>0.92</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.68</li>
+            </ul>
+          </li>
+          <li>
+            <ul data-type="bar" data-min="0" data-max="1">
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.77</li>
+              <li>0.92</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.85</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td class="description" id="sparklines-stacked-bar-graphs">Stacked bar graphs</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;ul class="sparkline" style="width:50px;height:30px;"&gt;
+  &lt;li&gt;
+    &lt;ul data-type="bar" data-min="0" data-max="1"&gt;
+    &lt;li&gt;0.87&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul data-type="bar" data-min="0" data-max="1"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul data-type="bar" data-min="0" data-max="1"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <ul class="sparkline" style="width:50px;height:30px;">
+          <li>
+            <ul data-type="area" data-min="0" data-max="1">
+              <li>0.35</li>
+              <li>0.45</li>
+              <li>0.38</li>
+              <li>0.3</li>
+              <li>0.35</li>
+              <li>0.3</li>
+              <li>0.27</li>
+              <li>0.3</li>
+              <li>0.35</li>
+              <li>0.4</li>
+              <li>0.38</li>
+              <li>0.36</li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+       <ul class="sparkline stacked" style="width:50px;height:30px;">
+          <li>
+            <ul data-type="area" data-min="0" data-max="1">
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.85</li>
+              <li>0.92</li>
+              <li>0.77</li>
+            </ul>
+          </li>
+          <li>
+            <ul data-type="area" data-min="0" data-max="1">
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.85</li>
+              <li>0.8</li>
+              <li>0.77</li>
+              <li>0.92</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.68</li>
+            </ul>
+          </li>
+          <li>
+            <ul data-type="area" data-min="0" data-max="1">
+              <li>0.8</li>
+              <li>0.68</li>
+              <li>0.68</li>
+              <li>0.62</li>
+              <li>0.87</li>
+              <li>0.8</li>
+              <li>0.77</li>
+              <li>0.92</li>
+              <li>0.9</li>
+              <li>0.8</li>
+              <li>0.8</li>
+              <li>0.85</li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <ul class="sparkline" style="width:50px;height:30px;">
+          <li>
+            <ul data-type="area" data-min="0" data-max="1" data-threshold-critical="0.5">
+              <li>0.49</li>
+              <li>0.45</li>
+              <li>0.43</li>
+              <li>0.45</li>
+              <li>0.42</li>
+              <li>0.4</li>
+              <li>0.5</li>
+              <li>0.53</li>
+              <li>0.52</li>
+              <li>0.56</li>
+              <li>0.60</li>
+              <li>0.64</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td class="description" id="sparklines-area-graph">Area graph</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;ul class="sparkline" style="width:50px;height:30px;"&gt;
+  &lt;li&gt;
+    &lt;ul data-type="area" data-min="0" data-max="1"&gt;
+      &lt;li&gt;0.35&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <ul class="sparkline">
+          <li>
+            <ul data-type="bullet" data-min="0" data-max="1">
+              <li>0.73</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td class="description" id="sparklines-bullet-graph">Bullet graph</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+&lt;ul class="sparkline" style="width:50px;height:30px;"&gt;
+  &lt;li&gt;
+    &lt;ul data-type="bullet" data-min="0" data-max="1"&gt;
+      &lt;li&gt;0.73&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>sparklines</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

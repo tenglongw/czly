@@ -1,0 +1,74 @@
+<table class="documentation">
+	<thead>
+		<tr>
+			<th>Example</th>
+			<th>Description</th>
+			<th>Usage</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="example">
+				<p>Morbi hendrerit, nisl quis <code>&lt;em&gt;dapis&lt;/em&gt;</code> semper, ipsum mi ultricies ipsum, quis vestibulum nisl ante vitae dui.</p>
+			</td>
+			<td class="description" id="inline">Inline</td>
+			<td class="usage">
+				<p>Wrap inline snippets of code using the <code>&lt;code&gt;</code> element.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;code&gt;&amp;lt;some code="here"&amp;gt;&lt;/code&gt;
+</pre>
+			</td>
+		</tr> <!-- /inline -->
+		<tr>
+			<td class="example">
+<pre>
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn btn-default" href="#"&gt;1&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;2&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;3&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+			</td>
+			<td class="description" id="basic-block">Basic Block</td>
+			<td class="usage">
+				<p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;pre&gt;
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn btn-default" href="#"&gt;1&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;2&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;3&lt;/a&gt;
+&lt;/div&gt;
+&lt;/pre&gt;
+</pre>
+				<p>Note: Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
+				<p>You may optionally add the <code>.pre-scrollable</code> class which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+			</td>
+		</tr> <!-- /basic block -->
+		<tr>
+			<td class="example">
+<pre class="prettyprint linenums lang-html">
+&lt;pre class="prettyprint linenums"&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;/pre&gt;
+</pre>
+			</td>
+			<td class="description" id="google-prettify">Google Prettify</td>
+			<td class="usage">
+				<p>Take the same <code>&lt;pre&gt;</code> element and add two optional classes for enhanced rendering.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;pre class="prettyprint linenums"&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;/pre&gt;
+</pre>
+				<p><a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html" target="_blank">View the README</a> for more details on advanced usage.</p>
+				<div class="alert alert-info">
+					<strong>Script Requirements:</strong>
+					<ul>
+						<li>prettify</li>
+					</ul>
+				</div>
+			</td>
+		</tr> <!-- /prettify -->
+	</tbody>
+</table>

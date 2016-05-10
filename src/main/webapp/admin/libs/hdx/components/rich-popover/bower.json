@@ -1,0 +1,27 @@
+{
+  "name": "rich-popover",
+  "version": "0.5.6",
+  "main": [
+    "js/rich-popover.js",
+    "less/rich-popover.less",
+    "less/hdx-popover.less",
+    "less/hdx-popover-lights-off.less"
+  ],
+  "ignore": [
+    ".*",
+    "npm-debug.log",
+    "Gruntfile.js",
+    "package.json",
+    "components",
+    "css",
+    "node_modules",
+    "test",
+    "js/require.config.js"
+  ],
+  "dependencies": {
+    "ge-bootstrap": "git@github.sw.ge.com:DXC/ge-bootstrap#v1.10.3",
+    "requirejs": "https://github.com/jrburke/requirejs-bower.git#~2.1.11",
+    "jquery": "https://github.com/components/jquery.git#~1.10.2"
+  },
+  "devDependencies": {}
+}

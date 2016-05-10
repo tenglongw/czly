@@ -1,0 +1,182 @@
+<script type="text/javascript">
+require([
+    'jquery', 'datagrids', 'prettify', 'ge-bootstrap',
+    'datatables-colreorder',
+    'datatables-scroller',
+    'datagrids/datagrids-col-vis',
+    'datagrids/datagrids-row-grouping'], function($) {
+
+    //Update internal links to lights-on theme
+    $('a.navigation-link').each(function ()
+    {
+        var $link = $(this),
+                href = $link.attr('href');
+
+        if (-1 < href.indexOf('?'))
+        {
+            $link.attr('href', href.split('?')[0])
+        }
+    });
+
+$('#theme-switcher').change(
+			function(e) {
+        var theme = $(this).val();
+        var currentOffset = $(this).offset().top;
+        if(theme=='lights-off'){
+            window.location.href= 'datagrids-lights-off.html?offset='+ currentOffset;
+        } else if(theme=='lights-on'){
+            window.location.href= 'datagrids.html?offset='+ currentOffset;
+        }
+
+    });
+
+    //scroll to current offset
+    var offsetvalue = (RegExp('offset=' + '(.+?)(&|$)').exec(window.location)||[,null])[1];
+
+    if (offsetvalue) {
+	    $("html, body").animate({ scrollTop: offsetvalue - 15 }, 1000, 'swing');
+    }
+
+
+
+    //Column reordering
+    $('table[data-table-name="dt-col-reorder-example"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential'},
+            { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential'},
+            { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional'},
+            { 'sTitle': 'Engine version', 'mData': 'version'},
+            { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential'}
+        ],
+        'sAjaxSource': '../assets/data/ao.browsers.json',
+        'useFloater': false,
+        'plugins': ['R'] //enable the col-reorder plugin (assumes 'col-reorder-amd' is on the page)
+    });
+
+    //Column Filtering
+    // From http://datatables.net/release-datatables/examples/api/multi_filter.html
+    // See also http://datatables.net/release-datatables/examples/api/multi_filter_select.html
+    // See also http://datatables.net/release-datatables/examples/api/regex.html
+    // See also http://datatables.net/release-datatables/examples/plug-ins/range_filtering.html
+    $('table[data-table-name="dt-col-filter-example"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential'},
+            { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential', 'filter':true},
+            { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional', 'filter': true},
+            { 'sTitle': 'Engine version', 'mData': 'version', 'filter':true, 'filterPlaceholder':'Filter by this field'},
+            { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential', 'filter':true}
+        ],
+        'sAjaxSource': '../assets/data/ao.browsers.json',
+        'useFloater': false,
+        'isResponsive': true
+    });
+
+
+    //Column hiding
+    //From http://datatables.net/extras/colvis/
+    //See also http://datatables.net/release-datatables/examples/api/show_hide.html
+    //assumes 'datagrids/datagrids-col-vis' is on the page...
+    $('table[data-table-name="dt-col-hiding-example"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential' },
+            { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential' },
+            { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional' },
+            { 'sTitle': 'Engine version', 'mData': 'version' },
+            { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential' }
+        ],
+        'useFloater': false,
+        'sAjaxSource': '../assets/data/ao.browsers.json',
+        "plugins": ["C"], //enable the Column Vis plugin (assumes datagrids/datagrids-col-vis.js is on the page)
+        "oColVis": { //configure the column vis plugin
+            "aiExclude": [ 1 ], // don't allow 2nd column to be hidden
+            "colVisDropdownSelector": ".col-vis-dropdown-container" //put the column hiding control inside the element at this selector
+        }
+    });
+
+    //assume 'datagrids/datagrids-row-grouping' is on the page...
+    $('table[data-table-name="dt-row-grouping-example"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential' },
+            { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential' },
+            { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional' },
+            { 'sTitle': 'Engine version', 'mData': 'version' },
+            { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential' }
+        ],
+        'sAjaxSource': '../assets/data/ao.browsers.json',
+
+        'plugins': ["G"], //enable the row grouping plugin (assumes datagrids/datagrids-row-grouping.js is on the page)
+        "bPaginate": false, // pagination is not compatible with row grouping
+        'useFloater': false,
+        "rowGrouping": { //configure the row grpuping plugin
+            rowGroupingDropdownSelector: ".row-grouping-dropdown-container" //tell the plugin where to put the row grouping control
+        }
+    });
+
+    // DOM elements
+    $('table[data-table-name="dt-dom"]').iidsBasicDataGrid({ 'isResponsive': true });
+
+    // JavaScript array and columns
+    $('table[data-table-name="dt-array"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Schedule', 'sClass': 'essential' },
+            { 'sTitle': 'Account Status', 'sClass': 'essential' },
+            { 'sTitle': 'DBA Name', 'sClass': 'essential' },
+            { 'sTitle': 'Customer Info', 'sClass': 'optional' }
+        ],
+        'aaData': [
+            ['foo', 'bar', 'baz', 'bueller'],
+            ['possum', 'raccoon', 'gravy', 'rabies'],
+            ['peanut', 'epsilon', 'flapjack', 'nominee']
+        ],
+        'useFloater': false,
+        'isResponsive': true
+    });
+
+    // Ajax with DataTables, array of objects
+    $('table[data-table-name="dt-ajax-objects"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential' },
+            { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential' },
+            { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional' },
+            { 'sTitle': 'Engine version', 'mData': 'version' },
+            { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential' }
+        ],
+        'sAjaxSource': '../assets/data/ao.browsers.json',
+        'useFloater': false,
+        'isResponsive': true
+    });
+
+    // Ajax with DataTables, array of arrays
+    $('table[data-table-name="dt-ajax-array"]').iidsBasicDataGrid({
+        'aoColumns': [
+            { 'sTitle': 'Rendering engine', 'sClass': 'essential' },
+            { 'sTitle': 'Browser', 'sClass': 'essential' },
+            { 'sTitle': 'Platform(s)', 'sClass': 'optional' },
+            { 'sTitle': 'Engine version' },
+            { 'sTitle': 'CSS grade', 'sClass': 'essential' }
+        ],
+        'sAjaxSource': '../assets/data/aa.browsers.json',
+        'useFloater': false,
+        'isResponsive': true
+    });
+
+    // Incremental Loading/Infinite Scroll
+    $('table[data-table-name="dt-incremental"]').iidsBasicDataGrid({
+        useFloater: false, //turn off cell filtering layer
+        "plugins": ["S"],
+        "sScrollY": "200px",
+        "bDeferRender": true,
+        'sPaginationType': null,
+        'sDom': "rt<'table-controls'<'pull-right'i>>",
+        'aoColumns': [
+            { 'sTitle': 'Id', 'mData': 'id'},
+            { 'sTitle': 'Fulcrum version', 'mData': 'fulcrumVersion'},
+            { 'sTitle': 'Platform(s)', 'mData': 'platform'},
+            { 'sTitle': 'Differential version', 'mData': 'differentialVersion'},
+            { 'sTitle': 'Grade', 'mData': 'grade'}
+        ],
+        'sAjaxSource': '../assets/sample-data/ao.browsers.11000.json'
+    });
+});
+
+</script>

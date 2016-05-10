@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--suppress HtmlUnknownTarget -->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Basic UI Elements</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../components/brandkit/favicon/favicon.ico">
+<link href="../../components/prettify/prettify.css" rel="stylesheet">
+<link id="theme-styles" href="../../css/hds-lights-off.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../css/responsive.css" rel="stylesheet" type="text/css">
+
+<!-- Documentation styles -->
+<link id="documentation-styles" href="../assets/css/documentation-lights-off.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/declarative-visualizations.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link id="theme-ie" href="../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+<link id="theme-ie9" href="../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../components/modernizr/modernizr.js"></script>
+<script src="../../components/requirejs/require.js"></script>
+<script src="../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({ baseUrl: '../../' });
+</script>
+
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>HDx - UI Elements</span></a>
+      </div>
+      <div class="pull-right">
+        <div class="btn-toolbar">
+	        <div class="col-md-8">
+	          <select id="theme-switcher">
+	            <option value="lights-on" >Lights On</option>
+	            <option value="lights-off" selected>Lights Off</option>
+	          </select>
+	         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="collapse primary-navbar navbar-collapse bs-navbar-collapse">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Containers <i class="icon-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="#module-groups">Module Groups</a></li>
+            <li><a href="#module-collapsible">Collapsible Modules</a></li>
+            <li><a href="#module-patient">Patient Module</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container doco hds-library">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="sdh-wrapper module">
+        <div class="page-header voice-brand">
+          <h1>Basic UI Elements</h1>
+        </div>
+        <!--Containers-->
+        <h2 class="voice voice-brand">Containers</h2>
+        <h3 class="voice voice-brand" id="modules">Modules</h3>
+        <dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+    <div class="well">
+      <section class="module">
+        <header class="module-header">Header</header>
+        <div class="module-body">Body</div>
+        <footer class="module-footer">Footer</footer>
+      </section>
+      <br>
+      <section class="module actionable">
+        <header class="module-header">
+          <h3 class="voice voice-brand pull-left">Sample Component</h3>
+          <div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+        </header>
+        <div class="module-body">
+          <div class="module-data-viz gauges">
+  <div>
+    <p class="subtitle">Minute volume</p>
+    <div data-visualization="gauge" class="chart1" data-value="6.2" data-threshold="10" data-max="20" data-label-min="0" data-label-max="20 L/MIN"></div>
+    <p class="caption hero"><strong>6.2</strong> l/min</p>
+    <p class="caption">Ideal Minute Volume: <strong>10</strong> l/min</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Tidal volume</p>
+    <div data-visualization="gauge" class="chart2" data-value="508" data-max="1000" data-threshold="500" data-label-min="0" data-label-max="1000 ML"></div>
+    <p class="caption hero"><strong>508</strong> ml</p>
+    <p class="caption">Ideal Tidal Volume: <strong>500</strong> ml</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Respiratory rate</p>
+    <div data-visualization="gauge" class="chart3" data-value="14" data-max="35" data-threshold="17" data-label-min="0" data-label-max="35/MIN"></div>
+    <p class="caption hero"><strong>14</strong>/min</p>
+    <p class="caption">Ideal Respiratory Rate: <strong>17</strong>/min</p>
+  </div>
+</div>
+
+        </div>
+        <footer class="module-footer">
+          <p>
+            <a href="#" onclick="return false;">View More Data <i class="icon-chevron-right" style="font-size: 12px;"></i></a>
+          </p>
+        </footer>
+      </section>
+    </div>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    <p>A container, or module, is used to wrap a component and provide structure and basic styling for appearance within a page.</p>
+    <p>Containers have four primary elements: wrapper, header, body and footer. Each of the latter three elements function as wrappers for component-specific content, such as component title and actions, the component body, and supplemental links placed below the component as a footer.</p>
+    <p>Containers do not have set dimensions or margins. By default, they will stretch horizontally to fill their parent element and expand vertically to expose all content within.</p>
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;section class="module"&gt;
+  &lt;header class="module-header"&gt;
+    &hellip;
+  &lt;/header&gt;
+  &lt;div class="module-body"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;footer class="module-footer"&gt;
+    &hellip;
+  &lt;/footer&gt;
+&lt;/section&gt;
+</pre>
+    <p>Additional classes may be applied to the container wrapper <code>.module</code> to trigger additional styles or behavior. These classes may be combined as needed.</p>
+    <table>
+      <tr>
+        <th>Class</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td><code>actionable</code></td>
+        <td>For use when an actions dropdown is included in the container header.</td>
+      </tr>
+      <tr>
+        <td><code>chromeless</code></td>
+        <td>Prevents the header and footer from displaying and removes all default background and padding rules.</td>
+      </tr>
+      <tr>
+        <td><code>draggable</code></td>
+        <td>
+          <p>Fixes the height of the container, centers the body content vertically within the container and applies hover/active styles to the header suitable for drag and drop interactions.</p>
+          <p>For use on Dashboard Views with the following script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$( ".row" ).sortable(
+  {
+    handle:          '.module-header',
+    helper:          'clone',
+    items:           '.draggable',
+    forceHelperSize: true,
+    revert:          200,
+    tolerance:       'pointer'
+  }
+);
+</pre>
+          <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+              <li>jquery-ui</li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>scrollable</code></td>
+        <td>Fixes the height of the container and triggers content scrolling within the container body.</td>
+      </tr>
+    </table>
+  </dd>
+</dl>
+
+        <h3 class="voice voice-brand" id="module-groups">Module Groups</h3>
+        <dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+    <div class="well">
+      <div class="module-group">
+        <section class="module">
+          <header class="module-header">Header</header>
+          <div class="module-body">Body</div>
+          <footer class="module-footer">Footer</footer>
+        </section>
+        <hr>
+
+        <section class="module actionable">
+          <header class="module-header">
+            <h3 class="voice voice-brand pull-left">Sample Component</h3>
+            <div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+          </header>
+          <div class="module-body">
+            <div class="module-data-viz gauges">
+  <div>
+    <p class="subtitle">Minute volume</p>
+    <div data-visualization="gauge" class="chart1" data-value="6.2" data-threshold="10" data-max="20" data-label-min="0" data-label-max="20 L/MIN"></div>
+    <p class="caption hero"><strong>6.2</strong> l/min</p>
+    <p class="caption">Ideal Minute Volume: <strong>10</strong> l/min</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Tidal volume</p>
+    <div data-visualization="gauge" class="chart2" data-value="508" data-max="1000" data-threshold="500" data-label-min="0" data-label-max="1000 ML"></div>
+    <p class="caption hero"><strong>508</strong> ml</p>
+    <p class="caption">Ideal Tidal Volume: <strong>500</strong> ml</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Respiratory rate</p>
+    <div data-visualization="gauge" class="chart3" data-value="14" data-max="35" data-threshold="17" data-label-min="0" data-label-max="35/MIN"></div>
+    <p class="caption hero"><strong>14</strong>/min</p>
+    <p class="caption">Ideal Respiratory Rate: <strong>17</strong>/min</p>
+  </div>
+</div>
+
+          </div>
+          <footer class="module-footer">
+            <p>
+              <a href="#module-groups" onclick="return false;">View More Data <i class="icon-chevron-right" style="font-size: 12px;"></i></a>
+            </p>
+          </footer>
+        </section>
+
+        <hr>
+        <section class="module">
+          <div class="module-body">
+            <table class="table table-striped table-hover responsive">
+              <thead>
+                <tr>
+                  <th class="essential">#</th>
+                  <th class="optional">First Name</th>
+                  <th class="essential">Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="voice voice-data">1</td>
+                  <td>Greg</td>
+                  <td>Petroff</td>
+                  <td>@gpetroff</td>
+                </tr>
+                <tr>
+                  <td class="voice voice-data">2</td>
+                  <td>Andrew</td>
+                  <td>Crow</td>
+                  <td>@andrewcrow</td>
+                </tr>
+                <tr>
+                  <td class="voice voice-data">3</td>
+                  <td>Dave</td>
+                  <td>Cronin</td>
+                  <td>@davcron</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    <p>Use module groups to join multiple modules together as one composite module. The top and bottom module will have rounded corners while modules in the center will use squared corners.</p>
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="module-group"&gt;
+    &lt;section class="module"&gt;
+        &lt;header class="module-header"&gt;Header&lt;/header&gt;
+        &lt;div class="module-body"&gt;Body&lt;/div&gt;
+        &lt;footer class="module-footer"&gt;Footer&lt;/footer&gt;
+    &lt;/section&gt;
+    &lt;hr&gt;
+    &lt;section class="module"&gt;
+        &lt;header class="module-header"&gt;Header&lt;/header&gt;
+        &lt;div class="module-body"&gt;Body&lt;/div&gt;
+        &lt;footer class="module-footer"&gt;Footer&lt;/footer&gt;
+    &lt;/section&gt;
+    &lt;hr&gt;
+    &lt;section class="module"&gt;
+        &lt;header class="module-header"&gt;Header&lt;/header&gt;
+        &lt;div class="module-body"&gt;Body&lt;/div&gt;
+        &lt;footer class="module-footer"&gt;Footer&lt;/footer&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+</pre>
+  </dd>
+</dl>
+
+        <h3 class="voice voice-brand" id="module-collapsible">Collapsible Modules</h3>
+        <dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+    <div class="well">
+
+      <section class="module collapsible">
+        <header class="module-header">Header</header>
+        <div class="module-body collapse in">Body</div>
+        <footer class="module-footer collapse in">Footer</footer>
+      </section>
+
+      <br>
+
+      <section class="module collapsible">
+        <header class="module-header">Sample Component</header>
+        <div class="module-body collapse in">
+          <div class="module-data-viz gauges">
+  <div>
+    <p class="subtitle">Minute volume</p>
+    <div data-visualization="gauge" class="chart1" data-value="6.2" data-threshold="10" data-max="20" data-label-min="0" data-label-max="20 L/MIN"></div>
+    <p class="caption hero"><strong>6.2</strong> l/min</p>
+    <p class="caption">Ideal Minute Volume: <strong>10</strong> l/min</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Tidal volume</p>
+    <div data-visualization="gauge" class="chart2" data-value="508" data-max="1000" data-threshold="500" data-label-min="0" data-label-max="1000 ML"></div>
+    <p class="caption hero"><strong>508</strong> ml</p>
+    <p class="caption">Ideal Tidal Volume: <strong>500</strong> ml</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Respiratory rate</p>
+    <div data-visualization="gauge" class="chart3" data-value="14" data-max="35" data-threshold="17" data-label-min="0" data-label-max="35/MIN"></div>
+    <p class="caption hero"><strong>14</strong>/min</p>
+    <p class="caption">Ideal Respiratory Rate: <strong>17</strong>/min</p>
+  </div>
+</div>
+
+        </div>
+        <footer class="module-footer collapse in">
+          <p><a href="#module-collapsible">View More Data <i class="icon-chevron-right" style="font-size: 12px;"></i></a></p>
+        </footer>
+      </section> 
+
+    </div>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    Used to expand and collapse container modules.
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+    <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;section class="module collapsible"&gt;
+  &lt;header class="module-header"&gt;Header&lt;/header&gt;
+  &lt;div class="module-body collapse in"&gt;Body&lt;/div&gt;
+  &lt;footer class="module-footer collapse in"&gt;Footer&lt;/footer&gt;
+&lt;/section&gt;
+</pre>
+    <p>Script:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;script type="text/javascript"&gt;
+  require(['module'], function() {
+    $('.module.collapsible').collapsible();
+  });
+&lt;/script&gt;
+</pre>
+    <p>Notes:</p>
+    <ul>
+      <li>Make sure to include a <code>collapse</code> class on any element you wish to toggle.</li>
+      <li>If you want an element to be shown by default include an <code>in</code> class, as in the markup example above.</li>
+    </ul>
+    <div class="alert alert-info">
+      <strong>Script Requirements:</strong>
+      <ul>
+        <li>modules</li>
+      </ul>
+    </div>
+  </dd>
+</dl>
+
+<script type="text/javascript">
+  require(['modules'], function() {
+    $('.module.collapsible').collapsible();
+  });
+</script>
+
+        <h3 class="voice voice-brand" id="module-patient">Patient Module</h3>
+        <!--suppress HtmlUnknownTarget -->
+<dl class="documentation">
+<dd class="example">
+<section class="module module-patient">
+  <figure class="patient-photo pull-left">
+    <img src="../../img/hds/patient.png" alt="Patient photo" />
+  </figure>
+  <div class="pull-left">
+    <h1>Van DerHoote, Doris</h1>
+    <div class="patient-number">009 18 721</div>
+    <table class="table-overview">
+      <tbody>
+        <tr>
+          <td>F</td>
+          <td>68</td>
+          <td>25 Nov 1945</td>
+          <!--suppress CheckDtdReferences -->
+	        <td>5&rsquo; 3&rdquo;</td>
+          <td>114 lbs</td>
+          <td>Dr. J. Fraserton</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Sex</th>
+          <th>Age</th>
+          <th>DOB</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>PCP</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="btn-group pull-right">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">Go to... <i class="icon-chevron-down"></i></button>
+    <ul class="dropdown-menu">
+      <li><a href="#" data-toggle="dropdown">Action</a></li>
+      <li><a href="#" data-toggle="dropdown">Another action</a></li>
+      <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+    </ul>
+  </div>
+</section>
+</dd>
+<dd class="usage">
+<pre class="prettyprint linenums lang-javascript">
+&lt;section class=&quot;module module-patient&quot;&gt;
+  &lt;figure class=&quot;patient-photo pull-left&quot;&gt;
+    &lt;img src=&quot;../../img/hds/patient.png&quot; alt=&quot;Patient photo&quot; /&gt;
+  &lt;/figure&gt;
+  &lt;div class=&quot;pull-left&quot;&gt;
+    &lt;h1&gt;Van DerHoote, Doris&lt;/h1&gt;
+    &lt;div class=&quot;patient-number&quot;&gt;009 18 721&lt;/div&gt;
+    &lt;table class=&quot;table-overview&quot;&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;F&lt;/td&gt;
+          &lt;td&gt;68&lt;/td&gt;
+          &lt;td&gt;25 Nov 1945&lt;/td&gt;
+          &lt;td&gt;5&amp;rsquo; 3&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;114 lbs&lt;/td&gt;
+          &lt;td&gt;Dr. J. Fraserton&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+      &lt;tfoot&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Sex&lt;/th&gt;
+          &lt;th&gt;Age&lt;/th&gt;
+          &lt;th&gt;DOB&lt;/th&gt;
+          &lt;th&gt;Height&lt;/th&gt;
+          &lt;th&gt;Weight&lt;/th&gt;
+          &lt;th&gt;PCP&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group pull-right&quot;&gt;
+    &lt;button class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Go to... &lt;i class=&quot;icon-chevron-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+</dd>
+</dl>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Scripts -->
+<!--
+* scripts-ui.ejs
+*
+* Copyright (c) 2015 by General Electric Company. All rights reserved.
+*
+* The copyright to the computer software herein is the property of
+* General Electric Company. The software may be used and/or copied only
+* with the written permission of General Electric Company or in accordance
+* with the terms and conditions stipulated in the agreement/contract
+* under which the software has been supplied.
+ -->
+
+
+<script type="text/javascript">
+  requirejs.config({
+    baseUrl: '../../'
+  });
+  // Preload JS libraries and exec page scripts
+  require([
+    'jquery',
+    'ge-bootstrap',
+    'prettify',
+    'tables',
+    'filechooser',
+    'hds'
+  ], function($) {
+      // -------------------
+      // DOCUMENTATION SETUP
+      // -------------------
+
+      // Create a global function that can be called from inside iframes
+      // to resize the frame to fit the content window.
+      window.resizeFrame = function( src, h ) {
+        $( 'iframe[src="' + src + '"]').css( { height: h + 'px' } );
+      };
+
+      // Make code lovely using Google Prettify.
+      window.prettyPrint && prettyPrint();
+
+      var scrollOffset=120;
+      // And now we initialize ScrollSpy on the body.
+      // DO NOT use data attributes on this, as it will init before our
+      // new constructor activate function is applied; this would be bad.
+      $('body').scrollspy({
+        offset: scrollOffset,
+        target: '.primary-navbar'
+      });
+
+      //Handle scroll event by url/hash tags
+      if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        //check if hashtag exists in page
+        if($("#"+hash).offset()){
+          var hashOffset = $("#"+hash).offset().top;
+          $( 'html, body' ).animate( { scrollTop: hashOffset-(scrollOffset-1) }, 1000, 'swing' );
+        }
+      }
+
+      // Finally, add some smooth scrolling to our body when one of the
+      // primary-navbar links are clicked (even though this isn't in
+      // Bootstrap, which everyone said it was... we'll rebuild anyway).
+      $('.primary-navbar a').click(function( event ) {
+        var target = $(event.currentTarget).attr("href");
+        if (target.indexOf(".html") != -1) {
+            // do normal things for outward facing links
+            return;
+        }
+
+        event.preventDefault();
+        var offset = $( $(this).attr('href') ).offset();
+
+        if (offset) {
+          $( 'html, body' ).animate( { scrollTop: offset.top - (scrollOffset-1) }, 1000, 'swing' );
+        }
+      });
+
+      // ---------------------------
+      // DOCUMENTATION FUNCTIONALITY
+      // ---------------------------
+
+      setTimeout(function(){
+          // Conditionally load D3/Declarative Viz if SVG is supported.
+          // This should prevent errors from being thrown in IE8
+          if (Modernizr.svg) {
+            require(['declarative-visualizations'], function (visualizations) {
+              // Initialize Bar Visualizations
+              $('div[data-visualization="bar"]').each(function (i, element) {
+                visualizations.bar(element);
+              });
+
+              // Initialize Gauge Visualizations
+              $('div[data-visualization="gauge"]').each(function (i, element) {
+                visualizations.gauge(element);
+              });
+            });
+            //hdx flavor of the meter and speedometer components
+            require(['hdx-declarative-visualizations'], function (visualizations) {
+              // Initialize Donut Visualizations
+              $('div[data-visualization="donut"]').each(function (i, element) {
+                visualizations.donut(element);
+              });
+
+              // Initialize Meter Visualizations
+              $('div[data-visualization="meter"]').each(function (i, element) {
+                visualizations.meter(element);
+              });
+
+              // Initialize Speedometer Visualizations
+              $('div[data-visualization="speedometer"]').each(function (i, element) {
+                visualizations.speedometer(element);
+              });
+            });
+            // If SVG isn't supported alert the user that some elements won't be loaded
+          }
+          else {
+            alert('Your browser does not support SVG.\nAny element using D3.js will be omitted.');
+          }
+      },1000);
+
+});
+</script>
+<script type="text/javascript">
+//script to handle lights-on/off switch
+require(['jquery'], function ($) {
+
+    var currentFileName = window.location.pathname.split('/').pop().split('.')[0];
+    //noinspection JSUnusedLocalSymbols
+    var baseUrl = currentFileName.replace('-lights-off', '');
+    var isLightsOn = currentFileName.toLowerCase().indexOf("-lights-off") == -1;
+
+    $('a.navigation-link').each(function () {
+        var $link = $(this),
+                href = $link.attr('href');
+
+        if (-1 < href.indexOf('?')) {
+            $link.attr('href', href.split('?')[0]);
+        }
+
+        if (!isLightsOn) {
+            $link.attr('href', href + '?theme=lights-off');
+        }
+
+    });
+
+
+    var themeSwitcher = $('#theme-switcher');
+    var themeSwitcherStartingValue = themeSwitcher.val();
+    themeSwitcher.change(function () {
+
+        var theme = themeSwitcher.val();
+        var currentOffset = $(this).offset().top;
+        themeSwitcher.val(themeSwitcherStartingValue);
+
+
+        switch (theme) {
+            case 'lights-on':
+                if (!isLightsOn) {
+                    window.location.href = baseUrl + '.html?offset=' + currentOffset;
+                }
+                break;
+
+            case 'lights-off':
+                if (isLightsOn) {
+                    window.location.href = baseUrl + '-lights-off.html?offset=' + currentOffset;
+                }
+                break;
+        }
+
+
+    });
+
+    //scroll to current offset
+    var offsetvalue = (RegExp('offset=' + '(.+?)(&|$)').exec(window.location) || [, null])[1];
+
+    if (offsetvalue) {
+
+        $("html, body").animate({ scrollTop: offsetvalue - 15 }, 1000, 'swing');
+    }
+
+});
+</script>
+</body>

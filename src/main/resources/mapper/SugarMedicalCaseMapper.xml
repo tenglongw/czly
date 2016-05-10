@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.SugarMedicalCaseMapper">
+	<select id="querySugarMedicalCaseList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_sugar_medical_case
+		WHERE 1=1
+		<if test="caseType != null">
+			and caseType = #{caseType}
+		</if>
+		<if test="description != null">
+			and description LIKE CONCAT('%', #{description} ,'%')
+		</if>
+	</select>
+	<select id="querySugarMedicalCaseIndex" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_sugar_medical_case
+		WHERE 1=1
+			and isIndex = '0'
+	</select>
+	<select id="getSugarMedicalCaseListByConditions" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_sugar_medical_case uc
+		<where>
+			<if test="title != null">
+				uc.title LIKE CONCAT('%', #{title} ,'%')
+			</if>
+		</where>
+		ORDER BY creationtime,readNum
+		LIMIT #{pageQuery.pageOffset},#{pageQuery.limit}
+	</select>
+	<select id="getCountByConditions" resultType="int">
+		SELECT COUNT("id") FROM t_sugar_medical_case uc
+		<where>
+			<if test="title != null">
+				uc.title LIKE CONCAT('%', #{title} ,'%')
+			</if>
+		</where>
+	</select>
+</mapper>

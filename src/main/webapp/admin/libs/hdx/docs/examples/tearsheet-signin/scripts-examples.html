@@ -1,0 +1,74 @@
+<!--suppress HtmlUnknownTarget -->
+<script src="../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+
+// Preload JS libraries and exec page scripts
+require([
+    'jquery',
+    'ge-bootstrap',
+    'hds'
+], function($) {
+
+    // jquery page loaded handler
+    $(function () {
+        $('#btn-refresh').click(toggleLightsOff);
+    });
+
+    setThemeFromURL();
+});
+
+var _lightsOff = false;
+
+function setThemeFromURL() {
+    // set theme from the URL
+    var query_string = window.location.search.replace('?', '')
+            , pairs = query_string.split('&')
+            , options = {};
+
+    for (var i=0; i < pairs.length; i++) {
+        var parts = pairs[i].split('=');
+        options[parts[0]] = parts[1];
+    }
+
+    if(options.theme == 'lights-off') {
+        setLightsOff(true);
+    }
+}
+
+function setLightsOff(b) {
+    _lightsOff = b;
+
+    var themeStyle;
+    var themeStyleEl = $('#theme-styles');
+    if (b) {
+        themeStyle = '../../css/hds-lights-off.css';
+        themeStyleEl.attr('href', themeStyle);
+    } else {
+        themeStyle = '../../css/hds.css';
+        themeStyleEl.attr('href', themeStyle);
+        $('#theme-styles-extra').remove();
+    }
+
+    var documentationStyle = b ? '../assets/css/documentation-lights-off.css' : '../assets/css/documentation.css';
+    $('#documentation-styles').attr('href', documentationStyle);
+}
+
+function lightsOff() {
+    return _lightsOff;
+}
+
+function toggleLightsOff() {
+    hideMarkup();
+    setLightsOff(!_lightsOff);
+
+}
+
+function hideMarkup() {
+    $('body').css('visibility', 'hidden');
+}
+
+function showMarkup() {
+    $('body').css('visibility', 'visible');
+}
+
+</script>

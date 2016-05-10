@@ -1,0 +1,401 @@
+
+
+<div id="tray-datagrid" class="tray filter-tray top collapse hidden-phone">
+  <div class="tray-inner">
+
+    <div class="filter-rule-group"></div>
+
+    <!-- client-side template -->
+    <script type="text/template" id="filter-rule-template">
+      <form class="inline-form filter-rule">
+        <span class="filter-item span2">
+          <select>
+            <option value="show" selected="selected">Show Only</option>
+            <option value="hide">Hide</option>
+            <option value="highlight">Highlight</option>
+          </select>
+        </span>
+        <span class="filter-item span3">
+          <select>
+            <option value="Rendering Engine" selected="selected">Rendering Engine</option>
+            <option value="Browser">Browser</option>
+            <option value="Engine version">Engine version</option>
+            <option value="CSS Grade">CSS Grade</option>
+          </select>
+        </span>
+        <span class="filter-item span2">
+          <select>
+            <option value="0">Equals</option>
+            <option value="1">Larger then</option>
+            <option value="2">Equals or larger then</option>
+            <option value="3">Smaller</option>
+            <option value="4">Equals or smaller then</option>
+            <option value="5">Starts with</option>
+            <option value="6">Ends with</option>
+            <option value="7">Contains</option>
+            <option value="8">Does not contain</option>
+            
+          </select>
+        </span>
+        <span class="filter-item">
+          <input type="text" value="">
+        </span>
+        <span class="filter-item">
+          <button type="button" class="btn-link" data-toggle="filter-rule-remove"><i class="icon-remove-sign"></i></button>
+        </span>
+      </form>
+    </script>
+    <!-- end template -->
+
+    <button class="btn btn-link btn-large pull-left" data-toggle="filter-rule-add" type="button"><i class="icon-plus-sign"></i> Add Condition</button>
+    <div class="pull-right control">
+      <button class="btn btn-inverse cancel">Cancel</button>
+      <button class="btn btn-primary apply">Apply</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-primary tray-toggle" data-toggle="collapse" data-target="#tray-datagrid">Filter</button>
+  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a><strong>Items</strong></a></li>
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+<!--div class="btn-group btn-filter">
+  <a class="btn btn-default"><i class="icon-star color-red"></i> Filter 001</a>
+  <a class="btn btn-fade"><i class="icon-remove"></i></a>
+</div-->
+    
+    
+<br/>
+    
+<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-array-results"></table>
+
+
+<script type="text/javascript">
+  var oTable;
+  require([
+        'jquery',
+        'trays',
+        'datagrids'
+    ], function(){
+        init();
+  } );              
+
+  function init()
+  {
+    initTrays();
+    initDatagrid();
+  }
+
+  
+  
+  function initTrays()
+  {
+	  var $trayDatagrid = $('#tray-datagrid');
+	  $trayDatagrid.iidsFilterTray();
+	  $trayDatagrid.find('.control .cancel').click(function(e){
+      //console.log("debug:control:cancel.click()");
+      e.preventDefault();
+    });
+
+	  $trayDatagrid.find('.control .apply').click(function(e){
+      //console.log("debug:control:apply.click()");
+      e.preventDefault();
+      
+      $('#tray-datagrid').find('.filter-rule').each(function(item){
+        //console.log("filter-item:", item , ", i:", i);
+        var results = parseFilterItem(item);
+        /**
+         * NOTE: we could transform the data to json, 
+         * OR use the data to create a query string
+         * THEN, reload the data by invoking the oTable.fnReloadAjax call
+         */
+         var newUrl = '/assets/iidx/docs/data/spoof-data-1.json';
+        //var json = $.toJSON(results);
+            //noinspection JSUnusedAssignment
+	      newUrl += "?key=value&key2=value2&ext";
+        //initDatagrid();
+
+         var instance = $('table[data-table-name="dt-array-results"]').data('iidsBasicDataGrid');
+             //noinspection JSDeprecatedSymbols
+	      instance.fnClearTable();
+             //noinspection JSDeprecatedSymbols
+	      instance.fnAddData( data_1 );
+
+             //instance.reloadAjax(instance.$table.fnSettings(), newUrl, null, null);
+      });
+
+      function parseFilterItem(item)
+      {
+        //console.log("filter-item:", item );
+        var results = [];
+        var row = {};
+        //noinspection JSUnusedLocalSymbols
+	      var elm = $(item).find("option");
+            //console.log("debug:parseFilterItem::elm:",elm);
+/*
+            insert logic here. add data to the row object, which will be returned in a resutls array
+*/
+            results.push(row);
+            return results;
+      }
+      
+    });
+
+  }
+
+  function initDatagrid()
+  {
+    // JavaScript array and columns
+    oTable = $('table[data-table-name="dt-array-results"]').iidsBasicDataGrid({
+    'aoColumns': [
+        { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential' },
+        { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential' },
+        { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional' },
+        { 'sTitle': 'Engine version', 'mData': 'version' },
+        { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential' }
+    ],
+      'aaData':  data_0,
+      'isResponsive': true
+      });
+
+      //console.log("debug:oTable:",oTable);
+  }
+
+var data_0 = [
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 7",
+          "platform": "Win XP SP2+",
+          "version": "7",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 4.0",
+          "platform": "Win 95+",
+          "version": "4",
+          "grade": "X"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.0",
+          "platform": "Win 95+",
+          "version": "5",
+          "grade": "C"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 5.5",
+          "platform": "Win 95+",
+          "version": "5.5",
+          "grade": "A"
+        },
+        {
+          "engine": "Trident",
+          "browser": "Internet Explorer 6",
+          "platform": "Win 98+",
+          "version": "6",
+          "grade": "A"
+        }
+      ];
+    
+var data_1 = [
+        {
+          "engine": "lorem ipsum",
+          "browser": "lorem ipsum",
+          "platform": "lorem ipsum",
+          "version": "lorem ipsum",
+          "grade": "lorem ipsum"
+        },
+        {
+          "engine": "lorem ipsum",
+          "browser": "lorem ipsum",
+          "platform": "lorem ipsum",
+          "version": "lorem ipsum",
+          "grade": "lorem ipsum"
+        },
+        {
+          "engine": "lorem ipsum",
+          "browser": "lorem ipsum",
+          "platform": "lorem ipsum",
+          "version": "lorem ipsum",
+          "grade": "lorem ipsum"
+        }
+        
+      ];
+
+</script>

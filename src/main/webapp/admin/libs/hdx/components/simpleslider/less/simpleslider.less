@@ -1,0 +1,203 @@
+// Dependencies
+// --------------------------------------------------
+//@import "ge-bootstrap/less/hdx-bootstrap.less";
+@import "brandkit/less/fonts.less";
+
+// Styles
+// --------------------------------------------------
+@sliderBackgroundColor: @white;
+@sliderButtonPressTextColor: @white;
+@sliderBorderColor: @grayLighter;
+@centerBackgroundColor: @offWhite;
+@sliderLabelColor: @gray;
+@activeColor: @cyan;
+
+
+input.simpleslider {
+  display: none;
+}
+
+.simpleslider 
+{
+	* {
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+	
+	
+	
+	  border-collapse: separate;
+	  display: table;
+	  position: relative;
+	  background-color: @sliderBackgroundColor;
+	  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+ 			width: 100%; 
+}
+	  //width: 100%;
+	  padding: 2px;
+	  border: 1px solid @sliderBorderColor;
+	  .border-radius(@baseBorderRadius);
+	
+	 button.slider-button {
+	  display: inline-block;
+	  background-color: @sliderBackgroundColor;
+	  color: @sliderLabelColor;
+	  border: 1px solid transparent;
+	  .border-radius(@baseBorderRadius);
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  width: 24px;
+	  height: 29px;
+	  line-height: @baseLineHeight + 11;
+	  text-align: center;
+	  vertical-align: middle;
+	}
+	
+	
+	.lt-ie10  button.slider-button {
+	  float: left;
+	}
+	
+	
+	 button.slider-button.less {
+	  margin-right: 3px;
+	}
+	
+	 button.slider-button.more {
+	  margin-left: 3px;
+	}
+	
+	 div.center {
+	  display: table-cell;
+	  
+	  width: 100%;
+	  background-color: @centerBackgroundColor;
+	  border: 1px solid @sliderBorderColor;
+	  .border-radius(@baseBorderRadius);
+	  vertical-align: middle;
+	}
+	
+	 .content {
+	  display: table;
+	  margin-top: 0px;
+	}
+	
+	
+	 label {
+	  display: table-cell;
+	  white-space: nowrap;
+	  padding: 0 7px;
+	  color: @sliderLabelColor;
+	  vertical-align: middle;
+	}
+	 .interactive {
+	  display: table-cell;
+	  width: 100%;
+	  padding-right: 10px;
+	  vertical-align: middle;
+	}
+	
+	 .track-and-thumb {
+	  position: relative;
+	  width: 100%;
+	  height: 25px;
+	}
+	
+	 .track {
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  height: 1px;
+	  width: 100%;
+	  background-color: @sliderLabelColor;
+	}
+	
+	
+	 .thumb {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 25px;
+	  width: 32px;
+	  line-height: @baseLineHeight + 5;
+	  padding: 0;
+	  background-color: @sliderBackgroundColor;
+	  border: 1px solid @sliderBorderColor;
+	  .border-radius(@baseBorderRadius);
+	  color: @activeColor;
+	}
+	
+	 .thumb i:first-child {
+	  padding-right: 7px;
+	}
+	
+	 button {
+	  outline: none;
+	}
+	
+	
+	 button:hover {
+	  border-color: @activeColor;
+	  color: @activeColor;
+	}
+}
+.simpleslider button:active,
+.simpleslider.active .thumb {
+  border-color: transparent;
+  color: @sliderButtonPressTextColor;
+  #gradient > .vertical(lighten(@activeColor, 15%), @activeColor);
+}
+
+
+.simpleslider.active .track {
+  background-color: @activeColor;
+}
+
+// Mega sized slider
+
+.simpleslider.mega {
+	  .border-radius(@borderRadiusLarge + 4);
+	
+	
+	 button {
+	  font-size: @baseFontSize + 7;
+	}
+	
+	
+	 button.slider-button {
+	  .border-radius(@borderRadiusLarge + 2);
+	  width: 40px;
+	  height: 59px;
+	  line-height: @baseLineHeight + 41;
+	}
+	
+	 div.center {
+	  .border-radius(6px);
+	}
+	
+	 label {
+	  padding: 0 17px;
+	  font-size: @baseFontSize + 5;
+	  font-family: @brandFontFamily;
+	}
+	
+	 .interactive {
+	  padding-right: 20px;
+	}
+	
+	 .track-and-thumb {
+	  height: 47px;
+	}
+	
+	 .thumb {
+	  height: 47px;
+	  width: 59px;
+	  line-height: @baseLineHeight + 29;
+	}
+	
+	 .thumb i:first-child {
+	  padding-right: 20px;
+	}
+}

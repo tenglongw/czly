@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--suppress HtmlUnknownTarget -->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Offcanvas Navigation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../components/brandkit/favicon/favicon.ico">
+<link href="../../components/prettify/prettify.css" rel="stylesheet">
+<link id="theme-styles" href="../../css/hds-lights-off.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../css/responsive.css" rel="stylesheet" type="text/css">
+
+<!-- Documentation styles -->
+<link id="documentation-styles" href="../assets/css/documentation-lights-off.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/declarative-visualizations.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link id="theme-ie" href="../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+<link id="theme-ie9" href="../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../components/modernizr/modernizr.js"></script>
+<script src="../../components/requirejs/require.js"></script>
+<script src="../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({ baseUrl: '../../' });
+</script>
+
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>HDx - Offcanvas Navigation bar</span></a>
+      </div>
+      <div class="pull-right">
+        <div class="btn-toolbar">
+	        <div class="col-md-8">
+	          <select id="theme-switcher">
+	            <option value="lights-on" selected>Lights On</option>
+	            <option value="lights-off">Lights Off</option>
+	          </select>
+	         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="container doco hds-library">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="sdh-wrapper module">
+                  <!--suppress HtmlUnknownTarget -->
+<dl class="documentation">
+	<dt>Example</dt>
+	<dd class="example">
+        <p><a class="navigation-link" href="../examples/navigation/offcanvas-lights-off-demo.html" target="_blank">Open fullscreen
+                example</a></p>
+
+		<p>
+			<img src="../assets/imgs/offcanvasnav_lights_off_screenshot.png" alt=""/>
+		</p>
+
+	</dd>
+	<dt>Description</dt>
+	<dd class="description show">OffCanvas Navigation bar<br/><strong>A horizontal navigation menu with dropdowns that looks fairly standard in widescreen mode (>768px), but appears to the left when the screen is smaller, and renders the page contents slightly off screen to highlight the navigation</strong></dd>
+	<dt>Usage</dt>
+	<dd class="usage">
+<pre class="prettyprint linenums lang-html">
+    %lt;div class="navbar navbar-default navbar-fixed-top offcanvas-fixed"%gt;
+        %lt;div class="container"%gt;
+            %lt;button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body"%gt;
+                %lt;span class="icon-bar"%gt;%lt;/span%gt;
+                %lt;span class="icon-bar"%gt;%lt;/span%gt;
+                %lt;span class="icon-bar"%gt;%lt;/span%gt;
+            %lt;/button%gt;
+            %lt;a class="navbar-brand" href="#"%gt;%lt;span class="navbar-ge-logo"%gt;%lt;/span%gt;%lt;span%gt;%lt;%=title%%gt;%lt;/span%gt;%lt;/a%gt;
+
+            %lt;div class="pull-right"%gt;...
+
+    %lt;div class="navmenu navmenu-default navbar-fixed-top navmenu-fixed-left offcanvas"%gt;
+        %lt;div class="container"%gt;
+            %lt;ul class="nav navmenu-nav primary-nav"%gt;
+                %lt;li class="stickydropdown"%gt;
+                    %lt;a href="#" class="dropdown-toggle" data-toggle="stickydropdown"%gt;Primary Nav 1%lt;/a%gt;
+                    %lt;ul class="dropdown-menu navmenu-nav"%gt;
+                        %lt;li%gt;%lt;a href="#introduction"%gt;Introduction%lt;/a%gt;%lt;/li%gt;
+                        ...
+                    %lt;/ul%gt;
+                %lt;/li%gt;
+                %lt;li%gt;
+                    %lt;hr/%gt;
+                %lt;/li%gt;
+                %lt;li%gt;%lt;a%gt;Contact us%lt;/a%gt;%lt;/li%gt;
+                %lt;li%gt;%lt;a%gt;Lorem ipsum%lt;/a%gt;%lt;/li%gt;
+            %lt;/ul%gt;
+        %lt;/div%gt;
+    %lt;/div%gt;
+    
+            <br/><br/>
+            ...
+
+</pre>
+		<div class="alert alert-info">
+			<strong>Script Requirements:</strong>
+			<ul>
+				<li>navbar-offcanvas/js/navbar-offcanvas</li>
+			</ul>
+		</div>
+	</dd>
+</dl>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--Scripts -->
+<!--
+* scripts-components.ejs
+*
+* Copyright (c) 2015 by General Electric Company. All rights reserved.
+*
+* The copyright to the computer software herein is the property of
+* General Electric Company. The software may be used and/or copied only
+* with the written permission of General Electric Company or in accordance
+* with the terms and conditions stipulated in the agreement/contract
+* under which the software has been supplied.
+-->
+
+<script type="text/javascript">
+  requirejs.config({
+    baseUrl: '../../'
+  });
+  // Preload JS libraries and exec page scripts
+  require([
+    'jquery',
+    'ge-bootstrap',
+    'bloodhound',
+    'typeahead',
+    'sparkline',
+    'slider',
+    'directional-pad',
+    'rich-popover',
+    'jumpnav',
+    'spinner',
+    'prettify',
+    'signalstrength',
+    'hds'
+  ], function($) {
+      // -------------------
+      // DOCUMENTATION SETUP
+      // -------------------
+
+      // Create a global function that can be called from inside iframes
+      // to resize the frame to fit the content window.
+      window.resizeFrame = function( src, h ) {
+        $( 'iframe[src="' + src + '"]').css( { height: h + 'px' } );
+      };
+
+      // Make code lovely using Google Prettify.
+      window.prettyPrint && prettyPrint();
+
+      var scrollOffset=120;
+	    var $body = $('body');
+      // And now we initialize ScrollSpy on the body.
+      // DO NOT use data attributes on this, as it will init before our
+      // new constructor activate function is applied; this would be bad.
+	    $body.scrollspy({
+        offset: scrollOffset,
+        target: '.primary-navbar'
+      });
+
+      //Handle scroll event by url/hash tags
+      if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+	      var $hash = $("#"+hash), ho = $hash.offset();
+        //check if hashtag exists in page
+        if(ho){
+          var hashOffset = ho.top;
+          $( 'html, body' ).animate( { scrollTop: hashOffset-(scrollOffset-1) }, 1000, 'swing' );
+        }
+      }
+
+      // Finally, add some smooth scrolling to our body when one of the
+      // primary-navbar links are clicked (even though this isn't in
+      // Bootstrap, which everyone said it was... we'll rebuild anyway).
+      $('.primary-navbar a').click(function( event ) {
+        var target = $(event.currentTarget).attr("href");
+        if (target.indexOf(".html") != -1) {
+            // do normal things for outward facing links
+            return;
+        }
+
+        event.preventDefault();
+        var offset = $( $(this).attr('href') ).offset();
+
+        if (offset) {
+          $( 'html, body' ).animate( { scrollTop: offset.top - (scrollOffset-1) }, 1000, 'swing' );
+        }
+      });
+
+      // ONE LAST THING! If this happens to be an iframe window we're
+      // loading then we will essentially create a listener that checks
+      // the body height, so that if the contents of this frame change
+      // then it will call back to the parent to continually resize the
+      // frame to always fit the content window.
+      if ( parent !== window ) {
+        var $el = $body,
+            h   = $el.height(),
+            key = 'body-height',
+            src = document.location.pathname;
+        $.data( this, key, h );
+        parent.resizeFrame( src, h );
+        function listen() {
+          setTimeout(function() {
+            var h   = $el.height(),
+                old = $.data( this, key );
+                if ( h !== old ) {
+                  $.data( this, key, h );
+                  parent.resizeFrame( src, h );
+                }
+            listen();
+          }, 250);
+        }
+        listen();
+      }
+
+      // ---------------------------
+      // DOCUMENTATION FUNCTIONALITY
+      // ---------------------------
+
+      // Enable stateful buttons
+      $('.stateful').click(function() {
+        var $self = $(this);
+        $self.button('loading');
+        setTimeout(function() {
+          $self.button('reset');
+        }, 3000);
+      });
+
+      // Enable spinners
+     $('.spinner').spin();
+
+      // Enable tabs (with dropdowns, mainly)
+      $('.nav-tabs > li > a').click(function(event) {
+        event.preventDefault();
+        $(this).tab('show');
+      });
+
+      // Make accordion carets animate!
+      $('.accordion .collapse')
+        .on('show', function() {
+          $(this).prev('.accordion-heading').find('.accordion-toggle').addClass('in');
+        })
+        .on('hide', function() {
+          $(this).prev('.accordion-heading').find('.accordion-toggle').removeClass('in');
+        });
+
+      setTimeout(function(){
+          // Conditionally load D3/Declarative Viz if SVG is supported.
+          // This should prevent errors from being thrown in IE8
+          if (Modernizr.svg) {
+            require(['declarative-visualizations'], function (visualizations) {
+              // Initialize Bar Visualizations
+              $('div[data-visualization="bar"]').each(function (i, element) {
+                visualizations.bar(element);
+              });
+
+              // Initialize Gauge Visualizations
+              $('div[data-visualization="gauge"]').each(function (i, element) {
+                visualizations.gauge(element);
+              });
+            });
+            //hdx flavor of the meter and speedometer components
+            require(['hdx-declarative-visualizations'], function (visualizations) {
+              // Initialize Donut Visualizations
+              $('div[data-visualization="donut"]').each(function (i, element) {
+                visualizations.donut(element);
+              });
+
+              // Initialize Meter Visualizations
+              $('div[data-visualization="meter"]').each(function (i, element) {
+                visualizations.meter(element);
+              });
+
+              // Initialize Speedometer Visualizations
+              $('div[data-visualization="speedometer"]').each(function (i, element) {
+                visualizations.speedometer(element);
+              });
+            });
+            // If SVG isn't supported alert the user that some elements won't be loaded
+          }
+          else {
+            alert('Your browser does not support SVG.\nAny element using D3.js will be omitted.');
+          }
+      },1000);
+
+      // Setup of rich popover examples
+      $('#rich-popover-1').richPopover();
+      $('#rich-popover-3').richPopover();
+      $('#rich-popover-4').richPopover();
+     
+      $("#rich-popover-2").richPopover({
+        	content : function () {
+        		return $("#popover2-content-wrapper").html();
+        	}
+        }).on('click', function(e) {
+    		e.preventDefault();
+    	});
+        
+		
+      // Register popovers.
+      var popovertargets = $('.popover-target');
+      popovertargets.popover({ trigger: 'click' }).on(
+              'click', function(e) {
+                  e.preventDefault();
+              });
+      popovertargets.popover().on(
+              'blur', function() {
+                  $(this).popover('hide');
+              });
+
+      // Directional Pad
+      $('.directional-pad').directionalPad(
+              {
+                  imagesUrl: '../../img/hds/svg'
+              });
+
+      // Typeahead example
+      var states = new Bloodhound(
+              {
+                  datumTokenizer: function(d) {
+                      return Bloodhound.tokenizers.whitespace(d.val);
+                  },
+                  queryTokenizer: Bloodhound.tokenizers.whitespace,
+                  local: [
+                      { val: 'Alabama' },
+                      { val: 'Alaska' },
+                      { val: 'Arizona' },
+                      { val: 'Arkansas' },
+                      { val: 'California' },
+                      { val: 'Colorado' },
+                      { val: 'Connecticut' },
+                      { val: 'Delaware' },
+                      { val: 'Florida' },
+                      { val: 'Georgia' },
+                      { val: 'Hawaii' },
+                      { val: 'Idaho' },
+                      { val: 'Illinois' },
+                      { val: 'Indiana' },
+                      { val: 'Iowa' },
+                      { val: 'Kansas' },
+                      { val: 'Kentucky' },
+                      { val: 'Louisiana' },
+                      { val: 'Maine' },
+                      { val: 'Maryland' },
+                      { val: 'Massachusetts' },
+                      { val: 'Michigan' },
+                      { val: 'Minnesota' },
+                      { val: 'Mississippi' },
+                      { val: 'Missouri' },
+                      { val: 'Montana' },
+                      { val: 'Nebraska' },
+                      { val: 'Nevada' },
+                      { val: 'New Hampshire' },
+                      { val: 'New Jersey' },
+                      { val: 'New Mexico' },
+                      { val: 'New York' },
+                      { val: 'North Carolina' },
+                      { val: 'North Dakota' },
+                      { val: 'Ohio' },
+                      { val: 'Oklahoma' },
+                      { val: 'Oregon' },
+                      { val: 'Pennsylvania' },
+                      { val: 'Rhode Island' },
+                      { val: 'South Carolina' },
+                      { val: 'South Dakota' },
+                      { val: 'Tennessee' },
+                      { val: 'Texas' },
+                      { val: 'Utah' },
+                      { val: 'Vermont' },
+                      { val: 'Virginia' },
+                      { val: 'Washington' },
+                      { val: 'West Virginia' },
+                      { val: 'Wisconsin' },
+                      { val: 'Wyoming' }
+                  ]
+              });
+
+      states.initialize();
+
+      $('#typeahead-example').typeahead(
+              {
+                  highlight: true
+              },
+              {
+                  displayKey: 'val',
+                  source: states.ttAdapter()
+              });
+
+
+    });
+
+</script>
+<script type="text/javascript">
+//script to handle lights-on/off switch
+require(['jquery'], function ($) {
+
+    var currentFileName = window.location.pathname.split('/').pop().split('.')[0];
+    //noinspection JSUnusedLocalSymbols
+    var baseUrl = currentFileName.replace('-lights-off', '');
+    var isLightsOn = currentFileName.toLowerCase().indexOf("-lights-off") == -1;
+
+    $('a.navigation-link').each(function () {
+        var $link = $(this),
+                href = $link.attr('href');
+
+        if (-1 < href.indexOf('?')) {
+            $link.attr('href', href.split('?')[0]);
+        }
+
+        if (!isLightsOn) {
+            $link.attr('href', href + '?theme=lights-off');
+        }
+
+    });
+
+
+    var themeSwitcher = $('#theme-switcher');
+    var themeSwitcherStartingValue = themeSwitcher.val();
+    themeSwitcher.change(function () {
+
+        var theme = themeSwitcher.val();
+        var currentOffset = $(this).offset().top;
+        themeSwitcher.val(themeSwitcherStartingValue);
+
+
+        switch (theme) {
+            case 'lights-on':
+                if (!isLightsOn) {
+                    window.location.href = baseUrl + '.html?offset=' + currentOffset;
+                }
+                break;
+
+            case 'lights-off':
+                if (isLightsOn) {
+                    window.location.href = baseUrl + '-lights-off.html?offset=' + currentOffset;
+                }
+                break;
+        }
+
+
+    });
+
+    //scroll to current offset
+    var offsetvalue = (RegExp('offset=' + '(.+?)(&|$)').exec(window.location) || [, null])[1];
+
+    if (offsetvalue) {
+
+        $("html, body").animate({ scrollTop: offsetvalue - 15 }, 1000, 'swing');
+    }
+
+});
+</script>
+</body>

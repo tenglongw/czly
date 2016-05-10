@@ -1,0 +1,213 @@
+// Styles
+// --------------------------------------------------
+
+.table th,
+.table td {
+  font-size: 1em;
+}
+
+.table > thead > tr > th {
+  background-color: @borderColor;
+  color: @formsTextColor;
+  font-weight: 300;
+}
+
+.table > thead:first-child > tr:first-child {
+  > th:first-child {
+    .border-radius(4px 0 0 0);
+  }
+
+  > th:last-child {
+    .border-radius(0 4px 0 0);
+  }
+}
+
+.table-arrow-selection > tbody > tr > td:first-child .arrow-container {
+  position: relative;
+
+  .content {
+  	margin-top: 0px;   // Overriding top margin to fix table in 1.2.0
+    position: relative;
+    z-index: 1;
+  }
+
+  .arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    height: 26px;
+    margin-top: -13px;
+    left: -4px;
+    width: 0;
+    z-index: 0;
+    .border-radius(4px 0 0 4px);
+    #gradient > .vertical(@highlightGradientStartColor, @highlightGradientEndColor);
+
+    .point {
+      position: absolute;
+      top: 0;
+      right: -10px;
+      height: 26px;
+      width: 13px;
+      background: transparent url("@{imagesPath}/table-selection-arrow.png") no-repeat 0 0;
+    }
+  }
+}
+
+.lt-ie10 .table-arrow-selection > tbody > tr > td:first-child .arrow-container .arrow .point {
+	//noinspection CssUnknownTarget
+	background-image: url(@{imagesPath}/table-selection-arrow-flat.png);
+}
+
+.table-arrow-selection > tbody > tr:hover > td > .arrow-container .arrow {
+  display: block;
+}
+
+.table-arrow-selection.table-arrow-selection-first-column > tbody > tr > td:first-child .arrow-container .arrow {
+  right: 5px;
+  width: auto;
+}
+
+.table-arrow-selection.table-arrow-selection-first-column > tbody > tr:hover > td:first-child {
+  color: @white;
+}
+
+table.data-grid {
+
+  > thead > tr > th,
+  > tbody > tr > td {
+    padding: 1em;
+  }
+
+  > tbody {
+    > tr > td {
+      background-color: @formsInverseBackgroundColor;
+
+      h2 {
+        line-height: 1em;
+        margin-bottom: 0.75em;
+      }
+    }
+
+    &:last-child > tr:last-child {
+      > td:first-child {
+        .border-radius(0 0 0 4px)
+      }
+
+      > td:last-child {
+        .border-radius(0 0 4px 0)
+      }
+    }
+  }
+
+  &.table-arrow-selection.table-arrow-selection-first-column.table-bordered > tbody > tr > td {
+    border-left: 0;
+    border-right: 1px solid @borderColor;
+  }
+
+  &.table-arrow-selection.table-arrow-selection-first-column > tbody > tr > td:first-child {
+    width: 1px;
+    font-family: ge-inspira;
+    font-size: 1.2em;
+    border-right: 0;
+  }
+
+  &.table-bordered.table > thead > tr > th.alt {
+    background-color: @formsHoverBackgroundColor;
+    border-top: 1px solid @formsInverseBorderColor;
+    border-right: 1px solid @formsInverseBorderColor;
+    border-left: none;
+
+    &:first-child {
+      border-left: 1px solid @formsInverseBorderColor;
+      border-right: 0;
+    }
+  }
+}
+
+table.dataTable {
+  > thead > th {
+  //  height: auto;
+
+	  &.sorting {
+		 &_desc, &_asc {
+			 background-color: @offWhite;
+		 }
+
+		  // TODO figure out if there's a way to use icon fonts for the sort indicator
+		  &_desc {
+			  background-image: url("@{imagesPath}/sort_desc_dark.png");
+		  }
+		  &_asc {
+			  background-image: url("@{imagesPath}/sort_asc_dark.png");
+		  }
+	  }
+  }
+
+
+  // TODO refactor - define semantic names for all colors and move this up to the shared component
+	> tr, > tbody > tr {
+		&.row_selected > td {
+			color: @grayDarkest;
+			background-color: @tableBackgroundAccent;
+			&.outlier {
+				background-color: @btnDangerBackground;
+				color: @grayDarkest;
+			}
+			a {
+				color: @blueDark;
+			}
+		}
+
+		// remove background color defined in base stylesheet - it shows through around the rounded corners of the table header cells
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+}
+
+// override of hds-tables font-weight: 300 to avoid flash
+.table > thead > tr > th {
+  font-weight: normal;
+}
+
+.table th,
+.table td {
+  vertical-align: top;
+
+  &.centered {
+    text-align: center;
+  }
+
+  h4 {
+  	font-weight: bold;
+  }
+}
+table.dataTable thead th,
+.table thead th {
+  //padding: 8px 8px;    //removed extra padding to fix table in 1.2.0
+  white-space: nowrap;
+  font-weight: normal;
+}
+table.dataTable thead th:last-child,
+.table thead th:last-child {
+  // make room for the sort indicator
+  padding-right: 18px
+}
+.table.dataTable td {
+  vertical-align: middle;
+  // font-size: 11px;
+  line-height: 15px;
+  border-right: none;
+  border-left: none;
+}
+.table td > i[class^="icon-"] {
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.table td > i.icon-circled {
+  font-size: 12px;
+}

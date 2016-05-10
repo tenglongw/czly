@@ -1,0 +1,28 @@
+{
+  "name": "inspector",
+  "description": "Inspector implementation for datagrids",
+  "version": "0.2.7",
+ 
+  "ignore": [
+    "components",
+    "css",
+    "node_modules",
+    "test",
+    ".*",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+   
+    "datagrids": "git@github.sw.ge.com:DXC/datagrids#v1.2.2",
+    "tables": "git@github.sw.ge.com:DXC/tables#v0.4.5",
+    "ge-bootstrap": "git@github.sw.ge.com:DXC/ge-bootstrap#v1.10.3",
+    "jquery": "git://github.com/components/jquery#~1.10.2",
+    "requirejs": "git://github.com/jrburke/requirejs-bower#~2.1.11",
+    "underscore": "git://github.com/amdjs/underscore#~1.5.2"
+  }
+  ,
+  "resolutions": {
+    "ge-bootstrap": "v1.10.3",
+    "brandkit": "v2.7.1"
+  }
+}

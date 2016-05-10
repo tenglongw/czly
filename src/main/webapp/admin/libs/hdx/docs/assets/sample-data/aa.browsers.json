@@ -1,0 +1,39 @@
+{
+    "aaData": [
+        [
+            "Trident",
+            "v4.0",
+            "Valance 95+",
+            "4",
+            "X"
+        ],
+        [
+            "Trident",
+            "v5.0",
+            "Valance 95+",
+            "5",
+            "C"
+        ],
+        [
+            "Trident",
+            "v5.5",
+            "Valance 95+",
+            "5.5",
+            "A"
+        ],
+        [
+            "Trident",
+            "v6",
+            "Valance 98+",
+            "6",
+            "A"
+        ],
+        [
+            "Trident",
+            "v7",
+            "Valance PX SP2+",
+            "7",
+            "A"
+        ]
+    ]
+}

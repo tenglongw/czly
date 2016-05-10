@@ -1,0 +1,30 @@
+@import "../components/ge-bootstrap/less/hdx-bootstrap.less";
+@import "hdx-megadropdown.less";
+@import "hdx-notification-buttons.less";
+@import "hdx-megadropdown.less";
+
+@navMenuBackgroundColor: @grayLighter;
+@navMenuTextColorNormal: @grayDark;
+@navMenuTextColorHover: @offBlack;
+
+// mega drop down
+@megaDropDownLinkColor: @grayDark;
+@megaDropDownFontSize: @baseFontSize;
+@megaDropDownFontWeight: normal;
+@megaDropDownHoverLinkColor: @grayDarker;
+
+// Mega drop down - drill into the mega list (tertiary nav)
+@megaDropDownMegaListLinkColor: @grayDark;
+@megaDropDownMegaListFontSize: @baseFontSize;
+
+.navMenuSelectionGradient {
+  #gradient > .vertical(lighten(@cyan, 15%), @cyan);
+}
+
+@import "navbar-offcanvas.less";
+
+
+// Paths
+
+@componentsPath: "../components";
+@fontsPath: "../components/brandkit/fonts";

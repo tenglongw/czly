@@ -1,0 +1,46 @@
+
+//noinspection CssUnknownTarget
+@import "ge-bootstrap/less/hdx-bootstrap-lights-off.less";
+@import "hdx-variables-lights-off.less";
+@import "tables.less";
+
+.table {
+
+	table& {
+		> thead {
+			> tr > {
+				th, td {
+					background-color: lighten(@tableHeaderBkgndGray, 6%);
+					color: @gray;
+					border: none;
+				}
+			}
+		}
+	}
+
+
+	&-hover {
+		tbody {
+			> tr:hover > {
+				td, th {
+					#gradient > .vertical(darken(@blue, 34%), darken(@blue, 35%));
+					color: @white;
+				}
+			}
+		}
+	}
+
+	 &-arrow-selection > tbody > tr > td:first-child .arrow-container .arrow {
+        background-image: none;
+        #gradient > .vertical(@blue, darken(@blue, 8%));
+
+        .point {
+            background-image: url("@{imagesPath}/table-selection-arrow-dark.png");
+            .lt-ie10 {
+                background-image: url("@{imagesPath}/table-selection-arrow-flat-dark.png");
+            }
+        }
+    }
+
+}
+

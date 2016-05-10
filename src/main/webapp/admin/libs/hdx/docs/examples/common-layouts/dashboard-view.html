@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Example - Breadcrumb - HDx Navigation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../../components/brandkit/favicon/favicon.ico">
+
+<link id="theme-styles" href="../../../css/hds.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../../css/responsive.css" rel="stylesheet" type="text/css">
+
+
+<!-- Documentation styles -->
+<!-- XXX documentation styles should not be included in examples -->
+<link id="documentation-styles" href="../../assets/css/documentation.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+  <link id="theme-ie" href="../../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+    <link id="theme-ie9" href="../../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../../components/modernizr/modernizr.js"></script>
+<script src="../../../components/requirejs/require.js"></script>
+<script src="../../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({
+    baseUrl: '../../../'
+  });
+</script>
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<body>
+
+<div class="navbar navbar-static-top">
+	<div class="masthead navbar-inner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>My Application</span></a>
+    </div>
+    <div class="pull-right">
+      <div class="notifications pull-left btn-toolbar">
+          <div class="btn-group">
+              <button class="btn notification notification-alert dropdown-toggle" data-toggle="dropdown">9</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-message dropdown-toggle" data-toggle="dropdown">1</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-suggestion dropdown-toggle" data-toggle="dropdown">3</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-task dropdown-toggle" data-toggle="dropdown">0</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="user-utilities btn-group pull-left btn-toolbar">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+          <img src="../../../img/hds/doctor-thumb.png" class="user-thumbnail" alt="User photo" />
+          <span class="user-name">Dr. Bradley Casper</span>
+          <i class="icon-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li><a>Action</a></li>
+          <li><a>Another action</a></li>
+          <li><a>Something else here</a></li>
+          <li class="divider"></li>
+          <li><a>Separated link</a></li>
+        </ul>
+
+
+      </div>
+
+        
+    </div>
+  </div>
+</div>
+
+	<nav class="collapse primary-navbar navbar-collapse bs-navbar-collapse">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Primary Nav 1</a></li>
+        <li><a href="#">Primary Nav 2</a></li>
+        <li><a href="#">Primary Nav 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav alt">
+        <li class="active"><a href="#">Alternate Nav 1</a></li>
+        <li><a href="#">Alternate Nav 2</a></li>
+        <li><a href="#">Alternate Nav 3</a></li>
+      </ul>
+  </div>
+</nav>
+
+</div>
+<div class="container">
+	<div class="page-header voice voice-brand">
+		<h1 class="pull-left">Dashboard</h1>
+
+		<div class="secondary-nav pull-right">
+			<div class="btn-group">
+				<a href="#" class="btn btn-icon btn-large" rel="tooltip" data-title="Add" data-placement="bottom"><i
+							class="icon-plus"></i></a>
+				<a href="#" class="btn btn-icon btn-large" rel="tooltip" data-title="Share" data-placement="bottom"><i
+							class="icon-share-alt"></i></a>
+				<a href="#" class="btn btn-icon btn-large" rel="tooltip" data-title="Refresh" data-placement="bottom"><i
+							class="icon-refresh"></i></a>
+				<a href="#" class="btn btn-icon btn-large" rel="tooltip" data-title="Fullscreen" data-placement="bottom"><i
+							class="icon-fullscreen"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<section class="module col-sm-8 col-md-8 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+		<section class="module col-sm-4 col-md-4 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+		<section class="module col-sm-4 col-md-4 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+		<section class="module col-sm-4 col-md-4 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+		<section class="module col-sm-4 col-md-4 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+		<section class="module col-sm-8 col-md-8 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+		<section class="module col-sm-4 col-md-4 draggable">
+			<header class="module-header"></header>
+			<div class="module-body" style="height: 290px;"></div>
+			<footer class="module-footer"></footer>
+		</section>
+	</div>
+</div>
+
+<script src="../../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+
+// Preload JS libraries and exec page scripts
+require([
+    'jquery',
+    'ge-bootstrap',
+    'hds'
+], function($) {
+    // application entry point
+
+    //
+    // your code here
+    //
+
+    // signin examples
+    $('#forgotpin').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpin-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpin-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send').on(
+					    'click', function() {
+						    var po = $('#forgotpin').data('popover');
+                    po.options.content=$('#forgotpin-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpin").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotuser').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotuser-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotuser-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-user').on(
+					    'click', function() {
+						    var po = $('#forgotuser').data('popover');
+                    po.options.content=$('#forgotuser-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotuser").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotpwd').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpwd-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpwd-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-pwd').on(
+					    'click', function() {
+						    var po = $('#forgotpwd').data('popover');
+                    po.options.content=$('#forgotpwd-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpwd").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+$('#btn-signin').on(
+			'click', function() {
+				$('#signin-progress').show();
+    });
+    /*
+     $('#forgotpin').click(function(){
+     $('#forgotpin').popover("show");
+     });
+     */
+    // end of signin examples
+
+    // jquery page loaded handler
+    $(function () {
+        $('#btn-refresh').click(toggleLightsOff);
+    });
+
+    setThemeFromURL();
+});
+
+// activate declarative visualizations
+require(['declarative-visualizations'], function(visualizations) {
+    $('div[data-visualization="donut"]').each(function(i, element) {
+        visualizations.donut(element);
+    });
+});
+
+var _lightsOff = false;
+
+function setThemeFromURL() {
+    // set theme from the URL
+    var query_string = window.location.search.replace('?', '')
+            , pairs = query_string.split('&')
+            , options = {};
+
+    for (var i=0; i < pairs.length; i++) {
+        var parts = pairs[i].split('=');
+        options[parts[0]] = parts[1];
+    }
+
+    if(options.theme == 'lights-off') {
+        setLightsOff(true);
+    }
+}
+
+function setLightsOff(b) {
+    _lightsOff = b;
+
+    //var themeStyle = b ? '../../../css/hds-lights-off.css' : '../../../css/hds.css';
+    var themeStyle;
+    var themeStyleEl = $('#theme-styles');
+    if (b) {
+        themeStyle = '../../../css/hds-lights-off.css';
+        themeStyleEl.attr('href', themeStyle);
+    } else {
+        themeStyle = '../../../css/hds.css';
+        themeStyleEl.attr('href', themeStyle);
+        $('#theme-styles-extra').remove();
+    }
+
+
+    var documentationStyle = b ? '../../assets/css/documentation-lights-off.css' : '../../assets/css/documentation.css';
+    $('#documentation-styles').attr('href', documentationStyle);
+
+    var chartTheme = b ? 'charts/theme-dark' : 'charts/theme';
+    require([chartTheme, 'charts','highstock'], function (theme, charts) {
+        Highcharts.setOptions(theme);
+
+        showMarkup();
+
+        if (b) {
+            // issue with firefox chart rendering requires small delay
+            window.setTimeout(function(){
+                updateCharts(charts);
+            }, 100);
+        } else {
+            updateCharts(charts);
+        }
+    });
+}
+
+function lightsOff() {
+    return _lightsOff;
+}
+
+function toggleLightsOff() {
+    hideMarkup();
+    setLightsOff(!_lightsOff);
+
+}
+
+function hideMarkup() {
+    $('body').css('visibility', 'hidden');
+}
+
+function showMarkup() {
+    $('body').css('visibility', 'visible');
+}
+
+</script>
+
+
+</body>

@@ -1,0 +1,57 @@
+<!-- Row grouping -->
+
+<dl class="documentation">
+    <dt>Row grouping</dt>
+    <dd class="description">
+        <p>A Datagrid using interactive <strong>row grouping.</strong></p>
+    </dd>
+    <dt>Example</dt>
+    <dd class="example">
+        <div class="row-grouping-dropdown-container pull-left" style="margin: 0 0 20px;">
+            <!-- Will be filled in automatically by the column vis plugin -->
+        </div>
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-row-grouping-example"></table>
+    </dd>
+    <dt class="hidden-phone">Usage</dt>
+    <dd class="usage hidden-phone">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class=&quot;row-grouping-dropdown-container&quot;&gt;&lt;/div&gt;
+&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; class=&quot;table table-bordered&quot; data-table-name=&quot;dt-row-grouping-example&quot;&gt;&lt;/table&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+//assume 'datagrids/datagrids-row-grouping' is on the page...
+$('table[data-table-name="dt-row-grouping-example"]').basicdatagrid({
+  'aoColumns': [
+    {'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential'},
+    {'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential'},
+    {'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional'},
+    {'sTitle': 'Engine version', 'mData': 'version'},
+    {'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential'}
+  ],
+  'sAjaxSource': '../assets/data/ao.browsers.json',
+  'useFloater': false,
+  'plugins': ["G"], //enable the row grouping plugin (assumes datagrids/datagrids-row-grouping.js is on the page)
+  "bPaginate": false, // pagination is not compatible with row grouping
+  "rowGrouping": { //configure the row grpuping plugin
+    rowGroupingDropdownSelector: ".row-grouping-dropdown-container" //tell the plugin where to put the row grouping control
+  }
+});
+</pre>
+        <p>Notes:</p>
+        <ul>
+            <li>You must include the plugin library "[datagrids root]/js/datagrids/datagrids-row-grouping.js" on the page.  The requirejs id for this in HDX is 'datagrids/datagrids-row-grouping'</li>
+            <li>Datatable "plugins" have been moved out of the "sDom" settings parameter into a separate "plugins" settings Array parameter, so enable the plugin by setting 'plugins': ["G"] on your table</li>
+            <li>Place the row grouping dropdown inside any element consistent with design guidelines by specifying a "rowGroupingDropdownSelector", which is a valid JQuery selector.</li>
+            <li>Pagination must be disabled when row grouping is enabled</li>
+        </ul>
+        <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+                <li>datagrids</li>
+                <li>datagrids/datagrids-row-grouping</li>
+            </ul>
+        </div>
+    </dd>
+</dl>

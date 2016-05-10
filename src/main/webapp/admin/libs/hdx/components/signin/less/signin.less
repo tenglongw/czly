@@ -1,0 +1,133 @@
+// user variables from bootstrap
+//overriding float to center the sign in component
+.signin-container.col-sm-4 {
+		float: none;
+}
+
+// sign in component specific styles
+.signin{
+
+	text-align:center;
+	margin-top: @signinTopMargin;
+	
+	.ge-logo {
+		background: transparent url("@{signinImagePath}/GE_black_monogram.png") no-repeat;
+		display: inline-block;
+		vertical-align: inherit;
+		width: @gelogoWidth;
+		height: @gelogoHeight;
+	}
+	
+	.span2 {
+		background-color: @white;
+		width: @fieldWidth;
+		height: @signinTextboxHeight;
+	}
+	
+	.span2-error {
+		background-color: @white;
+		border-color: @cyan;
+		width: @fieldWidth;
+	}
+	
+	.signin-btn {
+		line-height : @baseLineHeight;
+		width : @fieldWidth;
+	}
+	
+	.error-block {
+		text-align:left;
+		color: @red;
+		width: @fieldWidth;
+	}
+	
+	.signin-margin20 {
+		margin-bottom: @signinMargin20;
+	}
+	
+	.signin-left {
+		margin-left: @signinMargin20; 
+		text-align: left;
+	}
+	
+	.signin-margin40 {
+		margin-bottom: @signinMargin40;
+	}
+	
+	h3 {
+		color: @grayDark;
+	}
+	h4 {
+		font-weight: bold;
+	}
+	
+	.signin-noheader-margin {
+		margin-top: @signinNoHeaderMargin;
+	}
+	
+	/* forgot pwd styles */ 
+	
+	// overriding bootstrap modal styles
+	.modal-dialog {
+		height: @forgotpwdHeight;
+		width: @forgotpwdWidth;	
+		margin-top: @forgotpwdTopMargin;	
+	}
+	
+	.modal-body {
+		padding: @forgotpwdLeftPadding;
+	}
+	
+	.modal-header {
+		background-color: @white;
+		text-align: left;
+		margin-top: @signinMargin20;
+		padding: @forgotpwdLeftPadding;
+	}
+	
+	.modal .modal-header .close {
+		margin-right: @signinMargin20;
+		color: @grayDark;
+		opacity: 1;
+		height: @signinCloseBtnSize;
+		width: @signinCloseBtnSize;
+	}
+
+	.close.btn:hover {
+		color: @grayDarker;
+		background-color: transparent;
+	  	border-color: transparent;
+	}
+	
+	.close.btn:active,
+	.close.btn.active {
+		color: @black;
+	  	background-image: none;
+	  	background-color: transparent;
+	  	border-color: transparent;
+	}
+	
+	/* forgot pwd screen specific styles */
+	.forgot-pwd-email {
+		width: @fieldWidth;
+		height: @signinTextboxHeight;
+	}
+	
+	.forgot-pwd-modal-footer {
+		border-top: none;
+		text-align: left;
+		padding-left: @forgotpwdLeftPadding;
+		padding-top: @forgotpwdLeftPadding;
+		padding-bottom: @signinMargin40;
+	}
+	
+	.forgot-pwd-label {
+		color: @black;
+	}
+	
+	.forgot-pwd-btn {
+		line-height : @baseLineHeight;
+		width : @forgotpwdBtnWidth;
+		margin-left: @forgotpwdLeftPadding;
+	}
+}

@@ -1,0 +1,102 @@
+<!-- AJAX, Array of Arrays -->
+
+<dl class="documentation">
+    <dt>Data loading: ajax array of arrays</dt>
+    <dd class="description">
+        <p>A Datagrid loading data with AJAX. <strong>Array of Arrays JSON response.</strong></p>
+    </dd>
+    <dt>Example</dt>
+    <dd class="example">
+        <form class="pull-right form-inline" style="margin-bottom:20px;">
+            <div class="input-group pull-right">
+                <input type="text" class="form-control input-sm" data-filter-table="dt-ajax-array">
+                <div class="input-group-btn">
+                	<button class="btn btn-icon btn-default" type="button"><i class="icon-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-ajax-array"></table>
+    </dd>
+    <dt class="hidden-sm">Usage</dt>
+    <dd class="usage hidden-sm">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;form class="form-inline pull-right"&gt;
+  &lt;div class="input-group pull-right"&gt;
+     &lt;input type="text" class="form-control input-sm" data-filter-table="dt-ajax-array"&gt;
+     &lt;div class=input-group-btn"&gt;
+         &lt;button class="btn btn-icon"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-ajax-array"&gt;&lt;/table&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+// Ajax with DataTables, array of arrays
+$('table[data-table-name="dt-ajax-array"]').basicdatagrid({
+  'aoColumns': [
+    { 'sTitle': 'Rendering engine', 'sClass': 'essential' },
+    { 'sTitle': 'Browser', 'sClass': 'essential' },
+    { 'sTitle': 'Platform(s)', 'sClass': 'optional' },
+    { 'sTitle': 'Engine version' },
+    { 'sTitle': 'CSS grade', 'sClass': 'essential' }
+  ],
+  'sAjaxSource': '../assets/data/aa.browsers.json',
+  'useFloater': false,
+  'isResponsive': true
+});
+</pre>
+        <p>Response:</p>
+<pre class="prettyprint linenums lang-javascript">
+// JSON Array of Arrays
+{
+  "aaData": [
+    [
+      "Trident",
+      "Internet Explorer 4.0",
+      "Win 95+",
+      "4",
+      "X"
+    ],
+    [
+      "Trident",
+      "Internet Explorer 5.0",
+      "Win 95+",
+      "5",
+      "C"
+    ],
+    [
+      "Trident",
+      "Internet Explorer 5.5",
+      "Win 95+",
+      "5.5",
+      "A"
+    ],
+    [
+      "Trident",
+      "Internet Explorer 6",
+      "Win 98+",
+      "6",
+      "A"
+    ],
+    [
+      "Trident",
+      "Internet Explorer 7",
+      "Win XP SP2+",
+      "7",
+      "A"
+    ]
+  ]
+}
+</pre>
+        <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+                <li>datagrids</li>
+            </ul>
+        </div>
+    </dd>
+</dl>
+
+<!-- /AJAX, Array of Arrays -->

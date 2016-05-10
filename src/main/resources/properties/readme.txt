@@ -1,0 +1,5 @@
+数据库配置
+issgwdb.properties放在tomcat目录下的issconfig下
+
+dicom配置、vp配置、mq配置
+scp.json、scu.json、mq.properties三个文件放在tomcat目录下的issconfig/properties文件下

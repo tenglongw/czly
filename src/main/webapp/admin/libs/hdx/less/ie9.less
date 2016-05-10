@@ -1,0 +1,87 @@
+// Dependencies
+// --------------------------------------------------
+@import "brandkit/less/hdx-variables.less";
+
+@import "navbar/less/ie9.less";
+@import "slider/less/ie9.less";
+
+// Overrides
+// --------------------------------------------------
+
+// IE9 does a poor job at rendering Helvetica Neue and Helvetica, if the user has them installed (they don't come with Windows by default)
+body {
+  font-family: "GE Sans", "ge-sans", "GE Inspira", "ge-inspira", Arial, sans-serif;
+}
+
+// Turn off gradients in IE9 because they can't be used when also using border-radius
+button,
+.btn-group,
+a.btn,
+ul.nav li a,
+.pagination ul li a,
+.alert,
+.label,
+.badge,
+.progress,
+.patient-acuity {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+}
+
+// Fix for missing table row hover arrows
+.table-arrow-selection > tbody > tr > td:first-child .arrow-container .arrow {
+  z-index: auto;
+}
+
+// Fix for missing arrow point for datagrids row hovers
+.arrow-container {
+  z-index: 1;
+}
+
+// IE9 allows this element to get focus and thus would get the focused style, which we don't want
+.uneditable-input {
+  &:focus,
+  &.focused {
+    border-color: @inputBorder;
+    color: @grayDark;
+    outline: none;
+  }
+}
+
+// Fix for table grid lines disappearing
+table.table {
+  border-collapse: separate;
+}
+
+// Fix for table header gradients conflicting with rounded corners
+table.table > thead > tr > th {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+}
+
+// Fix for datagrid main cell borders being lost after first hover
+.data-grid.table-hover > tbody > tr > td {
+  position: relative;
+}
+
+// Fix for scrollable module content being pushed instead of covered by scrollbar
+section.module.scrollable div.module-body {
+  padding-right: 0;
+}
+
+.btn,
+.btn.btn-primary {
+
+	&:active,
+	&.active {
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); // Because of rounded corners & IE9.
+	}
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px ;
+}
+

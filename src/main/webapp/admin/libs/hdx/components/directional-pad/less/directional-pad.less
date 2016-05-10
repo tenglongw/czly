@@ -1,0 +1,73 @@
+// Dependencies
+// --------------------------------------------------
+
+
+// Styles
+// --------------------------------------------------
+.directional-pad {
+  width: 104px;
+  height: 104px;
+}
+
+.directional-pad.mega {
+  width: 234px;
+  height: 234px;
+}
+
+.directional-pad {
+
+  .background {
+
+    .circle,
+    .inner-circle {
+      stroke-width: 1.5px;
+      stroke: @grayLighter;
+      fill: @white;
+    }
+
+    .center {
+      fill: @gray;
+    }
+
+    .line {
+      stroke: @grayLight;
+      fill: none;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+
+    .border {
+      stroke-width: 1.5;
+      stroke: none;
+      fill: transparent;
+    }
+
+    &:hover .border {
+      fill: @white;
+      stroke: @cyan;
+    }
+
+    &.pressed {
+      .border {
+        fill: @cyan;
+        stroke: @cyan;
+      }
+    }
+
+    .arrow {
+      stroke: @cyan;
+      fill: none;
+    }
+
+    &.pressed .arrow {
+      stroke: @white;
+    }
+  }
+}
+
+// This should be moved to ge-bootstrap for any release > 0.6.0
+a:focus {
+  outline: none;
+}

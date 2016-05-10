@@ -1,0 +1,55 @@
+//------------------------
+// HDS LIGHTS ON CSS THEME
+//------------------------
+//
+// What's happening here?
+//
+// This is the lights-on theme for GE Healthcare apps. It customizes
+// the look of the IIDS classic theme and extends it with new components.
+//
+
+@import "brandkit/less/fonts.less";
+
+// BOOTSTRAP IMPORTS
+// -----------------
+
+/*
+You have to make sure to import the variables, mixins and extensions from
+ge-bootstrap, otherwise our theme will not compile properly. This lets us
+keep the ge-bootstrap.css and the hds.css in separate files which avoids
+selector limit issues in IE8
+ */
+
+@import "ge-bootstrap/less/hdx-bootstrap.less";
+
+// Components
+
+@import "navbar/less/hdx-navbar.less";
+@import "modules/less/hdx-modules.less";
+@import "tables/less/hdx-tables.less";
+@import "datagrids/less/hdx-datagrids.less";
+@import "datepicker/less/hdx-datepicker.less";
+@import "sparkline/less/hdx-sparkline.less";
+@import "slider/less/hdx-slider.less";
+@import "simpleslider/less/hdx-simpleslider.less";
+@import "filechooser/less/hdx-filechooser.less";
+@import "declarative-visualizations/less/hdx-declarative-visualizations.less";
+@import "message-list/less/hdx-message-list.less";
+@import "trays/less/hdx-trays.less";
+@import "charts/less/hdx-charts.less";
+@import "rich-popover/less/hdx-popover.less";
+@import "directional-pad/less/hdx-directional-pad.less";
+@import "dashboard-widgets/less/hdx-add-widget.less";
+@import "signalstrength/less/hdx-signalstrength.less";
+@import "timepicker/less/hdx-timepicker.less";
+@import "footer/less/hdx-footer.less";
+@import "inspector/less/hdx-inspector.less";
+@import "jumpnav/less/hdx-jumpnav.less";
+@import "multi-step-navigation/less/hdx-multi-step-navigation.less";
+@import "signin/less/hdx-signin.less";
+
+// Bootstrap Base
+@componentsPath:  "../components";
+
+@FontAwesomePath: "@{componentsPath}/font-awesome/font";
+@imagesPath:      "../img/hds";

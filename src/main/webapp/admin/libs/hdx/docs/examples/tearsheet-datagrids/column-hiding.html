@@ -1,0 +1,83 @@
+<!-- Column hiding -->
+
+<dl class="documentation">
+	<dt>Column hiding</dt>
+	<dd class="description">
+		<p>A Datagrid using interactive <strong>column hiding.</strong></p>
+	</dd>
+	<dt>Example</dt>
+	<dd class="example">
+		<div class="pull-right">
+			<div class="col-vis-dropdown-container" style="margin: 0 0 20px;">
+				<!-- Will be filled in automatically by the column vis plugin -->
+			</div>
+			<div class="input-append" style="margin-top:8px;">
+				<!--
+				//remove the style attribute on top and uncomment below.
+						<input type="text" class="input-sm search-query" data-filter-table="dt-ajax-array"><button class="btn btn-icon"><i class="icon-search"></i></button>
+				-->
+			</div>
+		</div>
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered"
+		       data-table-name="dt-col-hiding-example"></table>
+	</dd>
+	<dt class="hidden-sm">Usage</dt>
+	<dd class="usage hidden-sm">
+		<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="pull-right"&gt;
+  &lt;div class="col-vis-dropdown-container"&gt;&lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text" class="input-sm search-query" data-filter-table="dt-ajax-array"&gt;&lt;button class="btn btn-icon"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-col-hiding-example"&gt;&lt;/table&gt;
+</pre>
+		<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+//assume 'datagrids/datagrids-col-vis' is on the page...
+$('table[data-table-name="dt-col-hiding-example"]').basicdatagrid({
+  'aoColumns': [
+    {'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential' },
+    {'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential' },
+    {'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional' },
+    {'sTitle': 'Engine version', 'mData': 'version' },
+    {'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential' }
+  ],
+  'sAjaxSource': '../assets/data/ao.browsers.json',
+  'useFloater': false,
+  "plugins": ["C"], //enable the Column Vis plugin (assumes datagrids/datagrids-col-vis.js is on the page)
+  "oColVis": { //configure the column vis plugin
+    "aiExclude": [ 1 ], // don't allow 2nd column to be hidden
+    "colVisDropdownSelector": ".col-vis-dropdown-container" //put the column hiding control inside the element at this selector
+  }
+});
+</pre>
+		<p>Notes:</p>
+		<ul>
+			<li>We forked the DataTables project's <a href="http://datatables.net/extras/colvis/" target="_blank">"ColVis"
+					plugin</a> for this functionality. </li>
+			<li>You must include the plugin library "[datagrids root]/js/datagrids/datagrids-col-vis.js" on the page. The
+				requirejs id for this in HDX is 'datagrids/datagrids-col-vis'</li>
+			<li>Configure according to the original plug-in's <a href="http://datatables.net/extras/colvis/" target="_blank">documentation</a>
+				with the following changes.
+				<ul>
+					<li>Datatable "plugins" have been moved out of the "sDom" settings parameter into a separate "plugins"
+						settings Array parameter, so enable the plugin by setting 'plugins': ["C"] on your table</li>
+					<li>Place the column hide dropdown inside any element consistent with design guidelines by specifying a
+						"colVisDropdownMenuSelector", which is a valid JQuery selector.</li>
+					<li>The notion of "column groups" to show/hide has been removed</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="alert alert-info">
+			<strong>Script Requirements:</strong>
+			<ul>
+				<li>datagrids</li>
+				<li>datagrids/datagrids-col-vis</li>
+			</ul>
+		</div>
+	</dd>
+</dl>
+
+<!-- /Column hiding -->

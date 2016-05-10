@@ -1,0 +1,689 @@
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <button data-loading-text="loading..." class="btn btn-primary stateful">Loading State</button>
+      </td>
+      <td class="description" id="buttons-stateful">Stateful</td>
+      <td class="usage">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;button data-loading-text="loading..." class="btn btn-primary stateful"&gt;
+Loading State&lt;/button&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$(&hellip;).button('loading');
+</pre>
+        <p>Sets button state to loading—disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.</p>
+        <p class="note">NOTE: Firefox persists the disabled state across page loads. A workaround for this is to use <code>autocomplete="off"</code>.</p>
+<pre class="prettyprint linenums lang-javascript">
+$(&hellip;).button('reset');
+</pre>
+        <p>Resets button state—swaps text to original text.</p>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-button</li>
+          </ul>
+        </div>
+    </tr> <!-- /stateful -->
+    <tr>
+      <td class="example">
+        <button class="btn btn-primary" data-toggle="button">Single Toggle</button>
+      </td>
+      <td class="description" id="buttons-toggle">Toggle</td>
+      <td class="usage">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;button class="btn btn-primary" data-toggle="button"&gt;Single Toggle&lt;/button&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$(&hellip;).button('toggle');
+</pre>
+        <p>Toggles push state. Gives the button the appearance that it has been activated.</p>
+        <p>The <code>data-toggle</code> attribute enables auto-toggling.</p>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-button</li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /toggle -->
+    <tr>
+      <td class="example">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="radio" name="radio-group">Left
+          </label>
+          <label class="btn btn-default">
+            <input type="radio" name="radio-group">Middle
+          </label>
+          <label class="btn btn-default">
+            <input type="radio" name="radio-group">Right
+          </label>
+        </div>
+      </td>
+      <td class="description" id="buttons-radio-group">Radio Button Groups</td>
+      <td class="usage">
+        <p>Add <code>data-toggle="buttons"</code> for radio-style toggling on <code>.btn-group</code>.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group" data-toggle="buttons"&gt;
+	&lt;label class="btn btn-default"&gt;
+		&lt;input type="radio" name="radio-group"&gt;Left
+	&lt;/label&gt;
+	&lt;label class="btn btn-default"&gt;
+		&lt;input type="radio" name="radio-group"&gt;Middle
+	&lt;/label&gt;
+	&lt;label class="btn btn-default"&gt;
+    &lt;input type="radio" name="radio-group"&gt;Right
+	&lt;/label&gt;
+	&lt;/div&gt;
+</pre>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-button</li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /radio button groups -->
+    <tr>
+      <td class="example">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox" name="checkbox-group">Left
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="checkbox-group">Middle
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="checkbox-group">Right
+          </label>
+        </div>
+      </td>
+      <td class="description" id="buttons-checkbox-group">Checkbox Button Groups</td>
+      <td class="usage">
+        <p>Add <code>data-toggle="buttons"</code> for checkbox-style toggling on <code>.btn-group</code>.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group" data-toggle="buttons"&gt;
+	&lt;label class="btn btn-default"&gt;
+		&lt;input type="checkbox" name="checkbox-group"&gt;Left
+	&lt;/label&gt;
+	&lt;label class="btn btn-default"&gt;
+	  &lt;input type="checkbox" name="checkbox-group"&gt;Middle
+	&lt;/label&gt;
+	&lt;label class="btn btn-default"&gt;
+		&lt;input type="checkbox" name="checkbox-group"&gt;Right
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-button</li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /checkbox button groups -->
+    <tr>
+      <td class="example">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Action <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverse <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn dropdown-toggle disabled" data-toggle="dropdown">Disabled <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </td>
+      <td class="description" id="buttons-dropdowns">Button Dropdowns</td>
+      <td class="usage">
+        <p>Use any <code>button</code> to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.</p>
+        <p>To quickly add dropdown functionality to any element just add <code>data-toggle="dropdown"</code> and any valid bootstrap dropdown will automatically be activated.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;Action &lt;i class="icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+        <p>You may optionally target a specific dropdown by using <code>data-target="#id"</code> or <code>href="#fat"</code>.</p>
+        <p class="note">NOTE: In some cases—like mobile—dropdown menus will extend outside the viewport. You need to resolve the alignment manually or with custom javascript.</p>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-dropdown</li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /button dropdowns -->
+    <tr>
+      <td class="example">
+        <div class="btn-group dropup">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Action <i class="icon-chevron-up"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+      </td>
+      <td class="description" id="buttons-dropups">Button Dropups</td>
+      <td class="usage">
+        <p>Add <code>.dropup</code> to a <code>.btn-group</code> containing a dropdown to switch to a dropup.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;Action &lt;i class="icon-chevron-up"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+        <p class="note">NOTE: If using the original <code>.caret</code> markup from Bootstrap, the <code>.caret</code> will flip automatically for dropups. Otherwise, change the <code>.dropdown-toggle</code> icon to <code>.icon-chevron-up</code>.</p>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-dropdown</li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /button dropups -->
+    <tr>
+      <td class="example">
+        <div class="btn-group">
+          <button class="btn btn-default">Action</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-primary">Action</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-success">Success</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-inverse">Inverse</button>
+          <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+        <p></p>
+        <div class="btn-group">
+          <button class="btn disabled">Disabled</button>
+          <button class="btn dropdown-toggle disabled" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+      </td>
+      <td class="description" id="buttons-split-dropdowns">Split-Button Dropdowns</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-default"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;&lt;i class="icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="dropdown" &gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-dropdown</li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /split-button dropdown -->
+    <tr>
+      <td class="example">
+        <p>
+          <button class="btn btn-icon"><i class="icon-user"></i></button>
+        </p>
+        <div class="btn-group">
+          <button class="btn btn-icon dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> <i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+        <p></p>
+        <div class="btn-group">
+          <button class="btn btn-icon"><i class="icon-user"></i></button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="dropdown">Action</a></li>
+            <li><a href="#" data-toggle="dropdown">Another action</a></li>
+            <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+          </ul>
+        </div>
+      </td>
+      <td class="description" id="icon-buttons">Icon Buttons</td>
+      <td class="usage">
+        <p>An icon may be used in place of text for a button by adding <code>.btn-icon</code> to any Bootstrap button and including the proper Icon markup.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;button class="btn btn-primary btn-icon dropdown-toggle" data-toggle="dropdown"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt; &lt;i class="icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
+</pre>
+        <div class="alert alert-info">
+          <strong>Script Requirements:</strong>
+          <ul>
+            <li>bootstrap/bootstrap-dropdown<br><small>(for dropdown icon buttons only)</small></li>
+          </ul>
+        </div>
+      </td>
+    </tr> <!-- /icon buttons -->
+    <tr>
+      <td class="example">
+        <div class="btn-group btn-filter">
+          <a class="btn btn-default">Asset 01</a>
+          <a class="btn btn-remove"><i class="icon-remove"></i></a>
+        </div>
+        <p></p>
+        <div class="btn-group btn-filter">
+          <a class="btn btn-default"><i class="icon-star color-cyan"></i>Asset 02</a>
+          <a class="btn btn-remove"><i class="icon-remove"></i></a>
+        </div>
+        <p></p>
+        <div class="btn-group btn-filter">
+          <a class="btn btn-default"><i class="icon-star color-red"></i>Asset 03</a>
+          <a class="btn btn-remove"><i class="icon-remove"></i></a>
+        </div>
+        <p></p>
+        <div class="btn-group btn-filter">
+          <a class="btn btn-default"><i class="icon-star color-green"></i>Asset 04</a>
+          <a class="btn btn-remove"><i class="icon-remove"></i></a>
+        </div>
+        <p></p>
+        <div class="btn-group btn-filter">
+          <a class="btn btn-default"><i class="icon-star color-orange"></i>Asset 05</a>
+          <a class="btn btn-remove"><i class="icon-remove"></i></a>
+        </div>
+        <p></p>
+        <div class="btn-group btn-filter">
+          <a class="btn btn-default"><i class="icon-star color-purple"></i>Asset 06</a>
+          <a class="btn btn-remove"><i class="icon-remove"></i></a>
+        </div>
+      </td>
+      <td class="description" id="filter-label-buttons">Filter Label Buttons</td>
+      <td class="usage">
+        <p>Add <code>.btn-filter</code> to a <code>.btn-group</code> to trigger special filter alignment rules.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group btn-filter"&gt;
+	&lt;a href="#" class="btn btn-default"&gt;Asset 01&lt;/a&gt;
+	&lt;a href="#" class="btn btn-remove"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+        <hr>
+        <p>Icons with the prefix <code>.color-</code> specify colors for use within filter buttons. The primary GE Charting Palette is available for usage: <code>cyan</code>, <code>green</code>, <code>orange</code>, <code>purple</code> and <code>red</code>.
+<pre class="prettyprint linenums lang-html">
+&lt;div class="btn-group btn-filter"&gt;
+	&lt;a href="#" class="btn btn-default"&gt;&lt;i class="icon-star color-red"&gt;&lt;/i&gt;Asset 01&lt;/a&gt;
+	&lt;a href="#" class="btn btn-remove"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+      </td>
+    </tr> <!-- /filter buttons -->
+</tbody>
+</table>
+
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <div class="directional-pad">
+          <a href="#" class="up">Up</a>
+          <a href="#" class="right">Right</a>
+          <a href="#" class="down">Down</a>
+          <a href="#" class="left">Left</a>
+        </div>
+      </td>
+      <td class="description" id="dp-4-direction">4-direction</td>
+      <td class="usage">
+        <p>Markup:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="directional-pad"&gt;
+  &lt;a href="#" class="up"&gt;Up&lt;/a&gt;
+  &lt;a href="#" class="right"&gt;Right&lt;/a&gt;
+  &lt;a href="#" class="down"&gt;Down&lt;/a&gt;
+  &lt;a href="#" class="left"&gt;Left&lt;/a&gt;
+&lt;/div&gt;</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+$('.directional-pad').directionalPad({
+  imagesUrl: '../../img/hds/svg'
+});
+</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>directional-pad</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="directional-pad">
+          <a href="#" class="left">Left</a>
+          <a href="#" class="right">Right</a>
+        </div>
+      </td>
+      <td class="description" id="dp-2-direction-horizontal">2-direction, horizontal</td>
+      <td class="usage">
+        <p>Markup:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="directional-pad"&gt;
+  &lt;a href="#" class="left"&gt;Left&lt;/a&gt;
+  &lt;a href="#" class="right"&gt;Right&lt;/a&gt;
+&lt;/div&gt;</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+$('.directional-pad').directionalPad({
+  imagesUrl: '../../img/hds/svg'
+});
+</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>directional-pad</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="directional-pad">
+          <a href="#" class="up">Up</a>
+          <a href="#" class="down">Down</a>
+        </div>
+      </td>
+      <td class="description" id="dp-2-direction-vertical">2-direction, vertical</td>
+      <td class="usage">
+        <p>Markup:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="directional-pad"&gt;
+  &lt;a href="#" class="up"&gt;Up&lt;/a&gt;
+  &lt;a href="#" class="down"&gt;Down&lt;/a&gt;
+&lt;/div&gt;</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+$('.directional-pad').directionalPad({
+  imagesUrl: '../../img/hds/svg'
+});
+</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>directional-pad</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <div class="directional-pad mega">
+          <a href="#" class="up">Up</a>
+          <a href="#" class="right">Right</a>
+          <a href="#" class="down">Down</a>
+          <a href="#" class="left">Left</a>
+        </div>
+      </td>
+      <td class="description" id="mpd-4-direction">4-direction</td>
+      <td class="usage">
+        <p>Markup:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="directional-pad mega"&gt;
+  &lt;a href="#" class="up"&gt;Up&lt;/a&gt;
+  &lt;a href="#" class="right"&gt;Right&lt;/a&gt;
+  &lt;a href="#" class="down"&gt;Down&lt;/a&gt;
+  &lt;a href="#" class="left"&gt;Left&lt;/a&gt;
+&lt;/div&gt;</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+$('.directional-pad').directionalPad({
+  imagesUrl: '../../img/hds/svg'
+});
+</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>directional-pad</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="directional-pad mega">
+          <a href="#" class="left">Left</a>
+          <a href="#" class="right">Right</a>
+        </div>
+      </td>
+      <td class="description" id="mpd-2-direction-horizontal">2-direction, horizontal</td>
+      <td class="usage">
+        <p>Markup:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="directional-pad mega"&gt;
+  &lt;a href="#" class="left"&gt;Left&lt;/a&gt;
+  &lt;a href="#" class="right"&gt;Right&lt;/a&gt;
+&lt;/div&gt;</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+$('.directional-pad').directionalPad({
+  imagesUrl: '../../img/hds/svg'
+});
+</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>directional-pad</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="directional-pad mega">
+          <a href="#" class="up">Up</a>
+          <a href="#" class="down">Down</a>
+        </div>
+      </td>
+      <td class="description" id="mpd-2-direction-vertical">2-direction, vertical</td>
+      <td class="usage">
+        <p>Markup:</p>
+        <pre class="prettyprint linenums lang-html">
+&lt;div class="directional-pad mega"&gt;
+  &lt;a href="#" class="up"&gt;Up&lt;/a&gt;
+  &lt;a href="#" class="down"&gt;Down&lt;/a&gt;
+&lt;/div&gt;</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+$('.directional-pad').directionalPad({
+  imagesUrl: '../../img/hds/svg'
+});
+</pre>
+        <div class="alert alert-info">
+          <strong>Script requirements:</strong>
+          <ul>
+            <li>directional-pad</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.UserMapper">
+	<select id="getUserByName" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_user
+		WHERE loginName = #{loginName}
+		AND passwd = #{passwd}
+	</select>
+
+	<select id="getUserListByConditions" resultMap="BaseResultMap">
+		SELECT
+		user.*
+		FROM t_user user
+		<where>
+			<if test="userName != null">
+				loginname LIKE CONCAT('%', #{userName} ,'%')
+			</if>
+		</where>
+		ORDER BY creationtime DESC
+		LIMIT #{pageQuery.pageOffset},#{pageQuery.limit}
+	</select>
+	<select id="getCountByConditions" resultType="int">
+		SELECT COUNT("id") FROM t_user
+		<where>
+			<if test="userName != null">
+				loginname LIKE CONCAT('%', #{userName} ,'%')
+			</if>
+		</where>
+	</select>
+	<select id="checkLoginName" resultType="int">
+		SELECT COUNT("id") FROM t_user
+		<where>
+			<if test="loginName != null">
+				loginname = #{loginName}
+			</if>
+			<if test="id != 0">
+				AND id != #{id}
+			</if>
+		</where>
+	</select>
+	<select id="queryAllUser" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_user
+	</select>
+</mapper>

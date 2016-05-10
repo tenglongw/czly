@@ -1,0 +1,1065 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Example - Dashboard - HDx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../../components/brandkit/favicon/favicon.ico">
+
+<link id="theme-styles" href="../../../css/hds.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../../css/responsive.css" rel="stylesheet" type="text/css">
+
+
+<!-- Documentation styles -->
+<!-- XXX documentation styles should not be included in examples -->
+<link id="documentation-styles" href="../../assets/css/documentation.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+  <link id="theme-ie" href="../../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+    <link id="theme-ie9" href="../../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../../components/modernizr/modernizr.js"></script>
+<script src="../../../components/requirejs/require.js"></script>
+<script src="../../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({
+    baseUrl: '../../../'
+  });
+</script>
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+
+<body>
+
+<style type="text/css" media="screen" scoped="">
+	/* force scrollhead size up - TODO make this unnecessary */
+	/*noinspection CssUnusedSymbol*/
+	div.dataTables_scrollHead {
+		height: 44px !important;
+	}
+
+</style>
+
+<div class="navbar navbar-static-top">
+	<div class="masthead navbar-inner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>My Application</span></a>
+    </div>
+    <div class="pull-right">
+      <div class="notifications pull-left btn-toolbar">
+          <div class="btn-group">
+              <button class="btn notification notification-alert dropdown-toggle" data-toggle="dropdown">9</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-message dropdown-toggle" data-toggle="dropdown">1</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-suggestion dropdown-toggle" data-toggle="dropdown">3</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-task dropdown-toggle" data-toggle="dropdown">0</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="user-utilities btn-group pull-left btn-toolbar">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+          <img src="../../../img/hds/doctor-thumb.png" class="user-thumbnail" alt="User photo" />
+          <span class="user-name">Dr. Bradley Casper</span>
+          <i class="icon-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li><a>Action</a></li>
+          <li><a>Another action</a></li>
+          <li><a>Something else here</a></li>
+          <li class="divider"></li>
+          <li><a>Separated link</a></li>
+        </ul>
+
+
+      </div>
+
+        
+    </div>
+  </div>
+</div>
+
+	
+<div class="primary-navbar navbar-collapse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      
+      <li class="active"><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      
+      <li><a href="../list/index.html">Patient List</a></li>
+      
+      <li><a href="../detail/detail.html">Patient Detail</a></li>
+      
+      <li><a href="../analytics/analytics.html">Analysis</a></li>
+      
+      <li><a href="../reports/reports.html">Reports</a></li>
+      
+      <li><a href="#">Additional Tab</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div class="container">
+
+	<div class="page-header voice voice-brand">
+		<h1 class="pull-left">Dashboard</h1>
+
+		<div class="pull-right">
+			<div class="btn-group">
+				<a href="#" class="btn btn-icon btn-default btn-sm" rel="tooltip" data-title="Refresh"
+				   data-placement="bottom"><i class="icon-ico_add_alt_sm"></i></a>
+				<a id="btn-refresh" href="#" class="btn btn-icon btn-default btn-sm" rel="tooltip" data-title="Refresh"
+				   data-placement="bottom"><i class="icon-refresh"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<section id="worklist-module" class="col-sm-8 col-md-8">
+			<div class="module scrollable draggable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Upcoming Worklist Items</h3>
+
+					<div class="pull-right">
+						<h3 class="pull-left text-muted hidden-sm">Show me&nbsp;&nbsp;</h3>
+
+						<div class="btn-group pull-left">
+							<button class="btn dropdown-toggle btn-default btn-sm" data-toggle="dropdown">All <i
+										class="icon-chevron-down"></i></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+						<div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+					</div>
+				</header>
+
+				<div class="module-body">
+					<br/>
+					   <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-worklist"></table>
+   <script type="text/javascript">
+   require([
+       'jquery', 'datagrids', 'prettify', 'ge-bootstrap',
+       'datatables-colreorder',
+       'datagrids/datagrids-col-vis',
+       'datagrids/datagrids-row-grouping'], function($) {
+ //Column reordering
+   $('table[data-table-name="dt-worklist"]').iidsBasicDataGrid({
+       'aoColumns': [
+           { 'sTitle': 'Status', 'sClass': 'essential'},
+           { 'sTitle': 'Patient ID', 'sClass': 'essential'},
+           { 'sTitle': 'Details', 'sClass': 'optional'},
+           { 'sTitle': 'Time Recovered'}
+       ],
+       'useFloater': false,
+       'sAjaxSource': '../../assets/data/worklist.items.json',
+       'plugins': ['R'] //enable the col-reorder plugin (assumes 'col-reorder-amd' is on the page)
+   });
+   });
+
+   </script>
+   
+   
+				</div>
+				<footer class="module-footer"></footer>
+			</div>
+
+			<div class="module draggable empty-placeholder"><span></span></div>
+		</section>
+
+		<section id="icu-patients" class="col-sm-4 col-md-4">
+			<div class="module draggable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Patients in ICU</h3>
+
+					<div class="pull-right">
+						<div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+					</div>
+				</header>
+				<div class="module-body">
+					
+<style type="text/css" media="screen" scoped="">
+	div.viz-point-label {
+		position: absolute;
+		text-align: right;
+		white-space: nowrap;
+	}
+</style>
+
+<div data-visualization="pill" data-values="12,45,67" data-label="Total Patients" data-classes="success,warning,danger" data-thickness="12" style="height:150px">
+    <script type="text/x-underscore-template" class="viz-point-label-template">
+        <div class="viz-point-label muted" style="{{ 'left:'+ x +'px; width: '+ (width - 2) +'px; top: '+ (y + height + 2) + 'px' }}">
+            {% if(className == 'danger') { %}
+                <i class="icon-danger-sign color-{{className}}"></i>
+            {% } %}
+            {{value}}
+        </div>
+    </script>
+</div>
+<div>
+	<h3>Lorem ipsum</h3>
+	<p class="muted">Lorem ipsum figur figgufgy kfhgfdiguk lorem ipsum</p>
+</div>
+
+				</div>
+				<footer class="module-footer"></footer>
+			</div>
+
+			<div class="module draggable empty-placeholder"><span></span></div>
+		</section>
+
+		<section id="event-status" class="col-sm-4 col-md-4">
+			<div class="module draggable scrollable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Event Status</h3>
+
+					<div class="pull-right">
+						<h4 class="pull-left"><span class="color-danger"><i class="icon-ico_warning_sm"></i> 4</span></h4>
+						<div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+					</div>
+				</header>
+				<div class="module-body">
+					        <div>
+          <ul class="message-list">
+            <li class="message-item">
+              <a href="#">
+                <span class="message-title"><i class="color-warning icon-ico_alert_sm"></i> <strong>Critical Alert</strong></span>
+                <p>
+                  This is a brief description or summary of the associated event that occured&hellip;
+                  <br>
+                  <time datetime="2013-06-09T13:45" class="message-time">09 June, 2013 at 13:45</time>
+                </p>
+              </a>
+            </li>
+            <li class="message-item">
+              <a href="#">
+                <span class="message-title"><i class="color-warning icon-ico_alert_sm"></i> <strong>Alert Title 2</strong></span>
+                <p>
+                  This is a brief description or summary of the associated event that occured&hellip;
+                  <br>
+                  <time datetime="2013-06-09T13:45" class="message-time">09 June, 2013 at 1:05</time>
+                </p>
+              </a>
+            </li>
+            <li class="message-item">
+              <a href="#">
+                <span class="message-title"><i class="color-warning icon-ico_alert_sm"></i> <strong>Alert Type and Title</strong></span>
+                <p>
+                  This is a brief description or summary of the associated event that occured&hellip;
+                  <br>
+                  <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                </p>
+              </a>
+            </li>
+            <li class="message-item">
+              <a href="#">
+                <span class="message-title"><i class="color-danger icon-ico_warning_sm"></i> <strong>Alert Type and Title</strong></span>
+                <p>
+                  This is a brief description or summary of the associated event that occured&hellip;
+                  <br>
+                  <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                </p>
+              </a>
+            </li>
+            <li class="message-item">
+              <p><a href="#">See All</a></p>
+            </li>
+          </ul>
+        </div>
+
+				</div>
+				<footer class="module-footer"></footer>
+			</div>
+
+			<div class="module draggable empty-placeholder"><span></span></div>
+		</section>
+
+		<section id="vaccination-status" class="col-sm-4 col-md-4">
+			<div class="module draggable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Vaccination Status</h3>
+
+					<div class="pull-right">
+						<div class="btn-group pull-left" data-toggle="buttons-radio">
+							<button class="btn active btn-default btn-sm">ICU</button>
+							<button class="btn btn-default btn-sm">All</button>
+						</div>
+						<div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+					</div>
+				</header>
+				<div class="module-body">
+					<!-- <div id="chart-col" class="chart"></div> -->
+					<div id="threshold-bar-chart" class="chart threshold-bar"></div>
+				</div>
+				<footer class="module-footer"></footer>
+			</div>
+
+			<div class="module draggable empty-placeholder"><span></span></div>
+		</section>
+
+		<section id="messages" class="col-sm-4 col-md-4">
+			<div class="module draggable scrollable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Messages (3)</h3>
+
+					<div class="pull-right">
+						<div class="btn-group pull-left">
+							<button class="btn dropdown-toggle btn-default btn-sm" data-toggle="dropdown">Unread <i
+										class="icon-chevron-down"></i></button>
+							<ul class="dropdown-menu">
+								<li><a>All</a></li>
+								<li><a>Unread</a></li>
+								<li><a>Read</a></li>
+							</ul>
+						</div>
+						<div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+					</div>
+				</header>
+				<div class="module-body">
+					      <div>
+        <ul class="message-list">
+          <li class="message-item">
+            <a href="#">
+              <span class="message-title"><small>Sender Name</small><strong>Message Subject Line</strong></span>
+              <p>Lorem ipsum dolor sit adipiscing consecteurest comodo amet prota&hellip;
+                <br>
+                <time datetime="2013-06-09T15:33" class="message-time">09 June, 2013 15:33</time>
+              </p>
+            </a>
+          </li>
+          <li class="message-item">
+            <a href="#">
+              <span class="message-title"><small>Sender Name</small><strong>Message Subject Line</strong></span>
+              <p>Lorem ipsum dolor sit adipiscing consecteurest comodo amet prota&hellip;
+                <br>
+                <time datetime="2013-06-09T01:05" class="message-time">09 June, 2013 1:05</time>
+              </p>
+            </a>
+          </li>
+          <li class="message-item">
+            <a href="#">
+              <span class="message-title"><small>Sender Name</small><strong>Message Subject Line</strong></span>
+              <p>Lorem ipsum dolor sit adipiscing consecteurest comodo amet prota&hellip;
+                <br>
+                <time datetime="2013-06-09T19:25" class="message-time">09 June, 2013 19:25</time>
+              </p>
+            </a>
+          </li>
+          <li class="message-item">
+              <p><a href="#">See All</a></p>
+          </li>
+        </ul>
+      </div>
+
+				</div>
+				<footer class="module-footer"></footer>
+			</div>
+
+			<div class="module draggable empty-placeholder"><span></span></div>
+		</section>
+
+		<section id="pneumonia-vaccination-status-older-adults" class="col-sm-9 col-md-9">
+			<div class="module scrollable draggable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Pneumonia Vaccination Status for Older Adults</h3>
+
+					<div class="pull-right">
+						<div class="btn-group pull-left" data-toggle="buttons-radio">
+							<button class="btn btn-default btn-sm"><i class="icon-fullscreen"></i></button>
+						</div>
+						<div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+					</div>
+				</header>
+				<div class="module-body">
+					
+<style type="text/css" media="screen" scoped="">
+
+	.block {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+	}
+
+	#vaccination-status-summary-text {
+		width: 140px;
+		padding: 10px 0 0 5px;
+	}
+	#vaccination-status-summary-text span.huge {
+		margin-left: -5px;
+		font-size: 70px;
+		line-height: 50px;
+	}
+	#vaccination-status-viz {
+		width: 160px;
+		margin-top:-10px;
+	}
+	#vaccination-status-details {
+		/* we pad this to create separation from peers to the left */
+		margin-left: 10px; /* space to get the right side lined up, determined through browser inspector */
+		margin-right: -21px; /* make room on the right - this effectively allows the div to go outside its parent bounds and avoid wrapping */
+		/* full width minus our two peers minus padding/margins minus slop */
+		max-width: calc(100% - 145px - 160px + 10px);
+		/* three blocks, padding and margins and all */
+		min-width: calc( (12px + 84px + 12px + 6px + 4px) * 3 );
+	}
+	#vaccination-status-details > p {
+		margin-top: 15px;
+	}
+
+	#vaccination-status-details .data-container {
+		width: calc(33% - 40px);
+		margin-right: 6px;
+		min-width: 84px;
+		display: inline-block;
+		padding: 9px;
+		border-radius: 8px;
+		background-color: transparent;
+	}
+	#vaccination-status-details .data-container:last-child {
+		margin-right: 0;
+	}
+
+	#vaccination-status-details .data-container .table td,
+	#vaccination-status-details .data-container .table th {
+		padding-left: 2px;
+		padding-right: 0;
+	}
+	/* TODO port into shared stylesheets and use system colors */
+	#vaccination-status-details .data-container .table td {
+	//	border-color: #eee;
+	}
+
+	#vaccination-status-viz .centerlabel {
+		position: absolute;
+		top: 50%;
+		margin-top: -17px;
+		margin-left: -4px;
+		width: 100%;
+		text-align: center;
+		font-size: 26px;
+	}
+	#vaccination-status-viz .success, .danger, .gray {
+		font-size:18px;
+		
+	}
+</style>
+	<div style="position: relative; vertical-align: top" class="module">
+		<div class="block" id="vaccination-status-summary-text">
+			<div>
+				<span class="voice-brand color-danger huge">12%</span>
+				<br/>
+				<span  class="muted">Goal 60%</span>
+			</div>
+			<br/>
+			<div><span class="label label-important">Measure Unmet</span></div>
+		</div>
+
+
+        <div class="block" id="vaccination-status-viz">
+	        <div data-visualization="donut" data-source='[["", 10], ["", 5], ["", 70]]' data-classes="success,gray,danger" data-label-placement="around" data-thickness="24" data-labelwrap="1" data-show-as-percentage="false">
+	        	<span class="voice-ui centerlabel">85</span>
+	        </div>
+        </div>
+
+		<div class="block hidden-tablet hidden-phone pull-right" id="vaccination-status-details">
+			<div style="text-align: right">
+				<div class="block data-container">
+					<table class="table">
+						<tr>
+							<th colspan="2">Numerator</th>
+						</tr>
+						<tr>
+							<td>Met</td>
+							<td width="20"><span class="color-info">63</span></td>
+						</tr>
+						<tr>
+							<td>Unmet</td>
+							<td width="20"><span class="color-info">68</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="block data-container">
+					<table class="table">
+						<tr>
+	 						<th colspan="2">Denominator</th>
+	 					</tr>
+	 					<tr>
+	 						<td>Denom</td>
+	 						<td width="20"><span class="color-info">63</span></td>
+	 					</tr>
+	 					<tr>
+	 						<td>Exclusions</td>
+	 						<td width="20"><span class="color-info">64</span></td>
+	 					</tr>
+	 				</table>
+				</div>
+				<div class="block data-container">
+					<table class="table">
+						<tr>
+	 						<th colspan="2">Exceptions</th>
+	 					</tr>
+	 					<tr>
+	 						<td>Exception</td>
+	 						<td width="20"><span class="color-info">5<small>%</small></span></td>
+	 					</tr>
+	 					<tr>
+	 						<td>Exception</td>
+	 						<td width="20"><span class="color-info">4<small>%</small></span></td>
+	 					</tr>
+	 				</table>
+				</div>
+			</div>
+
+			<p class="muted" style="text-align: right">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...
+			</p>
+		</div>
+
+	</div>
+
+				</div>
+				<footer class="module-footer"></footer>
+			</div>
+
+			<div class="module draggable empty-placeholder"><span></span></div>
+		</section>
+
+
+		<section id="add-module" class="col-sm-3 col-md-3">
+			<div class="module actionable module-add-widget">
+				<a href="#"><i class="icon-plus-sign"></i> Add Module</a>
+			</div>
+		</section>
+	</div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">��</button>
+				<h3 id="myModalLabel">Modal header</h3>
+			</div>
+			<div class="modal-body">
+				<img src="../../assets/imgs/180x100placeholder.jpg" class="img-responsive"
+				     alt=""/>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+// Preload JS libraries and exec page scripts
+require(
+		[
+			'jquery',
+			'charts',
+			'ge-bootstrap',
+			'datagrids',
+			'jqueryui-sortable-amd',
+			'hds'
+		], function($, charts) {
+			// make dashboard modules draggable
+			$('.row').sortable(
+					{
+						handle: '.module-header',
+						helper: 'clone',
+						items: '.draggable',
+						forceHelperSize: true,
+						revert: 200,
+						tolerance: 'pointer'
+					});
+
+			// initialize data grid
+			$('table[data-table-name="dt-worklist"]').iidsBasicDataGrid(
+					{
+						useFloater: false,
+						isResponsive: false,
+						bPaginate: false,
+						bInfo: false,
+						bSortClasses: false,
+						bScrollInfinite: true,
+						sScrollY: "165px",
+						"aaSorting": [
+							[3, "asc"]
+						]
+					});
+
+			// initialize highcharts
+			updateCharts(charts);
+		});
+
+// Conditionally load D3/Declarative Viz if SVG is supported.
+// This should prevent errors from being thrown in IE8
+if(Modernizr.svg)
+{
+	require(
+			['declarative-visualizations'], function(visualizations) {
+				// Initialize Bar Visualizations
+				$('div[data-visualization="pill"]').each(
+						function(i, element) {
+							//noinspection JSUnusedLocalSymbols
+							var pill = visualizations.pill(element);
+						});
+			});
+}
+else
+{
+	// If SVG isn't supported alert the user that some elements won't be loaded
+	alert('Your browser does not support SVG.\nAny element using D3.js will be omitted.');
+}
+
+function updateCharts(charts) {
+	var $thresholdBar = $(".threshold-bar");
+	var thresholdBarChartConfig = {
+		chart: {
+			renderTo: 'threshold-bar-chart',
+			height: 200,
+			type: 'column',
+			marginTop: 0,
+			marginLeft: 35 // this margin needs to be wide enough to accomodate the threshold line label
+
+		},
+		xAxis: {
+			categories: ['CDTI', 'DLPN', 'CD', 'PQR'],
+			labels: {
+				style: {
+					fontWeight: 'bold'
+				}
+			}
+
+		},
+		yAxis: {
+			labels: {
+				enabled: false
+			},
+			plotLines: [
+				{
+					color: $thresholdBar.css('color'),
+					dashStyle: 'Dash',
+					label: {
+						text: 'Limit', //label for threashold bar line.
+						align: 'left',
+						textAlign: 'right',
+						x: -4,
+						y: 3,
+						style: {
+							fontSize: $thresholdBar.css('font-size')
+						}
+					},
+					width: 1,
+					value: 65 // threshold value
+				}
+			],
+			title: null,
+			gridLineWidth: 1 // horizontal grid line width
+		},
+		legend: {
+			enabled: false
+		},
+		plotOptions: {
+			series: {
+				borderWidth: 0,
+				pointPadding: 0.25,
+				colorByPoint: true
+			}
+		},
+		series: [
+			{
+				name: 'Count',
+				data: [25, 68, 38, 50]
+			}
+		]
+	};
+
+	charts.bar('threshold-bar-chart', thresholdBarChartConfig);
+}
+
+</script>
+
+<script src="../../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+
+// Preload JS libraries and exec page scripts
+require([
+    'jquery',
+    'ge-bootstrap',
+    'hds'
+], function($) {
+    // application entry point
+
+    //
+    // your code here
+    //
+
+    // signin examples
+    $('#forgotpin').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpin-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpin-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send').on(
+					    'click', function() {
+						    var po = $('#forgotpin').data('popover');
+                    po.options.content=$('#forgotpin-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpin").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotuser').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotuser-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotuser-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-user').on(
+					    'click', function() {
+						    var po = $('#forgotuser').data('popover');
+                    po.options.content=$('#forgotuser-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotuser").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotpwd').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpwd-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpwd-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-pwd').on(
+					    'click', function() {
+						    var po = $('#forgotpwd').data('popover');
+                    po.options.content=$('#forgotpwd-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpwd").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+$('#btn-signin').on(
+			'click', function() {
+				$('#signin-progress').show();
+    });
+    /*
+     $('#forgotpin').click(function(){
+     $('#forgotpin').popover("show");
+     });
+     */
+    // end of signin examples
+
+    // jquery page loaded handler
+    $(function () {
+        $('#btn-refresh').click(toggleLightsOff);
+    });
+
+    setThemeFromURL();
+});
+
+// activate declarative visualizations
+require(['declarative-visualizations'], function(visualizations) {
+    $('div[data-visualization="donut"]').each(function(i, element) {
+        visualizations.donut(element);
+    });
+});
+
+var _lightsOff = false;
+
+function setThemeFromURL() {
+    // set theme from the URL
+    var query_string = window.location.search.replace('?', '')
+            , pairs = query_string.split('&')
+            , options = {};
+
+    for (var i=0; i < pairs.length; i++) {
+        var parts = pairs[i].split('=');
+        options[parts[0]] = parts[1];
+    }
+
+    if(options.theme == 'lights-off') {
+        setLightsOff(true);
+    }
+}
+
+function setLightsOff(b) {
+    _lightsOff = b;
+
+    //var themeStyle = b ? '../../../css/hds-lights-off.css' : '../../../css/hds.css';
+    var themeStyle;
+    var themeStyleEl = $('#theme-styles');
+    if (b) {
+        themeStyle = '../../../css/hds-lights-off.css';
+        themeStyleEl.attr('href', themeStyle);
+    } else {
+        themeStyle = '../../../css/hds.css';
+        themeStyleEl.attr('href', themeStyle);
+        $('#theme-styles-extra').remove();
+    }
+
+
+    var documentationStyle = b ? '../../assets/css/documentation-lights-off.css' : '../../assets/css/documentation.css';
+    $('#documentation-styles').attr('href', documentationStyle);
+
+    var chartTheme = b ? 'charts/theme-dark' : 'charts/theme';
+    require([chartTheme, 'charts','highstock'], function (theme, charts) {
+        Highcharts.setOptions(theme);
+
+        showMarkup();
+
+        if (b) {
+            // issue with firefox chart rendering requires small delay
+            window.setTimeout(function(){
+                updateCharts(charts);
+            }, 100);
+        } else {
+            updateCharts(charts);
+        }
+    });
+}
+
+function lightsOff() {
+    return _lightsOff;
+}
+
+function toggleLightsOff() {
+    hideMarkup();
+    setLightsOff(!_lightsOff);
+
+}
+
+function hideMarkup() {
+    $('body').css('visibility', 'hidden');
+}
+
+function showMarkup() {
+    $('body').css('visibility', 'visible');
+}
+
+</script>
+
+
+</body>

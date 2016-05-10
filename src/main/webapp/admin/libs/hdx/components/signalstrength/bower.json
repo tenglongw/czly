@@ -1,0 +1,21 @@
+{
+  "name": "SignalStrength",
+  "version": "0.4.6",
+  "main": [
+    "less/signalstrength.less",
+    "less/variables.less"
+  ],
+  "ignore": [
+    ".*",
+    "npm-debug.log",
+    "Gruntfile.js",
+    "package.json",
+    "components",
+    "css",
+    "node_modules",
+    "test"
+  ],
+  "dependencies": {
+    "ge-bootstrap": "git@github.sw.ge.com:DXC/ge-bootstrap#v1.10.3"
+  }
+}

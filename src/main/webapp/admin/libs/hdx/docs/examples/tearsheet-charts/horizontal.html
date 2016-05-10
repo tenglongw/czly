@@ -1,0 +1,88 @@
+<!--suppress HtmlUnknownTarget -->
+<dl class="documentation">
+	<dt>Examples</dt>
+	<dd class="example">
+
+		<div id="pill-viz" class="module col-sm-6 col-md-6">
+			<div class="module-body">
+
+				<div data-visualization="pill" data-values="1,1,1" data-label="Total Lorem Ipsum"
+				     data-classes="success,warning,danger" data-thickness="9">
+				</div>
+
+				<div id="single" data-visualization="pill" data-values="1" data-label="Total Lorem Ipsum"
+				     data-classes="success,warning,danger" data-thickness="9">
+				</div>
+
+				<div id="double" data-visualization="pill" data-values="1,1,0" data-label="Total Lorem Ipsum"
+				     data-classes="success,warning,danger" data-thickness="9">
+				</div>
+
+				<div id="tail" data-visualization="pill" data-values="0,1,1" data-label="Total Lorem Ipsum"
+				     data-classes="success,warning,danger" data-thickness="9">
+				</div>
+
+				<div id="head" data-visualization="pill" data-values="1,0,1" data-label="Total Lorem Ipsum"
+				     data-classes="success,warning,danger" data-thickness="9">
+				</div>
+
+				<div id="single" data-visualization="pill" data-values="0" data-label="Total Lorem Ipsum"
+				     data-classes="empty,empty,empty" data-thickness="9">
+				</div>
+			</div>
+		</div>
+
+	</dd>
+
+	<dt>Description</dt>
+	<dd class="description show"><br/>The contextual horizontal stacked bar also known as the pill in the
+		data-visualizations package.
+	</dd>
+
+	<dt>Usage</dt>
+	<dd class="usage">
+		<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+ &lt;div class="module col-sm-6 col-md-6" id="pill-viz" &gt;
+	 &lt;div class="module-body" &gt;
+		&lt;div data-visualization="pill" data-values="1,1,1" data-label="Total Lorem Ipsum" data-classes="success,warning,danger" data-thickness="9"/&gt;
+		&lt;id="single" data-visualization="pill" data-values="1" data-label="Total Lorem Ipsum" data-classes="success,warning,danger" data-thickness="9"/&gt;
+		&lt;id="double" data-visualization="pill" data-values="1,1,0" data-label="Total Lorem Ipsum" data-classes="success,warning,danger" data-thickness="9"/&gt;
+	 &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+		<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+require(['hdx-declarative-visualizations'], function(visualizations) {
+  // Initialize Bar Visualizations
+  $('div[data-visualization="pill"]').each(function(i, element) {
+    var pill = visualizations.pill(element);
+  });
+});
+</pre>
+
+		<div class="alert alert-info">
+			<strong>Script requirements:</strong>
+			<ul>
+				<li>hdx-declarative-visualizations</li>
+			</ul>
+		</div>
+	</dd>
+
+
+</dl>
+
+<script src="../../components/requirejs/require.js"></script>
+<script src="../../js/require.config.js"></script>
+<script type="text/javascript">
+	require.config({
+		               "baseUrl": "../../"
+	               });
+	require(['hdx-declarative-visualizations'], function(visualizations) {
+		// Initialize Bar Visualizations
+		$('div[data-visualization="pill"]').each(function(i, element) {
+			visualizations.pill(element);
+		});
+	});
+</script>

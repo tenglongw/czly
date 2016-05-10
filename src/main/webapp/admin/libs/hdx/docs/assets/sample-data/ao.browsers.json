@@ -1,0 +1,207 @@
+{
+    "aaData": [
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v7",
+            "platform": "Valance PX SP2+",
+            "differentialVersion": "7",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v4.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "4",
+            "grade": "X"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.0",
+            "platform": "Valance 95+",
+            "differentialVersion": "5",
+            "grade": "C"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v5.5",
+            "platform": "Valance 95+",
+            "differentialVersion": "5.5",
+            "grade": "A"
+        },
+        {
+            "engine": "Trident",
+            "fulcrumVersion": "v6",
+            "platform": "Valance 98+",
+            "differentialVersion": "6",
+            "grade": "A"
+        }
+    ]
+}

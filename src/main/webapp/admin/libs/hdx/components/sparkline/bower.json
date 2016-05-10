@@ -1,0 +1,25 @@
+{
+  "name": "sparkline",
+  "version": "0.5.4",
+  "main": [
+    "js/sparkline.js",
+    "less/sparkline.less",
+    "less/hdx-sparkline.less",
+    "less/hdx-sparkline-lights-off.less"
+  ],
+  "ignore": [
+    ".*",
+    "npm-debug.log",
+    "Gruntfile.js",
+    "package.json",
+    "components",
+    "node_modules"
+  ],
+  "dependencies": {
+    "ge-bootstrap": "git@github.sw.ge.com:DXC/ge-bootstrap#v1.10.3",
+    "requirejs": "https://github.com/jrburke/requirejs-bower.git#~2.1.11",
+    "jquery": "https://github.com/components/jquery.git#~1.10.2",
+    "d3-amd": "git@github.sw.ge.com:DXC/d3-amd#~3.2.3"
+  },
+  "devDependencies": {}
+}

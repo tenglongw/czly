@@ -1,0 +1,112 @@
+<table class="documentation">
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <div class="input-append input-group">
+	        <input type="text" class="form-control input-sm" id="typeahead-example">
+	        <span class="input-group-btn">
+		        <span class="add-on">
+	            <button class="btn btn-default" type="button"><i class="icon-search"></i></button>
+			      </span>
+	        </span>
+        </div>
+      </td>
+      <td class="description" id="su-typeahead">Typeahead</td>
+      <td class="usage">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="input-append input-group"&gt;
+	&lt;input id="typeahead-example"
+		type="text" class="form-control input-sm"&gt;
+	&lt;span class="input-group-btn"&gt;
+		&lt;span class="add-on"&gt;
+			&lt;button class="btn btn-default" type="button"&gt;
+				&lt;i class="icon-search"&gt;&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+        <p>Script:</p>
+        <pre class="prettyprint linenums lang-javascript">
+         var states = new Bloodhound({
+              datumTokenizer: function(d) {
+                  return Bloodhound.tokenizers.whitespace(d.val);
+              },
+              queryTokenizer: Bloodhound.tokenizers.whitespace,
+              local: [{ val: 'Alabama' }, { val: 'Alaska' }...... ]
+            });
+
+          states.initialize();
+
+          $('#typeahead-example').typeahead({
+                highlight: true
+            },
+            {
+                displayKey: 'val',
+                source: states.ttAdapter()
+            });
+        </pre>
+        <p class="note">NOTE: See <a href="https://twitter.github.io/typeahead.js/examples/" target="_blank">Bootstrap Typeahead Examples</a> for a full list of options.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="typeahead typeahead-faceted dropdown-menu" style="display: block; position: relative; width: 90%;">
+          <ul class="list-unstyled">
+            <li class="facet">
+              <div class="facet-name">Top Result</div>
+              <ul class="facet-results list-unstyled">
+                <li><a><strong>Ma</strong>ine</a></li>
+              </ul>
+            </li>
+            <li class="facet">
+              <div class="facet-name">States</div>
+              <ul class="facet-results list-unstyled">
+                <li><a><strong>Ma</strong>ine</a></li>
+                <li><a><strong>Ma</strong>ryland</a></li>
+                <li><a><strong>Ma</strong>ssachusetts</a></li>
+                <li><a>Alaba<strong>ma</strong></a></li>
+              </ul>
+            </li>
+            <li class="facet">
+              <div class="facet-name">Cities</div>
+              <ul class="facet-results list-unstyled">
+                <li><a><strong>Ma</strong>bleton, GA</a></li>
+                <li><a><strong>Ma</strong>cedon, NY</a></li>
+                <li><a><strong>Ma</strong>cedonia, OH</a></li>
+                <li><a><strong>Ma</strong>chesney Park, IL</a></li>
+                <li><a><strong>Ma</strong>comb, IL</a></li>
+              </ul>
+            </li>
+            <li><a>View All Results</a></li>
+          </ul>
+        </div>
+      </td>
+      <td class="description" id="su-faceted-search-results">Faceted search results</td>
+      <td class="usage">
+        <pre class="prettyprint linenums lang-html">
+            &lt;div class="typeahead typeahead-faceted dropdown-menu"&gt;
+              &lt;ul class="list-unstyled"&gt;
+                &lt;li class="facet"&gt;
+                  &lt;div class="facet-name"&gt;Top Result&lt;/div&gt;
+                  &lt;ul class="facet-results list-unstyled"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;strong&gt;Ma&lt;/strong&gt;ine&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/li&gt;
+                ...
+                &lt;li&gt;&lt;a href="#"&gt;View All Results&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>

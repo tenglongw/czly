@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>HDx Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="../components/modernizr/modernizr.js"></script>
+
+    <!-- HDx styles -->
+    <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="../css/hds.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../components/brandkit/favicon/favicon.ico">
+
+    <!-- Documentation styles -->
+    <link id="documentation-styles" href="assets/css/documentation.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+    <link id="theme-ie" href="../css/ie.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+
+    <!--[if IE 9]>
+    <link id="theme-ie9" href="../css/ie9.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="ge-logo"></span> <span>Healthcare Design Extension (HDx) Documentation</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="documentation-index">
+                <h1 class="voice-brand">Documentation &amp; Examples</h1>
+
+                <h2>Documentation</h2>
+                <h4><a href="tearsheets/ui.html">Basic UI Elements</a></h4>
+                <p>Documentation for and examples of HDx Basic UI Elements, including typography, buttons and forms.</p>
+	            <h4><a href="tearsheets/containers.html">Containers</a></h4>
+	            <p>Documentation for and examples of HDx Containers like Modules, Module Groups, Collapsible Module and Patient Module.</p>
+	            <h4><a href="tearsheets/components.html">Components</a></h4>
+                <p>Documentation for and examples of HDx Components, including complex buttons, navigation and charting.</p>
+                <h4><a href="tearsheets/charts.html">Charts</a></h4>
+                <p>Documentation for and examples of HDx Charts, including Highcharts and d3 charts.</p>
+                <h4><a href="tearsheets/datagrids.html">Datagrids</a></h4>
+                <p>Documentation for and examples of HDx Charts, with example loading and plugins.</p>
+				<h4><a href="tearsheets/sign-in.html">Sign In</a></h4>
+                <p>Documentation for and examples of HDx Sign In.</p>
+	            <h4><a href="tearsheets/i18n-fonts.html">i18n Fonts</a></h4>
+	            <p>Documentation for and examples of HDx i18n Fonts.</p>
+			    <hr />
+
+                <h2 class="voice-brand">Masthead and Navigation Patterns</h2>
+                <p>
+                    The Masthead and Navigation are a consistent, global framework throughout HDx. The Masthead provides global controls and alerts, and the primary and secondary Navigation communicate to the user where they are within the system.
+                </p>
+                <p>
+                    The Masthead and Global Navigation are consistent at the top of every screen across HDx. The masthead is the topmost bar and holds elements pertaining to the entire system. This includes system alerts, global search, and system settings. The primary navigation appears under the masthead, and allows for navigation through the different screens within the system. The secondary navigation sits below, and holds elements pertaining to the current screen, including breadcrumbs, screen title, secondary tabs, and contextual controls for the content on the screen.
+                </p>
+
+                <h4><a href="examples/navigation/masthead-and-primary.html">Masthead &amp; Primary</a></h4>
+                <p>HDx masthead and primary navigation pattern</p>
+                <h4><a href="examples/navigation/secondary-and-tertiary.html">Secondary &amp; Tertiary</a></h4>
+                <p>HDx secondary and tertiary navigation pattern</p>
+                <h4><a href="examples/navigation/workspace.html">Workspace</a></h4>
+                <p>HDx workspace navigation pattern</p>
+                <h4><a href="examples/navigation/mega-dropdown.html">Mega-Dropdown</a></h4>
+                <p>HDx masthead and primary navigation with mega-dropdown pattern</p>
+                <h4><a href="examples/navigation/breadcrumbs.html">Breadcrumbs</a></h4>
+                <p>HDx masthead and primary navigation pattern with breadcrumbs</p>
+
+                <hr />
+
+                <h2 class="voice-brand">Sample Application</h2>
+
+                <h4><a href="examples/dashboard/dashboard.html">Dashboard</a></h4>
+                <p>
+                    The Dashboard is an easily scannable, overarching summary of elemental information generated by the application. It acts as a hub of information and communication, and provides both previews and shortcuts to more detailed components in the application. The Dashboard loads at application launch and is personalized for each user. It’s populated with a set of widgets focused on communication which may include monitoring status and the activity of patients, devices, and staff. The Dashboard can be customized by rearranging and adding new widgets specific to the user's needs.
+                </p>
+
+                <h4><a href="examples/list/index.html">Patient List</a></h4>
+                <p>
+                    Devices and/or patients are indexed in a filterable, sortable Data Table. Items are listed with identifying information, such as status, date, and ID numbers. Filters appear in an omnipresent Filter Toolbar at the top of the screen, and reveal query-building controls that allow the user to reveal, hide, or highlight data grid contents based on text matching conditions. The filter labels are progressively populated with selection and double as labels for the table content. Multi-select filters reveal nested accordion drop downs to allow for multiple, categorized filtering.
+                </p>
+                <p>
+                    When selected, rows in the data table expand to reveal a preview, called the Inspector View, which provides a snapshot of the data associated with the row's content. The preview presented in the Inspector View pulls information from a separate, more detailed screen within the system, such as a Detail or Analytics screen. If more detailed information is needed, selecting the View More Details button in the Inspector View opens the relevant screen.
+                </p>
+
+                <h4><a href="examples/detail/detail.html">Patient Detail</a></h4>
+
+                <p>
+                    The Detail screen holds detailed information about a patient or device. This includes identifying information, current asset status, recent events, notes, configuration data, and snapshots of patient or device metrics. A patient or device summary banner provides a snapshot of statistics. Some modules in the Detail screen include links to view more details, which opens corresponding supplemental screens and are navigated through progressively populated breadcrumbs.
+                </p>
+
+                <h4><a href="examples/analytics/analytics.html">Analytics</a></h4>
+                <p>
+                    An Analytics screen represents a place where users can analyze and compare data to identify trends and insights. It provides detailed charts and visualizations of patient and device data. These visualizations may be defined by unit measurements, timelines, or device type. The charts and graphs are manipulated by filters, view selectors, scrubbers, and date pickers. Multiple tabs allow for easy data comparison, and and expandable data table allows for an alternate view of the visualized data.
+                </p>
+
+                <h4><a href="examples/reports/reports.html">Reports</a></h4>
+                <p>
+                    The Reporting page acts as a hub for accessing past reports and generating new ones. A report archive presents sortable thumbnails of past reports which, when selected, display previews of the reports below. The report preview presents descriptions, multi-user comments, and contextual controls. Reports, in this context, provide a living document that users can share and discuss virtually.
+                </p>
+<!-- 
+                <h4><a href="examples/data-table/data-table-infinite.html">Patient List ( Infinite Scroll )</a></h4>
+                <p>
+                    Demonstration implementation of server-driven infinite scroll on a datagrid. The server (simulated here by client-side javascript) handles all datagrid functions including fetching the next page of data, sorting, and filtering. A loading indicator appears during the server delay.
+                </p>
+ -->
+                <h4><a href="tearsheets/offcanvas-navbar.html">OffCanvas Navigation Menu ( In-progress )</a></h4>
+                <p>
+                    Demonstration implementation of responsive navigation menu which addresses the need to provide a better intuitive solution for navigating a multi-layer menu once it reaches a specific break point that is not optimal for the current navigation state. The design is intended to be a solution for only the portrait orientation on the iPad, when both the landscape and portrait orientations are supported.
+                </p>
+                
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../components/respond/respond.src.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.AttachmentMapper" >
+  <resultMap id="BaseResultMap" type="com.czly.entity.Attachment" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="Type" property="Type" jdbcType="VARCHAR" />
+    <result column="fileName" property="fileName" jdbcType="VARCHAR" />
+    <result column="fileSize" property="fileSize" jdbcType="VARCHAR" />
+    <result column="createdby" property="createdby" jdbcType="VARCHAR" />
+    <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
+    <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, type, fileName,fileSize, 
+      createdby, updatedby, creationtime,updatetime
+  </sql>
+   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_attachment
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.czly.entity.Attachment" >
+    insert into t_attachment (id, type, fileName,fileSize,
+      createdby, updatedby, creationtime, 
+      updatetime)
+    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{fileName,jdbcType=VARCHAR}, 
+      #{fileSize,jdbcType=VARCHAR}, 
+      #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_attachment
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.czly.entity.Attachment" >
+    update t_attachment
+    <set >
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="fileName != null" >
+        fileName = #{fileName,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null" >
+        fileSize = #{fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        createdby = #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        updatedby = #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <insert id="insertSelective" parameterType="com.czly.entity.Attachment" >
+    insert into t_attachment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="fileName != null" >
+        fileName,
+      </if>
+      <if test="fileSize != null" >
+        fileSize,
+      </if>
+      <if test="createdby != null" >
+        createdby,
+      </if>
+      <if test="updatedby != null" >
+        updatedby,
+      </if>
+      <if test="creationtime != null" >
+        creationtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="fileName != null" >
+        #{fileName,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null" >
+        #{fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

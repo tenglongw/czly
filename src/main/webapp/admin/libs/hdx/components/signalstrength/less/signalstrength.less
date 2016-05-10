@@ -1,0 +1,129 @@
+// Dependencies
+// --------------------------------------------------
+@import "variables.less";
+@import "brandkit/less/fonts.less";
+
+.signalstrength {
+
+	&.well {
+		overflow-x: visible !important;
+		padding: @signalStrengthPadding;
+	}
+
+	//--------------Styles
+	width: @signalStrengthWidth;
+	//padding: @signalStrengthPadding;
+	height: @signalStrengthHeight;
+
+	// Divide into two sections vertically
+	& .bodycontent {
+		diplay: block;
+	}
+	& .bodycontent .col1 {
+		width: 45%;
+		float: left;
+	}
+	& .bodycontent .col2 {
+		width: 55%;
+		float: right;
+
+	}
+
+	//-----------Styles for text, value and title ( common for lights on and lights off)
+
+	& .title {
+		font-family: @textFontFamily;
+		font-size: @textFontSize;
+	}
+	& .dynamictext {
+		font-family: @textFontFamily;
+		font-size: @textFontSize;
+	}
+	& .dynamicvalue {
+		font-family: @brandFontFamily;
+		font-size: 35px;
+		line-height: 40px;
+	}
+
+	//----------------Styles for status indicator.	
+
+	& .indicator {
+		font-family: @geicons;
+		font-size: 7px;
+		font-weight: normal;
+		font-style: normal;
+		text-decoration: inherit;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: 5px;
+		padding-top: 17px;
+		color: @emptyCircleColor;
+
+		// NOTE: data= is invalid and should be deprecated.  Appropriate usage is data-value=
+		&[data=""],
+		&[data="0"],
+		&[data="1"],
+		&[data="2"],
+		&[data="3"],
+		&[data="4"],
+		&[data-value=""],
+		&[data-value="0"],
+		&[data-value="1"],
+		&[data-value="2"],
+		&[data-value="3"],
+		&[data-value="4"] {
+			&:after, &:before {
+				color: @emptyCircleColor;
+			}
+		}
+		&[data=""],
+		&[data="0"],
+		&[data-value=""],
+		&[data-value="0"]{
+			&:after {
+				content: "@{icon-ico_circle_sm}@{icon-ico_circle_sm}@{icon-ico_circle_sm}@{icon-ico_circle_sm}@{icon-ico_circle_sm}";
+			}
+		}
+
+		> i[class^="icon-ico_warning_sm"] {
+			&:before {
+				vertical-align: top;
+				margin-top: -3px;
+			}
+			&.error {
+				vertical-align: top;
+				font-size: @baseFontSize+5;
+				color: @red;
+			}
+		}
+
+		> i[class^="icon-ico_alert_sm"] {
+			&:before {
+				vertical-align: top;
+			}
+			&.warning {
+				vertical-align: top;
+				font-size: @baseFontSize;
+				color: @orange;
+			}
+		}
+
+		> i[class^="icon-ico_circle_sm"] {
+			&:before {
+				vertical-align: top;
+				margin-top: 3px;
+			}
+			&.error {
+				color: @red;
+			}
+			&.warning {
+				color: @orange;
+				margin-left: 1px;
+			}
+			&.success {
+				color: @green;
+			}
+		}
+
+	}
+
+}

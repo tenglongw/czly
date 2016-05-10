@@ -1,0 +1,219 @@
+<dl class="documentation">
+<dt>Examples</dt>
+<dd class="example">
+	<div class="row">
+		<input type="hidden"
+		       class="slider col-md-8"
+		       value="50"
+		       data-min="0"
+		       data-max="100"
+		       data-slider-steps="10"
+		       data-slider-highlight="#0098d6"
+		       data-slider-label-position='outside'
+		       data-slider-snap='true'
+		       data-slider-label-suffix=" RPM"
+		       data-slider-button-position="apart"
+		       data-slider-tickmarks='4'
+		       data-slider-scale='5'
+				/>
+	</div>
+	<div class="row">
+		<br/>
+		<br/>
+	</div>
+	<div class="row">
+		<input type="hidden"
+		       class="slider col-md-8"
+		       value="10"
+		       data-min="0"
+		       data-max="100"
+		       data-slider-steps="10"
+		       data-slider-highlight="#0098d6"
+		       data-slider-label-position='outside'
+		       data-slider-snap='true'
+		       data-slider-label-suffix=" RPM"
+		       data-slider-button-position="together"
+		       data-slider-tickmarks='3'
+		       data-slider-scale='4'
+				/>
+	</div>
+	<div class="row">
+		<br/>
+		<br/>
+	</div>
+	<div class="row">
+		<input type="hidden"
+		       class="slider col-md-8"
+		       value="40"
+		       data-min="0"
+		       data-max="100"
+		       data-slider-steps="10"
+		       data-slider-highlight="#0098d6"
+		       data-slider-label-position='outside'
+		       data-slider-snap='true'
+		       data-slider-label-prefix="$"
+		       data-slider-label-suffix=".00"
+		       data-slider-button-position="together"
+		       data-slider-tickmarks='5'
+		       data-slider-scale='10'
+				/>
+	</div>
+	<div class="row">
+		<br/>
+		<br/>
+	</div>
+	<div class="row" style="margin-left:-20px">
+		<input type="hidden"
+		       class="slider col-md-6"
+		       value="32"
+		       data-min="0"
+		       data-max="80"
+		       data-slider-steps="10"
+		       data-slider-highlight="#0098d6"
+		       data-slider-label-position='outside'
+		       data-slider-snap='true'
+		       data-slider-label-suffix=" RPM"
+		       data-slider-button-position="apart"
+		       data-slider-tickmarks='2'
+		       data-slider-scale='4'
+				/>
+	</div>
+
+</dd>
+
+<dt>Usage</dt>
+<dd class="usage">
+	<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;input type="hidden"
+	class="slider col-md-8"
+	value="50"
+	data-min="0"
+	data-max="100"
+	data-slider-steps="10"
+	data-slider-highlight="#0098d6"
+	data-slider-label-position='outside'
+	data-slider-snap='true'
+	data-slider-label-suffix=" RPM"
+	data-slider-button-position="apart"
+	data-slider-tickmarks='4'
+	data-slider-scale='5'
+/&gt;
+</pre>
+
+	<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$('.slider').slider({
+});
+</pre>
+	<p>Attributes:</p>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td><code>value</code></td>
+			<td>integer</td>
+			<td></td>
+			<td>Initial slider value</td>
+		</tr>
+		<tr>
+			<td><code>data-min</code></td>
+			<td>integer</td>
+			<td></td>
+			<td>Minimum value for slider</td>
+		</tr>
+		<tr>
+			<td><code>data-max</code></td>
+			<td>integer</td>
+			<td></td>
+			<td>Max value for slider</td>
+		</tr>
+
+		<tr>
+			<td><code>highlight</code></td>
+			<td>string</td>
+			<td>'#009ae1'</td>
+			<td>Color code for highlighter portion of track</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-buttons</code></td>
+			<td>true|false</td>
+			<td>true</td>
+			<td>flag to specify if slider should have buttons to increment and decrement the value.</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-button-position</code></td>
+			<td>'apart'|'together'</td>
+			<td>'apart'</td>
+			<td>Determines if increment and decrement buttons should be next right and slift ends of slider or placed
+				next to
+				each other on the right side of the slider
+			</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-tickmarks</code></td>
+			<td>number</td>
+			<td>0</td>
+			<td> Number of small ticks between two large ticks with number values
+			</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-scale</code></td>
+			<td>number</td>
+			<td>0</td>
+			<td>Number of intervals with large tick marks</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-label-position</code></td>
+			<td>'outside'|'inside'</td>
+			<td>'outside'</td>
+			<td>Determines if label should be displayed outside the bordered area or inside the bordered area</td>
+		</tr>
+
+		<tr>
+			<td><code>data-slider-label-prefix</code></td>
+			<td>String</td>
+			<td>''</td>
+			<td>Label prefix</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-label-suffix</code></td>
+			<td>string</td>
+			<td>''</td>
+			<td>Label suffix</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-snap</code></td>
+			<td>true|false</td>
+			<td>false</td>
+			<td>Determines if thumb will snap to closest discrete multiple of 'step' when thumb is adjusted manually.
+			</td>
+		</tr>
+		<tr>
+			<td><code>data-slider-steps</code></td>
+			<td>integer</td>
+			<td>0</td>
+			<td>Unit of change when + or - button is pressed.</td>
+		</tr>
+
+	</table>
+
+	<div class="alert alert-info">
+		<strong>Script requirements:</strong>
+		<ul>
+			<li>slider</li>
+		</ul>
+	</div>
+
+</dd>
+</dl>
+
+
+<script type="text/javascript">
+	require(['jquery', 'slider'], function($) { $('.slider').slider({}); });
+</script>

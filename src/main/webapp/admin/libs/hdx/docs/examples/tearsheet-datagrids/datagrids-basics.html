@@ -1,0 +1,27 @@
+<dl class="documentation">
+    <dt>Datagrids Basics</dt>
+    <dd class="description">
+        <p>HDX Datagrids take advantage of the Datatables jQuery plugin.</p>
+        <p>Datagrids come pre-styled and should fully support the Datatables.net API. This includes loading data with JavaScript Arrays, AJAX and progressive server updates. See <a href="http://datatables.net/">datatables.net</a> for more information about datatables configuration.</p>
+
+        <h3>General notes</h3>
+        <ul>
+            <li>Add class=”outlier” to  elements to mark a cell as an outlier.</li>
+            <li>Any <code>input</code> elements with an attribute data-filter-table=”table-name” (where <code>table-name</code> is the data-table-name of an IIDS data table) will become filters using the standard datatables.net fnFilter() capability. See also the “Simple Column Filtering” example.</li>
+            <li>To disable the floater on rollover set the useFloater configuration option to false. e.g. <code>$('.my-table').iidsBasicDataGrid({ useFloater: false });</code></li>
+            <li>Responsive design
+
+                <ul>
+                    <li>To enable responsive breakpoints set the isResponsive configuration option to true. e.g. <code>$('.my-table').iidsBasicDataGrid({ isResponsive: true });</code></li>
+                    <li>When isResponsive is enabled, the number of columns displayed in the table depends on the available screen space. By default, a smartphone will display ~2-3 columns, while an expanded desktop browser displays the full set. This is accomplished by assigning semantic classes to the column headings that indicate which data values take precedence (essential vs optional). If a column does not contain an essential or optional class it will always have the lowest precedence.</li>
+                    <li>While isResponsive is enabled you can prevent certain breakpoints from firing by using the excludes option. For example excludes: { phone: true }} will prevent the component from dropping optional columns on phones. The supported excludes are phone, portraitTablet and landscapeTablet.</li>
+                </ul></li>
+            <li>Plugins
+
+                <ul>
+                    <li>In the base “datatables” JQuery plugin, the notion of “datatables plugins” is supported with a plugin API. I few plugins ship with the IIDx.</li>
+                    <li>To use a plugin, the plugin JavaScript must be included on the page and the plugin enabled in a datagrid instance. In the base “datatables” JQuery plugin, datatables plugins are enabled by adding the plugin code to the “sDom” configuration parameter.  This is messy as “sDom” contains a lot of settings that would need to be repeated.  IIDx datagrids provides a separate “plugins” configuration parameter that expects an Array of plugin codes, e.g. <code>$('.my-table').iidsBasicDataGrid({plugins: ['R']});</code></li>
+                </ul></li>
+        </ul>
+    </dd>
+</dl>

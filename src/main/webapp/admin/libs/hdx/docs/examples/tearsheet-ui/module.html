@@ -1,0 +1,308 @@
+<dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+    <div class="well">
+
+      <section class="module collapsible">
+        <header class="module-header">Header</header>
+        <div class="module-body collapse in">Body</div>
+        <footer class="module-footer collapse in">Footer</footer>
+      </section>
+
+      <br>
+
+      <section class="module collapsible">
+        <header class="module-header">Sample Component</header>
+        <div class="module-body collapse in">
+          <div class="module-data-viz gauges">
+  <div>
+    <p class="subtitle">Minute volume</p>
+    <div data-visualization="gauge" class="chart1" data-value="6.2" data-threshold="10" data-max="20" data-label-min="0" data-label-max="20 L/MIN"></div>
+    <p class="caption hero"><strong>6.2</strong> l/min</p>
+    <p class="caption">Ideal Minute Volume: <strong>10</strong> l/min</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Tidal volume</p>
+    <div data-visualization="gauge" class="chart2" data-value="508" data-max="1000" data-threshold="500" data-label-min="0" data-label-max="1000 ML"></div>
+    <p class="caption hero"><strong>508</strong> ml</p>
+    <p class="caption">Ideal Tidal Volume: <strong>500</strong> ml</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Respiratory rate</p>
+    <div data-visualization="gauge" class="chart3" data-value="14" data-max="35" data-threshold="17" data-label-min="0" data-label-max="35/MIN"></div>
+    <p class="caption hero"><strong>14</strong>/min</p>
+    <p class="caption">Ideal Respiratory Rate: <strong>17</strong>/min</p>
+  </div>
+</div>
+
+        </div>
+        <footer class="module-footer collapse in">
+          <p><a href="#module-collapsible">View More Data <i class="icon-chevron-right" style="font-size: 12px;"></i></a></p>
+        </footer>
+      </section> 
+
+    </div>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    Used to expand and collapse container modules.
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+    <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;section class="module collapsible"&gt;
+  &lt;header class="module-header"&gt;Header&lt;/header&gt;
+  &lt;div class="module-body collapse in"&gt;Body&lt;/div&gt;
+  &lt;footer class="module-footer collapse in"&gt;Footer&lt;/footer&gt;
+&lt;/section&gt;
+</pre>
+    <p>Script:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;script type="text/javascript"&gt;
+  require(['module'], function() {
+    $('.module.collapsible').collapsible();
+  });
+&lt;/script&gt;
+</pre>
+    <p>Notes:</p>
+    <ul>
+      <li>Make sure to include a <code>collapse</code> class on any element you wish to toggle.</li>
+      <li>If you want an element to be shown by default include an <code>in</code> class, as in the markup example above.</li>
+    </ul>
+    <div class="alert alert-info">
+      <strong>Script Requirements:</strong>
+      <ul>
+        <li>modules</li>
+      </ul>
+    </div>
+  </dd>
+</dl>
+
+<script type="text/javascript">
+  require(['modules'], function() {
+    $('.module.collapsible').collapsible();
+  });
+</script>
+
+<dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+    <div class="well">
+      <div class="module-group">
+        <section class="module">
+          <header class="module-header">Header</header>
+          <div class="module-body">Body</div>
+          <footer class="module-footer">Footer</footer>
+        </section>
+        <hr>
+
+        <section class="module actionable">
+          <header class="module-header">
+            <h3 class="voice voice-brand pull-left">Sample Component</h3>
+            <div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+          </header>
+          <div class="module-body">
+            <div class="module-data-viz gauges">
+  <div>
+    <p class="subtitle">Minute volume</p>
+    <div data-visualization="gauge" class="chart1" data-value="6.2" data-threshold="10" data-max="20" data-label-min="0" data-label-max="20 L/MIN"></div>
+    <p class="caption hero"><strong>6.2</strong> l/min</p>
+    <p class="caption">Ideal Minute Volume: <strong>10</strong> l/min</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Tidal volume</p>
+    <div data-visualization="gauge" class="chart2" data-value="508" data-max="1000" data-threshold="500" data-label-min="0" data-label-max="1000 ML"></div>
+    <p class="caption hero"><strong>508</strong> ml</p>
+    <p class="caption">Ideal Tidal Volume: <strong>500</strong> ml</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Respiratory rate</p>
+    <div data-visualization="gauge" class="chart3" data-value="14" data-max="35" data-threshold="17" data-label-min="0" data-label-max="35/MIN"></div>
+    <p class="caption hero"><strong>14</strong>/min</p>
+    <p class="caption">Ideal Respiratory Rate: <strong>17</strong>/min</p>
+  </div>
+</div>
+
+          </div>
+          <footer class="module-footer">
+            <p>
+              <a href="#module-groups" onclick="return false;">View More Data <i class="icon-chevron-right" style="font-size: 12px;"></i></a>
+            </p>
+          </footer>
+        </section>
+
+        <hr>
+        <section class="module">
+          <div class="module-body">
+            <table class="table table-striped table-hover responsive">
+              <thead>
+                <tr>
+                  <th class="essential">#</th>
+                  <th class="optional">First Name</th>
+                  <th class="essential">Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="voice voice-data">1</td>
+                  <td>Greg</td>
+                  <td>Petroff</td>
+                  <td>@gpetroff</td>
+                </tr>
+                <tr>
+                  <td class="voice voice-data">2</td>
+                  <td>Andrew</td>
+                  <td>Crow</td>
+                  <td>@andrewcrow</td>
+                </tr>
+                <tr>
+                  <td class="voice voice-data">3</td>
+                  <td>Dave</td>
+                  <td>Cronin</td>
+                  <td>@davcron</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    <p>Use module groups to join multiple modules together as one composite module. The top and bottom module will have rounded corners while modules in the center will use squared corners.</p>
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="module-group"&gt;
+    &lt;section class="module"&gt;
+        &lt;header class="module-header"&gt;Header&lt;/header&gt;
+        &lt;div class="module-body"&gt;Body&lt;/div&gt;
+        &lt;footer class="module-footer"&gt;Footer&lt;/footer&gt;
+    &lt;/section&gt;
+    &lt;hr&gt;
+    &lt;section class="module"&gt;
+        &lt;header class="module-header"&gt;Header&lt;/header&gt;
+        &lt;div class="module-body"&gt;Body&lt;/div&gt;
+        &lt;footer class="module-footer"&gt;Footer&lt;/footer&gt;
+    &lt;/section&gt;
+    &lt;hr&gt;
+    &lt;section class="module"&gt;
+        &lt;header class="module-header"&gt;Header&lt;/header&gt;
+        &lt;div class="module-body"&gt;Body&lt;/div&gt;
+        &lt;footer class="module-footer"&gt;Footer&lt;/footer&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+</pre>
+  </dd>
+</dl>
+
+<!--suppress HtmlUnknownTarget -->
+<dl class="documentation">
+<dd class="example">
+<section class="module module-patient">
+  <figure class="patient-photo pull-left">
+    <img src="../../img/hds/patient.png" alt="Patient photo" />
+  </figure>
+  <div class="pull-left">
+    <h1>Van DerHoote, Doris</h1>
+    <div class="patient-number">009 18 721</div>
+    <table class="table-overview">
+      <tbody>
+        <tr>
+          <td>F</td>
+          <td>68</td>
+          <td>25 Nov 1945</td>
+          <!--suppress CheckDtdReferences -->
+	        <td>5&rsquo; 3&rdquo;</td>
+          <td>114 lbs</td>
+          <td>Dr. J. Fraserton</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Sex</th>
+          <th>Age</th>
+          <th>DOB</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>PCP</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="btn-group pull-right">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">Go to... <i class="icon-chevron-down"></i></button>
+    <ul class="dropdown-menu">
+      <li><a href="#" data-toggle="dropdown">Action</a></li>
+      <li><a href="#" data-toggle="dropdown">Another action</a></li>
+      <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+    </ul>
+  </div>
+</section>
+</dd>
+<dd class="usage">
+<pre class="prettyprint linenums lang-javascript">
+&lt;section class=&quot;module module-patient&quot;&gt;
+  &lt;figure class=&quot;patient-photo pull-left&quot;&gt;
+    &lt;img src=&quot;../../img/hds/patient.png&quot; alt=&quot;Patient photo&quot; /&gt;
+  &lt;/figure&gt;
+  &lt;div class=&quot;pull-left&quot;&gt;
+    &lt;h1&gt;Van DerHoote, Doris&lt;/h1&gt;
+    &lt;div class=&quot;patient-number&quot;&gt;009 18 721&lt;/div&gt;
+    &lt;table class=&quot;table-overview&quot;&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;F&lt;/td&gt;
+          &lt;td&gt;68&lt;/td&gt;
+          &lt;td&gt;25 Nov 1945&lt;/td&gt;
+          &lt;td&gt;5&amp;rsquo; 3&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;114 lbs&lt;/td&gt;
+          &lt;td&gt;Dr. J. Fraserton&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+      &lt;tfoot&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Sex&lt;/th&gt;
+          &lt;th&gt;Age&lt;/th&gt;
+          &lt;th&gt;DOB&lt;/th&gt;
+          &lt;th&gt;Height&lt;/th&gt;
+          &lt;th&gt;Weight&lt;/th&gt;
+          &lt;th&gt;PCP&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group pull-right&quot;&gt;
+    &lt;button class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Go to... &lt;i class=&quot;icon-chevron-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+</dd>
+</dl>

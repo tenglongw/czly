@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Example - OffCanvas Navigation - Beta Feature</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../../components/brandkit/favicon/favicon.ico">
+
+<link id="theme-styles" href="../../../css/hds-offcanvasnav-lights-off.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../../css/responsive.css" rel="stylesheet" type="text/css">
+
+
+<!-- Documentation styles -->
+<!-- XXX documentation styles should not be included in examples -->
+<link id="documentation-styles" href="../../assets/css/documentation.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+  <link id="theme-ie" href="../../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+    <link id="theme-ie9" href="../../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../../components/modernizr/modernizr.js"></script>
+<script src="../../../components/requirejs/require.js"></script>
+<script src="../../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({
+    baseUrl: '../../../'
+  });
+</script>
+</head>
+
+<body>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+
+<div class="navbar navbar-default navbar-fixed-top offcanvas-fixed">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="navbar-ge-logo"></span><span>OffCanvas Navigation - Beta Feature</span></a>
+
+        <div class="pull-right">
+            <div class="notifications pull-left btn-toolbar">
+                <div class="btn-group">
+                    <button class="btn notification notification-alert dropdown-toggle" data-toggle="dropdown">9</button>
+                    <ul class="dropdown-menu pull-right message-list">
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-important pull-left">Urgent</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured&hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-warning pull-left">Moderate</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured&hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item"><a href="#">View all alerts</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn notification notification-message dropdown-toggle" data-toggle="dropdown">1</button>
+                    <ul class="dropdown-menu pull-right message-list">
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-important pull-left">Urgent</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured&hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-warning pull-left">Moderate</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured&hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item"><a href="#">View all alerts</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn notification notification-suggestion dropdown-toggle" data-toggle="dropdown">3</button>
+                    <ul class="dropdown-menu pull-right message-list">
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-important pull-left">Urgent</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured&hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-warning pull-left">Moderate</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured&hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item"><a href="#">View all alerts</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn notification notification-task dropdown-toggle" data-toggle="dropdown">0</button>
+                    <ul class="dropdown-menu pull-right message-list">
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-important pull-left">Urgent</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured &hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item">
+                            <a href="#">
+                                <span class="label label-warning pull-left">Moderate</span>
+                                <h4 class="message-title">Alert Type and Title</h4>
+
+                                <p>This is a brief description or summary of the associated event that occured &hellip;<br>
+                                    <time datetime="12:05" class="message-time">MM/DD/YY 12:05</time>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="message-item"><a href="#">View all alerts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-utilities btn-group pull-left btn-toolbar">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img src="../../../img/hds/doctor-thumb.png" class="user-thumbnail" alt="User photo"/>
+                    <span class="user-name">Dr. Bradley Casper</span>
+                    <i class="icon-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li><a>Action</a></li>
+                    <li><a>Another action</a></li>
+                    <li><a>Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a>Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .block {
+        padding-top: 100px; /* addresses hidden headings underneath navbar when user clicks link */
+    }
+</style>
+
+<div class="navmenu navmenu-default navbar-fixed-top navmenu-fixed-left offcanvas">
+    <div class="container">
+        <ul class="nav navmenu-nav primary-nav">
+            <li class="stickydropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="stickydropdown">Primary Nav 1</a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#chapter1">Chapter 1</a></li>
+                    <li><a href="#chapter2">Chapter 2</a></li>
+                    <li><a href="#chapter3">Chapter 3</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </li>
+            <li class="stickydropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="stickydropdown">Primary Nav 2</a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#chapter1">Chapter 1</a></li>
+                    <li><a href="#chapter2">Chapter 2</a></li>
+                    <li><a href="#chapter3">Chapter 3</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </li>
+            <li class="stickydropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="stickydropdown">Primary Nav 3</a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#chapter1">Chapter 1</a></li>
+                    <li><a href="#chapter2">Chapter 2</a></li>
+                    <li><a href="#chapter3">Chapter 3</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </li>
+            <li class="stickydropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="stickydropdown">Primary Nav 4</a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#chapter1">Chapter 1</a></li>
+                    <li><a href="#chapter2">Chapter 2</a></li>
+                    <li><a href="#chapter3">Chapter 3</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </li>
+            <li>
+                <hr/>
+            </li>
+            <li><a>Contact us</a></li>
+            <li><a>Lorem ipsum</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container navbar-page-content">
+    <h1 class="voice-brand">
+        Reference Example for Offcanvas Navbar (beta)
+    </h1>
+
+    <p class="voice-brand">Example of offcanvas navbar: Resize screen to 768px or less to view new, offconvas behavior</p>
+    <div class="module">
+        <div id="introduction" class="block">
+            <h2 class="voice-brand">Introduction</h2>
+            <div class="row">
+                <div class="col-sm-5 col-md-5">
+                    <ol>
+                        <li>Oviducia comet: Lorem ipsum dolor sit amet felsar e pluribus unum.</li>
+                        <li>Onus turpis: Eaque ipsa quae ab illo inventore.</li>
+                        <li>Eicidus consequeteur: Unde omnis iste natus error sit voluptatem accusanti.</li>
+                        <li>Nemo enim ipsam voluptatem </li>
+                        <li>Ut enim ad minim veniam</li>
+                        <li>Duis aute irure dolor in reprehenderit</li>
+                        <li>Excepteur sint occaecat cupidatat non proident</li>
+                        <li>Onus turpis: Eaque ipsa quae ab illo inventore.</li>
+                        <li>Eicidus consequeteur: Unde omnis iste natus error sit voluptatem accusanti.</li>
+                    </ol><br><br>
+                    <img src="../../assets/imgs/350x150placeholder.gif"  alt="" />
+                </div>
+                <div class="col-sm-1 col-md-1">
+                    <img src="../../assets/imgs/50x250placeholder.gif"  alt="" />
+                    <br><br>
+                    <img src="../../assets/imgs/50x150placeholder.gif"  alt="" /></div>
+                <div class="col-sm-5 col-md-5">
+                    <img src="../../assets/imgs/350x150placeholder.gif"  alt="" />
+                    <br><br>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="chapter1" class="block">
+            <h2 class="voice-brand">Chapter 1</h2>
+            <div class="row">
+                <div class="col-sm-2 col-md-2">
+                    <img src="../../assets/imgs/100x450placeholder.gif"  alt="" />
+                </div>
+
+                <div class="col-sm-3 col-md-3">
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                </div>
+
+                <div class="col-sm-6 col-md-6">
+                    <img src="../../assets/imgs/450x150placeholder.gif"  alt="" />
+                    <br><br>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="chapter2" class="block">
+            <h2 class="voice-brand">Chapter 2</h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <ol>
+                        <li>Oviducia comet: Lorem ipsum dolor sit amet felsar e pluribus unum.</li>
+                        <li>Onus turpis: Eaque ipsa quae ab illo inventore.</li>
+                        <li>Eicidus consequeteur: Unde omnis iste natus error sit voluptatem accusanti.</li>
+                        <li>Nemo enim ipsam voluptatem </li>
+                        <li>Ut enim ad minim veniam</li>
+                        <li>Duis aute irure dolor in reprehenderit</li>
+                        <li>Excepteur sint occaecat cupidatat non proident</li>
+                        <li>Onus turpis: Eaque ipsa quae ab illo inventore.</li>
+                        <li>Eicidus consequeteur: Unde omnis iste natus error sit voluptatem accusanti.</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-5 col-md-5">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <br><br>
+                    <img src="../../assets/imgs/250x250placeholder.gif"  alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div id="chapter3" class="block">
+            <h2 class="voice-brand">Chapter 3</h2>
+            <div class="row">
+                <div class="col-sm-1 col-md-1">
+                    <img src="../../assets/imgs/50x250placeholder.gif"  alt="" />
+                    <br><br>
+                    <img src="../../assets/imgs/50x150placeholder.gif"  alt="" /></div>
+                <div class="col-sm-5 col-md-5">
+                    <img src="../../assets/imgs/350x150placeholder.gif"  alt="" />
+                    <br><br>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                </div>
+                <div class="col-sm-5 col-md-5">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                    <br><br>
+                    <img src="../../assets/imgs/350x150placeholder.gif"  alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div id="conclusion" class="block">
+        <h2 class="voice-brand">Conclusion</h2>
+        <div class="row">
+
+            <div class="col-sm-3 col-md-3">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+                <img src="../../assets/imgs/450x150placeholder.gif"  alt="" />
+                <br><br>
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?. <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis <a href="#" onclick="return false;">Neque porro quisquam</a> est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+
+            <div class="col-sm-2 col-md-2">
+                <img src="../../assets/imgs/100x450placeholder.gif"  alt="" />
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<script src="../../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+
+    // Preload JS libraries and exec page scripts
+    require([
+        'jquery',
+        'ge-bootstrap',
+        'navbar-offcanvas'
+    ], function($) {});
+
+</script>

@@ -1,0 +1,117 @@
+// pulling out these colors as mixins to allow different bgcolor and outline for lights out
+.notification-alert-colors {
+  background-color: @notificationAlertBackground;
+}
+
+.notification-message-colors {
+  background-color: @notificationMessageBackground;
+}
+
+.notification-suggestion-colors {
+  background-color: @notificationSuggestionBackground;
+}
+
+.notification-task-colors {
+  background-color: @notificationTaskBackground;
+}
+
+.navbar  {
+  .btn, .btn-group.open .btn.dropdown-toggle {
+    &.notification, &.notification:hover {
+      color: @white;
+      padding-right: 10px;
+      padding-left: 29px;
+      height: 26px;
+      border-color: transparent;
+      font-size: @baseFontSize;
+      line-height: @baseFontSize;
+      background: transparent url("@{imagesPath}/masthead-notifications.png") no-repeat 2px -4px;
+    }
+
+    &.notification-alert, &.notification-alert:hover {
+      .notification-alert-colors;
+    }
+
+    &.notification-message, &.notification-message:hover {
+      .notification-message-colors;
+      background-position: 2px -37px;
+    }
+
+    &.notification-suggestion, &.notification-suggestion:hover {
+      .notification-suggestion-colors;
+      background-position: 2px -69px;
+    }
+
+    &.notification-task, &.notification-task:hover {
+      .notification-task-colors;
+      background-position: 2px -99px;
+    }
+  } // .btn
+
+  .user-utilities {
+
+    .dropdown-menu {
+      padding-left: 0;
+    }
+
+    .btn.dropdown-toggle {
+      font-size: @baseFontSize;
+      padding-left: 2px;
+      background-color: @grayDarkest;
+      border-color: @grayDarkest;
+      padding-top: 1px;
+      padding-right: 10px;
+      padding-bottom: 1px;
+
+      &:hover,
+      &.hover,
+      &:active,
+      &.active {
+        color: @grayDark;
+        background-color: @grayDarker;
+        background-image: none;
+        border-color: @grayDarker;
+      }
+
+      [class^="icon-"] {
+        margin: 0 0 0 5px;
+      }
+
+      .user-thumbnail {
+        width: 22px;
+        height: 22px;
+        .border-radius(@borderRadiusSmall - 1);
+        vertical-align: bottom;
+      }
+
+      .user-thumbnail {
+        width: 22px;
+        height: 22px;
+        .border-radius(@borderRadiusSmall - 1);
+        vertical-align: bottom;
+      }
+    }
+
+    &.open {
+      .btn.dropdown-toggle, .btn.dropdown-toggle:hover {
+        color: @white;
+        background-image: none;
+        background-color: darken(@grayDarkest, 7%);
+        border-color: darken(@grayDarkest, 7%);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .navbar {
+    .user-utilities {
+      .btn.dropdown-toggle {
+        .user-name {
+          display:none;
+        }
+      }
+    }
+  }
+}

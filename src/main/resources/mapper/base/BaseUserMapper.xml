@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.czly.entity.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="loginName" property="loginName" jdbcType="VARCHAR" />
+    <result column="passwd" property="passwd" jdbcType="VARCHAR" />
+    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    <result column="createdby" property="createdby" jdbcType="VARCHAR" />
+    <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
+    <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, loginName, passwd, userName, createdby, updatedby, creationtime, 
+    updatetime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.czly.entity.User" >
+    insert into t_user (id, loginName, passwd, 
+      userName,  
+      createdby, updatedby, creationtime, 
+      updatetime)
+    values (#{id,jdbcType=INTEGER}, #{loginName,jdbcType=VARCHAR}, #{passwd,jdbcType=VARCHAR}, 
+      #{userName,jdbcType=VARCHAR},
+      #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.czly.entity.User" >
+    insert into t_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="loginName != null" >
+        loginName,
+      </if>
+      <if test="passwd != null" >
+        passwd,
+      </if>
+      <if test="userName != null" >
+        userName,
+      </if>
+      <if test="createdby != null" >
+        createdby,
+      </if>
+      <if test="updatedby != null" >
+        updatedby,
+      </if>
+      <if test="creationtime != null" >
+        creationtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="loginName != null" >
+        #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="passwd != null" >
+        #{passwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.czly.entity.User" >
+    update t_user
+    <set >
+      <if test="loginName != null" >
+        loginName = #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="passwd != null" >
+        passwd = #{passwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        userName = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        createdby = #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        updatedby = #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.czly.entity.User" >
+    update t_user
+    set loginName = #{loginName,jdbcType=VARCHAR},
+      passwd = #{passwd,jdbcType=VARCHAR},
+      userName = #{userName,jdbcType=VARCHAR},
+      createdby = #{createdby,jdbcType=VARCHAR},
+      updatedby = #{updatedby,jdbcType=VARCHAR},
+      creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,137 @@
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+.form-horizontal .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-horizontal .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 10px;
+  line-height: 20px;
+  border-radius: 3px;
+}
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 8px;
+  line-height: 20px;
+  border-radius: 3px;
+}
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.pager:before,
+.pager:after,
+.modal-footer:before,
+.modal-footer:after,
+.panel-body:before,
+.panel-body:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.container-fluid:after,
+.row:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.modal-footer:after,
+.panel-body:after {
+  clear: both;
+}
+@media (max-width: 767px) {
+  table.documentation {
+    display: block;
+  }
+  table.documentation > thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  table.documentation > tbody {
+    display: block;
+  }
+  table.documentation > tbody > tr {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+  }
+  table.documentation > tbody > tr td.description {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    font-size: 14px;
+    width: 100% !important;
+    display: block;
+  }
+  table.documentation > tbody > tr td.example {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    width: 100% !important;
+    display: block;
+  }
+  table.documentation > tbody > tr td.usage {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    box-ordinal-group: 3;
+    display: none;
+  }
+  dl.documentation > dt {
+    display: none;
+  }
+  dl.documentation > dd.description,
+  dl.documentation > dd.usage {
+    display: none;
+  }
+}

@@ -1,0 +1,3189 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Example - Patient Monitoring Data View</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../../components/brandkit/favicon/favicon.ico">
+
+<link id="theme-styles" href="../../../css/hds.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../../css/responsive.css" rel="stylesheet" type="text/css">
+
+
+<!-- Documentation styles -->
+<!-- XXX documentation styles should not be included in examples -->
+<link id="documentation-styles" href="../../assets/css/documentation.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+  <link id="theme-ie" href="../../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+    <link id="theme-ie9" href="../../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../../components/modernizr/modernizr.js"></script>
+<script src="../../../components/requirejs/require.js"></script>
+<script src="../../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({
+    baseUrl: '../../../'
+  });
+</script>
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<!--suppress HtmlUnknownTarget -->
+<body>
+<!--suppress HtmlUnknownTarget -->
+<div class="navbar navbar-static-top navbar-default">
+	<div class="masthead navbar-inner">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span><span>My Application</span></a>
+    </div>
+    <div class="pull-right">
+        <div class="notifications pull-left btn-toolbar">
+            <div class="btn-group">
+                <button class="btn notification notification-alert dropdown-toggle btn-default" data-toggle="dropdown">9</button>
+                <ul class="dropdown-menu pull-right message-list">
+                    <li class="message-item">
+                        <a href="#">
+                            <span class="label label-important pull-left">Urgent</span>
+                            <h4 class="message-title">Alert Type and Title</h4>
+                            <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                        </a>
+                    </li>
+                    <li class="message-item">
+                        <a href="#">
+                            <span class="label label-warning pull-left">Moderate</span>
+                            <h4 class="message-title">Alert Type and Title</h4>
+                            <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                        </a>
+                    </li>
+                    <li class="message-item"><a href="#">View all alerts</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn notification notification-message dropdown-toggle btn-default" data-toggle="dropdown">1</button>
+                <ul class="dropdown-menu pull-right message-list">
+                    <li class="message-item">
+                        <a href="#">
+                            <span class="label label-important pull-left">Urgent</span>
+                            <h4 class="message-title">Alert Type and Title</h4>
+                            <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                        </a>
+                    </li>
+                    <li class="message-item">
+                        <a href="#">
+                            <span class="label label-warning pull-left">Moderate</span>
+                            <h4 class="message-title">Alert Type and Title</h4>
+                            <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                        </a>
+                    </li>
+                    <li class="message-item"><a href="#">View all alerts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user-utilities btn-group pull-left btn-toolbar">
+            <form class="user-utilities pull-left form-inline">
+                <div class="input-append">
+                    <input type="text" class="input-medium search-query form-control"><button type="submit" class="btn-inverse btn-icon"><i class="icon-search"></i></button>
+                </div>
+            </form>
+
+            <button class="btn dropdown-toggle btn-default" data-toggle="dropdown">
+                <img src="../../../img/hds/doctor-thumb.png" class="user-thumbnail" alt="User photo" />
+                <span class="user-name">Dr. Bradley Casper</span>
+                <i class="icon-chevron-down"></i>
+            </button>
+
+            <ul class="dropdown-menu pull-right">
+                <li><a>Action</a></li>
+                <li><a>Another action</a></li>
+                <li><a>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a>Separated link</a></li>
+            </ul>
+
+
+        </div>
+
+        <button class="btn btn-navbar btn-default" data-toggle="collapse" data-target=".nav-collapse">
+            <i class="icon-bar"></i>
+            <i class="icon-bar"></i>
+            <i class="icon-bar"></i>
+        </button>
+    </div>
+</div>
+</div>
+	
+<div class="primary-navbar navbar-collapse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      
+      <li class="active"><a href="../list/index.html">Patient List</a></li>
+      
+      <li><a href="../detail/detail.html">Patient Detail</a></li>
+      
+      <li><a href="../analytics/analytics.html">Analysis</a></li>
+      
+      <li><a href="../reports/reports.html">Reports</a></li>
+      
+      <li><a href="#">Additional Tab</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<!-- avoid flash of unstyled table -->
+<style type="text/css" scoped="">table[data-table-name="myTable"] {
+		visibility: hidden;
+	}</style>
+
+<div class="container">
+<div class="page-header">
+	<h1 class="voice voice-brand pull-left">Patient List</h1>
+
+	<div class="pull-right">
+		<div class="btn-group">
+			<a href="#myModal" class="btn btn-icon btn-default btn-lg" rel="tooltip" data-title="Share"
+			   data-placement="bottom" data-toggle="modal"><i class="icon-share-alt"></i></a>
+			<a href="#" class="btn btn-icon btn-default btn-lg" rel="tooltip" data-title="Refresh" data-placement="bottom"><i
+						class="icon-refresh"></i></a>
+		</div>
+	</div>
+</div>
+
+<style type="text/css" media="screen" scoped="">
+	#filter-toolbar div label {
+		font-size: 11px;
+		color: #aaa;
+	}
+
+	/*noinspection CssUnusedSymbol*/
+	#filter-toolbar label.radio {
+		margin-right: 20px;
+	}
+
+	.table tr td.inspector {
+		position: relative;
+		border: 3px solid rgb(16, 161, 222);
+		border-radius: 8px;
+		padding: 4px 8px 8px 8px;
+	}
+
+	/*noinspection CssUnusedSymbol*/
+	.table tr td.inspector .icon-caret-up {
+		position: absolute;
+		top: -20px;
+		left: 120px;
+		font-size: 20px;
+		color: rgb(16, 161, 222);
+	}
+
+	.table tr:hover td.inspector {
+		background-color: white;
+	}
+
+	/*noinspection CssUnusedSymbol*/
+	.table tr td.inspector span.label {
+		color: #aaa;
+		background-color: transparent;
+	}
+
+	/* force scrollhead size up - TODO make this unnecessary */
+	/*noinspection CssUnusedSymbol*/
+	div.dataTables_scrollHead {
+		height: 44px !important;
+	}
+
+	#inspector-template {
+		display: none;
+	}
+
+	/*noinspection CssUnusedSymbol*/
+	#chart {
+		width: calc(100% - 100px);
+		height: 200px;
+	}
+
+	.inspector {
+		position: relative;
+	}
+
+	.inspector-body > img {
+		width: 100%;
+	}
+
+	.inspector-footer {
+		margin-top: 8px;
+	}
+
+	select {
+		font-family: FontAwesome, Arial, sans-serif;
+	}
+
+	@media (max-width: 480px) {
+		body {
+			padding: 0 8px;
+		}
+
+		/*noinspection CssUnusedSymbol*/
+		.module, .module-body, form.form-search, #filter-toolbar .span12 {
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+		}
+
+		.module-header {
+			display: none;
+		}
+
+		h2 {
+			display: none;
+		}
+
+		.page-header > .pull-right {
+			float: right;
+			clear: none;
+		}
+	}
+
+</style>
+
+<!--
+The inspector template is a piece of HTML that is inserted into the inspector.
+-->
+<div id="inspector-template" class="inspector">
+	<i class="icon-caret-up"></i>
+
+	<div class="inspector-body">
+		<div class="pull-left">
+			<span class="voice-ui label label-default"><b>CBN</b> 240/50</span>
+			<span class="voice-ui label label-default">CT SCAN</span>
+			<span class="voice-ui label label-default">20 mm/s</span>
+		</div>
+		<div class="pull-right">
+			<span class="voice-ui label label-default"><b>ECG</b> 125L</span>
+			<span class="voice-ui label label-default">v239</span>
+			<span class="voice-ui label label-default"><b>ADS</b> 0.04-100Hz</span>
+			<span class="voice-ui label label-default">4x2.5x3_25R</span>
+		</div>
+		<br clear="all">
+		<!-- <img src="holder.js/1200x230/auto"  alt="" /> -->
+		<img src="../../../img/hds/ekg-placeholder.png" alt=""/>
+	</div>
+	<div class="inspector-footer">
+		<div class="pull-right">
+			<a href="../analytics/analytics.html" class="btn btn-default">See More Details</a>
+			<button class="btn close-inspector btn-default"><i class="icon-remove"></i></button>
+		</div>
+	</div>
+</div>
+
+
+<div id="filter-toolbar" class="row">
+	<div class="col-sm-12 col-md-12">
+		<section class="module">
+			<header class="module-header">
+				<h2>Filter Toolbar</h2>
+			</header>
+			<div class="module-body">
+				<form class="form-inline">
+
+					<div class="control-row">
+
+						<div class="col-sm-2 col-md-2 hidden-sm">
+							<label class="no-spacer-bottom" for="select-zone">Zone</label>
+							<br>
+							<select name="select-zone">
+								<option value="item-1">Zone 1</option>
+								<option value="item-2">Zone 2</option>
+								<option value="item-3">Zone 3</option>
+							</select>
+						</div>
+
+						<div class="col-sm-2 col-md-2 hidden-sm">
+							<label class="no-spacer-bottom" for="select-site">Site</label>
+							<br>
+							<select name="select-site">
+								<option value="item-1">San Ramon</option>
+								<option value="item-2">Site 2</option>
+								<option value="item-3">Site 3</option>
+							</select>
+						</div>
+
+						<div class="col-sm-3 col-md-3 hidden-sm">
+							<label class="no-spacer-bottom" for="select-measure">Measure</label>
+							<br>
+							<select name="select-measure">
+								<option value="item-1">PQRS / Diabetes / Hemoglobin.HBPC</option>
+								<option value="item-2">Measure 2</option>
+								<option value="item-3">Measure 3</option>
+							</select>
+						</div>
+
+						<div class="col-sm-3 col-md-3 hidden-sm">
+							<label class="no-spacer-bottom">&nbsp;</label>
+							<br>
+
+							<div class="checkbox"><label for="show-discharged" class="">
+									<input name="show-discharged" type="checkbox">
+									Show me discharged patients
+								</label></div>
+						</div>
+
+						<div class="col-sm-2 col-md-2">
+							<label class="no-spacer-bottom hidden-sm">&nbsp;</label>
+							<br class="hidden-sm">
+
+							<div class="input-append input-fluid">
+								<input type="text" class="search-query form-control" placeholder="Find..." data-filter-table="myTable">
+								<button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
+							</div>
+						</div>
+
+					</div>
+					<br clear="all" class="hidden-sm">
+					<!-- break -->
+					<div class="control-row">
+
+						<div class="col-sm-2 col-md-2 hidden-sm">
+							<label class="no-spacer-bottom" for="select-fulfillment-zone">Fulfillment</label>
+							<select name="select-fulfillment-zone">
+								<option value="item-1">Zone 1</option>
+								<option value="item-2">Zone 2</option>
+								<option value="item-3">Zone 3</option>
+							</select>
+						</div>
+
+						<div class="col-sm-2 col-md-2 hidden-sm">
+							<label class="no-spacer-bottom" for="select-practice">Practice</label>
+							<select name="select-practice">
+								<option value="item-1"></option>
+								<option value="item-2">Practice 2</option>
+								<option value="item-3">Practice 3</option>
+							</select>
+						</div>
+
+						<div class="col-sm-3 col-md-3 hidden-sm">
+						</div>
+
+						<div class="col-sm-3 col-md-3 hidden-sm">
+							<label class="no-spacer-bottom">&nbsp;</label>
+							<br>
+
+							<div class="checkbox"><label class="">
+									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+									Option 1
+								</label></div>
+							<div class="checkbox"><label class="">
+									<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									Option 2
+								</label></div>
+						</div>
+
+						<div class="col-sm-2 col-md-2 hidden-sm">
+							<label class="no-spacer-bottom" for="btn-clear-filter-selections">&nbsp;</label>
+							<br>
+							<button id="btn-clear-filter-selections" class="btn btn-primary fullwidth"><i
+										class="icon-remove-sign"></i> <i>Clear All Selections</i></button>
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<section class="module scrollable">
+			<header class="module-header">
+				<h2>Overview</h2>
+			</header>
+			<div class="module-body">
+				
+
+<style type="text/css" media="screen">
+  #example_table .postcare {
+    width: 120px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  table.table tr.unread td {
+    font-weight: bold;
+    background-color: #f5f5f5;
+  }
+</style>
+
+<table id="example_table" class="table table-hover" data-table-name="myTable">
+  <thead>
+    <tr>
+      <th class="centered essential">Status</th>
+      <th class="numeric essential">Patient Name</th>
+      <th class="numeric essential">Patient ID</th>
+      <th class="numeric">Assigned To</th>
+      <th class="">Room/Bed</th>
+      <th class="date">Date</th>
+      <th class="numeric">BPM</th>
+      <th class="optional postcare centered">Postcare</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key=""></span></td>
+      <td><a href="#">John Smith</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="john.smith">John Smith</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"><span class="badge badge-important">3</span></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="centered"><span class="editable" data-type="select" data-select="select-alert-level" data-key="critical"><i class="icon-ico_warning_sm error"></i></span></td>
+      <td><a href="#">Name Lastname</a></td>
+      <td>39039485</td>
+      <td><span class="editable" data-type="select" data-select="select-assigned-to" data-key="name.lastname">Name Lastname</span></td>
+      <td>345/13B</td>
+      <td>06 July, 2013</td>
+      <td class="col-bpm">188</td>
+      <td class="postcare">
+        <i class="icon-ico_hospitalsign_sm"></i>
+        <i class="icon-ico_ambulance_sm"></i>
+        <i class="icon-ico_oralpill_sm"></i>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+			</div>
+		</section>
+	</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Modal header</h3>
+	</div>
+	<div class="modal-body" style="height:400px">
+	</div>
+	<!-- <div class="modal-footer">
+		<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Dismiss</button>
+	</div> -->
+</div>
+
+<script>
+require.config(
+		{
+			baseUrl: '../../../'
+		});
+
+
+// mapping keys to icon classes
+var iconClasses = {
+	'success': 'icon-ok color-success',
+	'warning': 'icon-warning-sign color-warning',
+	'critical': 'icon-danger-sign color-danger'
+};
+// mapping status levels to sortable values
+var statusValue = {
+	'success': 1,
+	'warning': 2,
+	'critical': 3
+};
+// mapping keys to badge classes
+var badgeClass = {
+	'success': 'badge-success',
+	'warning': 'badge-warning',
+	'critical': 'badge-important'
+};
+
+
+require(
+		['jquery', 'ge-bootstrap', 'datagrids', 'trays', 'hds'], function($) {
+			$(
+					function() {
+						$('.tray').iidsFilterTray();
+						//noinspection JSUnusedLocalSymbols
+						var $table = $('table[data-table-name="myTable"]'),
+								table = $table.iidsBasicDataGrid(
+										{
+											useFloater: false,
+											isResponsive: true,
+											bInfo: false,
+											bSortClasses: false,
+											aaSorting: [
+												[2, "asc"]
+											],
+											bPaginate: true,
+											bScrollInfinite: true,
+											sScrollY: "441px",
+											fnCreatedRow: function(nRow, aData, iDataIndex) {
+												$(nRow).click(toggleInspector);
+											}
+										});
+
+						// fetch the (hungarian) table for later use
+						var oTable = table.dataTable();
+
+						// handle completion of editing
+						oTable.on(
+								'edited', function(e) {
+									console.log('edited', this, arguments);
+									// application logic goes here - submit to backend, etc
+								});
+						// handle completion of editing. Fired once for each span.editable
+						oTable.on(
+								'edited', function(e) {
+									var el = $(e.target);
+
+									if(el.data('select')=='select-alert-level')
+									{
+										el.empty();
+										var key = el.data('key');
+										if(iconClasses[key])
+										{
+											$('<i>').addClass(iconClasses[key]).appendTo(el);
+										}
+										else
+										{
+											// don't add an icon - it's 'none' or something else unknown
+										}
+									}
+
+									// your application logic goes here - submit to backend, etc
+
+								});
+
+
+						// there will be more than one inspector created, so we keep track of the count to construct unique ids
+						var inspectorCount = 0;
+						var inspectors = [];
+
+						function toggleInspector() {
+							var tr = this;
+
+							if(inspectors.length>0)
+							{
+								// close the other open inspector if open
+								// not required - feel free to keep multiples open
+								var openinsp = inspectors.pop();
+								//noinspection JSDeprecatedSymbols
+								oTable.fnClose(openinsp.tr);
+								toggleEditables(openinsp.el);
+								$(openinsp.tr).removeClass('row_selected');
+							}
+
+							// click means we've read it
+							$(tr).removeClass('unread');
+
+							// toggle editable
+							// $(tr).find('td a[class^=edit-]').editable('toggle');
+							var el = $(tr).find('td span.editable');
+							// el.editable('toggle', false); // closeAll = false
+							toggleEditables(el);
+
+
+							//noinspection JSCheckFunctionSignatures,JSDeprecatedSymbols
+							if(oTable.fnIsOpen(tr))
+							{
+								// $('td a[class^=edit-]', tr).editable('hide');
+								//noinspection JSCheckFunctionSignatures,JSDeprecatedSymbols
+								oTable.fnClose(tr);
+								// unregister change handler
+								$(tr).off('change');
+							}
+							else
+							{
+								// create inspector
+								var inspector = $('#inspector-template').clone();
+								inspector.attr('id', 'inspector-template-' + (inspectorCount++));
+
+								// hook up close button for this row
+								inspector.find('.close-inspector').click(
+										function() {
+											//noinspection JSCheckFunctionSignatures,JSDeprecatedSymbols
+											oTable.fnClose(tr);
+											toggleEditables(el);
+											$(tr).removeClass('row_selected');
+										});
+
+								inspectors.push({ inspector: inspector, tr: tr, el: el });
+
+								//noinspection JSCheckFunctionSignatures
+								oTable.fnOpen(tr, inspector, 'inspector');
+
+								// register event handler
+								$(tr).on(
+										'change', function(e) {
+											// application change handler goes here
+											console.log('change', this, e);
+										});
+							}
+							// return true so that additional handlers will run
+							return true;
+						}
+
+						// stop clicks on links from going through to parent table row (seen in firefox, not webkit)
+						$$table.find('tbody tr a').click(
+								function(e) {
+									e.stopPropagation();
+								});
+
+						$(window).resize(
+								function() {
+									// tell datatables to adjust itself
+									//noinspection JSDeprecatedSymbols
+									oTable.fnAdjustColumnSizing();
+								});
+
+						// avoid flash of unstyled table
+						$table.css({ visibility: 'visible' });
+					});
+
+			// This functionality could be packaged as a jquery plugin
+
+			function toggleEditables(el) {
+				el.each(
+						function(i, childEl) {
+							var child = $(childEl), editor;
+							if(child.is(':visible'))
+							{
+								// enter edit mode
+								// XXX should we be a form?
+								editor = $('<span class="editor"><select></select></span>');
+
+								// dummy metadata for dropdowns. Matches `data-src` attribute of `.editable`.
+								var defs = {
+									'select-assigned-to': {
+										'name.lastname': "Name Lastname",
+										'john.smith': "John Smith",
+										'house': "House",
+										'oliver.sacks': "Oliver Sacks",
+										'hippocrates': "Hippocrates"
+									},
+									'select-alert-level': {
+										'': 'None',
+										// using entities this way *almost* works - problems in chrome
+										// 'success' : '&#xf058 Success',
+										// 'warning' : '&#xf071 Warning',
+										// 'critical' : '&#xf071 Critical',
+										'success': 'Success',
+										'warning': 'Warning',
+										'critical': 'Critical'
+									}
+								};
+
+								// populate dropdown
+								// get definition from data-select attribute
+								var def = defs[child.data('select')];
+								var select = $('select', editor);
+								for(var k in def)
+								{
+									//noinspection JSUnfilteredForInLoop
+									select.append($('<option></option>').val(k).html(def[k]));
+								}
+								select.val(child.data('key'));
+
+								// (Firefox) stop clicks on select from going through to close row inspector
+								select.click(function() { return false });
+
+								// update view
+								child.hide();
+								editor.appendTo(child.parent());
+							}
+							else
+							{
+								// edit mode done
+
+								// get editor
+								editor = child.parent().find('span.editor');
+								var opt = $('select option:selected', editor);
+
+								// application logic for validation would go here
+
+								// save choice
+								// XXX might make more sense to leave this up to application logic
+								child.data('key', opt.val());
+								child.text(opt.text());
+
+								// tell everybody, passing editor for context
+								child.trigger('edited', editor);
+
+								// update view
+								child.show();
+								editor.remove();
+							}
+						});
+			}
+		});
+</script>
+
+<script src="../../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+
+// Preload JS libraries and exec page scripts
+require([
+    'jquery',
+    'ge-bootstrap',
+    'hds'
+], function($) {
+    // application entry point
+
+    //
+    // your code here
+    //
+
+    // signin examples
+    $('#forgotpin').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpin-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpin-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send').on(
+					    'click', function() {
+						    var po = $('#forgotpin').data('popover');
+                    po.options.content=$('#forgotpin-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpin").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotuser').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotuser-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotuser-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-user').on(
+					    'click', function() {
+						    var po = $('#forgotuser').data('popover');
+                    po.options.content=$('#forgotuser-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotuser").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotpwd').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpwd-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpwd-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-pwd').on(
+					    'click', function() {
+						    var po = $('#forgotpwd').data('popover');
+                    po.options.content=$('#forgotpwd-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpwd").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+$('#btn-signin').on(
+			'click', function() {
+				$('#signin-progress').show();
+    });
+    /*
+     $('#forgotpin').click(function(){
+     $('#forgotpin').popover("show");
+     });
+     */
+    // end of signin examples
+
+    // jquery page loaded handler
+    $(function () {
+        $('#btn-refresh').click(toggleLightsOff);
+    });
+
+    setThemeFromURL();
+});
+
+// activate declarative visualizations
+require(['declarative-visualizations'], function(visualizations) {
+    $('div[data-visualization="donut"]').each(function(i, element) {
+        visualizations.donut(element);
+    });
+});
+
+var _lightsOff = false;
+
+function setThemeFromURL() {
+    // set theme from the URL
+    var query_string = window.location.search.replace('?', '')
+            , pairs = query_string.split('&')
+            , options = {};
+
+    for (var i=0; i < pairs.length; i++) {
+        var parts = pairs[i].split('=');
+        options[parts[0]] = parts[1];
+    }
+
+    if(options.theme == 'lights-off') {
+        setLightsOff(true);
+    }
+}
+
+function setLightsOff(b) {
+    _lightsOff = b;
+
+    //var themeStyle = b ? '../../../css/hds-lights-off.css' : '../../../css/hds.css';
+    var themeStyle;
+    var themeStyleEl = $('#theme-styles');
+    if (b) {
+        themeStyle = '../../../css/hds-lights-off.css';
+        themeStyleEl.attr('href', themeStyle);
+    } else {
+        themeStyle = '../../../css/hds.css';
+        themeStyleEl.attr('href', themeStyle);
+        $('#theme-styles-extra').remove();
+    }
+
+
+    var documentationStyle = b ? '../../assets/css/documentation-lights-off.css' : '../../assets/css/documentation.css';
+    $('#documentation-styles').attr('href', documentationStyle);
+
+    var chartTheme = b ? 'charts/theme-dark' : 'charts/theme';
+    require([chartTheme, 'charts','highstock'], function (theme, charts) {
+        Highcharts.setOptions(theme);
+
+        showMarkup();
+
+        if (b) {
+            // issue with firefox chart rendering requires small delay
+            window.setTimeout(function(){
+                updateCharts(charts);
+            }, 100);
+        } else {
+            updateCharts(charts);
+        }
+    });
+}
+
+function lightsOff() {
+    return _lightsOff;
+}
+
+function toggleLightsOff() {
+    hideMarkup();
+    setLightsOff(!_lightsOff);
+
+}
+
+function hideMarkup() {
+    $('body').css('visibility', 'hidden');
+}
+
+function showMarkup() {
+    $('body').css('visibility', 'visible');
+}
+
+</script>
+
+
+</body>

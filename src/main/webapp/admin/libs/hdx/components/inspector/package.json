@@ -1,0 +1,21 @@
+{
+  "name": "inspector",
+  "author": "General Electric",
+  "description": "Inspector component. Used with datagrid tables",
+  "version": "0.2.7",
+  "private": true,
+  "homepage": "http://gesdh.com/",
+  "devDependencies": {
+    "bower": "~0.10.0",
+    "grunt": "~0.4.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-shell": "^0.6.4",
+    "grunt-karma": "~0.8.0",
+    "grunt-contrib-jshint": "*",
+    "webdriver-support": "git+https://github.sw.ge.com/DT/webdriver-support.git#v2.0.3",
+    "karma-support": "git+https://github.sw.ge.com/DT/karma-support.git#v1.0.1",
+    "karma-chrome-launcher": "~0.1.3"
+  }
+}

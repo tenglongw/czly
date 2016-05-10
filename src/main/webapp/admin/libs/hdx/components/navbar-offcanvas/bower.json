@@ -1,0 +1,21 @@
+{
+    "name": "navbar-offcanvas",
+    "author": "General Electric",  
+    "version": "0.1.1",
+    "description": "Responsive off-canvas navbar",
+      "ignore": [
+        "components",
+        "css",
+        "node_modules",
+        "img",
+        ".*",
+        "Gruntfile.js",
+        "js/require.config.js"
+      ],
+      "dependencies": {
+        "ge-bootstrap": "git@github.sw.ge.com:DXC/ge-bootstrap#v1.10.3",
+        "requirejs": "git://github.com/jrburke/requirejs-bower#~2.1.11",
+        "jquery": "git://github.com/components/jquery#~1.10.2",
+        "responsive-emitter": "git@github.sw.ge.com:DXC/responsive-emitter#~0.8.1"
+      }
+}

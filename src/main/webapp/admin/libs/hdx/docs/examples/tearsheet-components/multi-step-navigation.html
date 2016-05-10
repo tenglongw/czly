@@ -1,0 +1,78 @@
+<dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+		<div class="multi-step-nav col-sm-10 col-md-10">
+			<div class="navbar navbar-default">
+			  <div class="navbar-inner">
+			    <div class="container">
+    				<ul>
+    					<li><a href="#tab1" data-toggle="tab" class="tab"><i class="icon-circle-blank"></i> Step 1: Lorem ipsum dolor</a></li>
+    					<li><a href="#tab2" data-toggle="tab"><i class="icon-circle-blank"></i> Step 2: Sit amet adipiscing</a></li>
+    					<li><a href="#tab3" data-toggle="tab"><i class="icon-circle-blank"></i> Step 3: Consecteur etud</a></li>
+    				</ul>
+          </div>
+        </div>
+			</div>
+			<div class="tab-content">
+				<ul class="pager wizard">
+					<li class="previous"><a>Previous</a></li>
+					<li class="next"><a>Next</a></li>
+					<li class="next finish" style="display:none;"><a href="javascript:">Finish</a></li>
+				</ul>
+			</div>
+		</div>
+<script type="text/javascript">
+require([
+   'jquery',
+   'twitter-bootstrap-wizard',
+   'multi-step-navigation'
+],function ($){
+   $('.multi-step-nav').multiStepNavigation();
+});
+</script>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    <p>Multi step navigation information regarding the steps the user has completed, the current step the user is on and how many steps are remaining.
+    Controls to go to previous and next step are provided.<br>
+    Application content for each step should be included between the navigation bar and the pager controls.    </p>
+    
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+    <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="multi-step-nav col-sm-10 col-md-10"&gt;
+  &lt;div class="navbar navbar-default"&gt;
+    &lt;div class="container"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#tab1" data-toggle="tab" class= "tab"&gt;&lt;i class="icon-circle-blank"&gt;&lt;/i&gt; Step 1: Lorem ipsum dolor&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;&lt;i class="icon-circle-blank"&gt;&lt;/i&gt; Step 2: Sit amet adipiscing&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#tab3" data-toggle="tab"&gt;&lt;i class="icon-circle-blank"&gt;&lt;/i&gt; Step 3: Consecteur etud&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;ul class="pager wizard"&gt;
+      &lt;li class="previous"&gt;&lt;a&gt;Previous&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="next"&gt;&lt;a&gt;Next&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="next finish" style="display:none;"&gt;&lt;a href="javascript:;"&gt;Finish&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> 
+    <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+require(['twitter-bootstrap-wizard','multi-step-navigation','jquery'],function (){
+ $('.multi-step-nav').multiStepNavigation();
+});
+</pre>
+
+    <div class="alert alert-info">
+      <strong>Script Requirements:</strong>
+      <ul>
+        <li>twitter-bootstrap-wizard</li>
+      </ul>
+    </div>
+  </dd>
+</dl>

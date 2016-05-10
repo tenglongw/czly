@@ -1,0 +1,147 @@
+
+<style type="text/css" media="screen" scoped="">
+
+	.block {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+	}
+
+	#vaccination-status-summary-text {
+		width: 140px;
+		padding: 10px 0 0 5px;
+	}
+	#vaccination-status-summary-text span.huge {
+		margin-left: -5px;
+		font-size: 70px;
+		line-height: 50px;
+	}
+	#vaccination-status-viz {
+		width: 160px;
+		margin-top:-10px;
+	}
+	#vaccination-status-details {
+		/* we pad this to create separation from peers to the left */
+		margin-left: 10px; /* space to get the right side lined up, determined through browser inspector */
+		margin-right: -21px; /* make room on the right - this effectively allows the div to go outside its parent bounds and avoid wrapping */
+		/* full width minus our two peers minus padding/margins minus slop */
+		max-width: calc(100% - 145px - 160px + 10px);
+		/* three blocks, padding and margins and all */
+		min-width: calc( (12px + 84px + 12px + 6px + 4px) * 3 );
+	}
+	#vaccination-status-details > p {
+		margin-top: 15px;
+	}
+
+	#vaccination-status-details .data-container {
+		width: calc(33% - 40px);
+		margin-right: 6px;
+		min-width: 84px;
+		display: inline-block;
+		padding: 9px;
+		border-radius: 8px;
+		background-color: transparent;
+	}
+	#vaccination-status-details .data-container:last-child {
+		margin-right: 0;
+	}
+
+	#vaccination-status-details .data-container .table td,
+	#vaccination-status-details .data-container .table th {
+		padding-left: 2px;
+		padding-right: 0;
+	}
+	/* TODO port into shared stylesheets and use system colors */
+	#vaccination-status-details .data-container .table td {
+	//	border-color: #eee;
+	}
+
+	#vaccination-status-viz .centerlabel {
+		position: absolute;
+		top: 50%;
+		margin-top: -17px;
+		margin-left: -4px;
+		width: 100%;
+		text-align: center;
+		font-size: 26px;
+	}
+	#vaccination-status-viz .success, .danger, .gray {
+		font-size:18px;
+		
+	}
+</style>
+	<div style="position: relative; vertical-align: top" class="module">
+		<div class="block" id="vaccination-status-summary-text">
+			<div>
+				<span class="voice-brand color-danger huge">12%</span>
+				<br/>
+				<span  class="muted">Goal 60%</span>
+			</div>
+			<br/>
+			<div><span class="label label-important">Measure Unmet</span></div>
+		</div>
+
+
+        <div class="block" id="vaccination-status-viz">
+	        <div data-visualization="donut" data-source='[["", 10], ["", 5], ["", 70]]' data-classes="success,gray,danger" data-label-placement="around" data-thickness="24" data-labelwrap="1" data-show-as-percentage="false">
+	        	<span class="voice-ui centerlabel">85</span>
+	        </div>
+        </div>
+
+		<div class="block hidden-tablet hidden-phone pull-right" id="vaccination-status-details">
+			<div style="text-align: right">
+				<div class="block data-container">
+					<table class="table">
+						<tr>
+							<th colspan="2">Numerator</th>
+						</tr>
+						<tr>
+							<td>Met</td>
+							<td width="20"><span class="color-info">63</span></td>
+						</tr>
+						<tr>
+							<td>Unmet</td>
+							<td width="20"><span class="color-info">68</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="block data-container">
+					<table class="table">
+						<tr>
+	 						<th colspan="2">Denominator</th>
+	 					</tr>
+	 					<tr>
+	 						<td>Denom</td>
+	 						<td width="20"><span class="color-info">63</span></td>
+	 					</tr>
+	 					<tr>
+	 						<td>Exclusions</td>
+	 						<td width="20"><span class="color-info">64</span></td>
+	 					</tr>
+	 				</table>
+				</div>
+				<div class="block data-container">
+					<table class="table">
+						<tr>
+	 						<th colspan="2">Exceptions</th>
+	 					</tr>
+	 					<tr>
+	 						<td>Exception</td>
+	 						<td width="20"><span class="color-info">5<small>%</small></span></td>
+	 					</tr>
+	 					<tr>
+	 						<td>Exception</td>
+	 						<td width="20"><span class="color-info">4<small>%</small></span></td>
+	 					</tr>
+	 				</table>
+				</div>
+			</div>
+
+			<p class="muted" style="text-align: right">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...
+			</p>
+		</div>
+
+	</div>

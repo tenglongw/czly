@@ -1,0 +1,83 @@
+
+<table class="documentation">
+	<thead>
+	<tr>
+		<th>Example</th>
+		<th>Description</th>
+		<th>Usage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="example">
+			<div class="input-append input-group bootstrap-timepicker">
+				<input type="text" class="form-control input-sm timepicker">
+        		<span class="input-group-btn">
+	        		<span class="add-on">
+            			<button class="btn btn-default" type="button"><i class="icon-time"></i></button>
+		      		</span>
+        		</span>
+			</div>
+
+		</td>
+		<td class="description">This class is a widget for selecting a time. We've added a thin layer around
+			bootstrap-timepicker.
+
+		</td>
+		<td class="usage">
+
+<pre class="prettyprint linenums lang-html">
+&lt;div class="input-append bootstrap-timepicker"&gt;
+  &lt;input type="text" class="form-control input-sm timepicker"&gt;
+  &lt;span class="input-group-btn"&gt;
+		&lt;span class="add-on"&gt;
+	    &lt;button class="btn btn-default" type="button"&gt;
+	      &lt;i class="icon-time"&gt;&lt;/i&gt;
+	    &lt;/button&gt;
+		&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+
+<pre class="prettyprint linenums lang-html">
+&lt;script type="text/javascript"&gt;
+    require.config({
+    baseUrl: '../src'
+  });
+
+  require([
+    'jquery',
+    'timepicker'
+  ], function ($) {
+    $('.timepicker').timepicker();
+  });
+&lt;/script&gt;
+</pre>
+
+
+			<div class="alert alert-info">
+				<strong>Script Requirements:</strong>
+				<ul>
+					<li>bootstap-timepicker</li>
+					<li>bootstrap</li>
+					<li>jquery, require</li>
+					<li>timepicker</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+
+
+	</tbody>
+</table>
+
+<script type="text/javascript">
+    require(
+            [
+                'jquery',
+                'timepicker'
+            ], function($) {
+                $('.timepicker').timepicker();
+            });
+</script>

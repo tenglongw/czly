@@ -1,0 +1,73 @@
+.navbar,
+.navbar li *,
+.navbar button,
+.secondary-nav li *,
+.workspace-navbar li * {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+}
+.navbar-inner {
+  background-color: #131313;
+}
+.navbar-fixed-top {
+  border: 0;
+}
+.navbar .primary-navbar .mega-dropdown > li {
+  float: left;
+}
+div.slider button:active,
+div.slider.active .thumb {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+}
+body {
+  font-family: "GE Sans", "ge-sans", "GE Inspira", "ge-inspira", Arial, sans-serif;
+}
+button,
+.btn-group,
+a.btn,
+ul.nav li a,
+.pagination ul li a,
+.alert,
+.label,
+.badge,
+.progress,
+.patient-acuity {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+}
+.table-arrow-selection > tbody > tr > td:first-child .arrow-container .arrow {
+  z-index: auto;
+}
+.arrow-container {
+  z-index: 1;
+}
+.uneditable-input:focus,
+.uneditable-input.focused {
+  border-color: #dcdcdc;
+  color: #797979;
+  outline: none;
+}
+table.table {
+  border-collapse: separate;
+}
+table.table > thead > tr > th {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+}
+.data-grid.table-hover > tbody > tr > td {
+  position: relative;
+}
+section.module.scrollable div.module-body {
+  padding-right: 0;
+}
+.btn:active,
+.btn.btn-primary:active,
+.btn.active,
+.btn.btn-primary.active {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px ;
+}

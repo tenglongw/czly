@@ -1,0 +1,81 @@
+//-------------------------
+// HDS LIGHTS OFF CSS THEME
+//-------------------------
+//
+// What's happening here?
+//
+// This is the lights-off theme for GE Healthcare apps. It customizes
+// the look of the lights out theme and extends it with new components.
+//
+@import "brandkit/less/fonts.less";
+
+
+
+// BOOTSTRAP IMPORTS
+// -----------------
+
+/*
+You have to make sure to import the variables, mixins and extensions from
+ge-bootstrap, otherwise our theme will not compile properly. This lets us
+keep the ge-bootstrap.css and the iids.css in separate files which avoids
+selector limit issues in IE8
+ */
+
+// Bootstrap Base
+@import "ge-bootstrap/less/hdx-bootstrap-lights-off.less";
+
+
+// Components
+/*Navbar*/
+@import "navbar-offcanvas/less/hdx-navbar-offcanvas-lights-off.less";
+/*modules*/
+@import "modules/less/hdx-modules-lights-off.less";
+/*tables*/
+@import "tables/less/hdx-tables-lights-off.less";
+/*datagrids*/
+@import "datagrids/less/hdx-datagrids.less";
+/*datepicker*/
+@import "datepicker/less/hdx-datepicker-lights-off.less";
+/*sparkline*/
+@import "sparkline/less/hdx-sparkline-lights-off.less";
+/*slider*/
+@import "slider/less/hdx-slider-lights-off.less";
+/*simpleslider*/
+@import "simpleslider/less/hdx-simpleslider-lights-off.less";
+/*filechooser*/
+@import "filechooser/less/hdx-filechooser-lights-off.less";
+/*message-list*/
+@import "message-list/less/hdx-message-list-lights-off.less";
+/*declarative vis*/
+@import "declarative-visualizations/less/hdx-declarative-visualizations-lights-off.less";
+/*charts*/
+@import "charts/less/hdx-charts-lights-off.less";
+/*popover*/
+@import "rich-popover/less/hdx-popover-lights-off.less";
+/*trays*/
+@import "trays/less/hdx-trays-lights-off.less";
+/*directional pad*/
+@import "directional-pad/less/hdx-directional-pad-lights-off.less";
+/*add-widget*/
+@import "dashboard-widgets/less/hdx-add-widget-lights-off.less";
+/*signalstrength*/
+@import "signalstrength/less/hdx-signalstrength-lights-off.less";
+
+@import "timepicker/less/hdx-timepicker-lights-off.less";
+@import "footer/less/hdx-footer-lights-off.less";
+
+/* No lights off for inspector for now - change once added */
+@import "inspector/less/hdx-inspector-lights-off.less";
+
+/*jumpnav*/
+@import "jumpnav/less/hdx-jumpnav-lights-off.less";
+/* Multi-step-navigation */
+@import "multi-step-navigation/less/hdx-multi-step-navigation-lights-off.less";
+/*signin*/
+@import "signin/less/hdx-signin-lights-off.less";
+
+@componentsPath:  "../components";
+@imagesPath:      "../img/hds";
+@fontsPath:       "@{componentsPath}/brandkit/fonts";
+@FontAwesomePath: "@{componentsPath}/font-awesome/font";
+

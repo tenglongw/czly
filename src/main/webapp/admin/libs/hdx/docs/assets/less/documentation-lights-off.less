@@ -1,0 +1,113 @@
+@import "documentation.less";
+
+@import (reference) "brandkit/less/hdx-variables-lights-off.less";
+
+@imagesPath: "../../../img/hds";
+
+#build_number {
+  color: white;
+  background-color: saddlebrown;
+}
+
+.documentation {
+  background-color: @offBlack;
+  border-bottom: 1px solid @black;
+}
+div.documentation {
+  color: @grayLightest;
+}
+
+.sdh-wrapper {
+  > h3:before {
+    background-color: @blue;
+  }
+}
+
+
+table.documentation {
+  width: 100%;
+  > thead > tr > th {
+    background-color: lighten(@black, 11.5%);
+  }
+  > tbody > tr > td {
+    border-top: 1px solid @black;
+  }
+}
+
+.usage {
+  th, td {
+    border: 1px solid @grayDarkest;
+  }
+}
+
+// TODO scope this tightly or remove
+.module-data-viz {
+  .caption {
+    &.hero {
+      color: @grayLightest !important;
+    }
+  }
+}
+
+.navbar .masthead .btn.notification {
+  background-image: url("@{imagesPath}/masthead-notifications-color.png"); 
+}
+
+// Signin Examples
+.signin-content{
+  background: url('@{imagesPath}/login_tile_off.png') repeat-x top left;
+  min-height:823px; padding-top: 50px;
+}
+li.success{
+  background: transparent url("@{imagesPath}/status-icons.png") no-repeat left 4px;
+}
+.signin{
+  .panel {
+    background-color: @grayDarker;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    &-body{
+      padding: 10px;
+
+      &-in{
+        margin:5px;
+      }
+    }
+
+    &-inverse{
+      background-color: @grayDarkest;
+      input[type="text"], input[type="password"]{
+        background-color: @black;
+      }
+    }
+  }
+  .new-link{
+    > a {
+      color: @green;
+      text-decoration: none;
+      &:hover{
+        color: @greenDark;
+      }
+    }
+  }
+}
+.img-border{
+  border-bottom: 1px solid #DCDCDC;
+  border-top: 1px solid #DCDCDC;
+  padding: 5px 0 5px 0;
+
+}
+.grayLighter{
+
+  margin-top: -20px;
+}
+.content-top{
+  background-color: @grayDarkest;
+}
+
+.nav-list-well{
+background-color: @black;
+padding:15px;
+}

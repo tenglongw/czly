@@ -1,0 +1,49 @@
+<!-- Column filtering -->
+
+<dl class="documentation">
+    <dt>Column filtering</dt>
+    <dd class="description">
+        <p>A Datagrid using interactive <strong>column filtering.</strong></p>
+        <i>Note: There is a bug with the 3rd party datatables component. On the iPad, when attaching a touch event to the body via the body tag or Javascript/jQuery, this text field input is blocked from allowing input</i>
+    </dd>
+    <dt>Example</dt>
+    <dd class="example">
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-col-filter-example"></table>
+    </dd>
+    <dt class="hidden-sm">Usage</dt>
+    <dd class="usage hidden-sm">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-col-filter-example"&gt;&lt;/table&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+//Filtering
+$('table[data-table-name="dt-col-filter-example"]').basicdatagrid({
+  'aoColumns': [
+    {'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential'},
+    {'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential', 'filter':true},
+    {'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional', 'filter': true},
+    {'sTitle': 'Engine version', 'mData': 'version', 'filter':true, 'filterPlaceholder':'Filter by this field'},
+    {'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential', 'filter':true}
+  ],
+  'sAjaxSource': '../assets/data/ao.browsers.json',
+  'useFloater': false,
+  'isResponsive': true
+});
+</pre>
+        <p>Notes:</p>
+        <ul>
+            <li>Use the "filter:true" and, optionally, "filterPlaceholder:..." members on each aoColumns element for the columns for which you want to enable column filtering.. </li>
+        </ul>
+        <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+                <li>datagrids</li>
+            </ul>
+        </div>
+    </dd>
+</dl>
+
+
+<!-- /Column filtering -->

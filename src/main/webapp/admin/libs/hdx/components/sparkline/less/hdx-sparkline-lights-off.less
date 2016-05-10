@@ -1,0 +1,110 @@
+@import "ge-bootstrap/less/hdx-bootstrap-lights-off.less";
+@import "sparkline.less";
+
+.sparkline-generated-container
+{
+    .area
+    {
+        stroke: none;
+
+        &.normal-a
+        {
+            fill: @normalA;
+        }
+
+        &.normal-b
+        {
+            fill: @normalB;
+        }
+
+        &.normal-c
+        {
+            fill: @normalC;
+        }
+
+        &.attention-a
+        {
+            fill: @attentionA;
+        }
+
+        &.warning-a
+        {
+            fill: @warningA;
+        }
+
+        &.critical-a
+        {
+            fill: @criticalA;
+        }
+    }
+
+    .line
+    {
+        fill: none;
+
+        &.normal-a
+        {
+            stroke: @normalALight;
+        }
+
+        &.normal-b
+        {
+            stroke: @normalBLight;
+        }
+
+        &.normal-c
+        {
+            stroke: @normalCLight;
+        }
+
+        &.attention-a
+        {
+            stroke: @attentionALight;
+        }
+
+        &.warning-a
+        {
+            stroke: @warningALight;
+        }
+
+        &.critical-a
+        {
+            stroke: @criticalALight;
+        }
+    }
+}
+.data-container
+{
+    background-color:		@black;
+    color:					@grayLight;
+    border-color:			@grayDarker;
+
+    &.sparkline
+    {
+        background-color:	 lighten(@black, 11.5);
+    	  border: 2px solid border-color;
+
+        .sparkline-value
+        {
+            color: lighten(@grayLightest, 6%);
+        }
+
+		.status {
+			background-color: @white;
+            overflow: visible;
+
+			display: inline;
+
+			&.icon-warning-sign{
+				height: 10px;
+				line-height: 10px;
+				width: 2px;
+				text-indent: -4px;
+				position: absolute;
+				top: -3px;
+				right: -2px;
+			}
+		}
+
+    }
+ }

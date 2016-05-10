@@ -1,0 +1,49 @@
+<!-- AJAX, Array of Arrays -->
+
+<dl class="documentation">
+    <dt>Data loading: Infinite/Incremental Scrolling</dt>
+    <dd class="description">
+        <p>A Datagrid loading many records <strong>with infinite/incremental scroll.</strong></p>
+        <p>Be sure to turn off the HDX's custom pagination with <code>sPagination: null</code> when using this feature</p>
+        <p>For more information on this Datagrids plugin, see the <a href="https://datatables.net/extensions/scroller/">scroller documentation</a></p>
+    </dd>
+    <dt>Example</dt>
+    <dd class="example">
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-incremental"></table>
+    </dd>
+    <dt class="hidden-sm">Usage</dt>
+    <dd class="usage hidden-sm">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-incremental"&gt;&lt;/table&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+// Incremental Loading/Infinite Scroll
+$('table[data-table-name="dt-incremental"]').iidsBasicDataGrid({
+    useFloater: false, //turn off cell filtering layer
+    "plugins": ["S"],
+    "sScrollY": "200px",
+    "bDeferRender": true,
+    'sPaginationType': null,
+    'aoColumns': [
+        { 'sTitle': 'Id', 'mData': 'id'},
+        { 'sTitle': 'Fulcrum version', 'mData': 'fulcrumVersion'},
+        { 'sTitle': 'Platform(s)', 'mData': 'platform'},
+        { 'sTitle': 'Differential version', 'mData': 'differentialVersion'},
+        { 'sTitle': 'Grade', 'mData': 'grade'}
+    ],
+    'sAjaxSource': '../assets/sample-data/ao.browsers.11000.json'
+});
+</pre>
+        <p>Response:</p>
+        <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+                <li>datagrids</li>
+            </ul>
+        </div>
+    </dd>
+</dl>
+
+<!-- /AJAX, Array of Arrays -->

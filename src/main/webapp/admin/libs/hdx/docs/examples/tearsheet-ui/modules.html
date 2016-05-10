@@ -1,0 +1,125 @@
+<dl class="documentation">
+  <dt>Example</dt>
+  <dd class="example">
+    <div class="well">
+      <section class="module">
+        <header class="module-header">Header</header>
+        <div class="module-body">Body</div>
+        <footer class="module-footer">Footer</footer>
+      </section>
+      <br>
+      <section class="module actionable">
+        <header class="module-header">
+          <h3 class="voice voice-brand pull-left">Sample Component</h3>
+          <div class="btn-group pull-right hidden-phone">
+  <button class="btn dropdown-toggle btn-sm" data-toggle="dropdown"><i class="icon-cog"></i> <i class="icon-chevron-down"></i></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-toggle="dropdown">Action</a></li>
+    <li><a href="#" data-toggle="dropdown">Another action</a></li>
+    <li><a href="#" data-toggle="dropdown">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#" data-toggle="dropdown">Separated link</a></li>
+  </ul>
+</div>
+
+        </header>
+        <div class="module-body">
+          <div class="module-data-viz gauges">
+  <div>
+    <p class="subtitle">Minute volume</p>
+    <div data-visualization="gauge" class="chart1" data-value="6.2" data-threshold="10" data-max="20" data-label-min="0" data-label-max="20 L/MIN"></div>
+    <p class="caption hero"><strong>6.2</strong> l/min</p>
+    <p class="caption">Ideal Minute Volume: <strong>10</strong> l/min</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Tidal volume</p>
+    <div data-visualization="gauge" class="chart2" data-value="508" data-max="1000" data-threshold="500" data-label-min="0" data-label-max="1000 ML"></div>
+    <p class="caption hero"><strong>508</strong> ml</p>
+    <p class="caption">Ideal Tidal Volume: <strong>500</strong> ml</p>
+  </div>
+
+  <div>
+    <p class="subtitle">Respiratory rate</p>
+    <div data-visualization="gauge" class="chart3" data-value="14" data-max="35" data-threshold="17" data-label-min="0" data-label-max="35/MIN"></div>
+    <p class="caption hero"><strong>14</strong>/min</p>
+    <p class="caption">Ideal Respiratory Rate: <strong>17</strong>/min</p>
+  </div>
+</div>
+
+        </div>
+        <footer class="module-footer">
+          <p>
+            <a href="#" onclick="return false;">View More Data <i class="icon-chevron-right" style="font-size: 12px;"></i></a>
+          </p>
+        </footer>
+      </section>
+    </div>
+  </dd>
+  <dt>Description</dt>
+  <dd class="description">
+    <p>A container, or module, is used to wrap a component and provide structure and basic styling for appearance within a page.</p>
+    <p>Containers have four primary elements: wrapper, header, body and footer. Each of the latter three elements function as wrappers for component-specific content, such as component title and actions, the component body, and supplemental links placed below the component as a footer.</p>
+    <p>Containers do not have set dimensions or margins. By default, they will stretch horizontally to fill their parent element and expand vertically to expose all content within.</p>
+  </dd>
+  <dt>Usage</dt>
+  <dd class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;section class="module"&gt;
+  &lt;header class="module-header"&gt;
+    &hellip;
+  &lt;/header&gt;
+  &lt;div class="module-body"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;footer class="module-footer"&gt;
+    &hellip;
+  &lt;/footer&gt;
+&lt;/section&gt;
+</pre>
+    <p>Additional classes may be applied to the container wrapper <code>.module</code> to trigger additional styles or behavior. These classes may be combined as needed.</p>
+    <table>
+      <tr>
+        <th>Class</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td><code>actionable</code></td>
+        <td>For use when an actions dropdown is included in the container header.</td>
+      </tr>
+      <tr>
+        <td><code>chromeless</code></td>
+        <td>Prevents the header and footer from displaying and removes all default background and padding rules.</td>
+      </tr>
+      <tr>
+        <td><code>draggable</code></td>
+        <td>
+          <p>Fixes the height of the container, centers the body content vertically within the container and applies hover/active styles to the header suitable for drag and drop interactions.</p>
+          <p>For use on Dashboard Views with the following script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$( ".row" ).sortable(
+  {
+    handle:          '.module-header',
+    helper:          'clone',
+    items:           '.draggable',
+    forceHelperSize: true,
+    revert:          200,
+    tolerance:       'pointer'
+  }
+);
+</pre>
+          <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+              <li>jquery-ui</li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>scrollable</code></td>
+        <td>Fixes the height of the container and triggers content scrolling within the container body.</td>
+      </tr>
+    </table>
+  </dd>
+</dl>

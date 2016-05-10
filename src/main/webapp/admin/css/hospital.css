@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+.body_wrap{ width: 100%; overflow-x: hidden; position: relative;}
+/* footer 样式 */
+.footer .primary{ height: 9px; background-color: #131313;}
+.olympicGE{ height: 44px; line-height: 44px; padding-left: 100px; background: url(../images/olympicGE_bg.png) left center no-repeat;}
+
+.thumbnail img{ width: 100%;}
+.caption{ height: 50px;/*  overflow: hidden; */}
+.caption h1{ line-height: 50px; color: #999;}
+
+.btn.btn-warning:before,
+.btn.btn-danger:before{ content: none;}
+
+input[type="text"],
+textarea.form-control{ background-color: #fff;}
+
+.time_info p{ font-size: 32px; color: #999; line-height: 40px;}
+.time_info span{ font-size: 15px; color: #333;}
+
+.width50b{ width: 50%;}
+.width80b{ width: 80%;}
+.description{ position: relative; display: inline-block;}
+.description p{ height: 16px; overflow: hidden; white-space: nowrap text-overflow: ellipsis;}
+.showmore{ color: #ea7600; font-size: 10px; margin-top: 3px; position: absolute; right: -15px; top:0px; cursor: pointer;}
+.description .collapse{ position: absolute; z-index: 20;}
+.descriptMore{ padding: 10px; font-size: 12px;}
+
+/* 右侧会诊记录面板 */
+.note_panel{ width: 320px; background-color: #fff; position: absolute; right: -320px; top: 115px;}
+.vertical_btn{ width: 35px; height: auto; white-space: normal; position: absolute; left: -35px; top: 0px; border-radius: 4px 0px 0px 4px;}
+.sexMF{ margin-left: 20px;}
+
+.note_panel .panel-heading{ /* background: #f00; */ height: 40px; line-height: 40px;}
+.note_panel .panel-heading.primary-header{color: #ffffff; background-color: #12aceb; background-image: -webkit-linear-gradient(top, #23bffe 0%, #029ad8 100%); background-image: -o-linear-gradient(top, #23bffe 0%, #029ad8 100%); background-image: linear-gradient(to bottom, #23bffe 0%, #029ad8 100%); background-repeat: repeat-x; filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff23bffe', endColorstr='#ff029ad8', GradientType=0); border: none;}
+.note_panel .panel-heading{ color: #777; background-color: #12aceb; background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #e1e1e1 60%, #f3f3f3 100%); background-image: -o-linear-gradient(top, #f2f2f2 0%, #e1e1e1 60%, #f3f3f3 100%); background-image: linear-gradient(to bottom, #f2f2f2 0%, #e1e1e1 60%, #f3f3f3 100%); background-repeat: repeat-x; filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff2f2f2', endColorstr='#fff3f3f3', GradientType=0); border-radius: 0px;}
+.note_panel .panel-heading h4{ height: 40px; line-height: 40px; padding: 0px;}
+.note_panel .panel-heading a{ display: block;}
+.note_panel .panel-heading a:focus:hover{ color: inherit;}
+.note_panel .panel-group{ margin-bottom: 0px;}
+.file_list li{ position: relative; background-color: #f1f1f1; margin-bottom: 15px; padding: 10px 10px 10px 65px; height: 65px;}
+.file_list li h4{ width: 215px; cursor: pointer;}
+.file_list li img{ width: 45px; height: 45px; position: absolute; left: 10px; top: 10px;}
+.file_info{ color: #797979;}
+.date_tac{ font-size: 16px; text-align: center;}
+.img_list li{ margin: 15px 0px 0px;}
+.img_list li img{ width: 100%;}
+
+/* 渐变 title */
+/*
+.room_list .module,
+.history_list .module,
+.room_detail .module,
+*/
+.pd0 .module{ padding: 0px;}
+.pd0 .module .module-header{ line-height: 20px; min-height: 20px; color: #ffffff; background-color: #12aceb; background-image: -webkit-linear-gradient(top, #23bffe 0%, #029ad8 100%); background-image: -o-linear-gradient(top, #23bffe 0%, #029ad8 100%); background-image: linear-gradient(to bottom, #23bffe 0%, #029ad8 100%); background-repeat: repeat-x; filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff23bffe', endColorstr='#ff029ad8', GradientType=0); border-radius: 0px; border: none;}
+.pd0 .module .module-header h3{ color: #ffffff; font-size: 14px;}
+.pd0 .module .module-header:hover, section.module.collapsible .module-header:hover > *{ color: #fff;}
+.pd0 .module .module-header,
+.pd0 .module.collapsible .module-header{ padding: 10px 15px;}
+.pd0 .module.collapsible .module-header i.module-arrow{ right:15px; left: auto;}
+.pd0 .module.collapsible .module-body.collapse:before, .module.collapsible .module-body.collapsing:before{ padding-top: 0px;}
+
+/* 扫描室列表 */
+.room_group{ padding: 0px;}
+.ellipsis{ position: relative; width: 100%; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; cursor: default;}
+.pd0 div[class*="col-"].room_group, 
+.pd0 section[class*="col-"].room_group,
+.pd0 div[class*="col-"].room_item, 
+.pd0 section[class*="col-"].room_item{ margin: 0px;}
+.room_item{ border: solid 1px #ddd; padding-top: 10px; padding-bottom: 10px; margin: -1px;}
+.room_item:hover{ background-color: #97ba4c; color: #fff; opacity: 0.9;}
+.item_selected{ background-color: #97ba4c; color: #fff;}
+.item_disabled{ background-color: #ebebeb;}
+.item_disabled:hover{ background-color: #ebebeb; color: #888; opacity: 1;}
+.room_item:hover h4,
+.item_selected h4{ color: #fff;}
+.item_disabled h4{ color: #888;}
+.item_disabled:hover h4{ color: #888;}
+.item_disabled .ellipsis{ color: #888;}
+.room_item span.pull-right{ display: none;}
+.room_item.item_selected span.pull-right{ display: inline-block;}
+
+.history_list{ /* margin-bottom: 50px; */}
+.history_list .module-header .pull-right{ margin: -3px;}
+.history_list .module-header .pull-right .btn{ font-size: 12px;}
+.history_list .module-body{ padding: 10px 15px;}
+.history_list div[class*="col-"],
+.history_list section[class*="col-"]{ margin-bottom: 0px;}
+
+.detail_item{ padding-top: 10px; background-color: #f1f1f1; color: #545454; margin-bottom: 15px; display: inline-block; width: 100%;}
+.detail_info{ color: #999;}
+.data_time{ line-height: 65px; font-size: 14px;}
+
+.room_detail{ line-height: 30px;}
+.room_detail .ellipsis{ color: #999; line-height: 20px;}
+.room_detail .ellipsis i{ position: absolute; right: 0px; top: 0px;}
+.room_detail .info_wrap{ color: #666;}
+.room_detail .info_wrap span{ display: inline-block; margin-right: 30px;}
+.room_detail .data_wrap{ color: #999; padding-bottom: 10px;}
+
+.btm_goback .btn{ margin: 0px auto 50px; display: block; }
+
+.room_status{ height: 20px; overflow: hidden; margin-top: 5px;}
+.room_status span{ border-radius: 3px; color: #fff; display: inline-block; height: 18px; line-height: 18px; padding: 2px 5px;}
+
+.status_selected span{ background-color: #97ba4c; }
+.status_online span{ background-color: #69c02f;}
+.status_quality span{ background-color: #eb7117;}
+.status_consultation span{ background-color: #ed2b24;}
+.status_offline span{ background-color: #bbb;}
+
+.icon1{ display: block; width: 40px; height: 20px;}
+.icon2{ display: block; width: 20px; height: 20px;}
+.icon3{ display: block; width: 20px; height: 20px;}
+.icon1 span{ display: inline-block; width: 8px; height: 8px; float: left; position: relative; margin: 1px; background-color: #bbb; margin-top: 5px;}
+.icon2 span{ display: inline-block; width: 8px; height: 8px; float: left; position: relative; margin: 1px; background-color: #bbb;}
+.icon3 span{ display: inline-block; width: 16px; height: 16px; background-color: #bbb; margin-top: 2px;}
+.active .icon1 span,
+.active .icon2 span,
+.active .icon3 span{ background-color: #fff;}
+
+.patient_wrap div[class*="col-"] { margin-bottom: 0px;}
+
+.patient_wrap{ display: inline-block; height: 120px; overflow-y: auto;}
+.patient_wrap .input-group{ width: 100%; margin: 10px 0px;}
+.patient_wrap .input-group .input-group-addon{ color: #666;}
+.patient_wrap .input-group .input-group-addon b{ color: #111; font-weight: normal;}
+.patient_wrap .input-group:hover .input-group-addon,
+.patient_wrap .input-group.active .input-group-addon{ border-color: #77933a; background-color: #97ba4c; color: #fff;}
+.patient_wrap .input-group:hover .input-group-addon b,
+.patient_wrap .input-group.active .input-group-addon b{ color: #fff; font-weight: normal;}
+
+.patient_detail .module-header{ background-color: #d5f0f9; color: #111; font-size: 14px;}
+.patient_detail .module-header span{ color: #666; margin-right: 20px;}
+.patient_detail .module-header span:last-child{ margin-right: 0px;}
+.patient_img_wrap{ margin-left: -15px; margin-right: -15px; margin-top: 5px;}
+.patient_img_wrap img{ width: 100%;}
+.patient_img_wrap .col-sm-6.col-md-4{ margin-bottom: 10px;}
+.module.patient_detail .module-header{ padding: 10px; background: #d5f0f9;}
+
+/* 会诊页面修改样式 */
+.doctor_list{ padding: 5px 5px 0px; background-color: #fff; display: inline-block; width: 100%; border-radius: 3px; margin-top: -10px;}
+.doctor_item{ width: 25%;  float: left; position: relative; background-color: #fff; padding: 5px 5px 0px; margin-bottom: 5px;}
+.doctor_item .thumb_img{ width: 100%; position: relative; cursor: pointer;}
+.doctor_item .thumb_img img{ width: 100%;}
+.doctor_item .thumb_img a{ display: none; position: absolute; right: 0px; bottom: 0px; z-index: 99; background-color: #0098d6; color: #fff; width: 30px; height: 30px; line-height: 32px; text-align: center; opacity: 0.8; border-radius: 3px;}
+.doctor_item.active .thumb_img a,
+.doctor_item:hover .thumb_img a{ display: block;}
+.doctor_item .dr_name{ text-align: center; height: 30px; line-height: 30px; color: #333; font-size: 14px;}
+.doctor_item.active .dr_name{ visibility: hidden;}
+
+/* 选择诊室 样式 */
+.consultation_wrap{ display: inline-block; width: 100%;}
+.consultation_item{  width: 20%; float: left; position: relative; padding: 5px; margin-bottom: 5px;}
+.consultation_con{ background: #fff; padding: 5px; border-radius: 3px; box-shadow: 2px 2px 5px #999;}
+.item_disabled .consultation_con{ background-color: #ebebeb;}
+.consultation_serial{ height: 14px; line-height: 14px; color: #666; margin-top: 10px;}
+
+/*会诊历史样式 */
+.consultation_con_his{padding: 5px; border-radius: 3px; box-shadow: 2px 2px 5px #999;}
+.scanroomdivhis:hover{background-color:#97ba4c;color:#fff;opacity:0.9;}

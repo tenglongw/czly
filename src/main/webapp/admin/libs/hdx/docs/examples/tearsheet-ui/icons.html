@@ -1,0 +1,1479 @@
+<dl class="documentation">
+<dt>Example</dt>
+<dd class="example row">
+	<div class="col-sm-4 col-md-4" style="margin-bottom: 0;">
+		<div class="btn-toolbar" style="margin-bottom: 9px">
+			<div class="btn-group">
+				<button class="btn btn-default"><i class="icon-align-left"></i></button>
+				<button class="btn btn-default"><i class="icon-align-center"></i></button>
+				<button class="btn btn-default"><i class="icon-align-right"></i></button>
+				<button class="btn btn-default"><i class="icon-align-justify"></i></button>
+			</div>
+			<div class="btn-group">
+				<button class="btn btn-primary"><i class="icon-user"></i> User</button><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-chevron-down"></i></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="dropdown"><i class="icon-pencil"></i> Edit</a></li>
+					<li><a href="#" data-toggle="dropdown"><i class="icon-trash"></i> Delete</a></li>
+					<li><a href="#" data-toggle="dropdown"><i class="icon-ban-circle"></i> Ban</a></li>
+					<li class="divider"></li>
+					<li><a href="#" data-toggle="dropdown"><i class="i"></i> Make admin</a></li>
+				</ul>
+			</div>
+		</div>
+		<p>
+			<a class="btn btn-default"><i class="icon-refresh"></i> Refresh</a>
+			<a class="btn btn-default"><i class="icon-shopping-cart"></i> Checkout</a>
+			<a class="btn btn-default"><i class="icon-trash"></i> Delete</a>
+		</p>
+
+		<p>
+			<a class="btn btn-default btn-lg"><i class="icon-comment"></i> Comment</a>
+			<a class="btn btn-default btn-sm"><i class="icon-cog"></i> Settings</a>
+			<a class="btn btn-info btn-sm"><i class="icon-info-sign"></i> More Info</a>
+		</p>
+	</div>
+	<div class="col-sm-4 col-md-4" style="margin-bottom: 0; margin-right:15px;">
+		<div class="well" style="padding: 8px 0;">
+			<ul class="nav nav-list">
+				<li class="active"><a><i class="icon-home"></i> Home</a></li>
+				<li><a><i class="icon-book"></i> Library</a></li>
+				<li><a><i class="icon-pencil"></i> Applications</a></li>
+				<li><a><i class="i"></i> Misc</a></li>
+			</ul>
+		</div>
+		<!-- /well -->
+	</div>
+	<div class="col-sm-3 col-md-3" style="margin-bottom: 0;">
+		<form>
+			<div class="form-group">
+				<label class="control-label" for="inputIcon">Email address</label>
+
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-icon"><i class="icon-envelope"></i></button>
+					</div>
+					<input id="inputIcon" type="text" class="input-sm form-control">
+				</div>
+			</div>
+
+
+		</form>
+		<p>
+			<a title="Add" class="tooltip-target" style="margin-right: 10px;"><i class="icon-plus"></i></a>
+			<a title="Share" class="tooltip-target" style="margin-right: 10px;"><i class="icon-share-alt"></i></a>
+			<a title="Refresh" class="tooltip-target"><i class="icon-refresh"></i></a>
+		</p>
+	</div>
+</dd>
+<dt>Description</dt>
+<dd class="description">
+	Icons use vector-based glyphs packaged within a web font that inherit the size and color of the element they are
+	placed within. Icons typically come in a large (_lg) or small (_sm) format.
+	Large icons have additional levels of detail that aren't found on their small counterparts, and can look a bit messy
+	when used in a smaller context.
+	<p><strong>Note that HDX has depcrecated its use of the Font Awesome library, however, important icons have alternate
+			names to maintain backwards compatibility.</strong></p>
+</dd>
+<dt>Usage</dt>
+<dd class="usage">
+<p>Icons use an <code>&lt;i&gt;</code> tag for all variants, but they have no case class &mdash; only a shared prefix.
+	To use, place the following code just about anywhere:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;i class="icon-search"&gt;&lt;/i&gt;
+</pre>
+<p>When using beside strings of text, as in buttons or nav links, be sure to leave a space after the <code>
+		&lt;i&gt;</code> tag for proper spacing.</p>
+
+<h4>Web Application Icons</h4>
+
+<div class="row" style="margin-left: 0;">
+
+<div class="col-sm-3 col-md-3"  id="icon-row-1" >
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_3d_sq_lg"><i class="icon-ico_3d_sq_lg"></i> "ico_3d_sq_lg"</li>
+		<li class="icons__item" data-name="ico_3d_sq_sm"><i class="icon-ico_3d_sq_sm"></i> "ico_3d_sq_sm"</li>
+		<li class="icons__item" data-name="ico_add_rnd_lg"><i class="icon-ico_add_rnd_lg"></i> "ico_add_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-plus-sign" data-name="ico_add_rnd_sm"><i
+					class="icon-ico_add_rnd_sm"></i> "ico_add_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_advancedstatistics_sq_lg"><i class="icon-ico_advancedstatistics_sq_lg"></i>
+			"ico_advancedstatistics_sq_lg"</li>
+		<li class="icons__item" data-name="ico_advancedstatistics_sq_sm"><i class="icon-ico_advancedstatistics_sq_sm"></i>
+			"ico_advancedstatistics_sq_sm"</li>
+		<li class="icons__item" data-name="ico_alcohol_lg"><i class="icon-ico_alcohol_lg"></i> "ico_alcohol_lg"</li>
+		<li class="icons__item" data-name="ico_alcohol_sm"><i class="icon-ico_alcohol_sm"></i> "ico_alcohol_sm"</li>
+		<li class="icons__item" data-name="ico_alert_lg"><i class="icon-ico_alert_lg"></i> "ico_alert_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-warning-sign" data-name="ico_alert_sm"><i
+					class="icon-ico_alert_sm"></i> "ico_alert_sm"</li>
+		<li class="icons__item" data-name="ico_aligncenter_lg"><i class="icon-ico_aligncenter_lg"></i> "ico_aligncenter_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-align-center" data-name="ico_aligncenter_sm"><i
+					class="icon-ico_aligncenter_sm"></i> "ico_aligncenter_sm"</li>
+		<li class="icons__item" data-name="ico_alignjustify_lg"><i class="icon-ico_alignjustify_lg"></i>
+			"ico_alignjustify_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-align-justify" data-name="ico_alignjustify_sm"><i
+					class="icon-ico_alignjustify_sm"></i> "ico_alignjustify_sm"</li>
+		<li class="icons__item" data-name="ico_alignleft_lg"><i class="icon-ico_alignleft_lg"></i> "ico_alignleft_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-align-left" data-name="ico_alignleft_sm"><i
+					class="icon-ico_alignleft_sm"></i> "ico_alignleft_sm"</li>
+		<li class="icons__item" data-name="ico_alignright_lg"><i class="icon-ico_alignright_lg"></i> "ico_alignright_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-align-right" data-name="ico_alignright_sm"><i
+					class="icon-ico_alignright_sm"></i> "ico_alignright_sm"</li>
+		<li class="icons__item" data-name="ico_allergy_sq_lg"><i class="icon-ico_allergy_sq_lg"></i> "ico_allergy_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_allergy_sq_sm"><i class="icon-ico_allergy_sq_sm"></i> "ico_allergy_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_ambulance_lg"><i class="icon-ico_ambulance_lg"></i> "ico_ambulance_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-ambulance" data-name="ico_ambulance_sm"><i
+					class="icon-ico_ambulance_sm"></i> "ico_ambulance_sm"</li>
+		<li class="icons__item" data-name="ico_annotate_sq_lg"><i class="icon-ico_annotate_sq_lg"></i> "ico_annotate_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_annotate_sq_sm"><i class="icon-ico_annotate_sq_sm"></i> "ico_annotate_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_areazoom_lg"><i class="icon-ico_areazoom_lg"></i> "ico_areazoom_lg"</li>
+		<li class="icons__item" data-name="ico_areazoom_sm"><i class="icon-ico_areazoom_sm"></i> "ico_areazoom_sm"</li>
+		<li class="icons__item" data-name="ico_aro_navdown_lg"><i class="icon-ico_aro_navdown_lg"></i> "ico_aro_navdown_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-caret-down" data-name="ico_aro_navdown_sm"><i
+					class="icon-ico_aro_navdown_sm"></i> "ico_aro_navdown_sm"</li>
+		<li class="icons__item" data-name="ico_aro_rewind_rnd_lg"><i class="icon-ico_aro_rewind_rnd_lg"></i>
+			"ico_aro_rewind_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-backward" data-name="ico_aro_rewind_rnd_sm"><i
+					class="icon-ico_aro_rewind_rnd_sm"></i> "ico_aro_rewind_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_attachment_lg"><i class="icon-ico_attachment_lg"></i> "ico_attachment_lg"
+		</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-paper-clip" data-name="ico_attachment_sm"><i
+					class="icon-ico_attachment_sm"></i> "ico_attachment_sm"</li>
+		<li class="icons__item" data-name="ico_audioclip_lg"><i class="icon-ico_audioclip_lg"></i> "ico_audioclip_lg"</li>
+		<li class="icons__item" data-name="ico_audioclip_sm"><i class="icon-ico_audioclip_sm"></i> "ico_audioclip_sm"</li>
+		<li class="icons__item" data-name="ico_backtobeginning_rnd_lg"><i class="icon-ico_backtobeginning_rnd_lg"></i>
+			"ico_backtobeginning_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-step-backward" data-name="ico_backtobeginning_rnd_sm"><i
+					class="icon-ico_backtobeginning_rnd_sm"></i> "ico_backtobeginning_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_ban1_lg"><i class="icon-ico_ban1_lg"></i> "ico_ban1_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-ban-circle" data-name="ico_ban1_sm"><i
+					class="icon-ico_ban1_sm"></i> "ico_ban1_sm"</li>
+		<li class="icons__item" data-name="ico_ban2_rnd_lg"><i class="icon-ico_ban2_rnd_lg"></i> "ico_ban2_rnd_lg"</li>
+		<li class="icons__item" data-name="ico_ban2_rnd_sm"><i class="icon-ico_ban2_rnd_sm"></i> "ico_ban2_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_bandage_lg"><i class="icon-ico_bandage_lg"></i> "ico_bandage_lg"</li>
+		<li class="icons__item" data-name="ico_battery100_lg"><i class="icon-ico_battery100_lg"></i> "ico_battery100_lg"
+		</li>
+		<li class="icons__item" data-name="ico_battery100_sm"><i class="icon-ico_battery100_sm"></i> "ico_battery100_sm"
+		</li>
+		<li class="icons__item" data-name="ico_battery25_lg"><i class="icon-ico_battery25_lg"></i> "ico_battery25_lg"</li>
+		<li class="icons__item" data-name="ico_battery25_sm"><i class="icon-ico_battery25_sm"></i> "ico_battery25_sm"</li>
+		<li class="icons__item" data-name="ico_battery50_lg"><i class="icon-ico_battery50_lg"></i> "ico_battery50_lg"</li>
+		<li class="icons__item" data-name="ico_battery50_sm"><i class="icon-ico_battery50_sm"></i> "ico_battery50_sm"</li>
+		<li class="icons__item" data-name="ico_battery5less_lg"><i class="icon-ico_battery5less_lg"></i>
+			"ico_battery5less_lg"</li>
+		<li class="icons__item" data-name="ico_battery5less_sm"><i class="icon-ico_battery5less_sm"></i>
+			"ico_battery5less_sm"</li>
+		<li class="icons__item" data-name="ico_battery75_lg"><i class="icon-ico_battery75_lg"></i> "ico_battery75_lg"</li>
+		<li class="icons__item" data-name="ico_battery75_sm"><i class="icon-ico_battery75_sm"></i> "ico_battery75_sm"</li>
+		<li class="icons__item" data-name="ico_batterycharging_lg"><i class="icon-ico_batterycharging_lg"></i>
+			"ico_batterycharging_lg"</li>
+		<li class="icons__item" data-name="ico_batterycharging_sm"><i class="icon-ico_batterycharging_sm"></i>
+			"ico_batterycharging_sm"</li>
+		<li class="icons__item" data-name="ico_bell_lg"><i class="icon-ico_bell_lg"></i> "ico_bell_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-bell-alt" data-name="ico_bell_sm"><i
+					class="icon-ico_bell_sm"></i> "ico_bell_sm"</li>
+		<li class="icons__item" data-name="ico_beverage_lg"><i class="icon-ico_beverage_lg"></i> "ico_beverage_lg"</li>
+		<li class="icons__item" data-name="ico_beverage_sm"><i class="icon-ico_beverage_sm"></i> "ico_beverage_sm"</li>
+		<li class="icons__item" data-name="ico_blackwhite_lg"><i class="icon-ico_blackwhite_lg"></i> "ico_blackwhite_lg"
+		</li>
+		<li class="icons__item" data-name="ico_blackwhite_sm"><i class="icon-ico_blackwhite_sm"></i> "ico_blackwhite_sm"
+		</li>
+		<li class="icons__item" data-name="ico_bold_sq_lg"><i class="icon-ico_bold_sq_lg"></i> "ico_bold_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-bold" data-name="ico_bold_sq_sm"><i
+					class="icon-ico_bold_sq_sm"></i> "ico_bold_sq_sm"</li>
+		<li class="icons__item" data-name="ico_bolt_lg"><i class="icon-ico_bolt_lg"></i> "ico_bolt_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-bolt" data-name="ico_bolt_sm"><i class="icon-ico_bolt_sm"></i>
+			"ico_bolt_sm"</li>
+		<li class="icons__item" data-name="ico_book_lg"><i class="icon-ico_book_lg"></i> "ico_book_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-book" data-name="ico_book_sm"><i class="icon-ico_book_sm"></i>
+			"ico_book_sm"</li>
+		<li class="icons__item" data-name="ico_bookmark_lg"><i class="icon-ico_bookmark_lg"></i> "ico_bookmark_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-bookmark" data-name="ico_bookmark_sm"><i
+					class="icon-ico_bookmark_sm"></i> "ico_bookmark_sm"</li>
+		<li class="icons__item" data-name="ico_bookmarklist_lg"><i class="icon-ico_bookmarklist_lg"></i>
+			"ico_bookmarklist_lg"</li>
+		<li class="icons__item" data-name="ico_bookmarklist_sm"><i class="icon-ico_bookmarklist_sm"></i>
+			"ico_bookmarklist_sm"</li>
+		<li class="icons__item" data-name="ico_brightness_lg"><i class="icon-ico_brightness_lg"></i> "ico_brightness_lg"
+		</li>
+		<li class="icons__item" data-name="ico_brightness_sm"><i class="icon-ico_brightness_sm"></i> "ico_brightness_sm"
+		</li>
+		<li class="icons__item" data-name="ico_brush_lg"><i class="icon-ico_brush_lg"></i> "ico_brush_lg"</li>
+		<li class="icons__item" data-name="ico_brush_sm"><i class="icon-ico_brush_sm"></i> "ico_brush_sm"</li>
+		<li class="icons__item" data-name="ico_bug_lg"><i class="icon-ico_bug_lg"></i> "ico_bug_lg"</li>
+		<li class="icons__item" data-name="ico_bug_sm"><i class="icon-ico_bug_sm"></i> "ico_bug_sm"</li>
+		<li class="icons__item" data-name="ico_bullhorn_lg"><i class="icon-ico_bullhorn_lg"></i> "ico_bullhorn_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-bullhorn" data-name="ico_bullhorn_sm"><i
+					class="icon-ico_bullhorn_sm"></i> "ico_bullhorn_sm"</li>
+		<li class="icons__item" data-name="ico_calculator1_lg"><i class="icon-ico_calculator1_lg"></i> "ico_calculator1_lg"
+		</li>
+		<li class="icons__item" data-name="ico_calculator1_sm"><i class="icon-ico_calculator1_sm"></i> "ico_calculator1_sm"
+		</li>
+		<li class="icons__item" data-name="ico_calculator2_lg"><i class="icon-ico_calculator2_lg"></i> "ico_calculator2_lg"
+		</li>
+		<li class="icons__item" data-name="ico_calculator2_sm"><i class="icon-ico_calculator2_sm"></i> "ico_calculator2_sm"
+		</li>
+		<li class="icons__item" data-name="ico_calendar_lg"><i class="icon-ico_calendar_lg"></i> "ico_calendar_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-calendar" data-name="ico_calendar_sm"><i
+					class="icon-ico_calendar_sm"></i> "ico_calendar_sm"</li>
+		<li class="icons__item" data-name="ico_camera_lg"><i class="icon-ico_camera_lg"></i> "ico_camera_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-camera" data-name="ico_camera_sm"><i
+					class="icon-ico_camera_sm"></i> "ico_camera_sm"</li>
+		<li class="icons__item" data-name="ico_cardioeditor_lg"><i class="icon-ico_cardioeditor_lg"></i>
+			"ico_cardioeditor_lg"</li>
+		<li class="icons__item" data-name="ico_cardioeditor_sm"><i class="icon-ico_cardioeditor_sm"></i>
+			"ico_cardioeditor_sm"</li>
+		<li class="icons__item" data-name="ico_cardiorealmode_lg"><i class="icon-ico_cardiorealmode_lg"></i>
+			"ico_cardiorealmode_lg"</li>
+		<li class="icons__item" data-name="ico_cardioschematicmode_lg"><i class="icon-ico_cardioschematicmode_lg"></i>
+			"ico_cardioschematicmode_lg"</li>
+		<li class="icons__item" data-name="ico_cardioschematicmode_sm"><i class="icon-ico_cardioschematicmode_sm"></i>
+			"ico_cardioschematicmode_sm"</li>
+		<li class="icons__item" data-name="ico_cardiovascular_sq_lg"><i class="icon-ico_cardiovascular_sq_lg"></i>
+			"ico_cardiovascular_sq_lg"</li>
+		<li class="icons__item" data-name="ico_cardiovascular_sq_sm"><i class="icon-ico_cardiovascular_sq_sm"></i>
+			"ico_cardiovascular_sq_sm"</li>
+		<li class="icons__item" data-name="ico_cart_lg"><i class="icon-ico_cart_lg"></i> "ico_cart_lg"</li>
+	</ul>
+</div>
+
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-shopping-cart" data-name="ico_cart_sm"><i
+					class="icon-ico_cart_sm"></i> "ico_cart_sm"</li>
+		<li class="icons__item" data-name="ico_certificate_lg"><i class="icon-ico_certificate_lg"></i> "ico_certificate_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-certificate" data-name="ico_certificate_sm"><i
+					class="icon-ico_certificate_sm"></i> "ico_certificate_sm"</li>
+		<li class="icons__item" data-name="ico_checkmark_rnd_lg"><i class="icon-ico_checkmark_rnd_lg"></i>
+			"ico_checkmark_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-ok-sign" data-name="ico_checkmark_rnd_sm"><i
+					class="icon-ico_checkmark_rnd_sm"></i> "ico_checkmark_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_cloud_lg"><i class="icon-ico_cloud_lg"></i> "ico_cloud_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-cloud" data-name="ico_cloud_sm"><i
+					class="icon-ico_cloud_sm"></i> "ico_cloud_sm"</li>
+		<li class="icons__item" data-name="ico_clouddownload_lg"><i class="icon-ico_clouddownload_lg"></i>
+			"ico_clouddownload_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-cloud-download" data-name="ico_clouddownload_sm"><i
+					class="icon-ico_clouddownload_sm"></i> "ico_clouddownload_sm"</li>
+		<li class="icons__item" data-name="ico_cloudupload_lg"><i class="icon-ico_cloudupload_lg"></i> "ico_cloudupload_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-cloud-upload" data-name="ico_cloudupload_sm"><i
+					class="icon-ico_cloudupload_sm"></i> "ico_cloudupload_sm"</li>
+		<li class="icons__item" data-name="ico_color_lg"><i class="icon-ico_color_lg"></i> "ico_color_lg"</li>
+		<li class="icons__item" data-name="ico_color_sm"><i class="icon-ico_color_sm"></i> "ico_color_sm"</li>
+		<li class="icons__item" data-name="ico_colorbground_lg"><i class="icon-ico_colorbground_lg"></i>
+			"ico_colorbground_lg"</li>
+		<li class="icons__item" data-name="ico_colorbground_sm"><i class="icon-ico_colorbground_sm"></i>
+			"ico_colorbground_sm"</li>
+		<li class="icons__item" data-name="ico_colorfont_lg"><i class="icon-ico_colorfont_lg"></i> "ico_colorfont_lg"</li>
+		<li class="icons__item" data-name="ico_colorfont_sm"><i class="icon-ico_colorfont_sm"></i> "ico_colorfont_sm"</li>
+		<li class="icons__item" data-name="ico_column_lg"><i class="icon-ico_column_lg"></i> "ico_column_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-columns" data-name="ico_column_sm"><i
+					class="icon-ico_column_sm"></i> "ico_column_sm"</li>
+		<li class="icons__item" data-name="ico_command_sq_lg"><i class="icon-ico_command_sq_lg"></i> "ico_command_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_command_sq_sm"><i class="icon-ico_command_sq_sm"></i> "ico_command_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_comment_lg"><i class="icon-ico_comment_lg"></i> "ico_comment_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-comment" data-name="ico_comment_sm"><i
+					class="icon-ico_comment_sm"></i> "ico_comment_sm"</li>
+		<li class="icons__item" data-name="ico_comments_lg"><i class="icon-ico_comments_lg"></i> "ico_comments_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-comments" data-name="ico_comments_sm"><i
+					class="icon-ico_comments_sm"></i> "ico_comments_sm"</li>
+		<li class="icons__item" data-name="ico_connect_lg"><i class="icon-ico_connect_lg"></i> "ico_connect_lg"</li>
+		<li class="icons__item" data-name="ico_connect_sm"><i class="icon-ico_connect_sm"></i> "ico_connect_sm"</li>
+		<li class="icons__item" data-name="ico_connect_sq_lg"><i class="icon-ico_connect_sq_lg"></i> "ico_connect_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_connect_sq_sm"><i class="icon-ico_connect_sq_sm"></i> "ico_connect_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_contacts_lg"><i class="icon-ico_contacts_lg"></i> "ico_contacts_lg"</li>
+		<li class="icons__item" data-name="ico_contacts_sm"><i class="icon-ico_contacts_sm"></i> "ico_contacts_sm"</li>
+	</ul>
+</div>
+</div>
+<div class="row" style="margin-left: 0;">
+<div class="col-sm-3 col-md-3" id="icon-row-2">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_contract_lg"><i class="icon-ico_contract_lg"></i> "ico_contract_lg"</li>
+		<li class="icons__item" data-name="ico_contract_sm"><i class="icon-ico_contract_sm"></i> "ico_contract_sm"</li>
+		<li class="icons__item" data-name="ico_contrast_lg"><i class="icon-ico_contrast_lg"></i> "ico_contrast_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-adjust" data-name="ico_contrast_sm"><i
+					class="icon-ico_contrast_sm"></i> "ico_contrast_sm"</li>
+		<li class="icons__item" data-name="ico_controlcharacters_sq_lg"><i class="icon-ico_controlcharacters_sq_lg"></i>
+			"ico_controlcharacters_sq_lg"</li>
+		<li class="icons__item" data-name="ico_controlcharacters_sq_sm"><i class="icon-ico_controlcharacters_sq_sm"></i>
+			"ico_controlcharacters_sq_sm"</li>
+		<li class="icons__item" data-name="ico_copy_lg"><i class="icon-ico_copy_lg"></i> "ico_copy_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-copy" data-name="ico_copy_sm"><i class="icon-ico_copy_sm"></i>
+			"ico_copy_sm"</li>
+		<li class="icons__item" data-name="ico_cross_rnd_lg"><i class="icon-ico_cross_rnd_lg"></i> "ico_cross_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-remove-sign" data-name="ico_cross_rnd_sm"><i
+					class="icon-ico_cross_rnd_sm"></i> "ico_cross_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_crossreference_lg"><i class="icon-ico_crossreference_lg"></i>
+			"ico_crossreference_lg"</li>
+		<li class="icons__item" data-name="ico_crossreference_sm"><i class="icon-ico_crossreference_sm"></i>
+			"ico_crossreference_sm"</li>
+		<li class="icons__item" data-name="ico_cut_lg"><i class="icon-ico_cut_lg"></i> "ico_cut_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-cut" data-name="ico_cut_sm"><i class="icon-ico_cut_sm"></i>
+			"ico_cut_sm"</li>
+		<li class="icons__item" data-name="ico_dashboard_lg"><i class="icon-ico_dashboard_lg"></i> "ico_dashboard_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-dashboard" data-name="ico_dashboard_sm"><i
+					class="icon-ico_dashboard_sm"></i> "ico_dashboard_sm"</li>
+		<li class="icons__item" data-name="ico_data_lg"><i class="icon-ico_data_lg"></i> "ico_data_lg"</li>
+		<li class="icons__item" data-name="ico_data_sm"><i class="icon-ico_data_sm"></i> "ico_data_sm"</li>
+		<li class="icons__item" data-name="ico_delete_lg"><i class="icon-ico_delete_lg"></i> "ico_delete_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-trash" data-name="ico_delete_sm"><i
+					class="icon-ico_delete_sm"></i> "ico_delete_sm"</li>
+		<li class="icons__item" data-name="ico_delivery_lg"><i class="icon-ico_delivery_lg"></i> "ico_delivery_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-truck" data-name="ico_delivery_sm"><i
+					class="icon-ico_delivery_sm"></i> "ico_delivery_sm"</li>
+		<li class="icons__item" data-name="ico_desktop_lg"><i class="icon-ico_desktop_lg"></i> "ico_desktop_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-desktop" data-name="ico_desktop_sm"><i
+					class="icon-ico_desktop_sm"></i> "ico_desktop_sm"</li>
+		<li class="icons__item" data-name="ico_diagnosis_lg"><i class="icon-ico_diagnosis_lg"></i> "ico_diagnosis_lg"</li>
+		<li class="icons__item" data-name="ico_diagnosis_sm"><i class="icon-ico_diagnosis_sm"></i> "ico_diagnosis_sm"</li>
+		<li class="icons__item" data-name="ico_digestive_sq_lg"><i class="icon-ico_digestive_sq_lg"></i>
+			"ico_digestive_sq_lg"</li>
+		<li class="icons__item" data-name="ico_digestive_sq_sm"><i class="icon-ico_digestive_sq_sm"></i>
+			"ico_digestive_sq_sm"</li>
+		<li class="icons__item" data-name="ico_disability_lg"><i class="icon-ico_disability_lg"></i> "ico_disability_lg"
+		</li>
+		<li class="icons__item" data-name="ico_disability_sm"><i class="icon-ico_disability_sm"></i> "ico_disability_sm"
+		</li>
+		<li class="icons__item" data-name="ico_diskspace_lg"><i class="icon-ico_diskspace_lg"></i> "ico_diskspace_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-hdd" data-name="ico_diskspace_sm"><i
+					class="icon-ico_diskspace_sm"></i> "ico_diskspace_sm"</li>
+		<li class="icons__item" data-name="ico_displayreset_sq_lg"><i class="icon-ico_displayreset_sq_lg"></i>
+			"ico_displayreset_sq_lg"</li>
+		<li class="icons__item" data-name="ico_displayreset_sq_sm"><i class="icon-ico_displayreset_sq_sm"></i>
+			"ico_displayreset_sq_sm"</li>
+		<li class="icons__item" data-name="ico_displaysettings_lg"><i class="icon-ico_displaysettings_lg"></i>
+			"ico_displaysettings_lg"</li>
+		<li class="icons__item" data-name="ico_displaysettings_sm"><i class="icon-ico_displaysettings_sm"></i>
+			"ico_displaysettings_sm"</li>
+		<li class="icons__item" data-name="ico_doctor_lg"><i class="icon-ico_doctor_lg"></i> "ico_doctor_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-user-md" data-name="ico_doctor_sm"><i
+					class="icon-ico_doctor_sm"></i> "ico_doctor_sm"</li>
+		<li class="icons__item" data-name="ico_documents_lg"><i class="icon-ico_documents_lg"></i> "ico_documents_lg"</li>
+		<li class="icons__item" data-name="ico_documents_sm"><i class="icon-ico_documents_sm"></i> "ico_documents_sm"</li>
+		<li class="icons__item" data-name="ico_download_lg"><i class="icon-ico_download_lg"></i> "ico_download_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-download-alt" data-name="ico_download_sm"><i
+					class="icon-ico_download_sm"></i> "ico_download_sm"</li>
+		<li class="icons__item" data-name="ico_drawarc_lg"><i class="icon-ico_drawarc_lg"></i> "ico_drawarc_lg"</li>
+		<li class="icons__item" data-name="ico_drawarc_sm"><i class="icon-ico_drawarc_sm"></i> "ico_drawarc_sm"</li>
+		<li class="icons__item" data-name="ico_drawingtools_lg"><i class="icon-ico_drawingtools_lg"></i>
+			"ico_drawingtools_lg"</li>
+		<li class="icons__item" data-name="ico_drawingtools_sm"><i class="icon-ico_drawingtools_sm"></i>
+			"ico_drawingtools_sm"</li>
+		<li class="icons__item" data-name="ico_drawline_lg"><i class="icon-ico_drawline_lg"></i> "ico_drawline_lg"</li>
+		<li class="icons__item" data-name="ico_drawline_sm"><i class="icon-ico_drawline_sm"></i> "ico_drawline_sm"</li>
+		<li class="icons__item" data-name="ico_drawshape_lg"><i class="icon-ico_drawshape_lg"></i> "ico_drawshape_lg"</li>
+		<li class="icons__item" data-name="ico_drawshape_sm"><i class="icon-ico_drawshape_sm"></i> "ico_drawshape_sm"</li>
+		<li class="icons__item" data-name="ico_edit_lg"><i class="icon-ico_edit_lg"></i> "ico_edit_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-edit" data-name="ico_edit_sm"><i class="icon-ico_edit_sm"></i>
+			"ico_edit_sm"</li>
+		<li class="icons__item" data-name="ico_endocrinological_sq_lg"><i class="icon-ico_endocrinological_sq_lg"></i>
+			"ico_endocrinological_sq_lg"</li>
+		<li class="icons__item" data-name="ico_endocrinological_sq_sm"><i class="icon-ico_endocrinological_sq_sm"></i>
+			"ico_endocrinological_sq_sm"</li>
+		<li class="icons__item" data-name="ico_error_lg"><i class="icon-ico_error_lg"></i> "ico_error_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-remove-circle" data-name="ico_error_sm"><i
+					class="icon-ico_error_sm"></i> "ico_error_sm"</li>
+		<li class="icons__item" data-name="ico_ethnicity_lg"><i class="icon-ico_ethnicity_lg"></i> "ico_ethnicity_lg"</li>
+		<li class="icons__item" data-name="ico_ethnicity_sm"><i class="icon-ico_ethnicity_sm"></i> "ico_ethnicity_sm"</li>
+		<li class="icons__item" data-name="ico_exam_lg"><i class="icon-ico_exam_lg"></i> "ico_exam_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-stethoscope" data-name="ico_exam_sm"><i
+					class="icon-ico_exam_sm"></i> "ico_exam_sm"</li>
+		<li class="icons__item" data-name="ico_exercise1_lg"><i class="icon-ico_exercise1_lg"></i> "ico_exercise1_lg"</li>
+		<li class="icons__item" data-name="ico_exercise1_sm"><i class="icon-ico_exercise1_sm"></i> "ico_exercise1_sm"</li>
+	</ul>
+</div>
+
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_exercise2_lg"><i class="icon-ico_exercise2_lg"></i> "ico_exercise2_lg"</li>
+		<li class="icons__item" data-name="ico_exercise2_sm"><i class="icon-ico_exercise2_sm"></i> "ico_exercise2_sm"</li>
+		<li class="icons__item" title="deprecated name: icon-external-link" data-name="ico_externallink_sm"><i
+					class="icon-ico_externallink_sm"></i> "ico_externallink_sm"</li>
+		<li class="icons__item" data-name="ico_facebook_sq_lg"><i class="icon-ico_facebook_sq_lg"></i> "ico_facebook_sq_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-facebook-sign" data-name="ico_facebook_sq_sm"><i
+					class="icon-ico_facebook_sq_sm"></i> "ico_facebook_sq_sm"</li>
+		<li class="icons__item" data-name="ico_factory_lg"><i class="icon-ico_factory_lg"></i> "ico_factory_lg"</li>
+		<li class="icons__item" data-name="ico_factory_sm"><i class="icon-ico_factory_sm"></i> "ico_factory_sm"</li>
+		<li class="icons__item" data-name="ico_fastforward_rnd_lg"><i class="icon-ico_fastforward_rnd_lg"></i>
+			"ico_fastforward_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-fast-forward" data-name="ico_fastforward_rnd_sm"><i
+					class="icon-ico_fastforward_rnd_sm"></i> "ico_fastforward_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_fax_lg"><i class="icon-ico_fax_lg"></i> "ico_fax_lg"</li>
+		<li class="icons__item" data-name="ico_fax_sm"><i class="icon-ico_fax_sm"></i> "ico_fax_sm"</li>
+		<li class="icons__item" data-name="ico_feed_lg"><i class="icon-ico_feed_lg"></i> "ico_feed_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-rss" data-name="ico_feed_sm"><i class="icon-ico_feed_sm"></i>
+			"ico_feed_sm"</li>
+		<li class="icons__item" data-name="ico_feed_sq_lg"><i class="icon-ico_feed_sq_lg"></i> "ico_feed_sq_lg"</li>
+		<li class="icons__item" data-name="ico_feed_sq_sm"><i class="icon-ico_feed_sq_sm"></i> "ico_feed_sq_sm"</li>
+		<li class="icons__item" data-name="ico_female_lg"><i class="icon-ico_female_lg"></i> "ico_female_lg"</li>
+		<li class="icons__item" data-name="ico_female_sm"><i class="icon-ico_female_sm"></i> "ico_female_sm"</li>
+		<li class="icons__item" data-name="ico_filter_lg"><i class="icon-ico_filter_lg"></i> "ico_filter_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-filter" data-name="ico_filter_sm"><i
+					class="icon-ico_filter_sm"></i> "ico_filter_sm"</li>
+		<li class="icons__item" data-name="ico_fittodisplay_lg"><i class="icon-ico_fittodisplay_lg"></i>
+			"ico_fittodisplay_lg"</li>
+		<li class="icons__item" data-name="ico_fittodisplay_sm"><i class="icon-ico_fittodisplay_sm"></i>
+			"ico_fittodisplay_sm"</li>
+		<li class="icons__item" data-name="ico_flag_lg"><i class="icon-ico_flag_lg"></i> "ico_flag_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-flag" data-name="ico_flag_sm"><i class="icon-ico_flag_sm"></i>
+			"ico_flag_sm"</li>
+		<li class="icons__item" data-name="ico_fliphorizontal_lg"><i class="icon-ico_fliphorizontal_lg"></i>
+			"ico_fliphorizontal_lg"</li>
+		<li class="icons__item" data-name="ico_fliphorizontal_sm"><i class="icon-ico_fliphorizontal_sm"></i>
+			"ico_fliphorizontal_sm"</li>
+		<li class="icons__item" data-name="ico_folder_lg"><i class="icon-ico_folder_lg"></i> "ico_folder_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-folder-close" data-name="ico_folder_sm"><i
+					class="icon-ico_folder_sm"></i> "ico_folder_sm"</li>
+		<li class="icons__item" data-name="ico_folderopen_lg"><i class="icon-ico_folderopen_lg"></i> "ico_folderopen_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-folder-open-alt" data-name="ico_folderopen_sm"><i
+					class="icon-ico_folderopen_sm"></i> "ico_folderopen_sm"</li>
+		<li class="icons__item" data-name="ico_font_sq_lg"><i class="icon-ico_font_sq_lg"></i> "ico_font_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-font" data-name="ico_font_sq_sm"><i
+					class="icon-ico_font_sq_sm"></i> "ico_font_sq_sm"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_fooddiet_sq_lg"><i class="icon-ico_fooddiet_sq_lg"></i> "ico_fooddiet_sq_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-food" data-name="ico_fooddiet_sq_sm"><i
+					class="icon-ico_fooddiet_sq_sm"></i> "ico_fooddiet_sq_sm"</li>
+		<li class="icons__item" data-name="ico_footer_lg"><i class="icon-ico_footer_lg"></i> "ico_footer_lg"</li>
+		<li class="icons__item" data-name="ico_footer_sm"><i class="icon-ico_footer_sm"></i> "ico_footer_sm"</li>
+		<li class="icons__item" data-name="ico_form1_lg"><i class="icon-ico_form1_lg"></i> "ico_form1_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-file" data-name="ico_form1_sm"><i
+					class="icon-ico_form1_sm"></i> "ico_form1_sm"</li>
+		<li class="icons__item" data-name="ico_form2_lg"><i class="icon-ico_form2_lg"></i> "ico_form2_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-file-alt" data-name="ico_form2_sm"><i
+					class="icon-ico_form2_sm"></i> "ico_form2_sm"</li>
+		<li class="icons__item" data-name="ico_frame_lg"><i class="icon-ico_frame_lg"></i> "ico_frame_lg"</li>
+		<li class="icons__item" data-name="ico_frame_sm"><i class="icon-ico_frame_sm"></i> "ico_frame_sm"</li>
+		<li class="icons__item" data-name="ico_freeroi_lg"><i class="icon-ico_freeroi_lg"></i> "ico_freeroi_lg"</li>
+		<li class="icons__item" data-name="ico_freeroi_sm"><i class="icon-ico_freeroi_sm"></i> "ico_freeroi_sm"</li>
+		<li class="icons__item" data-name="ico_fuel_lg"><i class="icon-ico_fuel_lg"></i> "ico_fuel_lg"</li>
+		<li class="icons__item" data-name="ico_fuel_sm"><i class="icon-ico_fuel_sm"></i> "ico_fuel_sm"</li>
+		<li class="icons__item" data-name="ico_fullscreen_lg"><i class="icon-ico_fullscreen_lg"></i> "ico_fullscreen_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-fullscreen" data-name="ico_fullscreen_sm"><i
+					class="icon-ico_fullscreen_sm"></i> "ico_fullscreen_sm"</li>
+		<li class="icons__item" data-name="ico_function_sq_lg"><i class="icon-ico_function_sq_lg"></i> "ico_function_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_function_sq_sm"><i class="icon-ico_function_sq_sm"></i> "ico_function_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_game_lg"><i class="icon-ico_game_lg"></i> "ico_game_lg"</li>
+		<li class="icons__item" data-name="ico_game_sm"><i class="icon-ico_game_sm"></i> "ico_game_sm"</li>
+		<li class="icons__item" data-name="ico_genetics_lg"><i class="icon-ico_genetics_lg"></i> "ico_genetics_lg"</li>
+		<li class="icons__item" data-name="ico_genetics_sm"><i class="icon-ico_genetics_sm"></i> "ico_genetics_sm"</li>
+		<li class="icons__item" data-name="ico_genetics_sq_lg"><i class="icon-ico_genetics_sq_lg"></i> "ico_genetics_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_genetics_sq_sm"><i class="icon-ico_genetics_sq_sm"></i> "ico_genetics_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_googleplus_sq_lg"><i class="icon-ico_googleplus_sq_lg"></i>
+			"ico_googleplus_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-google-plus-sign" data-name="ico_googleplus_sq_sm"><i
+					class="icon-ico_googleplus_sq_sm"></i> "ico_googleplus_sq_sm"</li>
+		<li class="icons__item" data-name="ico_gps_lg"><i class="icon-ico_gps_lg"></i> "ico_gps_lg"</li>
+		<li class="icons__item" data-name="ico_gps_sm"><i class="icon-ico_gps_sm"></i> "ico_gps_sm"</li>
+		<li class="icons__item" data-name="ico_hazard_lg"><i class="icon-ico_hazard_lg"></i> "ico_hazard_lg"</li>
+		<li class="icons__item" data-name="ico_hazard_sm"><i class="icon-ico_hazard_sm"></i> "ico_hazard_sm"</li>
+		<li class="icons__item" data-name="ico_header_lg"><i class="icon-ico_header_lg"></i> "ico_header_lg"</li>
+	</ul>
+</div>
+</div>
+<div class="row" style="margin-left: 0;">
+<div class="col-sm-3 col-md-3" id="icon-row-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_header_sm"><i class="icon-ico_header_sm"></i> "ico_header_sm"</li>
+		<li class="icons__item" data-name="ico_heart_lg"><i class="icon-ico_heart_lg"></i> "ico_heart_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-heart" data-name="ico_heart_sm"><i
+					class="icon-ico_heart_sm"></i> "ico_heart_sm"</li>
+		<li class="icons__item" data-name="ico_height_lg"><i class="icon-ico_height_lg"></i> "ico_height_lg"</li>
+		<li class="icons__item" data-name="ico_height_sm"><i class="icon-ico_height_sm"></i> "ico_height_sm"</li>
+		<li class="icons__item" data-name="ico_help_rnd_lg"><i class="icon-ico_help_rnd_lg"></i> "ico_help_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-question-sign" data-name="ico_help_rnd_sm"><i
+					class="icon-ico_help_rnd_sm"></i> "ico_help_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_history_lg"><i class="icon-ico_history_lg"></i> "ico_history_lg"</li>
+		<li class="icons__item" data-name="ico_history_sm"><i class="icon-ico_history_sm"></i> "ico_history_sm"</li>
+		<li class="icons__item" data-name="ico_home_lg"><i class="icon-ico_home_lg"></i> "ico_home_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-home" data-name="ico_home_sm"><i class="icon-ico_home_sm"></i>
+			"ico_home_sm"</li>
+		<li class="icons__item" data-name="ico_hospital_lg"><i class="icon-ico_hospital_lg"></i> "ico_hospital_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-hospital" data-name="ico_hospital_sm"><i
+					class="icon-ico_hospital_sm"></i> "ico_hospital_sm"</li>
+		<li class="icons__item" data-name="ico_hospitalsign_lg"><i class="icon-ico_hospitalsign_lg"></i>
+			"ico_hospitalsign_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-h-sign" data-name="ico_hospitalsign_sm"><i
+					class="icon-ico_hospitalsign_sm"></i> "ico_hospitalsign_sm"</li>
+		<li class="icons__item" data-name="ico_IDcredentials_lg"><i class="icon-ico_IDcredentials_lg"></i>
+			"ico_IDcredentials_lg"</li>
+		<li class="icons__item" data-name="ico_IDcredentials_sm"><i class="icon-ico_IDcredentials_sm"></i>
+			"ico_IDcredentials_sm"</li>
+		<li class="icons__item" data-name="ico_image_generic_lg"><i class="icon-ico_image_generic_lg"></i>
+			"ico_image_generic_lg"</li>
+		<li class="icons__item" data-name="ico_image_generic_sm"><i class="icon-ico_image_generic_sm"></i>
+			"ico_image_generic_sm"</li>
+		<li class="icons__item" data-name="ico_image_man_lg"><i class="icon-ico_image_man_lg"></i> "ico_image_man_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-picture" data-name="ico_image_man_sm"><i
+					class="icon-ico_image_man_sm"></i> "ico_image_man_sm"</li>
+		<li class="icons__item" data-name="ico_image_woman_lg"><i class="icon-ico_image_woman_lg"></i> "ico_image_woman_lg"
+		</li>
+		<li class="icons__item" data-name="ico_image_woman_sm"><i class="icon-ico_image_woman_sm"></i> "ico_image_woman_sm"
+		</li>
+		<li class="icons__item" data-name="ico_inbox_lg"><i class="icon-ico_inbox_lg"></i> "ico_inbox_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-inbox" data-name="ico_inbox_sm"><i
+					class="icon-ico_inbox_sm"></i> "ico_inbox_sm"</li>
+		<li class="icons__item" data-name="ico_indentleft_lg"><i class="icon-ico_indentleft_lg"></i> "ico_indentleft_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-indent-left" data-name="ico_indentleft_sm"><i
+					class="icon-ico_indentleft_sm"></i> "ico_indentleft_sm"</li>
+		<li class="icons__item" data-name="ico_indentright_lg"><i class="icon-ico_indentright_lg"></i> "ico_indentright_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-indent-right" data-name="ico_indentright_sm"><i
+					class="icon-ico_indentright_sm"></i> "ico_indentright_sm"</li>
+		<li class="icons__item" data-name="ico_index_lg"><i class="icon-ico_index_lg"></i> "ico_index_lg"</li>
+		<li class="icons__item" data-name="ico_index_sm"><i class="icon-ico_index_sm"></i> "ico_index_sm"</li>
+	</ul>
+</div>
+
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_info_rnd_lg"><i class="icon-ico_info_rnd_lg"></i> "ico_info_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-info-sign" data-name="ico_info_rnd_sm"><i
+					class="icon-ico_info_rnd_sm"></i> "ico_info_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_inhalant_lg"><i class="icon-ico_inhalant_lg"></i> "ico_inhalant_lg"</li>
+		<li class="icons__item" data-name="ico_inhalant_sm"><i class="icon-ico_inhalant_sm"></i> "ico_inhalant_sm"</li>
+		<li class="icons__item" data-name="ico_intravenous_lg"><i class="icon-ico_intravenous_lg"></i> "ico_intravenous_lg"
+		</li>
+		<li class="icons__item" data-name="ico_intravenous_sm"><i class="icon-ico_intravenous_sm"></i> "ico_intravenous_sm"
+		</li>
+		<li class="icons__item" data-name="ico_inventory_lg"><i class="icon-ico_inventory_lg"></i> "ico_inventory_lg"</li>
+		<li class="icons__item" data-name="ico_inventory_sm"><i class="icon-ico_inventory_sm"></i> "ico_inventory_sm"</li>
+		<li class="icons__item" data-name="ico_invertgreyscale_lg"><i class="icon-ico_invertgreyscale_lg"></i>
+			"ico_invertgreyscale_lg"</li>
+		<li class="icons__item" data-name="ico_invertgreyscale_sm"><i class="icon-ico_invertgreyscale_sm"></i>
+			"ico_invertgreyscale_sm"</li>
+		<li class="icons__item" data-name="ico_invoice_lg"><i class="icon-ico_invoice_lg"></i> "ico_invoice_lg"</li>
+		<li class="icons__item" data-name="ico_invoice_sm"><i class="icon-ico_invoice_sm"></i> "ico_invoice_sm"</li>
+		<li class="icons__item" data-name="ico_italic_sq_lg"><i class="icon-ico_italic_sq_lg"></i> "ico_italic_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-italic" data-name="ico_italic_sq_sm"><i
+					class="icon-ico_italic_sq_sm"></i> "ico_italic_sq_sm"</li>
+		<li class="icons__item" data-name="ico_key1_lg"><i class="icon-ico_key1_lg"></i> "ico_key1_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-key" data-name="ico_key1_sm"><i class="icon-ico_key1_sm"></i>
+			"ico_key1_sm"</li>
+		<li class="icons__item" data-name="ico_key2_lg"><i class="icon-ico_key2_lg"></i> "ico_key2_lg"</li>
+		<li class="icons__item" data-name="ico_key2_sm"><i class="icon-ico_key2_sm"></i> "ico_key2_sm"</li>
+		<li class="icons__item" data-name="ico_keyframe_lg"><i class="icon-ico_keyframe_lg"></i> "ico_keyframe_lg"</li>
+		<li class="icons__item" data-name="ico_keyframe_sm"><i class="icon-ico_keyframe_sm"></i> "ico_keyframe_sm"</li>
+		<li class="icons__item" data-name="ico_lab1_lg"><i class="icon-ico_lab1_lg"></i> "ico_lab1_lg"</li>
+		<li class="icons__item" data-name="ico_lab1_sm"><i class="icon-ico_lab1_sm"></i> "ico_lab1_sm"</li>
+		<li class="icons__item" data-name="ico_lab2_lg"><i class="icon-ico_lab2_lg"></i> "ico_lab2_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-beaker" data-name="ico_lab2_sm"><i
+					class="icon-ico_lab2_sm"></i> "ico_lab2_sm"</li>
+		<li class="icons__item" data-name="ico_language_lg"><i class="icon-ico_language_lg"></i> "ico_language_lg"</li>
+		<li class="icons__item" data-name="ico_language_sm"><i class="icon-ico_language_sm"></i> "ico_language_sm"</li>
+		<li class="icons__item" data-name="ico_layoutmultipleview1_lg"><i class="icon-ico_layoutmultipleview1_lg"></i>
+			"ico_layoutmultipleview1_lg"</li>
+		<li class="icons__item" data-name="ico_layoutmultipleview1_sm"><i class="icon-ico_layoutmultipleview1_sm"></i>
+			"ico_layoutmultipleview1_sm"</li>
+		<li class="icons__item" data-name="ico_layoutmultipleview2_lg"><i class="icon-ico_layoutmultipleview2_lg"></i>
+			"ico_layoutmultipleview2_lg"</li>
+		<li class="icons__item" data-name="ico_layoutmultipleview2_sm"><i class="icon-ico_layoutmultipleview2_sm"></i>
+			"ico_layoutmultipleview2_sm"</li>
+		<li class="icons__item" data-name="ico_layoutnoview_lg"><i class="icon-ico_layoutnoview_lg"></i>
+			"ico_layoutnoview_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_layoutnoview_sm"><i class="icon-ico_layoutnoview_sm"></i>
+			"ico_layoutnoview_sm"</li>
+		<li class="icons__item" data-name="ico_leaf_lg"><i class="icon-ico_leaf_lg"></i> "ico_leaf_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-leaf" data-name="ico_leaf_sm"><i class="icon-ico_leaf_sm"></i>
+			"ico_leaf_sm"</li>
+		<li class="icons__item" data-name="ico_legalgovt_lg"><i class="icon-ico_legalgovt_lg"></i> "ico_legalgovt_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-legal" data-name="ico_legalgovt_sm"><i
+					class="icon-ico_legalgovt_sm"></i> "ico_legalgovt_sm"</li>
+		<li class="icons__item" data-name="ico_lightbulb_lg"><i class="icon-ico_lightbulb_lg"></i> "ico_lightbulb_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-lightbulb" data-name="ico_lightbulb_sm"><i
+					class="icon-ico_lightbulb_sm"></i> "ico_lightbulb_sm"</li>
+		<li class="icons__item" data-name="ico_link_lg"><i class="icon-ico_link_lg"></i> "ico_link_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-link" data-name="ico_link_sm"><i class="icon-ico_link_sm"></i>
+			"ico_link_sm"</li>
+		<li class="icons__item" data-name="ico_linkedin_sq_lg"><i class="icon-ico_linkedin_sq_lg"></i> "ico_linkedin_sq_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-linkedin-sign" data-name="ico_linkedin_sq_sm"><i
+					class="icon-ico_linkedin_sq_sm"></i> "ico_linkedin_sq_sm"</li>
+		<li class="icons__item" data-name="ico_listol_lg"><i class="icon-ico_listol_lg"></i> "ico_listol_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-list-ol" data-name="ico_listol_sm"><i
+					class="icon-ico_listol_sm"></i> "ico_listol_sm"</li>
+		<li class="icons__item" data-name="ico_listul_lg"><i class="icon-ico_listul_lg"></i> "ico_listul_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-th-list" data-name="ico_listul_sm"><i
+					class="icon-ico_listul_sm"></i> "ico_listul_sm"</li>
+		<li class="icons__item" data-name="ico_localizerline_sq_lg"><i class="icon-ico_localizerline_sq_lg"></i>
+			"ico_localizerline_sq_lg"</li>
+		<li class="icons__item" data-name="ico_localizerline_sq_sm"><i class="icon-ico_localizerline_sq_sm"></i>
+			"ico_localizerline_sq_sm"</li>
+		<li class="icons__item" data-name="ico_lock_lg"><i class="icon-ico_lock_lg"></i> "ico_lock_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-lock" data-name="ico_lock_sm"><i class="icon-ico_lock_sm"></i>
+			"ico_lock_sm"</li>
+		<li class="icons__item" data-name="ico_login_lg"><i class="icon-ico_login_lg"></i> "ico_login_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-signin" data-name="ico_login_sm"><i
+					class="icon-ico_login_sm"></i> "ico_login_sm"</li>
+		<li class="icons__item" data-name="ico_logout_lg"><i class="icon-ico_logout_lg"></i> "ico_logout_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-signout" data-name="ico_logout_sm"><i
+					class="icon-ico_logout_sm"></i> "ico_logout_sm"</li>
+		<li class="icons__item" data-name="ico_magicwand_lg"><i class="icon-ico_magicwand_lg"></i> "ico_magicwand_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-magic" data-name="ico_magicwand_sm"><i
+					class="icon-ico_magicwand_sm"></i> "ico_magicwand_sm"</li>
+		<li class="icons__item" data-name="ico_magnet_lg"><i class="icon-ico_magnet_lg"></i> "ico_magnet_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-magnet" data-name="ico_magnet_sm"><i
+					class="icon-ico_magnet_sm"></i> "ico_magnet_sm"</li>
+		<li class="icons__item" data-name="ico_mail_lg"><i class="icon-ico_mail_lg"></i> "ico_mail_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-envelope-alt" data-name="ico_mail_sm"><i
+					class="icon-ico_mail_sm"></i> "ico_mail_sm"</li>
+		<li class="icons__item" data-name="ico_male_lg"><i class="icon-ico_male_lg"></i> "ico_male_lg"</li>
+		<li class="icons__item" data-name="ico_male_sm"><i class="icon-ico_male_sm"></i> "ico_male_sm"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_map_lg"><i class="icon-ico_map_lg"></i> "ico_map_lg"</li>
+		<li class="icons__item" data-name="ico_map_sm"><i class="icon-ico_map_sm"></i> "ico_map_sm"</li>
+		<li class="icons__item" data-name="ico_mapmarker_lg"><i class="icon-ico_mapmarker_lg"></i> "ico_mapmarker_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-map-marker" data-name="ico_mapmarker_sm"><i
+					class="icon-ico_mapmarker_sm"></i> "ico_mapmarker_sm"</li>
+		<li class="icons__item" data-name="ico_measureangle_lg"><i class="icon-ico_measureangle_lg"></i>
+			"ico_measureangle_lg"</li>
+		<li class="icons__item" data-name="ico_measureangle_sm"><i class="icon-ico_measureangle_sm"></i>
+			"ico_measureangle_sm"</li>
+		<li class="icons__item" data-name="ico_measurecalibration_lg"><i class="icon-ico_measurecalibration_lg"></i>
+			"ico_measurecalibration_lg"</li>
+		<li class="icons__item" data-name="ico_measurecalibration_sm"><i class="icon-ico_measurecalibration_sm"></i>
+			"ico_measurecalibration_sm"</li>
+		<li class="icons__item" data-name="ico_measuredistance_lg"><i class="icon-ico_measuredistance_lg"></i>
+			"ico_measuredistance_lg"</li>
+		<li class="icons__item" data-name="ico_measuredistance_sm"><i class="icon-ico_measuredistance_sm"></i>
+			"ico_measuredistance_sm"</li>
+		<li class="icons__item" data-name="ico_medicalkit_lg"><i class="icon-ico_medicalkit_lg"></i> "ico_medicalkit_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-medkit" data-name="ico_medicalkit_sm"><i
+					class="icon-ico_medicalkit_sm"></i> "ico_medicalkit_sm"</li>
+		<li class="icons__item" data-name="ico_medication_lg"><i class="icon-ico_medication_lg"></i> "ico_medication_lg"
+		</li>
+		<li class="icons__item" data-name="ico_medication_sm"><i class="icon-ico_medication_sm"></i> "ico_medication_sm"
+		</li>
+		<li class="icons__item" data-name="ico_medschedule_lg"><i class="icon-ico_medschedule_lg"></i> "ico_medschedule_lg"
+		</li>
+		<li class="icons__item" data-name="ico_medschedule_sm"><i class="icon-ico_medschedule_sm"></i> "ico_medschedule_sm"
+		</li>
+		<li class="icons__item" data-name="ico_module_lg"><i class="icon-ico_module_lg"></i> "ico_module_lg"</li>
+		<li class="icons__item" data-name="ico_module_sm"><i class="icon-ico_module_sm"></i> "ico_module_sm"</li>
+		<li class="icons__item" data-name="ico_modules_lg"><i class="icon-ico_modules_lg"></i> "ico_modules_lg"</li>
+		<li class="icons__item" data-name="ico_modules_sm"><i class="icon-ico_modules_sm"></i> "ico_modules_sm"</li>
+		<li class="icons__item" data-name="ico_moneydollar_lg"><i class="icon-ico_moneydollar_lg"></i> "ico_moneydollar_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-money" data-name="ico_moneydollar_sm"><i
+					class="icon-ico_moneydollar_sm"></i> "ico_moneydollar_sm"</li>
+		<li class="icons__item" data-name="ico_moneyeuro_lg"><i class="icon-ico_moneyeuro_lg"></i> "ico_moneyeuro_lg"</li>
+		<li class="icons__item" data-name="ico_moneyeuro_sm"><i class="icon-ico_moneyeuro_sm"></i> "ico_moneyeuro_sm"</li>
+		<li class="icons__item" data-name="ico_moneypound_lg"><i class="icon-ico_moneypound_lg"></i> "ico_moneypound_lg"
+		</li>
+		<li class="icons__item" data-name="ico_moneypound_sm"><i class="icon-ico_moneypound_sm"></i> "ico_moneypound_sm"
+		</li>
+		<li class="icons__item" data-name="ico_moneyyen_lg"><i class="icon-ico_moneyyen_lg"></i> "ico_moneyyen_lg"</li>
+		<li class="icons__item" data-name="ico_moneyyen_sm"><i class="icon-ico_moneyyen_sm"></i> "ico_moneyyen_sm"</li>
+		<li class="icons__item" data-name="ico_monitorsetting_lg"><i class="icon-ico_monitorsetting_lg"></i>
+			"ico_monitorsetting_lg"</li>
+		<li class="icons__item" data-name="ico_monitorsetting_sm"><i class="icon-ico_monitorsetting_sm"></i>
+			"ico_monitorsetting_sm"</li>
+		<li class="icons__item" data-name="ico_moon_lg"><i class="icon-ico_moon_lg"></i> "ico_moon_lg"</li>
+	</ul>
+</div>
+</div>
+<div class="row" style="margin-left: 0;">
+<div class="col-sm-3 col-md-3" id="icon-row-4">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_moon_sm"><i class="icon-ico_moon_sm"></i> "ico_moon_sm"</li>
+		<li class="icons__item" data-name="ico_multiplanar_lg"><i class="icon-ico_multiplanar_lg"></i> "ico_multiplanar_lg"
+		</li>
+		<li class="icons__item" data-name="ico_multiplanar_sm"><i class="icon-ico_multiplanar_sm"></i> "ico_multiplanar_sm"
+		</li>
+		<li class="icons__item" data-name="ico_muscular_sq_lg"><i class="icon-ico_muscular_sq_lg"></i> "ico_muscular_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_muscular_sq_sm"><i class="icon-ico_muscular_sq_sm"></i> "ico_muscular_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_navigateright_rnd_lg"><i class="icon-ico_navigateright_rnd_lg"></i>
+			"ico_navigateright_rnd_lg"</li>
+		<li class="icons__item" data-name="ico_navigateright_rnd_sm"><i class="icon-ico_navigateright_rnd_sm"></i>
+			"ico_navigateright_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_nervous_sq_lg"><i class="icon-ico_nervous_sq_lg"></i> "ico_nervous_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_nervous_sq_sm"><i class="icon-ico_nervous_sq_sm"></i> "ico_nervous_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_nextstudy_lg"><i class="icon-ico_nextstudy_lg"></i> "ico_nextstudy_lg"</li>
+		<li class="icons__item" data-name="ico_nextstudy_sm"><i class="icon-ico_nextstudy_sm"></i> "ico_nextstudy_sm"</li>
+		<li class="icons__item" data-name="ico_nfc_lg"><i class="icon-ico_nfc_lg"></i> "ico_nfc_lg"</li>
+		<li class="icons__item" data-name="ico_nfc_sm"><i class="icon-ico_nfc_sm"></i> "ico_nfc_sm"</li>
+		<li class="icons__item" data-name="ico_note_lg"><i class="icon-ico_note_lg"></i> "ico_note_lg"</li>
+		<li class="icons__item" data-name="ico_note_sm"><i class="icon-ico_note_sm"></i> "ico_note_sm"</li>
+		<li class="icons__item" data-name="ico_nurse_lg"><i class="icon-ico_nurse_lg"></i> "ico_nurse_lg"</li>
+		<li class="icons__item" data-name="ico_nurse_sm"><i class="icon-ico_nurse_sm"></i> "ico_nurse_sm"</li>
+		<li class="icons__item" data-name="ico_office_lg"><i class="icon-ico_office_lg"></i> "ico_office_lg"</li>
+		<li class="icons__item" data-name="ico_office_sm"><i class="icon-ico_office_sm"></i> "ico_office_sm"</li>
+		<li class="icons__item" data-name="ico_oralliquid_lg"><i class="icon-ico_oralliquid_lg"></i> "ico_oralliquid_lg"
+		</li>
+		<li class="icons__item" data-name="ico_oralliquid_sm"><i class="icon-ico_oralliquid_sm"></i> "ico_oralliquid_sm"
+		</li>
+		<li class="icons__item" data-name="ico_oralpill_lg"><i class="icon-ico_oralpill_lg"></i> "ico_oralpill_lg"</li>
+		<li class="icons__item" data-name="ico_oralpill_sm"><i class="icon-ico_oralpill_sm"></i> "ico_oralpill_sm"</li>
+		<li class="icons__item" data-name="ico_oraltablet_lg"><i class="icon-ico_oraltablet_lg"></i> "ico_oraltablet_lg"
+		</li>
+		<li class="icons__item" data-name="ico_oraltablet_sm"><i class="icon-ico_oraltablet_sm"></i> "ico_oraltablet_sm"
+		</li>
+		<li class="icons__item" data-name="ico_ovalroi_lg"><i class="icon-ico_ovalroi_lg"></i> "ico_ovalroi_lg"</li>
+		<li class="icons__item" data-name="ico_ovalroi_sm"><i class="icon-ico_ovalroi_sm"></i> "ico_ovalroi_sm"</li>
+		<li class="icons__item" data-name="ico_palette_lg"><i class="icon-ico_palette_lg"></i> "ico_palette_lg"</li>
+		<li class="icons__item" data-name="ico_palette_sm"><i class="icon-ico_palette_sm"></i> "ico_palette_sm"</li>
+		<li class="icons__item" data-name="ico_panarrow_lg"><i class="icon-ico_panarrow_lg"></i> "ico_panarrow_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-move" data-name="ico_panarrow_sm"><i
+					class="icon-ico_panarrow_sm"></i> "ico_panarrow_sm"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_panhand_lg"><i class="icon-ico_panhand_lg"></i> "ico_panhand_lg"</li>
+		<li class="icons__item" data-name="ico_panhand_sm"><i class="icon-ico_panhand_sm"></i> "ico_panhand_sm"</li>
+		<li class="icons__item" data-name="ico_partlycloudy_lg"><i class="icon-ico_partlycloudy_lg"></i>
+			"ico_partlycloudy_lg"</li>
+		<li class="icons__item" data-name="ico_partlycloudy_sm"><i class="icon-ico_partlycloudy_sm"></i>
+			"ico_partlycloudy_sm"</li>
+		<li class="icons__item" data-name="ico_paste_lg"><i class="icon-ico_paste_lg"></i> "ico_paste_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-paste" data-name="ico_paste_sm"><i
+					class="icon-ico_paste_sm"></i> "ico_paste_sm"</li>
+		<li class="icons__item" data-name="ico_pause_rnd_lg"><i class="icon-ico_pause_rnd_lg"></i> "ico_pause_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-pause" data-name="ico_pause_rnd_sm"><i
+					class="icon-ico_pause_rnd_sm"></i> "ico_pause_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_pen_lg"><i class="icon-ico_pen_lg"></i> "ico_pen_lg"</li>
+		<li class="icons__item" data-name="ico_pen_sm"><i class="icon-ico_pen_sm"></i> "ico_pen_sm"</li>
+		<li class="icons__item" data-name="ico_pharmacy_lg"><i class="icon-ico_pharmacy_lg"></i> "ico_pharmacy_lg"</li>
+		<li class="icons__item" data-name="ico_pharmacy_sm"><i class="icon-ico_pharmacy_sm"></i> "ico_pharmacy_sm"</li>
+		<li class="icons__item" data-name="ico_phone_lg"><i class="icon-ico_phone_lg"></i> "ico_phone_lg"</li>
+		<li class="icons__item" data-name="ico_phone_sm"><i class="icon-ico_phone_sm"></i> "ico_phone_sm"</li>
+		<li class="icons__item" data-name="ico_pinterest_sq_lg"><i class="icon-ico_pinterest_sq_lg"></i>
+			"ico_pinterest_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-pinterest-sign" data-name="ico_pinterest_sq_sm"><i
+					class="icon-ico_pinterest_sq_sm"></i> "ico_pinterest_sq_sm"</li>
+		<li class="icons__item" data-name="ico_pixellens_lg"><i class="icon-ico_pixellens_lg"></i> "ico_pixellens_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-screenshot" data-name="ico_pixellens_sm"><i
+					class="icon-ico_pixellens_sm"></i> "ico_pixellens_sm"</li>
+		<li class="icons__item" data-name="ico_plan_lg"><i class="icon-ico_plan_lg"></i> "ico_plan_lg"</li>
+		<li class="icons__item" data-name="ico_plan_sm"><i class="icon-ico_plan_sm"></i> "ico_plan_sm"</li>
+		<li class="icons__item" data-name="ico_plane_lg"><i class="icon-ico_plane_lg"></i> "ico_plane_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-plane" data-name="ico_plane_sm"><i
+					class="icon-ico_plane_sm"></i> "ico_plane_sm"</li>
+		<li class="icons__item" data-name="ico_play_rnd_lg"><i class="icon-ico_play_rnd_lg"></i> "ico_play_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-play" data-name="ico_play_rnd_sm"><i
+					class="icon-ico_play_rnd_sm"></i> "ico_play_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_polygonroi_lg"><i class="icon-ico_polygonroi_lg"></i> "ico_polygonroi_lg"
+		</li>
+		<li class="icons__item" data-name="ico_position1_lg"><i class="icon-ico_position1_lg"></i> "ico_position1_lg"</li>
+		<li class="icons__item" data-name="ico_position1_sm"><i class="icon-ico_position1_sm"></i> "ico_position1_sm"</li>
+		<li class="icons__item" data-name="ico_position2_lg"><i class="icon-ico_position2_lg"></i> "ico_position2_lg"</li>
+		<li class="icons__item" data-name="ico_position2_sm"><i class="icon-ico_position2_sm"></i> "ico_position2_sm"</li>
+		<li class="icons__item" data-name="ico_power_lg"><i class="icon-ico_power_lg"></i> "ico_power_lg"</li>
+		<li class="icons__item" data-name="ico_power_sm"><i class="icon-ico_power_sm"></i> "ico_power_sm"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_prescription_lg"><i class="icon-ico_prescription_lg"></i>
+			"ico_prescription_lg"</li>
+		<li class="icons__item" data-name="ico_prescription_sm"><i class="icon-ico_prescription_sm"></i>
+			"ico_prescription_sm"</li>
+		<li class="icons__item" data-name="ico_presentation_lg"><i class="icon-ico_presentation_lg"></i>
+			"ico_presentation_lg"</li>
+		<li class="icons__item" data-name="ico_presentation_sm"><i class="icon-ico_presentation_sm"></i>
+			"ico_presentation_sm"</li>
+		<li class="icons__item" data-name="ico_preview_lg"><i class="icon-ico_preview_lg"></i> "ico_preview_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-eye-open" data-name="ico_preview_sm"><i
+					class="icon-ico_preview_sm"></i> "ico_preview_sm"</li>
+		<li class="icons__item" data-name="ico_previousstudy_lg"><i class="icon-ico_previousstudy_lg"></i>
+			"ico_previousstudy_lg"</li>
+		<li class="icons__item" data-name="ico_previousstudy_sm"><i class="icon-ico_previousstudy_sm"></i>
+			"ico_previousstudy_sm"</li>
+		<li class="icons__item" data-name="ico_print_lg"><i class="icon-ico_print_lg"></i> "ico_print_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-print" data-name="ico_print_sm"><i
+					class="icon-ico_print_sm"></i> "ico_print_sm"</li>
+		<li class="icons__item" data-name="ico_procedure_sq_lg"><i class="icon-ico_procedure_sq_lg"></i>
+			"ico_procedure_sq_lg"</li>
+		<li class="icons__item" data-name="ico_procedure_sq_sm"><i class="icon-ico_procedure_sq_sm"></i>
+			"ico_procedure_sq_sm"</li>
+		<li class="icons__item" data-name="ico_pushpin_lg"><i class="icon-ico_pushpin_lg"></i> "ico_pushpin_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-pushpin" data-name="ico_pushpin_sm"><i
+					class="icon-ico_pushpin_sm"></i> "ico_pushpin_sm"</li>
+		<li class="icons__item" data-name="ico_quote_sq_lg"><i class="icon-ico_quote_sq_lg"></i> "ico_quote_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-quote-right" data-name="ico_quote_sq_sm"><i
+					class="icon-ico_quote_sq_sm"></i> "ico_quote_sq_sm"</li>
+		<li class="icons__item" data-name="ico_radioactive_lg"><i class="icon-ico_radioactive_lg"></i> "ico_radioactive_lg"
+		</li>
+		<li class="icons__item" data-name="ico_radioactive_sm"><i class="icon-ico_radioactive_sm"></i> "ico_radioactive_sm"
+		</li>
+		<li class="icons__item" data-name="ico_rainy_lg"><i class="icon-ico_rainy_lg"></i> "ico_rainy_lg"</li>
+		<li class="icons__item" data-name="ico_rainy_sm"><i class="icon-ico_rainy_sm"></i> "ico_rainy_sm"</li>
+		<li class="icons__item" data-name="ico_record_lg"><i class="icon-ico_record_lg"></i> "ico_record_lg"</li>
+		<li class="icons__item" data-name="ico_record_sm"><i class="icon-ico_record_sm"></i> "ico_record_sm"</li>
+		<li class="icons__item" data-name="ico_rectal_lg"><i class="icon-ico_rectal_lg"></i> "ico_rectal_lg"</li>
+		<li class="icons__item" data-name="ico_rectal_sm"><i class="icon-ico_rectal_sm"></i> "ico_rectal_sm"</li>
+		<li class="icons__item" data-name="ico_rectangleroi_lg"><i class="icon-ico_rectangleroi_lg"></i>
+			"ico_rectangleroi_lg"</li>
+		<li class="icons__item" data-name="ico_rectangleroi_sm"><i class="icon-ico_rectangleroi_sm"></i>
+			"ico_rectangleroi_sm"</li>
+		<li class="icons__item" data-name="ico_recycle_lg"><i class="icon-ico_recycle_lg"></i> "ico_recycle_lg"</li>
+		<li class="icons__item" data-name="ico_recycle_sm"><i class="icon-ico_recycle_sm"></i> "ico_recycle_sm"</li>
+		<li class="icons__item" data-name="ico_redo_rnd_lg"><i class="icon-ico_redo_rnd_lg"></i> "ico_redo_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-repeat" data-name="ico_redo_rnd_sm"><i
+					class="icon-ico_redo_rnd_sm"></i> "ico_redo_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_refresh_rnd_lg"><i class="icon-ico_refresh_rnd_lg"></i> "ico_refresh_rnd_lg"
+		</li>
+	</ul>
+</div>
+
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_refresh_rnd_sm"><i class="icon-ico_refresh_rnd_sm"></i> "ico_refresh_rnd_sm"
+		</li>
+		<li class="icons__item" data-name="ico_religion_lg"><i class="icon-ico_religion_lg"></i> "ico_religion_lg"</li>
+		<li class="icons__item" data-name="ico_religion_sm"><i class="icon-ico_religion_sm"></i> "ico_religion_sm"</li>
+		<li class="icons__item" data-name="ico_replace_sq_lg"><i class="icon-ico_replace_sq_lg"></i> "ico_replace_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_replace_sq_sm"><i class="icon-ico_replace_sq_sm"></i> "ico_replace_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_reply_lg"><i class="icon-ico_reply_lg"></i> "ico_reply_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-reply" data-name="ico_reply_sm"><i
+					class="icon-ico_reply_sm"></i> "ico_reply_sm"</li>
+		<li class="icons__item" data-name="ico_reports_lg"><i class="icon-ico_reports_lg"></i> "ico_reports_lg"</li>
+		<li class="icons__item" data-name="ico_reproduction_lg"><i class="icon-ico_reproduction_lg"></i>
+			"ico_reproduction_lg"</li>
+		<li class="icons__item" data-name="ico_reproduction_sm"><i class="icon-ico_reproduction_sm"></i>
+			"ico_reproduction_sm"</li>
+		<li class="icons__item" data-name="ico_reset_rnd_lg"><i class="icon-ico_reset_rnd_lg"></i> "ico_reset_rnd_lg"</li>
+		<li class="icons__item" data-name="ico_reset_rnd_sm"><i class="icon-ico_reset_rnd_sm"></i> "ico_reset_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_resizehorizontal_lg"><i class="icon-ico_resizehorizontal_lg"></i>
+			"ico_resizehorizontal_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-resize-horizontal" data-name="ico_resizehorizontal_sm"><i
+					class="icon-ico_resizehorizontal_sm"></i> "ico_resizehorizontal_sm"</li>
+		<li class="icons__item" data-name="ico_resizevertical_lg"><i class="icon-ico_resizevertical_lg"></i>
+			"ico_resizevertical_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-resize-vertical" data-name="ico_resizevertical_sm"><i
+					class="icon-ico_resizevertical_sm"></i> "ico_resizevertical_sm"</li>
+		<li class="icons__item" data-name="ico_respiratory_sq_lg"><i class="icon-ico_respiratory_sq_lg"></i>
+			"ico_respiratory_sq_lg"</li>
+		<li class="icons__item" data-name="ico_respiratory_sq_sm"><i class="icon-ico_respiratory_sq_sm"></i>
+			"ico_respiratory_sq_sm"</li>
+		<li class="icons__item" data-name="ico_rotate90_lg"><i class="icon-ico_rotate90_lg"></i> "ico_rotate90_lg"</li>
+		<li class="icons__item" data-name="ico_rotate90_sm"><i class="icon-ico_rotate90_sm"></i> "ico_rotate90_sm"</li>
+		<li class="icons__item" data-name="ico_rotate_lg"><i class="icon-ico_rotate_lg"></i> "ico_rotate_lg"</li>
+		<li class="icons__item" data-name="ico_rotate_sm"><i class="icon-ico_rotate_sm"></i> "ico_rotate_sm"</li>
+		<li class="icons__item" data-name="ico_route_lg"><i class="icon-ico_route_lg"></i> "ico_route_lg"</li>
+		<li class="icons__item" data-name="ico_route_sm"><i class="icon-ico_route_sm"></i> "ico_route_sm"</li>
+		<li class="icons__item" data-name="ico_save_lg"><i class="icon-ico_save_lg"></i> "ico_save_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-save" data-name="ico_save_sm"><i class="icon-ico_save_sm"></i>
+			"ico_save_sm"</li>
+		<li class="icons__item" data-name="ico_scanneddoc_lg"><i class="icon-ico_scanneddoc_lg"></i> "ico_scanneddoc_lg"
+		</li>
+		<li class="icons__item" data-name="ico_scanneddoc_sm"><i class="icon-ico_scanneddoc_sm"></i> "ico_scanneddoc_sm"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-barcode" data-name="ico_scanneditem_sm"><i
+					class="icon-ico_scanneditem_sm"></i> "ico_scanneditem_sm"</li>
+		<li class="icons__item" data-name="ico_scheduler1_lg"><i class="icon-ico_scheduler1_lg"></i> "ico_scheduler1_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-time" data-name="ico_scheduler1_sm"><i
+					class="icon-ico_scheduler1_sm"></i> "ico_scheduler1_sm"</li>
+	</ul>
+</div>
+</div>
+<div class="row" style="margin-left: 0;">
+<div class="col-sm-3 col-md-3" id="icon-row-5">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_scheduler2_lg"><i class="icon-ico_scheduler2_lg"></i> "ico_scheduler2_lg"
+		</li>
+		<li class="icons__item" data-name="ico_scheduler2_sm"><i class="icon-ico_scheduler2_sm"></i> "ico_scheduler2_sm"
+		</li>
+		<li class="icons__item" data-name="ico_scroll_lg"><i class="icon-ico_scroll_lg"></i> "ico_scroll_lg"</li>
+		<li class="icons__item" data-name="ico_scroll_rnd_lg"><i class="icon-ico_scroll_rnd_lg"></i> "ico_scroll_rnd_lg"
+		</li>
+		<li class="icons__item" data-name="ico_scroll_rnd_sm"><i class="icon-ico_scroll_rnd_sm"></i> "ico_scroll_rnd_sm"
+		</li>
+		<li class="icons__item" data-name="ico_scroll_sm"><i class="icon-ico_scroll_sm"></i> "ico_scroll_sm"</li>
+		<li class="icons__item" data-name="ico_search_lg"><i class="icon-ico_search_lg"></i> "ico_search_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-search" data-name="ico_search_sm"><i
+					class="icon-ico_search_sm"></i> "ico_search_sm"</li>
+		<li class="icons__item" data-name="ico_security_lg"><i class="icon-ico_security_lg"></i> "ico_security_lg"</li>
+		<li class="icons__item" data-name="ico_security_sm"><i class="icon-ico_security_sm"></i> "ico_security_sm"</li>
+		<li class="icons__item" data-name="ico_selectviewport_sq_lg"><i class="icon-ico_selectviewport_sq_lg"></i>
+			"ico_selectviewport_sq_lg"</li>
+		<li class="icons__item" data-name="ico_selectviewport_sq_sm"><i class="icon-ico_selectviewport_sq_sm"></i>
+			"ico_selectviewport_sq_sm"</li>
+		<li class="icons__item" data-name="ico_settings1_lg"><i class="icon-ico_settings1_lg"></i> "ico_settings1_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-cog" data-name="ico_settings1_sm"><i
+					class="icon-ico_settings1_sm"></i> "ico_settings1_sm"</li>
+		<li class="icons__item" data-name="ico_settings2_lg"><i class="icon-ico_settings2_lg"></i> "ico_settings2_lg"</li>
+		<li class="icons__item" data-name="ico_settings2_sm"><i class="icon-ico_settings2_sm"></i> "ico_settings2_sm"</li>
+		<li class="icons__item" data-name="ico_share_lg"><i class="icon-ico_share_lg"></i> "ico_share_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-share" data-name="ico_share_sm"><i
+					class="icon-ico_share_sm"></i> "ico_share_sm"</li>
+		<li class="icons__item" data-name="ico_signal_lg"><i class="icon-ico_signal_lg"></i> "ico_signal_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-signal" data-name="ico_signal_sm"><i
+					class="icon-ico_signal_sm"></i> "ico_signal_sm"</li>
+		<li class="icons__item" data-name="ico_singlepointroi_lg"><i class="icon-ico_singlepointroi_lg"></i>
+			"ico_singlepointroi_lg"</li>
+		<li class="icons__item" data-name="ico_singlepointroi_sm"><i class="icon-ico_singlepointroi_sm"></i>
+			"ico_singlepointroi_sm"</li>
+		<li class="icons__item" data-name="ico_sitemap_lg"><i class="icon-ico_sitemap_lg"></i> "ico_sitemap_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-sitexmap" data-name="ico_sitemap_sm"><i
+					class="icon-ico_sitemap_sm"></i> "ico_sitemap_sm"</li>
+		<li class="icons__item" data-name="ico_sizesync_lg"><i class="icon-ico_sizesync_lg"></i> "ico_sizesync_lg"</li>
+		<li class="icons__item" data-name="ico_sizesync_sm"><i class="icon-ico_sizesync_sm"></i> "ico_sizesync_sm"</li>
+		<li class="icons__item" data-name="ico_skeletal_sq_lg"><i class="icon-ico_skeletal_sq_lg"></i> "ico_skeletal_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_skeletal_sq_sm"><i class="icon-ico_skeletal_sq_sm"></i> "ico_skeletal_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_sort_sq_lg"><i class="icon-ico_sort_sq_lg"></i> "ico_sort_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-sort" data-name="ico_sort_sq_sm"><i
+					class="icon-ico_sort_sq_sm"></i> "ico_sort_sq_sm"</li>
+		<li class="icons__item" data-name="ico_spaceastronaut_lg"><i class="icon-ico_spaceastronaut_lg"></i>
+			"ico_spaceastronaut_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_spaceastronaut_sm"><i class="icon-ico_spaceastronaut_sm"></i>
+			"ico_spaceastronaut_sm"</li>
+		<li class="icons__item" data-name="ico_spacemilkyway_lg"><i class="icon-ico_spacemilkyway_lg"></i>
+			"ico_spacemilkyway_lg"</li>
+		<li class="icons__item" data-name="ico_spacemilkyway_sm"><i class="icon-ico_spacemilkyway_sm"></i>
+			"ico_spacemilkyway_sm"</li>
+		<li class="icons__item" data-name="ico_spaceplanets_lg"><i class="icon-ico_spaceplanets_lg"></i>
+			"ico_spaceplanets_lg"</li>
+		<li class="icons__item" data-name="ico_spaceplanets_sm"><i class="icon-ico_spaceplanets_sm"></i>
+			"ico_spaceplanets_sm"</li>
+		<li class="icons__item" data-name="ico_spacerocket1_lg"><i class="icon-ico_spacerocket1_lg"></i>
+			"ico_spacerocket1_lg"</li>
+		<li class="icons__item" data-name="ico_spacerocket1_sm"><i class="icon-ico_spacerocket1_sm"></i>
+			"ico_spacerocket1_sm"</li>
+		<li class="icons__item" data-name="ico_spacerocket2_lg"><i class="icon-ico_spacerocket2_lg"></i>
+			"ico_spacerocket2_lg"</li>
+		<li class="icons__item" data-name="ico_spacerocket2_sm"><i class="icon-ico_spacerocket2_sm"></i>
+			"ico_spacerocket2_sm"</li>
+		<li class="icons__item" data-name="ico_spacesolarsystem1_lg"><i class="icon-ico_spacesolarsystem1_lg"></i>
+			"ico_spacesolarsystem1_lg"</li>
+		<li class="icons__item" data-name="ico_spacesolarsystem1_sm"><i class="icon-ico_spacesolarsystem1_sm"></i>
+			"ico_spacesolarsystem1_sm"</li>
+		<li class="icons__item" data-name="ico_spacesolarsystem2_lg"><i class="icon-ico_spacesolarsystem2_lg"></i>
+			"ico_spacesolarsystem2_lg"</li>
+		<li class="icons__item" data-name="ico_spacesolarsystem2_sm"><i class="icon-ico_spacesolarsystem2_sm"></i>
+			"ico_spacesolarsystem2_sm"</li>
+		<li class="icons__item" data-name="ico_spacesolarsystem3_lg"><i class="icon-ico_spacesolarsystem3_lg"></i>
+			"ico_spacesolarsystem3_lg"</li>
+		<li class="icons__item" data-name="ico_spacesolarsystem3_sm"><i class="icon-ico_spacesolarsystem3_sm"></i>
+			"ico_spacesolarsystem3_sm"</li>
+		<li class="icons__item" data-name="ico_spacetransmissions1_lg"><i class="icon-ico_spacetransmissions1_lg"></i>
+			"ico_spacetransmissions1_lg"</li>
+		<li class="icons__item" data-name="ico_spacetransmissions1_sm"><i class="icon-ico_spacetransmissions1_sm"></i>
+			"ico_spacetransmissions1_sm"</li>
+		<li class="icons__item" data-name="ico_spacetransmissions2_lg"><i class="icon-ico_spacetransmissions2_lg"></i>
+			"ico_spacetransmissions2_lg"</li>
+		<li class="icons__item" data-name="ico_spacetransmissions2_sm"><i class="icon-ico_spacetransmissions2_sm"></i>
+			"ico_spacetransmissions2_sm"</li>
+		<li class="icons__item" data-name="ico_spinner_lg"><i class="icon-ico_spinner_lg"></i> "ico_spinner_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-spinner" data-name="ico_spinner_sm"><i
+					class="icon-ico_spinner_sm"></i> "ico_spinner_sm"</li>
+		<li class="icons__item" data-name="ico_star_lg"><i class="icon-ico_star_lg"></i> "ico_star_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-star" data-name="ico_star_sm"><i class="icon-ico_star_sm"></i>
+			"ico_star_sm"</li>
+		<li class="icons__item" data-name="ico_starempty_lg"><i class="icon-ico_starempty_lg"></i> "ico_starempty_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-star-empty" data-name="ico_starempty_sm"><i
+					class="icon-ico_starempty_sm"></i> "ico_starempty_sm"</li>
+		<li class="icons__item" data-name="ico_starhalf_lg"><i class="icon-ico_starhalf_lg"></i> "ico_starhalf_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-star-half" data-name="ico_starhalf_sm"><i
+					class="icon-ico_starhalf_sm"></i> "ico_starhalf_sm"</li>
+		<li class="icons__item" data-name="ico_statistics_sq_lg"><i class="icon-ico_statistics_sq_lg"></i>
+			"ico_statistics_sq_lg"</li>
+		<li class="icons__item" data-name="ico_statistics_sq_sm"><i class="icon-ico_statistics_sq_sm"></i>
+			"ico_statistics_sq_sm"</li>
+		<li class="icons__item" data-name="ico_stop_rnd_lg"><i class="icon-ico_stop_rnd_lg"></i> "ico_stop_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-stop" data-name="ico_stop_rnd_sm"><i
+					class="icon-ico_stop_rnd_sm"></i> "ico_stop_rnd_sm"</li>
+	</ul>
+</div>
+
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_stormy_lg"><i class="icon-ico_stormy_lg"></i> "ico_stormy_lg"</li>
+		<li class="icons__item" data-name="ico_stormy_sm"><i class="icon-ico_stormy_sm"></i> "ico_stormy_sm"</li>
+		<li class="icons__item" data-name="ico_strikethrough_sq_lg"><i class="icon-ico_strikethrough_sq_lg"></i>
+			"ico_strikethrough_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-strikethrough" data-name="ico_strikethrough_sq_sm"><i
+					class="icon-ico_strikethrough_sq_sm"></i> "ico_strikethrough_sq_sm"</li>
+		<li class="icons__item" data-name="ico_sublingual_lg"><i class="icon-ico_sublingual_lg"></i> "ico_sublingual_lg"
+		</li>
+		<li class="icons__item" data-name="ico_sublingual_sm"><i class="icon-ico_sublingual_sm"></i> "ico_sublingual_sm"
+		</li>
+		<li class="icons__item" data-name="ico_sunny_lg"><i class="icon-ico_sunny_lg"></i> "ico_sunny_lg"</li>
+		<li class="icons__item" data-name="ico_sunny_sm"><i class="icon-ico_sunny_sm"></i> "ico_sunny_sm"</li>
+		<li class="icons__item" data-name="ico_symbols_sq_lg"><i class="icon-ico_symbols_sq_lg"></i> "ico_symbols_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_symbols_sq_sm"><i class="icon-ico_symbols_sq_sm"></i> "ico_symbols_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_sync_lg"><i class="icon-ico_sync_lg"></i> "ico_sync_lg"</li>
+		<li class="icons__item" data-name="ico_sync_sm"><i class="icon-ico_sync_sm"></i> "ico_sync_sm"</li>
+		<li class="icons__item" data-name="ico_syringe_lg"><i class="icon-ico_syringe_lg"></i> "ico_syringe_lg"</li>
+		<li class="icons__item" data-name="ico_syringe_sm"><i class="icon-ico_syringe_sm"></i> "ico_syringe_sm"</li>
+		<li class="icons__item" data-name="ico_table_lg"><i class="icon-ico_table_lg"></i> "ico_table_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-table" data-name="ico_table_sm"><i
+					class="icon-ico_table_sm"></i> "ico_table_sm"</li>
+		<li class="icons__item" data-name="ico_tag_lg"><i class="icon-ico_tag_lg"></i> "ico_tag_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-tag" data-name="ico_tag_sm"><i class="icon-ico_tag_sm"></i>
+			"ico_tag_sm"</li>
+		<li class="icons__item" data-name="ico_target_lg"><i class="icon-ico_target_lg"></i> "ico_target_lg"</li>
+		<li class="icons__item" data-name="ico_target_sm"><i class="icon-ico_target_sm"></i> "ico_target_sm"</li>
+		<li class="icons__item" data-name="ico_teaching_lg"><i class="icon-ico_teaching_lg"></i> "ico_teaching_lg"</li>
+		<li class="icons__item" data-name="ico_teaching_sm"><i class="icon-ico_teaching_sm"></i> "ico_teaching_sm"</li>
+		<li class="icons__item" data-name="ico_textheight_sq_lg"><i class="icon-ico_textheight_sq_lg"></i>
+			"ico_textheight_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-text-height" data-name="ico_textheight_sq_sm"><i
+					class="icon-ico_textheight_sq_sm"></i> "ico_textheight_sq_sm"</li>
+		<li class="icons__item" data-name="ico_textreport_lg"><i class="icon-ico_textreport_lg"></i> "ico_textreport_lg"
+		</li>
+		<li class="icons__item" data-name="ico_textreport_sm"><i class="icon-ico_textreport_sm"></i> "ico_textreport_sm"
+		</li>
+		<li class="icons__item" data-name="ico_textwidth_sq_lg"><i class="icon-ico_textwidth_sq_lg"></i>
+			"ico_textwidth_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-text-width" data-name="ico_textwidth_sq_sm"><i
+					class="icon-ico_textwidth_sq_sm"></i> "ico_textwidth_sq_sm"</li>
+		<li class="icons__item" data-name="ico_thermometer_lg"><i class="icon-ico_thermometer_lg"></i> "ico_thermometer_lg"
+		</li>
+		<li class="icons__item" data-name="ico_thermometer_sm"><i class="icon-ico_thermometer_sm"></i> "ico_thermometer_sm"
+		</li>
+		<li class="icons__item" data-name="ico_thumbsdown_lg"><i class="icon-ico_thumbsdown_lg"></i> "ico_thumbsdown_lg"
+		</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-thumbs-down" data-name="ico_thumbsdown_sm"><i
+					class="icon-ico_thumbsdown_sm"></i> "ico_thumbsdown_sm"</li>
+		<li class="icons__item" data-name="ico_thumbsup_lg"><i class="icon-ico_thumbsup_lg"></i> "ico_thumbsup_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-thumbs-up" data-name="ico_thumbsup_sm"><i
+					class="icon-ico_thumbsup_sm"></i> "ico_thumbsup_sm"</li>
+		<li class="icons__item" data-name="ico_timeline_lg"><i class="icon-ico_timeline_lg"></i> "ico_timeline_lg"</li>
+		<li class="icons__item" data-name="ico_timeline_sm"><i class="icon-ico_timeline_sm"></i> "ico_timeline_sm"</li>
+		<li class="icons__item" data-name="ico_todo_lg"><i class="icon-ico_todo_lg"></i> "ico_todo_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-tasks" data-name="ico_todo_sm"><i class="icon-ico_todo_sm"></i>
+			"ico_todo_sm"</li>
+		<li class="icons__item" data-name="ico_twitter_sq_lg"><i class="icon-ico_twitter_sq_lg"></i> "ico_twitter_sq_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-twitter-sign" data-name="ico_twitter_sq_sm"><i
+					class="icon-ico_twitter_sq_sm"></i> "ico_twitter_sq_sm"</li>
+		<li class="icons__item" data-name="ico_underlined_sq_lg"><i class="icon-ico_underlined_sq_lg"></i>
+			"ico_underlined_sq_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-underline" data-name="ico_underlined_sq_sm"><i
+					class="icon-ico_underlined_sq_sm"></i> "ico_underlined_sq_sm"</li>
+		<li class="icons__item" data-name="ico_undo_rnd_lg"><i class="icon-ico_undo_rnd_lg"></i> "ico_undo_rnd_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-undo" data-name="ico_undo_rnd_sm"><i
+					class="icon-ico_undo_rnd_sm"></i> "ico_undo_rnd_sm"</li>
+		<li class="icons__item" data-name="ico_unlink_lg"><i class="icon-ico_unlink_lg"></i> "ico_unlink_lg"</li>
+		<li class="icons__item" data-name="ico_unlink_sm"><i class="icon-ico_unlink_sm"></i> "ico_unlink_sm"</li>
+		<li class="icons__item" data-name="ico_unlock_lg"><i class="icon-ico_unlock_lg"></i> "ico_unlock_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-unlock" data-name="ico_unlock_sm"><i
+					class="icon-ico_unlock_sm"></i> "ico_unlock_sm"</li>
+		<li class="icons__item" data-name="ico_urinary_sq_lg"><i class="icon-ico_urinary_sq_lg"></i> "ico_urinary_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_urinary_sq_sm"><i class="icon-ico_urinary_sq_sm"></i> "ico_urinary_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_user_female_lg"><i class="icon-ico_user_female_lg"></i> "ico_user_female_lg"
+		</li>
+		<li class="icons__item" data-name="ico_user_female_sm"><i class="icon-ico_user_female_sm"></i> "ico_user_female_sm"
+		</li>
+		<li class="icons__item" data-name="ico_user_groups_lg"><i class="icon-ico_user_groups_lg"></i> "ico_user_groups_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-group" data-name="ico_user_groups_sm"><i
+					class="icon-ico_user_groups_sm"></i> "ico_user_groups_sm"</li>
+		<li class="icons__item" data-name="ico_user_male_lg"><i class="icon-ico_user_male_lg"></i> "ico_user_male_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-user" data-name="ico_user_male_sm"><i
+					class="icon-ico_user_male_sm"></i> "ico_user_male_sm"</li>
+		<li class="icons__item" data-name="ico_videos_lg"><i class="icon-ico_videos_lg"></i> "ico_videos_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-film" data-name="ico_videos_sm"><i
+					class="icon-ico_videos_sm"></i> "ico_videos_sm"</li>
+		<li class="icons__item" data-name="ico_vision_lg"><i class="icon-ico_vision_lg"></i> "ico_vision_lg"</li>
+		<li class="icons__item" data-name="ico_vision_sm"><i class="icon-ico_vision_sm"></i> "ico_vision_sm"</li>
+		<li class="icons__item" data-name="ico_vitals_lg"><i class="icon-ico_vitals_lg"></i> "ico_vitals_lg"</li>
+		<li class="icons__item" data-name="ico_vitals_sm"><i class="icon-ico_vitals_sm"></i> "ico_vitals_sm"</li>
+	</ul>
+</div>
+</div>
+<div class="row" style="margin-left: 0;">
+<div class="col-sm-3 col-md-3" id="icon-row-6">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_volume_lg"><i class="icon-ico_volume_lg"></i> "ico_volume_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-volume-up" data-name="ico_volume_sm"><i
+					class="icon-ico_volume_sm"></i> "ico_volume_sm"</li>
+		<li class="icons__item" data-name="ico_weight_lg"><i class="icon-ico_weight_lg"></i> "ico_weight_lg"</li>
+		<li class="icons__item" data-name="ico_weight_sm"><i class="icon-ico_weight_sm"></i> "ico_weight_sm"</li>
+		<li class="icons__item" data-name="ico_windowclampedmode_sq_lg"><i class="icon-ico_windowclampedmode_sq_lg"></i>
+			"ico_windowclampedmode_sq_lg"</li>
+		<li class="icons__item" data-name="ico_windowclampedmode_sq_sm"><i class="icon-ico_windowclampedmode_sq_sm"></i>
+			"ico_windowclampedmode_sq_sm"</li>
+		<li class="icons__item" data-name="ico_windowlevels_lg"><i class="icon-ico_windowlevels_lg"></i>
+			"ico_windowlevels_lg"</li>
+		<li class="icons__item" data-name="ico_windowlevels_sm"><i class="icon-ico_windowlevels_sm"></i>
+			"ico_windowlevels_sm"</li>
+		<li class="icons__item" data-name="ico_wireless_lg"><i class="icon-ico_wireless_lg"></i> "ico_wireless_lg"</li>
+		<li class="icons__item" data-name="ico_wireless_sm"><i class="icon-ico_wireless_sm"></i> "ico_wireless_sm"</li>
+		<li class="icons__item" data-name="ico_wireless_sq_lg"><i class="icon-ico_wireless_sq_lg"></i> "ico_wireless_sq_lg"
+		</li>
+		<li class="icons__item" data-name="ico_wireless_sq_sm"><i class="icon-ico_wireless_sq_sm"></i> "ico_wireless_sq_sm"
+		</li>
+		<li class="icons__item" data-name="ico_worldamericas_lg"><i class="icon-ico_worldamericas_lg"></i>
+			"ico_worldamericas_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-globe" data-name="ico_worldamericas_sm"><i
+					class="icon-ico_worldamericas_sm"></i> "ico_worldamericas_sm"</li>
+		<li class="icons__item" data-name="ico_worldasia_lg"><i class="icon-ico_worldasia_lg"></i> "ico_worldasia_lg"</li>
+		<li class="icons__item" data-name="ico_worldasia_sm"><i class="icon-ico_worldasia_sm"></i> "ico_worldasia_sm"</li>
+		<li class="icons__item" data-name="ico_worldeurope_lg"><i class="icon-ico_worldeurope_lg"></i> "ico_worldeurope_lg"
+		</li>
+		<li class="icons__item" data-name="ico_worldeurope_sm"><i class="icon-ico_worldeurope_sm"></i> "ico_worldeurope_sm"
+		</li>
+		<li class="icons__item" data-name="ico_wrench_lg"><i class="icon-ico_wrench_lg"></i> "ico_wrench_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-wrench" data-name="ico_wrench_sm"><i
+					class="icon-ico_wrench_sm"></i> "ico_wrench_sm"</li>
+		<li class="icons__item" data-name="ico_zoom200_lg"><i class="icon-ico_zoom200_lg"></i> "ico_zoom200_lg"</li>
+		<li class="icons__item" data-name="ico_zoom200_sm"><i class="icon-ico_zoom200_sm"></i> "ico_zoom200_sm"</li>
+		<li class="icons__item" data-name="ico_zoomcontinuous_lg"><i class="icon-ico_zoomcontinuous_lg"></i>
+			"ico_zoomcontinuous_lg"</li>
+		<li class="icons__item" data-name="ico_zoomcontinuous_sm"><i class="icon-ico_zoomcontinuous_sm"></i>
+			"ico_zoomcontinuous_sm"</li>
+		<li class="icons__item" data-name="ico_add_alt_lg"><i class="icon-ico_add_alt_lg"></i> "ico_add_alt_lg"</li>
+		<li class="icons__item" data-name="ico_add_alt_sm"><i class="icon-ico_add_alt_sm"></i> "ico_add_alt_sm"</li>
+		<li class="icons__item" data-name="ico_arrowdown_lg"><i class="icon-ico_arrowdown_lg"></i> "ico_arrowdown_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-down" data-name="ico_arrowdown_sm"><i
+					class="icon-ico_arrowdown_sm"></i> "ico_arrowdown_sm"</li>
+		<li class="icons__item" data-name="ico_arrowup_lg"><i class="icon-ico_arrowup_lg"></i> "ico_arrowup_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-up" data-name="ico_arrowup_sm"><i
+					class="icon-ico_arrowup_sm"></i> "ico_arrowup_sm"</li>
+		<li class="icons__item" data-name="ico_arrowleft_lg"><i class="icon-ico_arrowleft_lg"></i> "ico_arrowleft_lg"</li>
+	</ul>
+</div>
+
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-left" data-name="ico_arrowleft_sm"><i
+					class="icon-ico_arrowleft_sm"></i> "ico_arrowleft_sm"</li>
+		<li class="icons__item" data-name="ico_arrowright_lg"><i class="icon-ico_arrowright_lg"></i> "ico_arrowright_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-right" data-name="ico_arrowright_sm"><i
+					class="icon-ico_arrowright_sm"></i> "ico_arrowright_sm"</li>
+		<li class="icons__item" title="deprecated name: icon-chevron-down" data-name="ico_chevron_down_lg"><i
+					class="icon-ico_chevron_down_lg"></i> "ico_chevron_down_lg"</li>
+		<li class="icons__item" data-name="ico_chevron_left_lg"><i class="icon-ico_chevron_left_lg"></i>
+			"ico_chevron_left_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-chevron-left" data-name="ico_chevron_left_sm"><i
+					class="icon-ico_chevron_left_sm"></i> "ico_chevron_left_sm"</li>
+		<li class="icons__item" data-name="ico_chevron_right_lg"><i class="icon-ico_chevron_right_lg"></i>
+			"ico_chevron_right_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-chevron-right" data-name="ico_chevron_right_sm"><i
+					class="icon-ico_chevron_right_sm"></i> "ico_chevron_right_sm"</li>
+		<li class="icons__item" data-name="ico_chevron_up_lg"><i class="icon-ico_chevron_up_lg"></i> "ico_chevron_up_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-chevron-up" data-name="ico_chevron_up_sm"><i
+					class="icon-ico_chevron_up_sm"></i> "ico_chevron_up_sm"</li>
+		<li class="icons__item" data-name="ico_exitfullscreen_lg"><i class="icon-ico_exitfullscreen_lg"></i>
+			"ico_exitfullscreen_lg"</li>
+		<li class="icons__item" data-name="ico_exitfullscreen_sm"><i class="icon-ico_exitfullscreen_sm"></i>
+			"ico_exitfullscreen_sm"</li>
+		<li class="icons__item" data-name="ico_instagram_lg"><i class="icon-ico_instagram_lg"></i> "ico_instagram_lg"</li>
+		<li class="icons__item" data-name="ico_instagram_sm"><i class="icon-ico_instagram_sm"></i> "ico_instagram_sm"</li>
+		<li class="icons__item" data-name="ico_menu_lg"><i class="icon-ico_menu_lg"></i> "ico_menu_lg"</li>
+		<li class="icons__item" data-name="ico_menu_sm"><i class="icon-ico_menu_sm"></i> "ico_menu_sm"</li>
+		<li class="icons__item" data-name="ico_refresh_alt_lg"><i class="icon-ico_refresh_alt_lg"></i> "ico_refresh_alt_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-refresh" data-name="ico_refresh_alt_sm"><i
+					class="icon-ico_refresh_alt_sm"></i> "ico_refresh_alt_sm"</li>
+		<li class="icons__item" data-name="ico_remove_lg"><i class="icon-ico_remove_lg"></i> "ico_remove_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-remove" data-name="ico_remove_sm"><i
+					class="icon-ico_remove_sm"></i> "ico_remove_sm"</li>
+		<li class="icons__item" data-name="ico_youtube_lg"><i class="icon-ico_youtube_lg"></i> "ico_youtube_lg"</li>
+		<li class="icons__item" data-name="ico_youtube_sm"><i class="icon-ico_youtube_sm"></i> "ico_youtube_sm"</li>
+		<li class="icons__item" data-name="ico_mutevolume_lg"><i class="icon-ico_mutevolume_lg"></i> "ico_mutevolume_lg"
+		</li>
+		<li class="icons__item" data-name="ico_mutevolume_sm"><i class="icon-ico_mutevolume_sm"></i> "ico_mutevolume_sm"
+		</li>
+		<li class="icons__item" data-name="ico_follow"><i class="icon-ico_follow"></i> "ico_follow"</li>
+		<li class="icons__item" data-name="ico_mobile"><i class="icon-ico_mobile"></i> "ico_mobile"</li>
+		<li class="icons__item" data-name="ico_webex"><i class="icon-ico_webex"></i> "ico_webex"</li>
+		<li class="icons__item" data-name="ico_2Col_lg"><i class="icon-ico_2Col_lg"></i> "ico_2Col_lg"</li>
+		<li class="icons__item" data-name="ico_2Col_sm"><i class="icon-ico_2Col_sm"></i> "ico_2Col_sm"</li>
+		<li class="icons__item" data-name="ico_3Col_lg"><i class="icon-ico_3Col_lg"></i> "ico_3Col_lg"</li>
+		<li class="icons__item" data-name="ico_3Col_sm"><i class="icon-ico_3Col_sm"></i> "ico_3Col_sm"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_alphaSort_lg"><i class="icon-ico_alphaSort_lg"></i> "ico_alphaSort_lg"</li>
+		<li class="icons__item" data-name="ico_alphaSort_sm"><i class="icon-ico_alphaSort_sm"></i> "ico_alphaSort_sm"</li>
+		<li class="icons__item" data-name="ico_alphaSort2_lg"><i class="icon-ico_alphaSort2_lg"></i> "ico_alphaSort2_lg"
+		</li>
+		<li class="icons__item" data-name="ico_alphaSort2_sm"><i class="icon-ico_alphaSort2_sm"></i> "ico_alphaSort2_sm"
+		</li>
+		<li class="icons__item" data-name="ico_arrowln_lg"><i class="icon-ico_arrowln_lg"></i> "ico_arrowln_lg"</li>
+		<li class="icons__item" data-name="ico_arrowln_sm"><i class="icon-ico_arrowln_sm"></i> "ico_arrowln_sm"</li>
+		<li class="icons__item" data-name="ico_barchart_lg"><i class="icon-ico_barchart_lg"></i> "ico_barchart_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-bar-chart" data-name="ico_barchart_sm"><i
+					class="icon-ico_barchart_sm"></i> "ico_barchart_sm"</li>
+		<li class="icons__item" data-name="ico_bracketLine_lg"><i class="icon-ico_bracketLine_lg"></i> "ico_bracketLine_lg"
+		</li>
+		<li class="icons__item" data-name="ico_bracketLine_sm"><i class="icon-ico_bracketLine_sm"></i> "ico_bracketLine_sm"
+		</li>
+		<li class="icons__item" data-name="ico_check1_lg"><i class="icon-ico_check1_lg"></i> "ico_check1_lg"</li>
+		<li class="icons__item" data-name="ico_check1_sm"><i class="icon-ico_check1_sm"></i> "ico_check1_sm"</li>
+		<li class="icons__item" data-name="ico_check2_lg"><i class="icon-ico_check2_lg"></i> "ico_check2_lg"</li>
+		<li class="icons__item" data-name="ico_check2_sm"><i class="icon-ico_check2_sm"></i> "ico_check2_sm"</li>
+		<li class="icons__item" data-name="ico_check3_lg"><i class="icon-ico_check3_lg"></i> "ico_check3_lg"</li>
+		<li class="icons__item" data-name="ico_check3_sm"><i class="icon-ico_check3_sm"></i> "ico_check3_sm"</li>
+		<li class="icons__item" data-name="ico_doubleDown_lg"><i class="icon-ico_doubleDown_lg"></i> "ico_doubleDown_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-double-angle-down" data-name="ico_doubleDown_sm"><i
+					class="icon-ico_doubleDown_sm"></i> "ico_doubleDown_sm"</li>
+		<li class="icons__item" data-name="ico_doubleLeft_lg"><i class="icon-ico_doubleLeft_lg"></i> "ico_doubleLeft_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-double-angle-left" data-name="ico_doubleLeft_sm"><i
+					class="icon-ico_doubleLeft_sm"></i> "ico_doubleLeft_sm"</li>
+		<li class="icons__item" data-name="ico_doubleRight_lg"><i class="icon-ico_doubleRight_lg"></i> "ico_doubleRight_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-double-angle-right" data-name="ico_doubleRight_sm"><i
+					class="icon-ico_doubleRight_sm"></i> "ico_doubleRight_sm"</li>
+		<li class="icons__item" data-name="ico_doubleUp_lg"><i class="icon-ico_doubleUp_lg"></i> "ico_doubleUp_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-double-angle-up" data-name="ico_doubleUp_sm"><i
+					class="icon-ico_doubleUp_sm"></i> "ico_doubleUp_sm"</li>
+		<li class="icons__item" data-name="ico_eject_lg"><i class="icon-ico_eject_lg"></i> "ico_eject_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-eject" data-name="ico_eject_sm"><i
+					class="icon-ico_eject_sm"></i> "ico_eject_sm"</li>
+		<li class="icons__item" data-name="ico_gears_lg"><i class="icon-ico_gears_lg"></i> "ico_gears_lg"</li>
+		<li class="icons__item" data-name="ico_gears_sm"><i class="icon-ico_gears_sm"></i> "ico_gears_sm"</li>
+		<li class="icons__item" data-name="ico_halfShield_lg"><i class="icon-ico_halfShield_lg"></i> "ico_halfShield_lg"
+		</li>
+		<li class="icons__item" data-name="ico_halfShield_sm"><i class="icon-ico_halfShield_sm"></i> "ico_halfShield_sm"
+		</li>
+		<li class="icons__item" data-name="ico_harddrive_lg"><i class="icon-ico_harddrive_lg"></i> "ico_harddrive_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_harddrive_sm"><i class="icon-ico_harddrive_sm"></i> "ico_harddrive_sm"</li>
+		<li class="icons__item" data-name="ico_lineDown_lg"><i class="icon-ico_lineDown_lg"></i> "ico_lineDown_lg"</li>
+		<li class="icons__item" data-name="ico_lineDown_sm"><i class="icon-ico_lineDown_sm"></i> "ico_lineDown_sm"</li>
+		<li class="icons__item" data-name="ico_lineSort_lg"><i class="icon-ico_lineSort_lg"></i> "ico_lineSort_lg"</li>
+		<li class="icons__item" data-name="ico_lineSort_sm"><i class="icon-ico_lineSort_sm"></i> "ico_lineSort_sm"</li>
+		<li class="icons__item" data-name="ico_lineSort2_lg"><i class="icon-ico_lineSort2_lg"></i> "ico_lineSort2_lg"</li>
+		<li class="icons__item" data-name="ico_lineSort2_sm"><i class="icon-ico_lineSort2_sm"></i> "ico_lineSort2_sm"</li>
+		<li class="icons__item" data-name="ico_lineUp_lg"><i class="icon-ico_lineUp_lg"></i> "ico_lineUp_lg"</li>
+		<li class="icons__item" data-name="ico_lineUp_sm"><i class="icon-ico_lineUp_sm"></i> "ico_lineUp_sm"</li>
+		<li class="icons__item" data-name="ico_minus_lg"><i class="icon-ico_minus_lg"></i> "ico_minus_lg"</li>
+		<li class="icons__item" data-name="ico_minus_sm"><i class="icon-ico_minus_sm"></i> "ico_minus_sm"</li>
+		<li class="icons__item" data-name="ico_minus2_lg"><i class="icon-ico_minus2_lg"></i> "ico_minus2_lg"</li>
+		<li class="icons__item" data-name="ico_minus2_sm"><i class="icon-ico_minus2_sm"></i> "ico_minus2_sm"</li>
+		<li class="icons__item" data-name="ico_numSort_lg"><i class="icon-ico_numSort_lg"></i> "ico_numSort_lg"</li>
+		<li class="icons__item" data-name="ico_numSort_sm"><i class="icon-ico_numSort_sm"></i> "ico_numSort_sm"</li>
+		<li class="icons__item" data-name="ico_numSort2_lg"><i class="icon-ico_numSort2_lg"></i> "ico_numSort2_lg"</li>
+		<li class="icons__item" data-name="ico_numSort2_sm"><i class="icon-ico_numSort2_sm"></i> "ico_numSort2_sm"</li>
+		<li class="icons__item" data-name="ico_squareLine_lg"><i class="icon-ico_squareLine_lg"></i> "ico_squareLine_lg"
+		</li>
+		<li class="icons__item" data-name="ico_squareLine_sm"><i class="icon-ico_squareLine_sm"></i> "ico_squareLine_sm"
+		</li>
+		<li class="icons__item" data-name="ico_circle_arrow_down_lg"><i class="icon-ico_circle_arrow_down_lg"></i>
+			"ico_circle_arrow_down_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-down" data-name="ico_circle_arrow_down_sm"><i
+					class="icon-ico_circle_arrow_down_sm"></i> "ico_circle_arrow_down_sm"</li>
+		<li class="icons__item" data-name="ico_circle_arrow_left_lg"><i class="icon-ico_circle_arrow_left_lg"></i>
+			"ico_circle_arrow_left_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-left" data-name="ico_circle_arrow_left_sm"><i
+					class="icon-ico_circle_arrow_left_sm"></i> "ico_circle_arrow_left_sm"</li>
+		<li class="icons__item" data-name="ico_circle_arrow_right_lg"><i class="icon-ico_circle_arrow_right_lg"></i>
+			"ico_circle_arrow_right_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-right" data-name="ico_circle_arrow_right_sm"><i
+					class="icon-ico_circle_arrow_right_sm"></i> "ico_circle_arrow_right_sm"</li>
+		<li class="icons__item" data-name="ico_circle_arrow_up_lg"><i class="icon-ico_circle_arrow_up_lg"></i>
+			"ico_circle_arrow_up_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-arrow-up" data-name="ico_circle_arrow_up_sm"><i
+					class="icon-ico_circle_arrow_up_sm"></i> "ico_circle_arrow_up_sm"</li>
+		<li class="icons__item" data-name="ico_circle_blank_lg"><i class="icon-ico_circle_blank_lg"></i>
+			"ico_circle_blank_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle-blank" data-name="ico_circle_blank_sm"><i
+					class="icon-ico_circle_blank_sm"></i> "ico_circle_blank_sm"</li>
+		<li class="icons__item" data-name="ico_circle_lg"><i class="icon-ico_circle_lg"></i> "ico_circle_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-circle" data-name="ico_circle_sm"><i
+					class="icon-ico_circle_sm"></i> "ico_circle_sm"</li>
+	</ul>
+</div>
+</div>
+<div class="row" style="margin-left: 0;">
+<div class="col-sm-3 col-md-3" id="icon-row-7">
+	<ul class="list-unstyled">
+		<li class="icons__item" data-name="ico_cogs_lg"><i class="icon-ico_cogs_lg"></i> "ico_cogs_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-cogs" data-name="ico_cogs_sm"><i class="icon-ico_cogs_sm"></i>
+			"ico_cogs_sm"</li>
+		<li class="icons__item" data-name="ico_comment_alt_lg"><i class="icon-ico_comment_alt_lg"></i> "ico_comment_alt_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-comment-alt" data-name="ico_comment_alt_sm"><i
+					class="icon-ico_comment_alt_sm"></i> "ico_comment_alt_sm"</li>
+		<li class="icons__item" data-name="ico_credit_card_lg"><i class="icon-ico_credit_card_lg"></i> "ico_credit_card_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-credit-card" data-name="ico_credit_card_sm"><i
+					class="icon-ico_credit_card_sm"></i> "ico_credit_card_sm"</li>
+		<li class="icons__item" data-name="ico_envelope_lg"><i class="icon-ico_envelope_lg"></i> "ico_envelope_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-envelope" data-name="ico_envelope_sm"><i
+					class="icon-ico_envelope_sm"></i> "ico_envelope_sm"</li>
+		<li class="icons__item" data-name="ico_exchange_lg"><i class="icon-ico_exchange_lg"></i> "ico_exchange_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-exchange" data-name="ico_exchange_sm"><i
+					class="icon-ico_exchange_sm"></i> "ico_exchange_sm"</li>
+		<li class="icons__item" data-name="ico_eye_close_lg"><i class="icon-ico_eye_close_lg"></i> "ico_eye_close_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-eye-close" data-name="ico_eye_close_sm"><i
+					class="icon-ico_eye_close_sm"></i> "ico_eye_close_sm"</li>
+		<li class="icons__item" data-name="ico_fast_backward_lg"><i class="icon-ico_fast_backward_lg"></i>
+			"ico_fast_backward_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-fast-backward" data-name="ico_fast_backward_sm"><i
+					class="icon-ico_fast_backward_sm"></i> "ico_fast_backward_sm"</li>
+		<li class="icons__item" data-name="ico_heart_empty_lg"><i class="icon-ico_heart_empty_lg"></i> "ico_heart_empty_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-heart-empty" data-name="ico_heart_empty_sm"><i
+					class="icon-ico_heart_empty_sm"></i> "ico_heart_empty_sm"</li>
+		<li class="icons__item" data-name="ico_laptop_lg"><i class="icon-ico_laptop_lg"></i> "ico_laptop_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-laptop" data-name="ico_laptop_sm"><i
+					class="icon-ico_laptop_sm"></i> "ico_laptop_sm"</li>
+		<li class="icons__item" title="deprecated name: icon-minus-sign" data-name="ico_minus_sign"><i
+					class="icon-ico_minus_sign"></i> "ico_minus_sign"</li>
+		<li class="icons__item" data-name="ico_off_lg"><i class="icon-ico_off_lg"></i> "ico_off_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-off" data-name="ico_off_sm"><i class="icon-ico_off_sm"></i>
+			"ico_off_sm"</li>
+		<li class="icons__item" data-name="ico_ok_circle_lg"><i class="icon-ico_ok_circle_lg"></i> "ico_ok_circle_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-ok-circle" data-name="ico_ok_circle_sm"><i
+					class="icon-ico_ok_circle_sm"></i> "ico_ok_circle_sm"</li>
+		<li class="icons__item" data-name="ico_ok_lg"><i class="icon-ico_ok_lg"></i> "ico_ok_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-ok" data-name="ico_ok_sm"><i class="icon-ico_ok_sm"></i>
+			"ico_ok_sm"</li>
+		<li class="icons__item" data-name="ico_play_circle_lg"><i class="icon-ico_play_circle_lg"></i> "ico_play_circle_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-play-circle" data-name="ico_play_circle_sm"><i
+					class="icon-ico_play_circle_sm"></i> "ico_play_circle_sm"</li>
+		<li class="icons__item" data-name="ico_quote_left_lg"><i class="icon-ico_quote_left_lg"></i> "ico_quote_left_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-quote-left" data-name="ico_quote_left_sm"><i
+					class="icon-ico_quote_left_sm"></i> "ico_quote_left_sm"</li>
+		<li class="icons__item" data-name="ico_random_lg"><i class="icon-ico_random_lg"></i> "ico_random_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-random" data-name="ico_random_sm"><i
+					class="icon-ico_random_sm"></i> "ico_random_sm"</li>
+		<li class="icons__item" data-name="ico_resize_full_lg"><i class="icon-ico_resize_full_lg"></i> "ico_resize_full_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-resize-full" data-name="ico_resize_full_sm"><i
+					class="icon-ico_resize_full_sm"></i> "ico_resize_full_sm"</li>
+		<li class="icons__item" data-name="ico_resize_small_lg"><i class="icon-ico_resize_small_lg"></i>
+			"ico_resize_small_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-resize-small" data-name="ico_resize_small_sm"><i
+					class="icon-ico_resize_small_sm"></i> "ico_resize_small_sm"</li>
+		<li class="icons__item" data-name="ico_sort_lg"><i class="icon-ico_sort_lg"></i> "ico_sort_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-sort" data-name="ico_sort_sm"><i class="icon-ico_sort_sm"></i>
+			"ico_sort_sm"</li>
+		<li class="icons__item" data-name="ico_step_forward_lg"><i class="icon-ico_step_forward_lg"></i>
+			"ico_step_forward_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-step-forward" data-name="ico_step_forward_sm"><i
+					class="icon-ico_step_forward_sm"></i> "ico_step_forward_sm"</li>
+		<li class="icons__item" data-name="ico_th_large_lg"><i class="icon-ico_th_large_lg"></i> "ico_th_large_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-th-large" data-name="ico_th_large_sm"><i
+					class="icon-ico_th_large_sm"></i> "ico_th_large_sm"</li>
+		<li class="icons__item" data-name="ico_th_lg"><i class="icon-ico_th_lg"></i> "ico_th_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-th" data-name="ico_th_sm"><i class="icon-ico_th_sm"></i>
+			"ico_th_sm"</li>
+		<li class="icons__item" data-name="ico_upload_lg"><i class="icon-ico_upload_lg"></i> "ico_upload_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-upload-alt" data-name="ico_upload_sm"><i
+					class="icon-ico_upload_sm"></i> "ico_upload_sm"</li>
+		<li class="icons__item" data-name="ico_volume_down_lg"><i class="icon-ico_volume_down_lg"></i> "ico_volume_down_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-volume-down" data-name="ico_volume_down_sm"><i
+					class="icon-ico_volume_down_sm"></i> "ico_volume_down_sm"</li>
+		<li class="icons__item" data-name="ico_volume_off_lg"><i class="icon-ico_volume_off_lg"></i> "ico_volume_off_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-volume-off" data-name="ico_volume_off_sm"><i
+					class="icon-ico_volume_off_sm"></i> "ico_volume_off_sm"</li>
+		<li class="icons__item" data-name="ico_zoom_in_lg"><i class="icon-ico_zoom_in_lg"></i> "ico_zoom_in_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-zoom-in" data-name="ico_zoom_in_sm"><i
+					class="icon-ico_zoom_in_sm"></i> "ico_zoom_in_sm"</li>
+		<li class="icons__item" title="deprecated name: icon-zoom-out" data-name="ico_zoom_out_lg"><i
+					class="icon-ico_zoom_out_lg"></i> "ico_zoom_out_lg"</li>
+		<li class="icons__item" data-name="ico_asterisk_lg"><i class="icon-ico_asterisk_lg"></i> "ico_asterisk_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-asterisk" data-name="ico_asterisk_sm"><i
+					class="icon-ico_asterisk_sm"></i> "ico_asterisk_sm"</li>
+		<li class="icons__item" data-name="ico_carot_down_lg"><i class="icon-ico_carot_down_lg"></i> "ico_carot_down_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-carot-down" data-name="ico_carot_down_sm"><i
+					class="icon-ico_carot_down_sm"></i> "ico_carot_down_sm"</li>
+		<li class="icons__item" data-name="ico_carot_left_lg"><i class="icon-ico_carot_left_lg"></i> "ico_carot_left_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-caret-left" data-name="ico_carot_left_sm"><i
+					class="icon-ico_carot_left_sm"></i> "ico_carot_left_sm"</li>
+		<li class="icons__item" data-name="ico_carot_right_lg"><i class="icon-ico_carot_right_lg"></i> "ico_carot_right_lg"
+		</li>
+		<li class="icons__item" title="deprecated name: icon-caret-right" data-name="ico_carot_right_sm"><i
+					class="icon-ico_carot_right_sm"></i> "ico_carot_right_sm"</li>
+		<li class="icons__item" data-name="ico_carot_up_lg"><i class="icon-ico_carot_up_lg"></i> "ico_carot_up_lg"</li>
+	</ul>
+</div>
+<div class="col-sm-3 col-md-3">
+	<ul class="list-unstyled">
+		<li class="icons__item" title="deprecated name: icon-caret-up" data-name="ico_carot_up_sm"><i
+					class="icon-ico_carot_up_sm"></i> "ico_carot_up_sm"</li>
+		<li class="icons__item" data-name="ico_remove_circle_lg"><i class="icon-ico_remove_circle_lg"></i>
+			"ico_remove_circle_lg"</li>
+		<li class="icons__item" title="deprecated name: icon-remove-circle" data-name="ico_remove_circle_sm"><i
+					class="icon-ico_remove_circle_sm"></i> "ico_remove_circle_sm"</li>
+		<li class="icons__item" data-name="ico_warning_lg"><i class="icon-ico_warning_lg"></i> "ico_warning_lg"</li>
+		<li class="icons__item" data-name="ico_warning_sm"><i class="icon-ico_warning_sm"></i> "ico_warning_sm"</li>
+		<li class="icons__item" data-name="ico_keyboard_lg"><i class="icon-ico_keyboard_lg"></i> "ico_keyboard_lg"</li>
+		<li class="icons__item" data-name="ico_keyboard_sm"><i class="icon-ico_keyboard_sm"></i> "ico_keyboard_sm"</li>
+		<li class="icons__item" data-name="ico_mouse_lg"><i class="icon-ico_mouse_lg"></i> "ico_mouse_lg"</li>
+		<li class="icons__item" data-name="ico_mouse_sm"><i class="icon-ico_mouse_sm"></i> "ico_mouse_sm"</li>
+	</ul>
+</div>
+</div>
+</div>
+</dd>
+</dl>

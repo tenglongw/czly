@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.BannerMapper">
+	<select id="queryBannerList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_banner
+		WHERE 1=1
+		<if test="type != null">
+			and type = #{type}
+		</if>
+			and displayFlag = '0'
+	</select>
+	<select id="getBannerListByConditions" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_banner uc
+		<where>
+			<if test="title != null">
+				uc.title LIKE CONCAT('%', #{title} ,'%')
+			</if>
+		</where>
+		ORDER BY creationtime
+		LIMIT #{pageQuery.pageOffset},#{pageQuery.limit}
+	</select>
+	<select id="getCountByConditions" resultType="int">
+		SELECT COUNT("id") FROM t_banner uc
+		<where>
+			<if test="title != null">
+				uc.title LIKE CONCAT('%', #{title} ,'%')
+			</if>
+		</where>
+	</select>
+</mapper>

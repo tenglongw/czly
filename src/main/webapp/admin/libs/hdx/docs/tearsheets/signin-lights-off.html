@@ -1,0 +1,511 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--suppress HtmlUnknownTarget -->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Sign In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../components/brandkit/favicon/favicon.ico">
+<link href="../../components/prettify/prettify.css" rel="stylesheet">
+<link id="theme-styles" href="../../css/hds-lights-off.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../css/responsive.css" rel="stylesheet" type="text/css">
+
+<!-- Documentation styles -->
+<link id="documentation-styles" href="../assets/css/documentation-lights-off.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/declarative-visualizations.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link id="theme-ie" href="../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+<link id="theme-ie9" href="../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../components/modernizr/modernizr.js"></script>
+<script src="../../components/requirejs/require.js"></script>
+<script src="../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({ baseUrl: '../../' });
+</script>
+
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<!--suppress HtmlUnknownTarget -->
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+		  <div class="navbar-header">
+		    <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>HDx - Sign In</span></a>
+		  </div>
+		  <div class="pull-right">
+		    <div class="btn-toolbar">
+			    <div class="col-md-8">
+			      <select id="theme-switcher" style="padding-right:4px;">
+			        <option value="lights-on">Lights On</option>
+			        <option value="lights-off" selected>Lights Off</option>
+			      </select>
+			    </div>
+		     </div>
+		  </div>
+		</div>
+	</div>
+	<nav class="collapse primary-navbar navbar-collapse bs-navbar-collapse">
+		  <div class="primary-navbar nav-collapse">
+		    <div class="container">
+		      <ul class="nav navbar-nav">
+		      
+		      	<li><a href="#signin-basics">Basics</a></li>
+		      
+		      	<li class="dropdown">
+		      		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Examples <i class="icon-chevron-down"></i></a>
+		      		<ul class="dropdown-menu">
+		      			<li><a href="#sign-in">Sign In with header</a></li>
+		      			<li><a href="#sign-in-error">Sign In with error</a></li>
+		      			<li><a href="#sign-in-noheader">Sign In without header</a></li>
+		      			<li><a href="#sign-in-nopwd">Sign In without forgot password link</a></li>
+		      		</ul>
+		      	</li>
+		      </ul>
+		    </div>
+		  </div>
+	</nav>
+</div>
+<div class="container doco hds-library">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+          <div class="sdh-wrapper module">
+            <div class="page-header voice-brand">
+              <h1>Sign In</h1>
+            </div>
+
+            <h2 class="voice voice-brand" id="signin-basics">Basics</h2>
+            <dl class="documentation">
+            <dt>HDX Sign In</dt>
+            <dd class="description">
+                <p>Sign In component come pre-styled and pre-structured with header and content of the component. It supports few optional attributes which user can use to edit the component as per their requirements.</p>
+                <p>Sign In optional attributes are as follows header, app-name, forgot-pwd and error-block.</p>
+                <h3>Optional Sign In attributes</h3>
+                <ul>
+                    <li>header: Set header = true/false to show or hide the header. Sign In header includes the GE logo, Application name and GE Healthcare brand name. Entire header can be removed by setting this attribute to false.</li>
+                    <li>app-name: This attribute can be used to add an application name to the header.</li>
+                    <li>forgot-pwd: Set forgot-pwd = true/false to show or hide the 'forgot your password' link. On clicking this link, forgot password window will be opened. User can use this to reset the password.</li>
+                    <li>error-block:This attribute can be used to add sign-in error message. When server cannot authenticate user due to invalid username or password, it may throw an error or an exception based on authentication error handling code. To display this error on Sign In screen, the error-block attribute can be linked to the error message received from server.</li>
+                </ul>
+            </dd>
+            </dl>
+            
+            <h2 class="voice voice-brand" id="sign-in">Sign In</h2>
+            <dl class="documentation">
+            <dt>Sign In (with no error message)</dt>
+            <dd class="example">
+                <p><img src="../assets/imgs/Hdx_sign-in-lightOff.png"  alt="" /></p>
+                <p><a class="navigation-link" href="../tearsheets/sign-in-header.html" target="_blank">Open fullscreen example.</a></p>
+            </dd>
+            <dt>Description</dt>
+            <dd class="description show"><br/><strong>A Sign In screen with username and password information. This example displays header and forgot password link.</strong></dd>
+            <dt>Usage</dt>
+            <dd class="usage">
+            <pre class="prettyprint linenums lang-html">
+            &lt;div class="container col-sm-4 signin-container"&gt;
+        		&lt;div class="signin" header="true" app-name="HDX Application" forgot-pwd="true" error-block=""&gt;
+
+        		&lt;/div&gt;
+        	&lt;/div&gt;
+        	</pre>
+            
+            <pre class="prettyprint linenums lang-html">
+            &lt;script type="text/javascript"&gt;
+            require(['signin'], function() {
+              $('.signin').signinconstruct();
+            });
+            &lt;/script&gt;
+            </pre>
+
+            <div class="alert alert-info">
+            	<strong>Script Requirements:</strong>
+                	<ul>
+                		<li>ge-bootstrap</li>
+                		<li>jquery, require</li>
+                		<li>signin</li>
+                	</ul>
+            </div>
+            </dd>
+            </dl>
+            
+            <h2 class="voice voice-brand" id="sign-in-error">Sign In with error</h2>
+            <dl class="documentation">
+            <dt>Sign In (with error message)</dt>
+            <dd class="example">
+                <p><a class="navigation-link" href="../tearsheets/signin-error.html" target="_blank">Open fullscreen example.</a></p>
+            </dd>
+            <dt>Description</dt>
+            <dd class="description show"><br/><strong>A Sign In screen with username,password and error message information. In this example following attributes are set to true. header, error-block and forgot-pwd</strong></dd>
+            <dd class="description show"><strong>error-block:This attribute can be used to add sign-in error message. When server cannot authenticate user due to invalid username or password, it may throw an error or an exception based on authentication error handling code. To display this error on Sign In screen, the error-block attribute can be linked to the error message received from server.</strong></dd>
+            <dt>Usage</dt>
+            <dd class="usage">
+            <pre class="prettyprint linenums lang-html">
+            &lt;div class="container col-sm-4 signin-container"&gt;
+        		&lt;div class="signin" header="true" app-name="HDX Application" forgot-pwd="true" error-block="The username or password is incorrect"&gt;
+
+        		&lt;/div&gt;
+        	&lt;/div&gt;
+        	</pre>
+            
+            <pre class="prettyprint linenums lang-html">
+            &lt;script type="text/javascript"&gt;
+            require(['signin'], function() {
+              $('.signin').signinconstruct();
+            });
+            &lt;/script&gt;
+            </pre>
+
+            <div class="alert alert-info">
+            	<strong>Script Requirements:</strong>
+                	<ul>
+                		<li>ge-bootstrap</li>
+                		<li>jquery, require</li>
+                		<li>signin</li>
+                	</ul>
+            </div>
+            </dd>
+            </dl>
+
+
+            <h2 class="voice voice-brand" id="sign-in-noheader">Sign In without header</h2>
+            <dl class="documentation">
+            <dt>Sign In (with no header)</dt>
+            <dd class="example">
+                <p><a class="navigation-link" href="../tearsheets/signin-noheader.html" target="_blank">Open fullscreen example.</a></p>
+            </dd>
+            <dt>Description</dt>
+            <dd class="description show"><br/><strong>A Sign In screen with username and password information. In this example 'header' attribute is set to false.</strong></dd>
+            <dt>Usage</dt>
+            <dd class="usage">
+            <pre class="prettyprint linenums lang-html">
+            &lt;div class="container col-sm-4 signin-container"&gt;
+        		&lt;div class="signin" header="false" app-name="HDX Application" forgot-pwd="true" error-block=""&gt;
+
+        		&lt;/div&gt;
+        	&lt;/div&gt;
+        	</pre>
+            
+            <pre class="prettyprint linenums lang-html">
+            &lt;script type="text/javascript"&gt;
+            require(['signin'], function() {
+              $('.signin').signinconstruct();
+            });
+            &lt;/script&gt;
+            </pre>
+
+            <div class="alert alert-info">
+            	<strong>Script Requirements:</strong>
+                	<ul>
+                		<li>ge-bootstrap</li>
+                		<li>jquery, require</li>
+                		<li>signin</li>
+                	</ul>
+            </div>
+            </dd>
+            </dl>
+
+            <h2 class="voice voice-brand" id="sign-in-nopwd">Sign In without forgot password link</h2>
+            <dl class="documentation">
+            <dt>Sign In (with no forgot password)</dt>
+            <dd class="example">
+                <p><a class="navigation-link" href="../tearsheets/signin-nopwd.html" target="_blank">Open fullscreen example.</a></p>
+            </dd>
+            <dt>Description</dt>
+            <dd class="description show"><br/><strong>A Sign In screen with username and password information. In this example 'forgot-pwd' attribute is set to false.</strong></dd>
+            <dt>Usage</dt>
+            <dd class="usage">
+            <pre class="prettyprint linenums lang-html">
+            &lt;div class="container col-sm-4 signin-container"&gt;
+        		&lt;div class="signin" header="false" app-name="HDX Application" forgot-pwd="false" error-block=""&gt;
+
+        		&lt;/div&gt;
+        	&lt;/div&gt;
+        	</pre>
+            
+            <pre class="prettyprint linenums lang-html">
+            &lt;script type="text/javascript"&gt;
+            require(['signin'], function() {
+              $('.signin').signinconstruct();
+            });
+            &lt;/script&gt;
+            </pre>
+
+            <div class="alert alert-info">
+            	<strong>Script Requirements:</strong>
+                	<ul>
+                		<li>ge-bootstrap</li>
+                		<li>jquery, require</li>
+                		<li>signin</li>
+                	</ul>
+            </div>
+            </dd>
+            </dl>
+
+            
+            
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Scripts -->
+
+<!--suppress HtmlUnknownTarget -->
+<script type="text/javascript" src="../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+  //console.log("respond.min.js loaded.");
+  requirejs.config({
+    baseUrl: '../../',
+    config: {
+      'directional-pad': {
+        imagesUrl: '../../img/hds/svg/directional-pad'
+      }
+    }
+  });
+  // Preload JS libraries and exec page scripts
+  require([
+    'jquery',
+    'ge-bootstrap',
+    'spinner',
+    'prettify',
+    'hds'
+  ], function($) {
+      // -------------------
+      // DOCUMENTATION SETUP
+      // -------------------
+
+      // Create a global function that can be called from inside iframes
+      // to resize the frame to fit the content window.
+      window.resizeFrame = function( src, h ) {
+        $( 'iframe[src="' + src + '"]').css( { height: h + 'px' } );
+      };
+
+      // Make code lovely using Google Prettify.
+      window.prettyPrint && prettyPrint();
+
+      var scrollOffset=120;
+      // And now we initialize ScrollSpy on the body.
+      // DO NOT use data attributes on this, as it will init before our
+      // new constructor activate function is applied; this would be bad.
+      $('body').scrollspy({
+        offset: scrollOffset,
+        target: '.primary-navbar'
+      });
+
+      //Handle scroll event by url/hash tags
+      if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        //check if hashtag exists in page
+        if($("#"+hash).offset()){
+          var hashOffset = $("#"+hash).offset().top;
+          $( 'html, body' ).animate( { scrollTop: hashOffset-(scrollOffset-1) }, 1000, 'swing' );
+        }
+      }
+
+      // Finally, add some smooth scrolling to our body when one of the
+      // primary-navbar links are clicked (even though this isn't in
+      // Bootstrap, which everyone said it was... we'll rebuild anyway).
+      $('.primary-navbar a').click(function( event ) {
+        var target = $(event.currentTarget).attr("href");
+        if (target.indexOf(".html") != -1) {
+            // do normal things for outward facing links
+            return;
+        }
+
+        event.preventDefault();
+        var offset = $( $(this).attr('href') ).offset();
+
+        if (offset) {
+          $( 'html, body' ).animate( { scrollTop: offset.top - (scrollOffset-1) }, 1000, 'swing' );
+        }
+      });
+
+      // ONE LAST THING! If this happens to be an iframe window we're
+      // loading then we will essentially create a listener that checks
+      // the body height, so that if the contents of this frame change
+      // then it will call back to the parent to continually resize the
+      // frame to always fit the content window.
+      if ( parent !== window ) {
+        var $el = $('body'),
+            h   = $el.height(),
+            key = 'body-height',
+            src = document.location.pathname;
+        $.data( this, key, h );
+        parent.resizeFrame( src, h );
+        function listen() {
+          setTimeout(function() {
+            var h   = $el.height(),
+                old = $.data( this, key );
+                if ( h !== old ) {
+                  $.data( this, key, h );
+                  parent.resizeFrame( src, h );
+                }
+            listen();
+          }, 250);
+        }
+        listen();
+      }
+
+      // Now, on to...
+
+      // ---------------------------
+      // DOCUMENTATION FUNCTIONALITY
+      // ---------------------------
+
+      // Enable stateful buttons
+      $('.stateful').click(function() {
+        var $self = $(this);
+        $self.button('loading');
+        setTimeout(function() {
+          $self.button('reset');
+        }, 3000);
+      });
+
+      // Enable spinners
+     $('.spinner').spin();
+
+      // Enable tabs (with dropdowns, mainly)
+      $('.nav-tabs > li > a').click(function(event) {
+        event.preventDefault();
+        $(this).tab('show');
+      });
+
+      // Make accordion carets animate!
+      $('.accordion .collapse')
+        .on('show', function() {
+          $(this).prev('.accordion-heading').find('.accordion-toggle').addClass('in');
+        })
+        .on('hide', function() {
+          $(this).prev('.accordion-heading').find('.accordion-toggle').removeClass('in');
+        });
+
+      setTimeout(function(){
+          // Conditionally load D3/Declarative Viz if SVG is supported.
+          // This should prevent errors from being thrown in IE8
+          if (Modernizr.svg) {
+            require(['declarative-visualizations'], function (visualizations) {
+              // Initialize Bar Visualizations
+              $('div[data-visualization="bar"]').each(function (i, element) {
+                visualizations.bar(element);
+              });
+
+              // Initialize Gauge Visualizations
+              $('div[data-visualization="gauge"]').each(function (i, element) {
+                visualizations.gauge(element);
+              });
+            });
+            //hdx flavor of the meter and speedometer components
+            require(['hdx-declarative-visualizations'], function (visualizations) {
+              // Initialize Donut Visualizations
+              $('div[data-visualization="donut"]').each(function (i, element) {
+                visualizations.donut(element);
+              });
+
+              // Initialize Meter Visualizations
+              $('div[data-visualization="meter"]').each(function (i, element) {
+                visualizations.meter(element);
+              });
+
+              // Initialize Speedometer Visualizations
+              $('div[data-visualization="speedometer"]').each(function (i, element) {
+                visualizations.speedometer(element);
+              });
+            });
+            // If SVG isn't supported alert the user that some elements won't be loaded
+          }
+          else {
+            alert('Your browser does not support SVG.\nAny element using D3.js will be omitted.');
+          }
+      },1000);
+
+    
+  });
+</script>
+
+<script src="../../components/respond/respond.src.js"></script>
+
+<script>
+require([
+'jquery'
+], function($) {
+	$(function() {
+
+	//Update internal links to lights-off theme
+	$('a.navigation-link').each(function ()
+	     {
+	       var $link = $(this),
+	           href = $link.attr('href');
+
+	       if (-1 < href.indexOf('?'))
+	       {
+	         href = href.split('?')[0]
+	       }
+
+	       $link.attr('href', href + '?theme=lights-off')
+	     });
+		$('#theme-switcher').change(
+				function(e) {
+		var theme = $(this).val();
+	  		var currentOffset = $(this).offset().top;
+	        if(theme=='lights-on'){
+	        	window.location.href= 'sign-in.html?offset='+ currentOffset;
+	        }
+
+	      });
+
+	//scroll to current offset
+	var offsetvalue = (RegExp('offset=' + '(.+?)(&|$)').exec(window.location)||[,null])[1];
+
+	if (offsetvalue) {
+		$("html, body").animate({ scrollTop: offsetvalue - 15 }, 1000, 'swing');
+	}
+	});
+});
+</script>

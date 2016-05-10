@@ -1,0 +1,365 @@
+<table class="documentation">
+	<thead>
+		<tr>
+			<th>Example</th>
+			<th>Description</th>
+			<th>Usage</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="example">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+			</td>
+			<td class="description" id="headings">Headings</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+</pre>
+			</td>
+		</tr> <!-- /headings -->
+		<tr>
+			<td class="example">
+				<p>Nullam quis risus <a href="#" onclick="return false;">eget urna mollis</a> ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+			</td>
+			<td class="description" id="bodytext">Body Text</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p&gt;Nullam quis risus &lt;a href="#"&gt;eget urna mollis&lt;/a&gt; ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.&lt;/p&gt;
+</pre>
+			</td>
+		</tr> <!-- /headings -->
+		<tr>
+			<td class="example">
+				<p>Fusce dapibus, <strong>tellus ac cursus commodo</strong>, <em>tortor mauris condimentum nibh</em>, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p>
+			</td>
+			<td class="description" id="emphasis">Emphasis</td>
+			<td class="usage">
+				<table>
+					<tr>
+						<th>Element</th>
+						<th>Usage</th>
+					</tr>
+					<tr>
+						<td><code>&lt;strong&gt;</code></td>
+						<td>For emphasizing a snippet of text with <strong>important</strong></td>
+					</tr>
+					<tr>
+						<td><code>&lt;em&gt;</code></td>
+						<td>For emphasizing a snippet of text with <em>stress</em></td>
+					</tr>
+				</table>
+			</td>
+		</tr> <!-- /emphasis -->
+		<tr>
+			<td class="example">
+				<address>
+					<strong>General Electric</strong><br>
+					2623 Camino Ramon<br>
+					San Ramon, CA 94583<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7890<br>
+				</address>
+				<address>
+					<strong>Full Name</strong><br>
+					<a href="mailto:#">first.last@ge.com</a>
+				</address>
+			</td>
+			<td class="description" id="address">Address</td>
+			<td class="usage">
+				<p>For contact information for its nearest ancestor or the entire body of work</p>
+				<p>Preserve formatting by ending all lines with <code>&lt;br&gt;</code></p>
+<pre class="prettyprint linenums lang-html">
+&lt;address&gt;
+  &lt;strong&gt;General Electric&lt;/strong&gt;&lt;br&gt;
+  2623 Camino Ramon&lt;br&gt;
+  San Ramon, CA 94583&lt;br&gt;
+  &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890&lt;br&gt;
+&lt;/address&gt;
+</pre>
+<pre class="prettyprint linenums lang-html">
+&lt;address&gt;
+  &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br&gt;
+  &lt;a href="mailto:#"&gt;first.last@ge.com&lt;/a&gt;
+&lt;/address&gt;
+</pre>
+			</td>
+		</tr> <!-- /address -->
+		<tr>
+			<td class="example">
+		        <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+		        <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+			</td>
+			<td class="description" id="abbreviation">Abbreviation</td>
+			<td class="usage">
+				<p>Wraps abbreviations and acronyms to show the expanded version on hover</p>
+				<p>Include optional <code>title</code> attribute for expanded text. Use <code>.initialism</code> class for uppercase abbreviations.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;
+</pre>
+<pre class="prettyprint linenums lang-html">
+&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;
+</pre>
+			</td>
+		</tr> <!-- /abbreviation -->
+		<tr>
+			<td class="example">
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
+					<small>Someone famous in <cite>Body of Work</cite></small>
+				</blockquote>
+				<blockquote class="pull-right">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
+					<small>Someone famous in <cite>Body of Work</cite></small>
+				</blockquote>
+			</td>
+			<td class="description" id="blockquotes">Blockquotes</td>
+			<td class="usage">
+				<table>
+					<tr>
+						<th>Element</th>
+						<th>Usage</th>
+						<th>Optional</th>
+					</tr>
+					<tr>
+						<td><code>&lt;blockquote&gt;</code></td>
+						<td>Block-level element for quoting content from another source</td>
+						<td>
+							<p>Add <code>cite</code> attribute for source URL</p>
+							<p>Use <code>.pull-left</code> and <code>.pull-right</code> classes for floated options</p>
+						</td>
+					</tr>
+					<tr>
+						<td><code>&lt;small&gt;</code></td>
+						<td>Optional element for adding a user-facing citation, typically an author with title of work</td>
+						<td>Place the <code>&lt;cite&gt;</code> around the title or name of source</td>
+					</tr>
+				</table>
+				<p>To include a blockquote, wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.</p>
+				<p>Include an optional <code>&lt;small&gt;</code> element to cite your source and you'll get an em dash <code>&amp;mdash;</code> before it for styling purposes.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;blockquote class="pull-right"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.&lt;/p&gt;
+  &lt;small&gt;Someone famous in &lt;cite&gt;Body of Work&lt;/cite&gt;&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre>
+			</td>
+		</tr> <!-- /blockquotes -->
+	</tbody>
+</table>
+
+<table class="documentation">
+	<thead>
+		<tr>
+			<th>Example</th>
+			<th>Description</th>
+			<th>Usage</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="example">
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Nulla volutpat aliquam velit
+						<ul>
+							<li>Phasellus iaculis neque</li>
+							<li>Purus sodales ultricies</li>
+						</ul>
+					</li>
+					<li>Eget porttitor lorem</li>
+				</ul>
+			</td>
+			<td class="description" id="unordered">Unordered</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			</td>
+		</tr> <!-- /unordered -->
+		<tr>
+			<td class="example">
+				<ul class="list-unstyled">
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Nulla volutpat aliquam velit
+						<ul>
+							<li>Phasellus iaculis neque</li>
+							<li>Purus sodales ultricies</li>
+						</ul>
+					</li>
+					<li>Eget porttitor lorem</li>
+				</ul>
+			</td>
+			<td class="description" id="unstyled">Unstyled</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;ul class="list-unstyled"&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			</td>
+		</tr> <!-- /unstyled -->
+		<tr>
+			<td class="example">
+				<ul class="structured">
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Eget porttitor lorem</li>
+				</ul>
+			</td>
+			<td class="description" id="structured">Structured</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;ul class="structured"&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			</td>
+		</tr> <!-- /unstyled -->
+		<tr>
+			<td class="example">
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Nulla volutpat aliquam velit
+						<ul>
+							<li>Phasellus iaculis neque</li>
+							<li>Purus sodales ultricies</li>
+						</ul>
+					</li>
+					<li>Eget porttitor lorem</li>
+				</ol>
+			</td>
+			<td class="description" id="ordered">Ordered</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;ol&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+			</td>
+		</tr> <!-- /ordered -->
+		<tr>
+			<td class="example">
+				<dl>
+					<dt>Description lists</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+					<dt>Euismod</dt>
+					<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+					Donec id elit non mi porta gravida at eget metus.</dd>
+					<dt>Malesuada porta</dt>
+					<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+				</dl>
+			</td>
+			<td class="description" id="description">Description</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;dl&gt;
+  &lt;dt&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+			</td>
+		</tr> <!-- /description -->
+		<tr>
+			<td class="example">
+				<dl class="dl-horizontal">
+					<dt>Description lists</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+					<dt>Euismod</dt>
+					<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+					<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+					<dt>Malesuada porta</dt>
+					<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+				</dl>
+			</td>
+			<td class="description" id="horizontal-description">Horizontal Description</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;dl class="dl-horizontal"&gt;
+  &lt;dt&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+				<p>Horizontal description lists will truncate terms that are too long to fit in the left column using <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+			</td>
+		</tr> <!-- /horizontal description -->
+	</tbody>
+</table>
+
+<table class="documentation">
+	<thead>
+		<tr>
+			<th>Example</th>
+			<th>Description</th>
+			<th>Usage</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<tr>
+			<td class="example">
+				<div class="voice voice-brand">
+					<h2>Heading</h2>
+					<p>Body copy. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<blockquote>
+						<p>Quotation. Integer erat a ante venenatis.</p>
+						<small>First Last in <cite title="">Body of work</cite></small>
+					</blockquote>
+					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+					</ul>
+				</div>
+			</td>
+			<td class="description" id="brand-inspira"><strong>Brand (Inspira)</strong><br>For use on headings, body copy, blockquotes or lists.</td>
+			<td class="usage">
+				<p>Use the <code>voice-brand</code> class to trigger the Brand voice on the permitted element or collection of permitted elements.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;h2 class="voice voice-brand"&gt;Heading&lt;/h2&gt;
+</pre>
+			</td>
+		</tr> <!-- /brand -->
+		<tr>
+			<td class="example">
+				<div class="voice voice-human">
+					<h2>Heading</h2>
+					<p>Body copy. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<blockquote>
+						<p>Quotation. Integer erat a ante venenatis.</p>
+						<small>First Last in <cite title="">Body of work</cite></small>
+					</blockquote>
+					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+					</ul>
+				</div>
+			</td>
+			<td class="description" id="human-serif"><strong>Human (Serif)</strong><br>For use on headings, body copy, blockquotes or lists.</td>
+			<td class="usage">
+				<p>Use the <code>voice-human</code> class to trigger the Human voice on the permitted element or collection of permitted elements.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;blockquote class="voice voice-human"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+</pre>
+			</td>
+		</tr> <!-- /human -->
+
+	</tbody>
+</table>

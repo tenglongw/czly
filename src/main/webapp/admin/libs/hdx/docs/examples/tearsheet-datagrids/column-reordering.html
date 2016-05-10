@@ -1,0 +1,60 @@
+<!-- Column reordering -->
+
+<dl class="documentation">
+	<dt>Column reordering</dt>
+	<dd class="description">
+		<p>A Datagrid using interactive <strong>column reordering.</strong>. Drag any column using the mouse, a blue line to
+			the right of the nearest column will indicate where the dragged column will be placed when dropped.</p>
+	</dd>
+	<dt>Example</dt>
+	<dd class="example">
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered"
+		       data-table-name="dt-col-reorder-example"></table>
+	</dd>
+	<dt class="hidden-sm">Usage</dt>
+	<dd class="usage hidden-sm">
+		<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-col-reorder-example"&gt;&lt;/table&gt;
+</pre>
+		<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+//Column reordering
+$('table[data-table-name="dt-col-reorder-example"]').basicdatagrid({
+	'aoColumns': [
+		{ 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential'},
+		{ 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential'},
+		{ 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional'},
+		{ 'sTitle': 'Engine version', 'mData': 'version'},
+		{ 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential'}
+	],
+	'useFloater': false,
+	'sAjaxSource': '../assets/data/ao.browsers.json',
+	'plugins': ['R'] //enable the col-reorder plugin (assumes 'col-reorder-amd' is on the page)
+});
+</pre>
+		<p>Notes:</p>
+		<ul>
+			<li>We use the DataTables project's <a href="https://datatables.net/extras/colreorder/" target="_blank">"ColReorder"
+					plugin</a> for this functionality. </li>
+			<li>You must include the plugin library on the page. The requirejs id for this in HDX is 'col-reorder-amd'</li>
+			<li>Configure according to the plug-in's <a href="https://datatables.net/extras/colreorder/" target="_blank">documentation</a>
+				with the following changes.
+				<ul>
+					<li>Datatable "plugins" have been moved out of the "sDom" settings parameter into a separate "plugins"
+						settings Array parameter, so enable the plugin by setting 'plugins': ["R"] on your table</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="alert alert-info">
+			<strong>Script Requirements:</strong>
+			<ul>
+				<li>datagrids</li>
+				<li>col-reorder-amd</li>
+			</ul>
+		</div>
+	</dd>
+</dl>
+
+
+<!-- /Column reordering -->

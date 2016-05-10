@@ -1,0 +1,160 @@
+<table class="documentation">
+	<thead>
+		<tr>
+			<th>Example</th>
+			<th>Description</th>
+			<th>Usage</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="example">
+				<div class="progress">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-success">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-info">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-warning">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-danger">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+			</td>
+			<td class="description" id="li-progress-bar">Progress Bar (Basic)</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 45%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				<p>Use a percentage width on <code>.progress-bar</code> to advance progress bars.</p>
+				<hr>
+				<p>Add one of <code>.progress-success</code>, <code>.progress-info</code>, <code>.progress-warning</code> or <code>.progress-danger</code> to colorize <code>.progress</code> according to context.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="progress progress-success"&gt;
+  &lt;div class="progress-bar" style="width: 45%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</td>
+		</tr> <!-- /basic progress bar -->
+		<tr>
+			<td class="example">
+				<div class="progress progress-striped">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-success progress-striped">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-info progress-striped">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-warning progress-striped">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-danger progress-striped">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+			</td>
+			<td class="description" id="li-progress-bar-striped">Progress Bar (Striped)</td>
+			<td class="usage">
+				<p>Add <code>.progress-striped</code> to add a striping effect to the progress bar.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="progress-bar" style="width: 45%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</td>
+		</tr> <!-- /striped progress bar -->
+		<tr>
+			<td class="example">
+				<div class="progress progress-striped active">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-success progress-striped active">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-info progress-striped active">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-warning progress-striped active">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+				<div class="progress progress-danger progress-striped active">
+					<div class="progress-bar" style="width: 45%;"></div>
+				</div>
+			</td>
+			<td class="description" id="li-progress-bar-animated">Progress Bar (Animated)</td>
+			<td class="usage">
+				<p>Add <code>.active</code> to a striped progress bar to trigger animation.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="progress progress-striped active"&gt;
+  &lt;div class="progress-bar" style="width: 45%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</td>
+		</tr> <!-- /animated progress bar -->
+		<tr>
+			<td class="example"> 
+				<div class="spinner"  style="padding-top:23px;"></div>
+			</td>
+			<td class="description" id="li-activity-indicator">Activity Indicator (Spinner)</td>
+			<td class="usage">
+				<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;span class="spinner"&gt;&lt;/span&gt;
+</pre>
+				<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$(&hellip;).spin();
+</pre>
+				<p>The size and color of the spinner can be modified by passing options when initializing.</p>
+				<p class="note">NOTE: The options listed in the example are default.</p>
+<pre class="prettyprint linenums lang-javascript">
+var options = {
+  // The number of lines to draw
+  lines: 10,
+  // The length of each line
+  length: 4,
+  // The line thickness
+  width: 2,
+  // The radius of the inner circle
+  radius: 4,
+  // The rotation offset
+  rotate: 0,
+  // #rgb or #rrggbb
+  color: '#313337',
+  // Rounds per second
+  speed: 1.2,
+  // Afterglow percentage
+  trail: 60,
+  // Whether to render a shadow
+  shadow: false,
+  // Whether to use hardware acceleration
+  hwaccel: false,
+  // The CSS class to assign to the spinner
+  className: 'spinner',
+  // The z-index (defaults to 2000000000)
+  zIndex: 2e9,
+  // Top position relative to parent in px
+  top: 'auto',
+  // Left position relative to parent in px
+  left: 'auto'
+};
+$(&hellip;).spin(options);
+</pre>
+				<p class="note">NOTE: See <a href="http://fgnass.github.com/spin.js/" target="_blank">spin.js documentation</a> for a full list of configuration options.</p>
+				<div class="alert alert-info">
+					<strong>Script Requirements:</strong>
+					<ul>
+						<li>spinner</li>
+					</ul>
+				</div>
+			</td>
+		</tr> <!-- /animated progress bar -->
+	</tbody>
+</table>

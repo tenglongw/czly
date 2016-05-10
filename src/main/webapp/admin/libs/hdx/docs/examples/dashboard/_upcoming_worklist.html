@@ -1,0 +1,24 @@
+   <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-worklist"></table>
+   <script type="text/javascript">
+   require([
+       'jquery', 'datagrids', 'prettify', 'ge-bootstrap',
+       'datatables-colreorder',
+       'datagrids/datagrids-col-vis',
+       'datagrids/datagrids-row-grouping'], function($) {
+ //Column reordering
+   $('table[data-table-name="dt-worklist"]').iidsBasicDataGrid({
+       'aoColumns': [
+           { 'sTitle': 'Status', 'sClass': 'essential'},
+           { 'sTitle': 'Patient ID', 'sClass': 'essential'},
+           { 'sTitle': 'Details', 'sClass': 'optional'},
+           { 'sTitle': 'Time Recovered'}
+       ],
+       'useFloater': false,
+       'sAjaxSource': '../../assets/data/worklist.items.json',
+       'plugins': ['R'] //enable the col-reorder plugin (assumes 'col-reorder-amd' is on the page)
+   });
+   });
+
+   </script>
+   
+   

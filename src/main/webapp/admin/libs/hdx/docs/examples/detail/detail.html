@@ -1,0 +1,1447 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Example - Patient Detail View - HDx Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../../components/brandkit/favicon/favicon.ico">
+
+<link id="theme-styles" href="../../../css/hds.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../../css/responsive.css" rel="stylesheet" type="text/css">
+
+
+<!-- Documentation styles -->
+<!-- XXX documentation styles should not be included in examples -->
+<link id="documentation-styles" href="../../assets/css/documentation.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+  <link id="theme-ie" href="../../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+    <link id="theme-ie9" href="../../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../../components/modernizr/modernizr.js"></script>
+<script src="../../../components/requirejs/require.js"></script>
+<script src="../../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({
+    baseUrl: '../../../'
+  });
+</script>
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<body>
+
+<style type="text/css" scoped="">
+
+.physiciannotes {
+	padding-right: 30px;
+}
+
+/* Breadcrumbs - remove margin below */
+/*noinspection CssUnusedSymbol*/
+div[class^="col-"].breadcrumb-container {
+	margin-bottom: 0;
+}
+
+/* make the nav pills the same height as the large buttons */
+.nav-pills > li > a {
+	line-height: 23px;
+}
+
+/* some space for a row that sits at the bottom of a module-body */
+.row-bottom-margin {
+	margin-top: 15px;
+}
+
+.row-top-margin {
+	margin-top: 15px;
+}
+
+.module .row-no-spacer-bottom select {
+	margin-bottom: 0;
+}
+
+.panel-left-bordered {
+	border-left: 1px solid #e1e1e1;
+}
+
+/* applied to image filter container on post care tab */
+.container-bordered {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+.container-bordered .row {
+	margin: 0;
+}
+
+/* Start Box and Whisker module */
+/*noinspection CssUnusedSymbol*/
+#chartBox {
+	margin-left: -38px;
+	margin-bottom: -14px;
+}
+
+/*noinspection CssUnusedSymbol*/
+.icon-black-caret {
+	color: #000;
+}
+
+/*noinspection CssUnusedSymbol*/
+.icon-green-caret {
+	color: #76B900;
+}
+
+/*noinspection CssUnusedSymbol*/
+.box-plot-legend {
+	display: table;
+	font-size: 12px;
+	color: #5c5f63;
+}
+
+.box-plot-legend > div {
+	display: table-row;
+}
+
+.box-plot-legend > div > i {
+	display: table-cell;
+	width: 13px;
+}
+
+.box-plot-legend > div > span {
+	display: table-cell;
+}
+
+.box-plot-legend > div > span:nth-child(1) {
+	width: 80px;
+}
+
+/*noinspection CssUnusedSymbol*/
+.box-dlp-offset-black {
+	color: #000;
+	font-weight: bold;
+}
+
+/*noinspection CssUnusedSymbol*/
+.box-dlp-offset-green {
+	color: #76B900;
+	font-weight: bold;
+}
+
+/* End Box and Whisker module */
+
+.message-item a {
+	text-decoration: none;
+}
+
+.paragraph-list {
+/ / padding-left : 10 px;
+}
+
+/*.paragraph-list > p:not(:first-child) {
+  margin-top:12px;
+}
+*/
+.paragraph-list > p > time {
+	margin-top: 2px;
+	display: block;
+}
+
+/*
+  btn-tag class is a new style for a new type of component
+  used in post care barriers module
+*/
+.btn-tag {
+	display: block;
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.btn-group.btn-tag + .btn-group {
+	margin-left: 0;
+}
+
+.btn-tag > div {
+	text-align: left;
+}
+
+.btn-tag > div hr {
+	margin: 3px;
+	border-bottom: none;
+}
+
+.btn-tag > div i {
+	margin-right: 5px;
+}
+
+.btn-tag > div span {
+	margin: 0 20px 0 0;
+}
+
+.btn-tag > div span.pull-right {
+	margin: 0;
+}
+
+.btn-tag > div + .btn {
+	padding: 20px 18px;
+
+}
+
+.btn-tag .tag-label {
+	text-overflow: ellipsis;
+	/* width: 120px;*/
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn-tag-fake {
+	display: block;
+	float: left;
+	text-align: left;
+	margin: 0 15px 15px 0;
+	height: 48px;
+	line-height: 20px;
+	padding: 6px 10px;
+	color: #797979;
+	background-color: #f5f5f5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid 4px #dcdcdc;
+	opacity: 1;
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+
+/*noinspection CssUnusedSymbol*/
+.btn-tag-fake.fade {
+	opacity: 0;
+}
+
+/*
+
+.btn-group > input[type=text].btn {
+  height: 24px;
+  margin-bottom: 0;
+}
+*/
+
+select.spacer-left {
+	margin-left: 10px;
+}
+
+label.spacer-left {
+	margin-left: 10px;
+}
+
+/*
+  styles for fluid rows that may be used within a module
+  applied in patient detail reference screen
+*/
+.span-fluid {
+	float: left;
+	margin: 0;
+}
+
+.span-fluid-20 {
+	width: 20%;
+	padding: 0 15px 0 0;
+}
+
+.span-fluid-30 {
+	width: 30%;
+	padding: 0 9px 0 8px;
+}
+
+.span-fluid-50 {
+	width: 50%;
+}
+
+.span-no-spacer-left {
+	margin-left: 0;
+}
+
+</style>
+<div class="navbar navbar-static-top">
+	<div class="masthead navbar-inner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>My Application</span></a>
+    </div>
+    <div class="pull-right">
+      <div class="notifications pull-left btn-toolbar">
+          <div class="btn-group">
+              <button class="btn notification notification-alert dropdown-toggle" data-toggle="dropdown">9</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-message dropdown-toggle" data-toggle="dropdown">1</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-suggestion dropdown-toggle" data-toggle="dropdown">3</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group">
+              <button class="btn notification notification-task dropdown-toggle" data-toggle="dropdown">0</button>
+              <ul class="dropdown-menu pull-right message-list">
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-important pull-left">Urgent</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item">
+                      <a href="#">
+                          <span class="label label-warning pull-left">Moderate</span>
+                          <h4 class="message-title">Alert Type and Title</h4>
+                          <p>This is a brief description or summary of the associated event that occured&hellip;<br><time datetime="12:05" class="message-time">MM/DD/YY 12:05</time></p>
+                      </a>
+                  </li>
+                  <li class="message-item"><a href="#">View all alerts</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="user-utilities btn-group pull-left btn-toolbar">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+          <img src="../../../img/hds/doctor-thumb.png" class="user-thumbnail" alt="User photo" />
+          <span class="user-name">Dr. Bradley Casper</span>
+          <i class="icon-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li><a>Action</a></li>
+          <li><a>Another action</a></li>
+          <li><a>Something else here</a></li>
+          <li class="divider"></li>
+          <li><a>Separated link</a></li>
+        </ul>
+
+
+      </div>
+
+        
+    </div>
+  </div>
+</div>
+
+	
+<div class="primary-navbar navbar-collapse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      
+      <li><a href="../list/index.html">Patient List</a></li>
+      
+      <li class="active"><a href="../detail/detail.html">Patient Detail</a></li>
+      
+      <li><a href="../analytics/analytics.html">Analysis</a></li>
+      
+      <li><a href="../reports/reports.html">Reports</a></li>
+      
+      <li><a href="#">Additional Tab</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div class="container">
+<div class="row">
+	<div class="breadcrumb-container col-sm-12 col-md-12">
+		<ul class="breadcrumb">
+			<li><a>HDS</a></li>
+			<li><a>Data Table</a></li>
+			<li><a>Data Detail</a></li>
+			<li class="active">Patient Detail</li>
+		</ul>
+	</div>
+</div>
+
+<div class="page-header">
+	<h1 class="voice voice-brand pull-left">Patient Detail</h1>
+
+	<div class="secondary-nav pull-right">
+		<ul id="tabPills" class="nav nav-pills pull-left">
+			<li class="active"><a href="#panePatientOverview">Patient Overview</a></li>
+			<li><a href="#panePostCare">Post Care</a></li>
+			<li><a href="#">Analytics</a></li>
+			<li><a href="#">Comments</a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div class="tabbable">
+<div class="tab-content">
+<div class="tab-pane active" id="panePatientOverview">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<section class="module module-patient">
+				<div class="pull-left">
+					<h1>Van DerHoote, Doris</h1>
+
+					<div class="patient-number">ID #12234567893456782345</div>
+					<table class="table-overview">
+						<tbody>
+						<tr>
+							<td>F</td>
+							<td>68</td>
+							<td>25 Nov 1945</td>
+							<td>5' 3"</td>
+							<td>114 lbs</td>
+							<td>Dr. J. Fraserton</td>
+							<td>MM/DD/YY</td>
+						</tr>
+						</tbody>
+						<tfoot>
+						<tr>
+							<th>Sex</th>
+							<th>Age</th>
+							<th>DOB</th>
+							<th>Height</th>
+							<th>Weight</th>
+							<th>PCP</th>
+							<th>Discharge Date</th>
+						</tr>
+						</tfoot>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-md-4">
+			<section class="module">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Diagnosis</h3>
+				</header>
+				<div class="module-body">
+					<div class="row ">
+						<div class="col-sm-12 col-md-12">
+							<label class="no-spacer-bottom"> <strong>Congestive Heart Failure (CHF)</strong></label>
+
+							<p class="help-block">(See more details)</p>
+						</div>
+					</div>
+					<div class="row-top-margin row">
+						<div class="col-md-6">
+							<label class="no-spacer-bottom">Estimated Discharge Date</label>
+
+							<div class="input-append input-group bootstrap-datepicker">
+								<input type="text" class="form-control input-sm datepicker">
+                          <span class="input-group-btn">
+                             <span class="add-on">
+                                <button class="btn btn-default" type="button">
+	                                <i class="icon-calendar"></i>
+                                </button>
+                              </span>
+                          </span>
+							</div>
+						</div>
+					</div>
+					<div class="row-top-margin row-no-spacer-bottom row">
+						<div class="col-sm-12 col-md-12 no-spacer-bottom">
+							<label class="no-spacer-bottom"> Estimated Discharge Time</label>
+
+							<div>
+								<select class="input-small">
+									<option>9</option>
+									<option selected="">10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+								<select class="spacer-left input-small">
+									<option>AM</option>
+									<option>PM</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="module-footer"></footer>
+			</section>
+			<br>
+
+			<section class="module scrollable">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Comments (13)</h3>
+
+					<div class="pull-right">
+						<button class="btn btn-mini">+ New</button>
+
+					</div>
+
+					<div class="pull-right">
+					</div>
+				</header>
+				<div class="module-body">
+					<div>
+						<ul class="message-list">
+							<li class="message-item">
+								<a href="#">
+									<h4 class="message-title">
+										<small>Michael McDouggal</small>
+										Message Subject Line
+									</h4>
+									<p>Lorem ipsum dolor sit adipiscing consecteurest comodo amet prota&hellip;
+										<br>
+										<time datetime="2013-06-08 15:45" class="message-time">08 June, 2013 15:45</time>
+									</p>
+								</a>
+							</li>
+							<li class="message-item">
+								<a href="#">
+									<h4 class="message-title">
+										<small>Essie Longstreet</small>
+										Message Subject Line
+									</h4>
+									<p>Lorem ipsum dolor sit adipiscing consecteurest comodo amet prota&hellip;
+										<br>
+										<time datetime="2013-06-07 18:05" class="message-time">07 June, 2013 18:05</time>
+									</p>
+								</a>
+							</li>
+							<li class="message-item">
+								<a href="#">
+									<h4 class="message-title">
+										<small>Essie Longstreet</small>
+										Message Subject Line
+									</h4>
+									<p>Lorem ipsum dolor sit adipiscing consecteurest comodo amet prota&hellip;
+										<br>
+										<time datetime="2013-06-06 12:05" class="message-time">06 June, 2013 12:05</time>
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<footer class="module-footer"></footer>
+			</section>
+		</div>
+		<div class="col-sm-8 col-md-8">
+			<section class="module">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Physician Notes</h3>
+				</header>
+				<div class="module-body">
+					<div class="row">
+						<div class="col-sm-3 col-md-3">
+							<strong><i>Last Updated by:</i></strong>
+							<br>
+							<strong>Firstname Lastname</strong>
+							<br>
+							<time datetime="2013-06-09 08:04">09 June, 2013 8:04</time>
+						</div>
+						<div class="physiciannotes col-sm-9 col-md-9">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida nulla vitae nisl hendrerit
+								lacinia. Pellentesque tempus dui sed nibh lobortis tristique. Nullam eget posuere elit. Nulla luctus
+								mattis eros a sodales. Ut lacinia nisi purus, fermentum ornare neque congue eget. Cum sociis natoque
+								penatibus et magnis dis parturient montes., nascetur ridiculus mus. Etiam eget laoreet urna, eget
+								egestas justo. In feugiat, est ut.</p>
+						</div>
+					</div>
+				</div>
+				<footer class="module-footer"></footer>
+			</section>
+			<br>
+			<section class="module">
+				<header class="module-header">
+					<h3 class="voice voice-brand pull-left">Analytics</h3>
+				</header>
+				<div class="module-body">
+					<div id="analyticsChart"></div>
+					<div class="cf row-bottom-margin row">
+						<div class="pull-right text-right col-sm-3 col-md-3">
+							<button class="btn btn-default">View Details</button>
+						</div>
+					</div>
+				</div>
+				<footer class="module-footer"></footer>
+			</section>
+		</div>
+	</div>
+</div>
+<div class="tab-pane" id="panePostCare">
+<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<section class="module module-patient">
+			<div class="pull-left">
+				<h1>Van DerHoote, Doris</h1>
+
+				<div class="patient-number">ID #12234567893456782345</div>
+				<table class="table-overview">
+					<tbody>
+					<tr>
+						<td>F</td>
+						<td>68</td>
+						<td>25 Nov 1945</td>
+						<td>5' 3"</td>
+						<td>114 lbs</td>
+						<td>Dr. J. Fraserton</td>
+						<td>MM/DD/YY</td>
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+						<th>Sex</th>
+						<th>Age</th>
+						<th>DOB</th>
+						<th>Height</th>
+						<th>Weight</th>
+						<th>PCP</th>
+						<th>Discharge Date</th>
+					</tr>
+					</tfoot>
+				</table>
+			</div>
+		</section>
+	</div>
+</div>
+<div class="row" data-height="350">
+	<div class="col-sm-4 col-md-4">
+		<section class="module">
+			<header class="module-header">
+				<h3 class="voice voice-brand pull-left">Post Care</h3>
+			</header>
+			<div class="module-body" style="height:253px">
+				<div class="row-no-spacer-bottom row">
+					<div class="span-no-spacer-bottom col-sm-6 col-md-6">
+						<label class="no-spacer-bottom"><strong>Patient Predisposition</strong></label>
+						<select class="input-medium">
+							<option selected="">Predisposition 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+							<option>option 4</option>
+						</select>
+					</div>
+					<div class="span-no-spacer-bottom span-no-spacer-left col-sm-6 col-md-6">
+						<label class="no-spacer-bottom"><strong>Patient Transport</strong></label>
+						<select class="input-medium">
+							<option>Ambulance</option>
+							<option>option 2</option>
+						</select>
+					</div>
+				</div>
+				<div class="row-top-margin row">
+					<div class="col-md-6">
+						<label class="no-spacer-bottom"><strong>Post Op Check In</strong></label>
+
+						<div class="input-append input-group bootstrap-datepicker">
+							<input type="text" class="form-control input-sm datepicker">
+                          <span class="input-group-btn">
+                             <span class="add-on">
+                                <button class="btn btn-default" type="button">
+	                                <i class="icon-calendar"></i>
+                                </button>
+                              </span>
+                          </span>
+						</div>
+					</div>
+				</div>
+				<div class="row-no-spacer-bottom row">
+					<div class="col-sm-12 col-md-12">
+						<label class="no-spacer-bottom"><strong>Appointment Time</strong></label>
+						<select class="input-small">
+							<option>9</option>
+							<option selected="">10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+						<select class="spacer-left input-small">
+							<option>AM</option>
+							<option>PM</option>
+						</select>
+					</div>
+				</div>
+				<div class="row-top-margin row">
+					<div class="col-sm-12 col-md-12">
+						<strong>Special Instructions</strong>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						<br>
+						<a href="#">Click to Edit</a>
+					</div>
+				</div>
+			</div>
+			<footer class="module-footer"></footer>
+		</section>
+	</div>
+	<div class="col-sm-8 col-md-8">
+		<section class="module">
+			<header class="module-header">
+				<h3 class="voice voice-brand pull-left">Barriers</h3>
+
+				<div class="pull-right">
+					<button class="btn btn-mini">+ Add</button>
+				</div>
+			</header>
+			<div class="module-body">
+
+
+				<div class="btn-group btn-tag">
+					<div class="btn btn-default" style="width:200px;">
+						<i class="icon-user-md"></i><span class="tag-label"><strong>Emission Tomography</strong></span>
+						<hr>
+						<span class="pull-left">Submitted</span><span class="pull-right">17 min ago</span>
+					</div>
+					<a href="#" class="btn btn-remove btn-default"><i class="icon-remove"></i></a>
+				</div>
+				<div class="btn-group btn-tag">
+					<div class="btn btn-default">
+						<i class="icon-tasks"></i><span class="tag-label"><strong>Positron Emission Tomography</strong></span>
+						<hr>
+						<span class="pull-left">Submitted</span><span class="pull-right">17 min ago</span>
+					</div>
+					<a href="#" class="btn btn-remove btn-default"><i class="icon-remove"></i></a>
+				</div>
+				<div class="btn-group btn-tag">
+					<div class="btn btn-default">
+						<i class="icon-stethoscope"></i><span class="tag-label"><strong>Pain Management</strong></span>
+						<hr>
+						<span class="pull-right">2 hrs ago</span>
+					</div>
+					<a href="#" class="btn btn-remove btn-default"><i class="icon-remove"></i></a>
+				</div>
+				<div class="btn-tag-fake">
+					You have just removed <strong>Interventional Radiology</strong>
+					<br>
+					<a href="#">Undo This</a>
+				</div>
+			</div>
+			<footer class="module-footer"></footer>
+		</section>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<section class="module">
+			<header class="module-header">
+				<h3 class="voice voice-brand pull-left">Patient Images</h3>
+			</header>
+			<div class="module-body">
+				<div class="row">
+					<div class="paragraph-list col-sm-3 col-md-3">
+						<p>
+							<strong>Nemo Enim Ipsam</strong>
+							<br>
+							Nulla luctus mattis eros a sodales. Ut lacinia nisi purus, fermentum ornare neque congue eget. Cum sociis
+							natoque penatibus et magnis dis parturient montes.
+							<br>
+							<time datetime="2013-06-09 13:45" class="message-time">09 June, 2013 13:45</time>
+						</p>
+						<p>
+							<strong>Nemo Enim Ipsam</strong>
+							<br>
+							Nulla luctus mattis eros a sodales. Ut lacinia nisi purus, fermentum ornare neque congue eget. Cum sociis
+							natoque penatibus et magnis dis parturient montes.
+							<br>
+							<time datetime="2013-06-09 13:45" class="message-time">09 June, 2013 13:45</time>
+						</p>
+						<p>
+							<strong>Nemo Enim Ipsam</strong>
+							<br>
+							Nulla luctus mattis eros a sodales. Ut lacinia nisi purus, fermentum ornare neque congue eget. Cum sociis
+							natoque penatibus et magnis dis parturient montes.
+							<br>
+							<time datetime="2013-06-09 13:45" class="message-time">09 June, 2013 13:45</time>
+						</p>
+					</div>
+					<div class="col-sm-9 col-md-9">
+						<div class="container-bordered data-container" style="margin-right:0;">
+							<header class="module-header">
+								<h3 class="voice voice-brand pull-left">Image Filter</h3>
+							</header>
+							<div class="row">
+								<div class="span-fluid span-fluid-20">
+									<label><strong>Viewing</strong></label>
+									<select>
+										<option>CT Scan</option>
+										<option>Another Option</option>
+									</select>
+									<select>
+										<option>Imaging Tool</option>
+										<option>Another Option</option>
+									</select>
+									<hr>
+									<div class="checkbox"><label class="">
+											<input type="checkbox" value="check1">
+											Checkbox 1
+										</label></div>
+									<div class="checkbox"><label class="">
+											<input type="checkbox" value="check2">
+											Checkbox 2
+										</label></div>
+									<div class="checkbox"><label class="">
+											<input type="checkbox" value="check3">
+											Checkbox 3
+										</label></div>
+									<hr>
+									<div class="row-no-spacer-bottom row">
+										<div class="radio"><label class="">
+												<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
+												Option1
+											</label>&nbsp;
+											<label class="">
+												<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option2">
+												Option2
+											</label></div>
+									</div>
+									<div class="row-no-spacer-bottom row">
+										<div class="radio"><label class="">
+												<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option1" checked>
+												Option1
+											</label>
+											&nbsp;
+											<label class="">
+												<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+												Option2
+											</label></div>
+									</div>
+								</div>
+								<div class="span-fluid span-fluid-30 panel-left-bordered">
+									<img class="img-responsive" src="../../assets/imgs/image_filter_a.png" alt=""/>
+								</div>
+								<div class="span-fluid span-fluid-50">
+									<img class="img-responsive" src="../../assets/imgs/image_filter_b.png" alt=""/>
+								</div>
+							</div>
+						</div>
+						<div class="cf row-bottom-margin row">
+							<div class="pull-right text-right col-sm-12 col-md-12">
+								<button class="btn btn-default">Vew Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="module-footer"></footer>
+		</section>
+	</div>
+</div>
+</div>
+<div class="tab-pane" id="paneAnalytics">
+	<p>Analytics Content</p>
+</div>
+<div class="tab-pane" id="paneComments">
+	<p>Comments Content</p>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Modal header</h3>
+	</div>
+	<div class="modal-body" style="height:400px">
+	</div>
+	<!-- <div class="modal-footer">
+		<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Dismiss</button>
+	</div> -->
+</div>
+
+<script id="metaTagRemove" type="text/template">
+You have just removed [tagLabel]
+<br/>
+<a href="#">Undo This</a>
+</script>
+
+<script type="text/javascript">
+require.config(
+		{
+			baseUrl: '../../../'
+		});
+require(
+		[
+			'jquery', 'charts-theme', 'ge-bootstrap', 'datepicker','highcharts-more'
+		], function($, theme) {
+			$(
+					function() {
+						// tabs for pills
+						$('#tabPills').find('a').click(
+								function(e) {
+									e.preventDefault();
+									$(this).tab('show');
+									if($(this).attr('href')==='#panePostCare')
+									{
+										// make top modules uniform in height, accounting for scrolling
+										updateUniformRow();
+									}
+								});
+
+						Highcharts.setOptions(theme);
+
+						// highcharts
+						var chartDef = {
+							chart: {
+								renderTo: 'analyticsChart',
+								height: 200,
+								type: 'column',
+								// plotBorderWidth: 1,
+								// backgroundColor: '#daeefa',
+								marginTop: 20,
+								marginLeft: 82
+							},
+							xAxis: {
+								categories: ['CT Studies', 'XA Studies', 'MG Studies', 'RF Studies'],
+								labels: {
+									style: {
+										fontSize: '13px'
+									}
+								}
+							},
+							yAxis: {
+								title: {
+									text: 'Measurement'
+								},
+								gridLineWidth: 1,
+								max: 1000,
+								tickInterval: 250
+							},
+							legend: {
+								enabled: false
+							},
+							plotOptions: {
+								series: {
+									borderWidth: 0,
+									pointPadding: 0,
+									colorByPoint: false,
+									animation: false
+								}
+							},
+							series: [
+								{
+									name: 'Count',
+									data: [267, 998, 604, 789],
+									pointWidth: 20
+								}
+							],
+							title: { text: null },
+							credits: { enabled: false }
+						};
+
+						//noinspection JSUnusedLocalSymbols
+						var seriesConfig = new Highcharts.Chart(chartDef);
+
+//						var seriesBoxConfig = {
+//
+//							chart: {
+//								renderTo: 'chartBox',
+//								type: 'boxplot',
+//								inverted: true,
+//								height: 62,
+//								marginRight: 0,
+//								marginBottom: 0
+//							},
+//
+//							xAxis: {
+//								lineWidth: 0,
+//								minorGridLineWidth: 0,
+//								lineColor: 'transparent',
+//								labels: {
+//									enabled: false
+//								},
+//								minorTickLength: 0,
+//								tickLength: 0
+//							},
+//
+//							yAxis: {
+//								lineWidth: 0,
+//								minorGridLineWidth: 0,
+//								lineColor: 'transparent',
+//								labels: {
+//									enabled: false
+//								},
+//								minorTickLength: 0,
+//								tickLength: 0,
+//								title: {
+//									text: ''
+//								},
+//								gridLineWidth: 0
+//							},
+//
+//							legend: {
+//								enabled: false
+//							},
+//
+//							exporting: {
+//								enabled: false
+//							},
+//
+//							plotOptions: {
+//								boxplot: {
+//									enableMouseTracking: false,
+//									fillColor: '#add566',
+//									stemColor: '#ABABAB',
+//									lineWidth: 0,
+//									medianWidth: 2,
+//									medianColor: '#76B900',
+//									stemWidth: 2,
+//									whiskerColor: '#ABABAB',
+//									whiskerWidth: 2,
+//									whiskerLength: '100%'
+//								},
+//								series: {
+//									animation: false
+//								}
+//							},
+//
+//							series: [
+//								{
+//									name: 'Observations',
+//									data: [
+//										[733, 753, 775, 900, 1080]
+//									]/*,
+//								 pointWidth: 22*/
+//								},
+//								{
+//									name: 'Study',
+//									color: '#000000',
+//									type: 'scatter',
+//									data: [ // x, y positions where 0 is the first category
+//										[0, 810]
+//									],
+//									marker: {
+//										fillColor: '#000000',
+//										lineWidth: 1,
+//										lineColor: '#000000'
+//									},
+//									tooltip: {
+//										pointFormat: 'DLP: {point.y}',
+//										color: '#C152B7'
+//									}
+//								}
+//							],
+//
+//							title: { text: null },
+//							credits: { enabled: false }
+//
+//						};
+
+
+						// TODO: check version of highcharts, even example is not working
+						// http://jsfiddle.net/highcharts/fWN75/
+						//   var boxChart = new Highcharts.Chart(seriesBoxConfig);
+
+
+						// datepicker
+						$('.datepicker').datepicker();
+
+
+						// disable dead links
+						$('a[href="#"]').click(
+								function(e) {
+									e.preventDefault();
+									//console.log('hi');
+									return false;
+								});
+
+						/* TODO: could be made into a plugin, real implementation requires server-side support */
+						// meta tag close
+						$('.btn-tag > a.btn-remove').click(
+								function(e) {
+									e.preventDefault();
+									var curTarget = $(e.currentTarget);
+									var container = curTarget.parent();
+									var tagLabel = container.find('.tag-label').html();
+									// update html
+									var templateHTML = $('#metaTagRemove').html();
+									// search are replace tag label
+									var newHTML = templateHTML.replace('[tagLabel]', tagLabel);
+
+									// update class styles
+									container.html(newHTML);
+									container.removeClass('btn-group');
+									container.removeClass('btn-tag');
+									//container.addClass('btn');
+									container.addClass('btn-tag-fake');
+
+									// adjust row height
+									updateUniformRow();
+
+									// fade off after 1.5 seconds
+									window.setTimeout(
+											function() {
+												if($('html').hasClass('csstransitions'))
+												{
+													// add event listener to fade
+													container.on(
+															'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+																// remove from DOM
+																container.remove();
+
+																// adjust row height
+																updateUniformRow();
+															});
+													container.addClass('fade');
+												}
+												else
+												{
+													// remove from DOM
+													container.remove();
+
+													// adjust row height
+													updateUniformRow();
+												}
+											}, 1500);
+								});
+
+
+						// keep module heights uniform up to a point where they will scroll
+						var updateUniformRow = function() {
+							$('.row[data-height]').each(
+									function() {
+										var row = $(this);
+										var rowTargetHeight = row.data('height');
+										// get the max module height
+										var maxHeight = 0;
+										row.find('.module').each(
+												function() {
+													var module = $(this);
+													// remove any prior inline height styles
+													module.css('height', '');
+													module.find('.module-body').css('height', '');
+													// remove scrollable class
+													module.removeClass('scrollable');
+													var moduleHeight = module.outerHeight();
+													if(maxHeight<moduleHeight)
+													{
+														maxHeight = moduleHeight;
+
+														// check if we're over the target height where scrolling should start
+														if(maxHeight>rowTargetHeight)
+														{
+															// set the module to scrollable
+															module.addClass('scrollable');
+															module.css('height', rowTargetHeight + 'px');
+															// adjust height of scrollable module body
+															var bodyHeight = rowTargetHeight - 68;
+															module.find('.module-body').css('height', bodyHeight + 'px');
+															maxHeight = rowTargetHeight;
+														}
+													}
+												});
+
+										// now set the heights
+										row.find('.module').each(
+												function() {
+													if($(this).outerHeight()<maxHeight)
+													{
+														$(this).css('height', maxHeight + 'px');
+														//console.log('reset');
+													}
+												});
+									});
+						}
+					});
+
+
+		});
+</script>
+
+<script src="../../../components/respond/respond.min.js"></script>
+<script type="text/javascript">
+
+// Preload JS libraries and exec page scripts
+require([
+    'jquery',
+    'ge-bootstrap',
+    'hds'
+], function($) {
+    // application entry point
+
+    //
+    // your code here
+    //
+
+    // signin examples
+    $('#forgotpin').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpin-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpin-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send').on(
+					    'click', function() {
+						    var po = $('#forgotpin').data('popover');
+                    po.options.content=$('#forgotpin-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpin").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotuser').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotuser-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotuser-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-user').on(
+					    'click', function() {
+						    var po = $('#forgotuser').data('popover');
+                    po.options.content=$('#forgotuser-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotuser").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+    $('#forgotpwd').popover({
+        html: 'true',
+        type: 'richpopover',
+        placement: 'bottom',
+        selector: '#forgotpwd-form',
+        trigger: 'manual',
+        content: function() {
+            return $('#forgotpwd-form').html();
+        }
+    }).on('click', function(e) {
+                e.preventDefault();
+    }).on(
+		    'shown.bs.popover', function() {
+			    $('#btn-send-reset-pwd').on(
+					    'click', function() {
+						    var po = $('#forgotpwd').data('popover');
+                    po.options.content=$('#forgotpwd-confirmation').html();
+
+                    // if popover is visible before content has loaded
+                    if ($("#forgotpwd").next('div.popover:visible').length){
+                        // reposition
+                        po.show();
+                    }
+                });
+            });
+
+$('#btn-signin').on(
+			'click', function() {
+				$('#signin-progress').show();
+    });
+    /*
+     $('#forgotpin').click(function(){
+     $('#forgotpin').popover("show");
+     });
+     */
+    // end of signin examples
+
+    // jquery page loaded handler
+    $(function () {
+        $('#btn-refresh').click(toggleLightsOff);
+    });
+
+    setThemeFromURL();
+});
+
+// activate declarative visualizations
+require(['declarative-visualizations'], function(visualizations) {
+    $('div[data-visualization="donut"]').each(function(i, element) {
+        visualizations.donut(element);
+    });
+});
+
+var _lightsOff = false;
+
+function setThemeFromURL() {
+    // set theme from the URL
+    var query_string = window.location.search.replace('?', '')
+            , pairs = query_string.split('&')
+            , options = {};
+
+    for (var i=0; i < pairs.length; i++) {
+        var parts = pairs[i].split('=');
+        options[parts[0]] = parts[1];
+    }
+
+    if(options.theme == 'lights-off') {
+        setLightsOff(true);
+    }
+}
+
+function setLightsOff(b) {
+    _lightsOff = b;
+
+    //var themeStyle = b ? '../../../css/hds-lights-off.css' : '../../../css/hds.css';
+    var themeStyle;
+    var themeStyleEl = $('#theme-styles');
+    if (b) {
+        themeStyle = '../../../css/hds-lights-off.css';
+        themeStyleEl.attr('href', themeStyle);
+    } else {
+        themeStyle = '../../../css/hds.css';
+        themeStyleEl.attr('href', themeStyle);
+        $('#theme-styles-extra').remove();
+    }
+
+
+    var documentationStyle = b ? '../../assets/css/documentation-lights-off.css' : '../../assets/css/documentation.css';
+    $('#documentation-styles').attr('href', documentationStyle);
+
+    var chartTheme = b ? 'charts/theme-dark' : 'charts/theme';
+    require([chartTheme, 'charts','highstock'], function (theme, charts) {
+        Highcharts.setOptions(theme);
+
+        showMarkup();
+
+        if (b) {
+            // issue with firefox chart rendering requires small delay
+            window.setTimeout(function(){
+                updateCharts(charts);
+            }, 100);
+        } else {
+            updateCharts(charts);
+        }
+    });
+}
+
+function lightsOff() {
+    return _lightsOff;
+}
+
+function toggleLightsOff() {
+    hideMarkup();
+    setLightsOff(!_lightsOff);
+
+}
+
+function hideMarkup() {
+    $('body').css('visibility', 'hidden');
+}
+
+function showMarkup() {
+    $('body').css('visibility', 'visible');
+}
+
+</script>
+
+
+</body>

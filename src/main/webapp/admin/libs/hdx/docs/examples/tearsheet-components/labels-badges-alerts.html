@@ -1,0 +1,189 @@
+<table class="documentation">
+	<thead>
+	<tr>
+		<th>Example</th>
+		<th>Description</th>
+		<th>Usage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+
+		<td class="example">
+			<p>
+				<span class="label label-default">Default</span>
+			</p>
+
+			<p>
+				<span class="label label-success">Success</span>
+			</p>
+
+			<p>
+				<span class="label label-warning">Warning</span>
+			</p>
+
+			<p>
+				<span class="label label-important">Important</span>
+			</p>
+
+			<p>
+				<span class="label label-info">Info</span>
+			</p>
+
+			<p>
+				<span class="label label-inverse">Inverse</span>
+			</p>
+		</td>
+		<td class="description" id="lba-labels">Labels</td>
+		<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;span class="label label label-default"&gt;Default&lt;/span&gt;
+</pre>
+			<hr>
+			<p>Add one of <code>.label-success</code>, <code>.label-warning</code>, <code>.label-important</code>, <code>.label-info</code>
+				or <code>.label-inverse</code> to colorize the <code>.label</code> for the appropriate context.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;span class="label label-success"&gt;Success&lt;/span&gt;
+</pre>
+			<hr>
+			<p>Use the Bootstrap utility classes <code>.pull-left</code> or <code>.pull-right</code> to make
+				<code>.label</code> float alongside headlines or other block elements.</p>
+		</td>
+	</tr>
+	<!-- /labels -->
+	<tr>
+		<td class="example">
+			<p>
+				<span class="badge">1</span>
+			</p>
+
+			<p>
+				<span class="badge badge-success">2</span>
+			</p>
+
+			<p>
+				<span class="badge badge-warning">4</span>
+			</p>
+
+			<p>
+				<span class="badge badge-important">6</span>
+			</p>
+
+			<p>
+				<span class="badge badge-info">8</span>
+			</p>
+
+			<p>
+				<span class="badge badge-inverse">10</span>
+			</p>
+		</td>
+		<td class="description" id="lba-badges">Badges</td>
+		<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;span class="badge"&gt;1&lt;/span&gt;
+</pre>
+			<hr>
+			<p>Add one of <code>.badge-success</code>, <code>.badge-warning</code>, <code>.badge-important</code>, <code>.badge-info</code>
+				or <code>.badge-inverse</code> to colorize the <code>.badge</code> for the appropriate context.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;span class="badge badge-success"&gt;2&lt;/span&gt;
+</pre>
+		</td>
+	</tr>
+	<!-- /badges -->
+	<tr>
+		<td class="example">
+			<div class="alert alert-warning">
+				<strong>Warning!</strong> Best check yo self.
+			</div>
+			<div class="alert alert-error alertPositionBookmark">
+				<strong>Oh snap!</strong> Change a few things up.
+			</div>
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert" onclick="dismissedAlerts.push($(this).parent())">×
+				</button>
+				<strong>Well done!</strong> You successfully read this.
+			</div>
+			<div class="alert alert-info">
+				<button type="button" class="close" data-dismiss="alert" onclick="dismissedAlerts.push($(this).parent())">×
+				</button>
+				<button class="btn btn-small pull-right">Action</button>
+				<strong>Heads up!</strong> This needs your attention.
+			</div>
+			<div class="alert alert-block">
+				<button type="button" class="close" data-dismiss="alert" onclick="dismissedAlerts.push($(this).parent())">×
+				</button>
+				<h4 class="alert-heading">Warning!</h4>
+
+				<p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo
+					cursus magna, vel scelerisque nisl consectetur et.</p>
+			</div>
+			<div class="alert alert-block alert-error">
+				<button type="button" class="close" data-dismiss="alert" onclick="dismissedAlerts.push($(this).parent())">×
+				</button>
+				<h4 class="alert-heading">Oh Snap!</h4>
+
+				<p>Change a few things and try submitting again. Change this and that and try again. Duis mollis, est non
+					commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
+					amet fermentum.</p>
+
+				<div class="toolbar">
+					<button class="btn btn-default">Action</button>
+				</div>
+			</div>
+
+			<a href="#" onclick="refreshAlerts(); return false;">Reset Links</a>
+
+			<script>
+				var dismissedAlerts = [];
+				function refreshAlerts() {
+					var a = dismissedAlerts;
+					dismissedAlerts = [];
+					a.forEach(function(c) { $(".alertPositionBookmark").after(c); });
+				}
+			</script>
+		</td>
+		<td class="description" id="lba-alerts">Alerts</td>
+		<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="alert alert-warning"&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self.
+&lt;/div&gt;
+</pre>
+			<hr>
+			<p>Use one of <code>.alert-success</code>, <code>.alert-info</code> or <code>.alert-error</code> to colorize the
+				<code>.alert</code> for the appropriate context.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="alert alert-success"&gt;
+  &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this.
+&lt;/div&gt;
+</pre>
+			<p>Add <code>.alert-fixed-top</code> to <code>.alert</code> to fix the position to the top of the browser window
+				and only round the bottom corners.</p>
+			<hr/>
+			<p>Add an optional <code>button</code> before the message. Use the attribute <code class="prettyprint">data-dismiss="alert"</code>
+				to automatically enable alert dismissal.</p>
+
+			<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="alert alert-success"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+  &lt;strong&gt;Well Done!&lt;/strong&gt; You successfully read this.
+&lt;/div&gt;
+</pre>
+			<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+$(&hellip;).alert('close');
+</pre>
+
+			<div class="alert alert-info">
+				<strong>Script Requirements:</strong>
+				<ul>
+					<li>bootstrap/bootstrap-alert</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+	<!-- /alerts -->
+	</tbody>
+</table>

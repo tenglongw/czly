@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.SugarMedicalCaseMapper" >
+  <resultMap id="BaseResultMap" type="com.czly.entity.SugarMedicalCase" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="caseType" property="caseType" jdbcType="VARCHAR" />
+    <result column="icon" property="icon" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="brand" property="brand" jdbcType="VARCHAR" />
+    <result column="readNum" property="readNum" jdbcType="INTEGER" />
+    <result column="displayFlag" property="displayFlag" jdbcType="INTEGER" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+     <result column="isIndex" property="isIndex" jdbcType="INTEGER" />
+    <result column="createdby" property="createdby" jdbcType="VARCHAR" />
+    <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
+    <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, caseType, icon,title, description, brand,  readNum, displayFlag, url,isIndex,
+      createdby, updatedby, creationtime,updatetime
+  </sql>
+   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_sugar_medical_case
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.czly.entity.SugarMedicalCase" >
+    insert into t_sugar_medical_case (id, caseType, icon, 
+      title, description, brand,  readNum, displayFlag, url,isIndex, 
+      createdby, updatedby, creationtime, 
+      updatetime)
+    values (#{id,jdbcType=INTEGER}, #{caseType,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, 
+      #{readNum,jdbcType=INTEGER}, #{displayFlag,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},#{isIndex,jdbcType=INTEGER}, 
+      #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sugar_medical_case
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.czly.entity.SugarMedicalCase" >
+    update t_sugar_medical_case
+    <set >
+      <if test="caseType != null" >
+        caseType = #{caseType,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        icon = #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="brand != null" >
+        brand = #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="readNum != null" >
+        readNum = #{readNum,jdbcType=INTEGER},
+      </if>
+       <if test="displayFlag != null" >
+        displayFlag = #{displayFlag,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="isIndex != null" >
+        isIndex = #{isIndex,jdbcType=INTEGER},
+      </if>
+      <if test="createdby != null" >
+        createdby = #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        updatedby = #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.czly.entity.SugarMedicalCase" >
+    update t_sugar_medical_case
+    set caseType = #{caseType,jdbcType=INTEGER},
+     	title = #{title,jdbcType=VARCHAR},
+      	icon = #{icon,jdbcType=VARCHAR},
+      	description = #{description,jdbcType=VARCHAR},
+       	brand = #{brand,jdbcType=VARCHAR},
+       	readNum = #{readNum,jdbcType=INTEGER},
+       	displayFlag = #{displayFlag,jdbcType=INTEGER},
+       	url = #{url,jdbcType=VARCHAR},
+       	isIndex = #{isIndex,jdbcType=INTEGER},
+       	createdby = #{createdby,jdbcType=VARCHAR},
+       	updatedby = #{updatedby,jdbcType=VARCHAR},
+      	creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      	updatetime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <insert id="insertSelective" parameterType="com.czly.entity.SugarMedicalCase" >
+    insert into t_sugar_medical_case
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="caseType != null" >
+        caseType,
+      </if>
+      <if test="icon != null" >
+        icon,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="brand != null" >
+        brand,
+      </if>
+      <if test="readNum != null" >
+        readNum,
+      </if>
+      <if test="displayFlag != null" >
+        displayFlag,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="isIndex != null" >
+        isIndex,
+      </if>
+      <if test="createdby != null" >
+        createdby,
+      </if>
+      <if test="updatedby != null" >
+        updatedby,
+      </if>
+      <if test="creationtime != null" >
+        creationtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="caseType != null" >
+        #{caseType,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="brand != null" >
+        #{brand,jdbcType=INTEGER},
+      </if>
+      <if test="readNum != null" >
+        #{readNum,jdbcType=INTEGER},
+      </if>
+      <if test="displayFlag != null" >
+        #{displayFlag,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="isIndex != null" >
+        #{isIndex,jdbcType=INTEGER},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

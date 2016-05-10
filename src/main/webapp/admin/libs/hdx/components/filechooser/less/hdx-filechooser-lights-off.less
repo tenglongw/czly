@@ -1,0 +1,29 @@
+//--------------------
+// HDS LIGHTS OFF CSS THEME
+//--------------------
+//
+// What's happening here?
+//
+// This is the lights-off theme for GE Healthcare apps. It customizes
+// the look of the lights off theme and extends it with new components.
+//
+@import "ge-bootstrap/less/hdx-bootstrap-lights-off.less";
+@import "filechooser.less";
+.filechooser {
+  .btn {
+    &:hover,
+    &.hover {
+      background: @btnHoverBackground;
+      border-color: @grayDarkest;
+      color: @grayLight;
+    }
+
+    &:active,
+    &.active {
+      color: @white;
+      border-color: @blue;
+      #gradient > .vertical(@blue, darken(@blue, 11.5%));
+    }
+  }
+}
+

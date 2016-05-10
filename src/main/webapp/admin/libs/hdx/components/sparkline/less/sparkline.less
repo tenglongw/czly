@@ -1,0 +1,219 @@
+// Dependencies
+// --------------------------------------------------
+
+@import "variables.less";
+
+
+// Styles
+// --------------------------------------------------
+
+.data-container {
+  position: relative;
+  border: 1px solid @grayLighter;
+  .border-radius(@borderRadiusSmall - 1);
+  display: inline-block;
+  background-color: @white;
+  margin-right: 7px;
+
+  &.sparkline {
+    position: relative;
+    border: 1px solid @borderColor;
+    .border-radius(@borderRadiusSmall - 1);
+    padding: 4px 64px 4px 4px;
+
+    .sparkline-label {
+      font-size: @baseFontSize;
+      color: @gray;
+    }
+
+    .sparkline-value {
+      font-size: @baseFontSize + 9;
+      font-family: @brandFontFamily;
+    }
+
+    .sparkline-label.warning,
+    .sparkline-label .warning,
+    .sparkline-value.warning,
+    .sparkline-value .warning {
+      color: @errorText;
+      font-weight: bold;
+    }
+
+    .sparkline,
+    .sparkline-generated-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 40px;
+    }
+
+    &.stacked {
+
+      .sparkline-label {
+        color: @successText;
+        line-height: 14px;
+      }
+
+      .sparkline,
+      .sparkline-generated-container {
+        width: 20px;
+        height: 26px;
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+
+  .status {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    font-size: @baseFontSize + 3;
+
+    &.warning {
+      color: @errorText;
+    }
+  }
+}
+
+ul.sparkline {
+  display: none;
+}
+
+.nojs ul.sparkline {
+  display: block;
+}
+
+.sparkline-generated-container {
+  display: inline-block;
+
+  .bar rect,
+  .bullet rect {
+    &.normal-a {
+      fill: @normalA;
+    }
+
+    &.normal-b {
+      fill: @normalB;
+    }
+
+    &.normal-c {
+      fill: @normalC;
+    }
+
+    &.attention-a {
+      fill: @attentionA;
+    }
+
+    &.warning-a {
+      fill: @warningA;
+    }
+
+    &.critical-a {
+      fill: @criticalA;
+    }
+  }
+
+  .area {
+    stroke: none;
+
+    &.normal-a {
+      fill: @normalALight;
+    }
+
+    &.normal-b {
+      fill: @normalBLight;
+    }
+
+    &.normal-c {
+      fill: @normalCLight;
+    }
+
+    &.attention-a {
+      fill: @attentionALight;
+    }
+
+    &.warning-a {
+      fill: @warningALight;
+    }
+
+    &.critical-a {
+      fill: @criticalALight;
+    }
+  }
+
+  .line {
+    fill: none;
+
+    &.normal-a {
+      stroke: @normalA;
+    }
+
+    &.normal-b {
+      stroke: @normalB;
+    }
+
+    &.normal-c {
+      stroke: @normalC;
+    }
+
+    &.attention-a {
+      stroke: @attentionA;
+    }
+
+    &.warning-a {
+      stroke: @warningA;
+    }
+
+    &.critical-a {
+      stroke: @criticalA;
+    }
+  }
+}
+
+.patient-acuity {
+    display: inline-block;
+    vertical-align: middle;
+    .border-radius(@borderRadiusSmall - 1);
+    text-align: center;
+
+    &.critical {
+        width: 28px;
+        height: 28px;
+        line-height: @baseLineHeight + 10;
+        color: @white;
+        font-weight: bold;
+        #gradient > .vertical(lighten(@criticalA, 6%), @criticalA);
+    }
+
+    &.warning {
+        width: 24px;
+        height: 24px;
+        line-height: @baseLineHeight + 6;
+        color: @white;
+        font-weight: bold;
+        #gradient > .vertical(darken(@warningALight, 25%), darken(@warningALight, 15%));
+    }
+
+    &.attention {
+        width: 20px;
+        height: 22px;
+        line-height: @baseLineHeight + 4;
+        #gradient > .vertical(lighten(@attentionA, 24%), @attentionA);
+    }
+
+    &.stable {
+        width: 16px;
+        height: 18px;
+        line-height: @baseLineHeight;
+        #gradient > .vertical(lighten(@normalALight, 10%), lighten(@normalALight, 2%));
+    }
+
+    &.improving {
+        width: 14px;
+        height: 16px;
+        line-height: @baseLineHeight - 2;
+        background-color: @normalBLight;
+    }
+}

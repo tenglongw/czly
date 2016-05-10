@@ -1,0 +1,36 @@
+// Dependencies
+// --------------------------------------------------
+//noinspection CssUnknownTarget
+@import "ge-bootstrap/less/hdx-bootstrap.less";
+@import "hdx-variables.less";
+@import "tables.less";
+
+// Override typography settings.
+.table {
+
+	th,
+	td {
+		font-size: @baseFontSize;
+	}
+	th {
+		background-color: @grayDarker;
+		color: @white;
+		font-weight: normal;
+	}
+	// Remove top border from first row so it doesn't look like a shadow.
+	thead + tbody tr:first-child td {
+		border-top-width: 0;
+	}
+
+	td > i {
+		&.icon-chevron {
+			&-right, &-down {
+				font-size:14px;
+			}
+		}
+	}
+}
+
+
+
+

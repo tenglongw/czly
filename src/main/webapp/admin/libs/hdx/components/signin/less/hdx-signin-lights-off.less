@@ -1,0 +1,48 @@
+@import "ge-bootstrap/less/hdx-bootstrap-lights-off.less";
+@import "variables.less";
+@import "signin.less";
+
+
+// sign in component specific styles
+.signin{
+	.ge-logo {
+		background: transparent url("@{signinImagePath}/GE_white_monogram.png") no-repeat;
+	}
+	.span2 {
+		background-color: @black;
+	}
+	
+	/* forgot pwd styles */ 
+	
+	// overriding bootstrap modal styles
+	.modal-header {
+		background-color: @black;
+	}
+	
+	.modal-content {
+		background-color: @black;
+	}
+	
+	.modal .modal-header .close {
+		margin-right: @signinMargin20;
+		color: @grayDark;
+		opacity: 1;
+	}
+
+	.close.btn:hover {
+		color: @grayLight;
+	  	background-image: none;
+	}
+	
+	.close.btn:active,
+	.close.btn.active {
+		color: @white;
+	  	background-image: none;
+	}
+	
+	/* forgot pwd screen specific styles */
+	.forgot-pwd-label {
+		color: @white;
+	}
+	
+}

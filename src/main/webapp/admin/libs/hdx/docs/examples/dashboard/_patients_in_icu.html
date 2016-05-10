@@ -1,0 +1,23 @@
+
+<style type="text/css" media="screen" scoped="">
+	div.viz-point-label {
+		position: absolute;
+		text-align: right;
+		white-space: nowrap;
+	}
+</style>
+
+<div data-visualization="pill" data-values="12,45,67" data-label="Total Patients" data-classes="success,warning,danger" data-thickness="12" style="height:150px">
+    <script type="text/x-underscore-template" class="viz-point-label-template">
+        <div class="viz-point-label muted" style="{{ 'left:'+ x +'px; width: '+ (width - 2) +'px; top: '+ (y + height + 2) + 'px' }}">
+            {% if(className == 'danger') { %}
+                <i class="icon-danger-sign color-{{className}}"></i>
+            {% } %}
+            {{value}}
+        </div>
+    </script>
+</div>
+<div>
+	<h3>Lorem ipsum</h3>
+	<p class="muted">Lorem ipsum figur figgufgy kfhgfdiguk lorem ipsum</p>
+</div>

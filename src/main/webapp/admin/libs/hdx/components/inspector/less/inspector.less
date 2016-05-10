@@ -1,0 +1,73 @@
+//These styles apply to inspector component.
+//-------------------------------------------
+
+.inspector {
+			 
+  	position: relative;
+  	background-color: @inspectorBodyBackground;
+    border: 2px solid @inspectorBorder;
+    .border-radius(@baseBorderRadius);
+    padding: 0px; //No padding for the inspect. Put padding for content.
+    
+    .inspector-content{
+	    //overflow: hidden ;
+	    position: relative;
+	    vertical-align: middle;
+    	 padding: 10px 10px;
+    	 background-color: @inspectorBodyBackground;
+     }
+  	
+	  .icon-caret-up {
+	    position: absolute;
+	     color: @cyan;
+	   	top:-31px;
+		font-size: 39px;
+		
+	  }
+	  //Chrome specific 
+	   @media screen and (-webkit-min-device-pixel-ratio:0) { 
+		    // Safari and Chrome 
+		    .icon-caret-up {
+		     top:-35px;
+		     font-size: 39px;
+		    }
+		
+		    // Chrome only override 
+		    ::i-block-chrome,.icon-caret-up {
+		     top:-35px;
+		     font-size: 39px;
+		     }
+	 }
+	 //firefox specific
+	:not(:-moz-handler-blocked) .icon-caret-up {
+	    font-size: 32px;
+	    top:-28px;
+	  }
+	   //ipad specific
+	   @media only screen and (device-width: 768px) {
+	  .icon-caret-up {
+		     top:-40px;
+		     font-size: 39px;
+		    }
+	}
+}
+
+.dataTable td.inspector{
+	border: 2px solid @inspectorBorder;
+}
+//Style specific to hover table
+.table-hover tbody tr:hover > td.inspector  {
+	background-color: @inspectorBodyBackground;
+}
+//Style specific to striped table.
+ .table-striped tbody > tr:nth-child(odd) > td.inspector  {
+	background-color: @inspectorBodyBackground;
+}
+.inspectable{
+	&:hover{
+  	cursor: pointer;
+    *cursor: hand;
+}
+
+}
+

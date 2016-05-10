@@ -1,0 +1,62 @@
+<!-- JS ARRAY -->
+
+<dl class="documentation">
+    <dt>Data loading: array of objects</dt>
+    <dd class="description">
+        <p>A Datagrid loading data from a JavaScript Array.</p>
+    </dd>
+    <dt>Example</dt>
+    <dd class="example">
+       <form class="pull-right form-inline" style="margin-bottom:20px;">
+            <div class="input-group pull-right">
+                <input type="text" class="form-control input-sm" data-filter-table="dt-array">
+                <div class="input-group-btn">
+                	<button class="btn btn-icon btn-default" type="button"><i class="icon-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-array"></table>
+    </dd>
+    <dt class="hidden-sm">Usage</dt>
+    <dd class="usage hidden-sm">
+        <p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;form class="form-inline pull-right"&gt;
+  &lt;div class="input-group pull-right"&gt;
+     &lt;input type="text" class="form-control input-sm" data-filter-table="dt-array"&gt;
+     &lt;div class=input-group-btn"&gt;
+         &lt;button class="btn btn-icon"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-array"&gt;&lt;/table&gt;
+</pre>
+        <p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+// JavaScript array and columns
+$('table[data-table-name="dt-array"]').basicdatagrid({
+  'aoColumns': [
+    { 'sTitle': 'Schedule', 'sClass': 'essential' },
+    { 'sTitle': 'Account Status', 'sClass': 'essential' },
+    { 'sTitle': 'DBA Name', 'sClass': 'essential' },
+    { 'sTitle': 'Customer Info', 'sClass': 'optional' }
+  ],
+  'aaData': [
+    ['foo', 'bar', 'baz', 'bueller'],
+    ['possum', 'raccoon', 'gravy', 'snowflake'],
+    ['peanut', 'epsilon', 'flapjack', 'nominee']
+  ],
+  'useFloater': false,
+  'isResponsive': true
+});
+</pre>
+        <div class="alert alert-info">
+            <strong>Script Requirements:</strong>
+            <ul>
+                <li>datagrids</li>
+            </ul>
+        </div>
+    </dd>
+</dl>
+
+<!-- /JS ARRAY -->

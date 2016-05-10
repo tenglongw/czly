@@ -1,0 +1,523 @@
+<!--
+* tearsheet-i18n\index-lights-off.ejs
+*
+* Copyright (c) 2015 by General Electric Company. All rights reserved.
+*
+* The copyright to the computer software herein is the property of
+* General Electric Company. The software may be used and/or copied only
+* with the written permission of General Electric Company or in accordance
+* with the terms and conditions stipulated in the agreement/contract
+* under which the software has been supplied.
+-->
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--suppress HtmlUnknownTarget -->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- This conditional IF may not be read by IE, but currently it breaks validation. -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<title>HDx Documentation: Basic UI Elements</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../components/brandkit/favicon/favicon-144px.png">
+
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../components/brandkit/favicon/favicon-114px.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../components/brandkit/favicon/favicon-72px.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="../../components/brandkit/favicon/favicon.png">
+
+<link rel="icon" href="../../components/brandkit/favicon/favicon.ico">
+<link href="../../components/prettify/prettify.css" rel="stylesheet">
+<link id="theme-styles" href="../../css/hds-lights-off.css" rel="stylesheet" type="text/css">
+<link id="theme-styles-responsive"  href="../../css/responsive.css" rel="stylesheet" type="text/css">
+
+<!-- Documentation styles -->
+<link id="documentation-styles" href="../assets/css/documentation-lights-off.css" rel="stylesheet" type="text/css">
+<link id="documentation-styles-responsive" href="../assets/css/documentation-responsive.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/declarative-visualizations.css" rel="stylesheet" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link id="theme-ie" href="../../css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE 9]>
+<link id="theme-ie9" href="../../css/ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+
+<script src="../../components/modernizr/modernizr.js"></script>
+<script src="../../components/requirejs/require.js"></script>
+<script src="../../js/require.config.js"></script>
+<script type="text/javascript">
+  require.config({ baseUrl: '../../' });
+</script>
+
+</head>
+
+<!-- For QA Testing -->
+<!-- <div id="build_number">
+  0025
+</div>
+ -->
+
+
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="ge-logo">General Electric</span> <span>HDx - i18n Fonts</span></a>
+      </div>
+      <div class="pull-right">
+        <div class="btn-toolbar">
+	        <div class="col-md-8">
+	          <select id="theme-switcher">
+	            <option value="lights-on" >Lights On</option>
+	            <option value="lights-off" selected>Lights Off</option>
+	          </select>
+	         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <nav class="collapse primary-navbar navbar-collapse bs-navbar-collapse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">i18n Fonts <i class="icon-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#danish">Danish</a></li>
+                        <li><a href="#dutch">Dutch</a></li>
+                        <li><a href="#english">English</a></li>
+                        <li><a href="#finnish">Finnish</a></li>
+                        <li><a href="#french">French</a></li>
+                        <li><a href="#german">German</a></li>
+                        <li><a href="#italian">Italian</a></li>
+                        <li><a href="#norwegian">Norwegian</a></li>
+                        <li><a href="#portuguese">Portuguese</a></li>
+                        <li><a href="#russian">Russian</a></li>
+                        <li><a href="#spanish">Spanish</a></li>
+                        <li><a href="#swedish">Swedish</a></li>
+                        <li><a href="#japanese">Japanese</a></li>
+                        <li><a href="#simplified-chinese">Simplified Chinese</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="sdh-wrapper module">
+        <div class="page-header voice-brand">
+          <h1>i18n Fonts</h1>
+        </div>
+        <div>
+            <p>Products using “Inspira Western European” and/or “Inspira Cyrillic” must include the font licensing text included in the HDx package.</p>
+        </div>
+        <h2> Languages</h2>
+        <!--i18n content-->
+        <table class="documentation">
+        <thead>
+        <tr>
+            <th>Example</th>
+            <th>Typeface</th>
+            <th>Usage</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr>
+            <td class="example" id="danish">
+                <h2>Danish</h2>
+                <p class="i18nFont">Thomas Alva Edison var en amerikansk telegrafist, opfinder og forretningsmand som udviklede en lang række vigtige forbrugsvarer. Blandt hans opfindelser var fonografen (1877), en forbedring af den elektriske glødelampe (1879) og diktafonen (1887).</p>
+            </td>
+            <td class="description">Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont" &gt;
+    Thomas Alva Edison var en amerikansk telegrafist, opfinder og forretningsmand som udviklede en lang række vigtige ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="dutch">
+                <h2>Dutch</h2>
+                <p class="i18nFont">Thomas Alva Edison was een Amerikaanse uitvinder en oprichter van General Electric Company, die zijn fortuin maakte door uitvindingen op te kopen en de octrooien op zijn eigen naam vast te leggen. Als deze succesvol bleken, perfectioneerde hij ze en nam ze in productie. Edison was lange tijd recordhouder voor het grootste aantal octrooien toegekend aan een persoon (ongeveer 1400).</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont" &gt;
+    Thomas Alva Edison was een Amerikaanse uitvinder en oprichter van General Electric Company, die  ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="english">
+                <h2>English</h2>
+                <p class="i18nFont">Thomas Alva Edison was an American inventor and businessman. He developed many devices that greatly influenced life around the world, including the phonograph, the motion picture camera, and a long-lasting, practical electric light bulb.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison was an American inventor and businessman. He developed many devices that greatly influenced life around the world ....
+&lt;/p&gt;
+</pre>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="finnish">
+                <h2>Finnish</h2>
+                <p class="i18nFont">Thomas Alva Edison oli yhdysvaltalainen keksijä ja liikemies. Hän oli aikansa tuotteliaimpia keksijöitä ja hänen nimissään oli 1 093 patenttia. Hän on jättiläisyritys General Electricin perustaja.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison oli yhdysvaltalainen keksijä ja liikemies. Hän oli aikansa tuotteliaimpia keksijöitä ja hänen nimissään ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="french">
+                <h2>French</h2>
+                <p class="i18nFont">Thomas Alva Edison, né le 11 février 1847 à Milan dans l'Ohio et mort le 18 octobre 1931 à West Orange dans le New Jersey, est un inventeur, un scientifique et un industriel américain.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison, né le 11 février 1847 à Milan dans l'Ohio et mort le 18 octobre 1931 à West Orange dans le New Jersey ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="german">
+                <h2>German</h2>
+                <p class="i18nFont">Thomas Alva Edison war ein US-amerikanischer Erfinder und Unternehmer mit dem Schwerpunkt auf dem Gebiet der Elektrizität und Elektrotechnik.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison war ein US-amerikanischer Erfinder und Unternehmer  ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="italian">
+                <h2>Italian</h2>
+                <p class="i18nFont">Thomas Alva Edison  è stato un inventore e imprenditore statunitense. Fu il primo imprenditore che seppe applicare i principi della produzione di massa al processo dell'invenzione.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison  è stato un inventore e imprenditore statunitense. Fu il primo imprenditore che seppe applicare ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="norwegian">
+                <h2>Norwegian</h2>
+                <p class="i18nFont">Thomas Alva Edison (Milan (Ohio), 11 februari 1847 – West Orange (New Jersey), 18 oktober 1931) was een Amerikaanse uitvinder en oprichter van General Electric Company, die zijn fortuin maakte door uitvindingen op te kopen en de octrooien op zijn eigen naam vast te leggen.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison (Milan (Ohio), 11 februari 1847 – West Orange (New Jersey), 18 oktober 1931) was een Amerikaanse ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="portuguese">
+                <h2>Portuguese</h2>
+                <p class="i18nFont">Thomas Alva Edison (Milan, Ohio, 11 de Fevereiro de 1847 — West Orange, Nova Jérsei, 18 de Outubro de 1931) foi um empresário dos Estados Unidos que patenteou e financiou o desenvolvimento de muitos dispositivos importantes de grande interesse industrial.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison (Milan, Ohio, 11 de Fevereiro de 1847 — West Orange, Nova Jérsei, 18 de Outubro de 1931) foi um empresário dos Estados Unidos ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="russian">
+                <h2>Russian</h2>
+                <p class="i18nFont">То́мас А́льва Э́дисон (англ. Thomas Alva Edison; 11 февраля 1847, Майлен, штат Огайо — 18 октября 1931, Вест Оранж, штат Нью-Джерси) — всемирно известный американский изобретатель и предприниматель. Эдисон получил в США 1093 патента[1] и около 3 тысяч в других странах мира.</p>
+            </td>
+            <td class="description" >Inspira Cyrillic</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont" &gt;
+    То́мас А́льва Э́дисон (англ. Thomas Alva Edison; 11 февраля 1847, Майлен, штат Огайо — 18 октября 1931, Вест Оранж, штат Нью-Джер ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="spanish">
+                <h2>Spanish</h2>
+                <p class="i18nFont">Thomas Alva Edison fue un empresario y un prolífico inventor estadounidense que patentó más de mil inventos (durante su vida adulta hacía un invento cada quince días) y contribuyó a darle, tanto a Estados Unidos como a Europa, los perfiles tecnológicos del mundo contemporáneo: las industrias eléctricas, un sistema telefónico viable, el fonógrafo, las películas, etc.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+   Thomas Alva Edison fue un empresario y un prolífico inventor estadounidense que patentó más de mil inventos (durante su vida adulta hacía....
+&lt;/p&gt;
+</pre>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="example" id="swedish">
+                <h2>Swedish</h2>
+                <p class="i18nFont">Thomas Alva Edison, född 11 februari 1847 i Milan i Ohio, död 18 oktober 1931 i West Orange i New Jersey, var en amerikansk uppfinnare och industrialist. Hans uppfinningar förändrade människors liv påtagligt under slutet av 1800- och början av 1900-talet. Till hans uppfinningar hör fonografen och den första användbara glödlampan.</p>
+            </td>
+            <td class="description" >Inspira Western European</td>
+            <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;p class="i18nFont"&gt;
+    Thomas Alva Edison, född 11 februari 1847 i Milan i Ohio, död 18 oktober 1931 i West Orange i New Jersey, var en amerikansk uppfinnare ....
+&lt;/p&gt;
+</pre>
+            </td>
+        </tr>
+
+        </tbody>
+        </table>
+
+        <h3 id="japanese">Japanese</h3>
+        <p>
+            The recommended font for Japanese is DF Mary Gothic and needs to be purchased by each product team. Please refer to the release notes for details on how to license the font. Preliminary pricing is in the processes of being determined by the foundry.
+        </p>
+
+        <h3 id="simplified-chinese">Simplified Chinese</h3>
+        <p>
+            The recommended font for Simplified Chinese is Hanyi Zhong Yuan and needs to be purchased by each product team. Please refer to the release notes for details on how to license the font and preliminary pricing.
+        </p>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+* scripts-ui.ejs
+*
+* Copyright (c) 2015 by General Electric Company. All rights reserved.
+*
+* The copyright to the computer software herein is the property of
+* General Electric Company. The software may be used and/or copied only
+* with the written permission of General Electric Company or in accordance
+* with the terms and conditions stipulated in the agreement/contract
+* under which the software has been supplied.
+ -->
+
+
+<script type="text/javascript">
+  requirejs.config({
+    baseUrl: '../../'
+  });
+  // Preload JS libraries and exec page scripts
+  require([
+    'jquery',
+    'ge-bootstrap',
+    'prettify',
+    'tables',
+    'filechooser',
+    'hds'
+  ], function($) {
+      // -------------------
+      // DOCUMENTATION SETUP
+      // -------------------
+
+      // Create a global function that can be called from inside iframes
+      // to resize the frame to fit the content window.
+      window.resizeFrame = function( src, h ) {
+        $( 'iframe[src="' + src + '"]').css( { height: h + 'px' } );
+      };
+
+      // Make code lovely using Google Prettify.
+      window.prettyPrint && prettyPrint();
+
+      var scrollOffset=120;
+      // And now we initialize ScrollSpy on the body.
+      // DO NOT use data attributes on this, as it will init before our
+      // new constructor activate function is applied; this would be bad.
+      $('body').scrollspy({
+        offset: scrollOffset,
+        target: '.primary-navbar'
+      });
+
+      //Handle scroll event by url/hash tags
+      if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        //check if hashtag exists in page
+        if($("#"+hash).offset()){
+          var hashOffset = $("#"+hash).offset().top;
+          $( 'html, body' ).animate( { scrollTop: hashOffset-(scrollOffset-1) }, 1000, 'swing' );
+        }
+      }
+
+      // Finally, add some smooth scrolling to our body when one of the
+      // primary-navbar links are clicked (even though this isn't in
+      // Bootstrap, which everyone said it was... we'll rebuild anyway).
+      $('.primary-navbar a').click(function( event ) {
+        var target = $(event.currentTarget).attr("href");
+        if (target.indexOf(".html") != -1) {
+            // do normal things for outward facing links
+            return;
+        }
+
+        event.preventDefault();
+        var offset = $( $(this).attr('href') ).offset();
+
+        if (offset) {
+          $( 'html, body' ).animate( { scrollTop: offset.top - (scrollOffset-1) }, 1000, 'swing' );
+        }
+      });
+
+      // ---------------------------
+      // DOCUMENTATION FUNCTIONALITY
+      // ---------------------------
+
+      setTimeout(function(){
+          // Conditionally load D3/Declarative Viz if SVG is supported.
+          // This should prevent errors from being thrown in IE8
+          if (Modernizr.svg) {
+            require(['declarative-visualizations'], function (visualizations) {
+              // Initialize Bar Visualizations
+              $('div[data-visualization="bar"]').each(function (i, element) {
+                visualizations.bar(element);
+              });
+
+              // Initialize Gauge Visualizations
+              $('div[data-visualization="gauge"]').each(function (i, element) {
+                visualizations.gauge(element);
+              });
+            });
+            //hdx flavor of the meter and speedometer components
+            require(['hdx-declarative-visualizations'], function (visualizations) {
+              // Initialize Donut Visualizations
+              $('div[data-visualization="donut"]').each(function (i, element) {
+                visualizations.donut(element);
+              });
+
+              // Initialize Meter Visualizations
+              $('div[data-visualization="meter"]').each(function (i, element) {
+                visualizations.meter(element);
+              });
+
+              // Initialize Speedometer Visualizations
+              $('div[data-visualization="speedometer"]').each(function (i, element) {
+                visualizations.speedometer(element);
+              });
+            });
+            // If SVG isn't supported alert the user that some elements won't be loaded
+          }
+          else {
+            alert('Your browser does not support SVG.\nAny element using D3.js will be omitted.');
+          }
+      },1000);
+
+});
+</script>
+<!--Scripts -->
+<script type="text/javascript">
+//script to handle lights-on/off switch
+require(['jquery'], function ($) {
+
+    var currentFileName = window.location.pathname.split('/').pop().split('.')[0];
+    //noinspection JSUnusedLocalSymbols
+    var baseUrl = currentFileName.replace('-lights-off', '');
+    var isLightsOn = currentFileName.toLowerCase().indexOf("-lights-off") == -1;
+
+    $('a.navigation-link').each(function () {
+        var $link = $(this),
+                href = $link.attr('href');
+
+        if (-1 < href.indexOf('?')) {
+            $link.attr('href', href.split('?')[0]);
+        }
+
+        if (!isLightsOn) {
+            $link.attr('href', href + '?theme=lights-off');
+        }
+
+    });
+
+
+    var themeSwitcher = $('#theme-switcher');
+    var themeSwitcherStartingValue = themeSwitcher.val();
+    themeSwitcher.change(function () {
+
+        var theme = themeSwitcher.val();
+        var currentOffset = $(this).offset().top;
+        themeSwitcher.val(themeSwitcherStartingValue);
+
+
+        switch (theme) {
+            case 'lights-on':
+                if (!isLightsOn) {
+                    window.location.href = baseUrl + '.html?offset=' + currentOffset;
+                }
+                break;
+
+            case 'lights-off':
+                if (isLightsOn) {
+                    window.location.href = baseUrl + '-lights-off.html?offset=' + currentOffset;
+                }
+                break;
+        }
+
+
+    });
+
+    //scroll to current offset
+    var offsetvalue = (RegExp('offset=' + '(.+?)(&|$)').exec(window.location) || [, null])[1];
+
+    if (offsetvalue) {
+
+        $("html, body").animate({ scrollTop: offsetvalue - 15 }, 1000, 'swing');
+    }
+
+});
+</script>
+</body>

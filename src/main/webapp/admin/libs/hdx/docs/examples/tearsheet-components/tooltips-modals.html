@@ -1,0 +1,279 @@
+<table class="documentation">
+	<thead>
+	<tr>
+		<th>Example</th>
+		<th>Description</th>
+		<th>Usage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="example">
+			<div class="well">
+				<p class="muted" style="margin-bottom: 0;">Pants level kale <a title="first tooltip" class="tooltip-target">you
+						probably</a> haven't heard of them. Fixie sustainable quinoa 8-bit american apparel and shoes <a title="Another tooltip" class="tooltip-target">have
+						a</a> terry richardson vinyl chambray. A really ironic artisan <a title="Another one here too" class="tooltip-target">whatever
+						</a>, scenester farm-to-table Austin <a title="The last tip!" class="tooltip-target">twitter handle</a> freegan
+					cred raw denim single-origin coffee viral.</p>
+			</div>
+		</td>
+		<td class="description">Tooltips</td>
+		<td class="usage">
+			<p>Markup:</p>
+
+        <pre class="prettyprint linenums lang-html">
+        Pants level kale &lt;a title="first tooltip" class="tooltip-target"&gt;you probably&lt;/a&gt; haven't heard of them. Fixie sustainable quinoa 8-bit american apparel and shoes &lt;a title="Another tooltip" class="tooltip-target"&gt; have a&lt;/a&gt; terry richardson vinyl chambray. A really ironic artisan &lt;a title="Another one here too" class="tooltip-target"&gt;whatever&lt;/a&gt;, scenester farm-to-table Austin &lt;a title="The last tip!" class="tooltip-target"&gt;twitter handle&lt;/a&gt; freegan cred raw denim single-origin coffee viral.
+        </pre>
+
+			<p>Script:</p>
+
+        <pre class="prettyprint linenums lang-javascript">
+          $(&hellip;).tooltip(options);
+        </pre>
+
+			<p>Options:</p>
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td><code>animation</code></td>
+					<td>boolean</td>
+					<td>true</td>
+					<td>Apply a CSS fade transition to the tooltip</td>
+				</tr>
+				<tr>
+					<td><code>html</code></td>
+					<td>boolean</td>
+					<td>false</td>
+					<td>Insert HTML into the tooltip. If false, jquery's <code>text</code> method will be used to insert content
+						into the DOM. Use text if you're worried about XSS attacks.
+					</td>
+				</tr>
+				<tr>
+					<td><code>placement</code></td>
+					<td>string|function</td>
+					<td>'top'</td>
+					<td>
+						<p>How to position the tooltip - top | bottom | left | right | auto.</p>
+						<p>When "auto" is specified, it will dynamically reorient the tooltip. For example, if placement is "auto left", the tooltip will display to the left when possible, otherwise it will display right.</p>
+						<p>When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the tooltip instance.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>selector</code></td>
+					<td>string</td>
+					<td>false</td>
+					<td>If a selector is provided, tooltip objects will be delegated to the specified targets.</td>
+				</tr>
+				<tr>
+					<td><code>title</code></td>
+					<td>string | function</td>
+					<td>''</td>
+					<td>
+						<p>Default title value if <code>title</code> tag isn't present</p>
+						<p>If a function is given, it will be called with its <code>this</code> reference set to the element that the tooltip is attached to.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>trigger</code></td>
+					<td>string</td>
+					<td>'hover focus'</td>
+					<td>How tooltip is triggered - click | hover | focus | manual. Note you case pass trigger mutliple, space
+						seperated, trigger types.
+					</td>
+				</tr>
+				<tr>
+					<td><code>delay</code></td>
+					<td>number | object</td>
+					<td>0</td>
+					<td>
+						<p>delay showing and hiding the tooltip (ms) - does not apply to manual trigger type</p>
+
+						<p>If a number is supplied, delay is applied to both hide/show</p>
+
+						<p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>container</code></td>
+					<td>string | false</td>
+					<td>false</td>
+					<td>
+						<p>Appends the tooltip to a specific element <code>container: 'body'</code></p>
+						<p>This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize.</p>
+					</td>
+				</tr>
+			</table>
+			<p>All of the above options may be applied independently as <code>data-</code> attributes.</p>
+
+			<p class="note">NOTE: For performance reasons, tooltips are opt-in. They must be manually initialized to
+				function.</p>
+
+			<p class="note">NOTE: <code>hds.js</code> disables tooltips on mobile. It is recommended that you follow this
+				practice since most mobile devices do not support <code>hover</code> events well.</p>
+
+			<p class="note">NOTE: See <a href="http://getbootstrap.com/javascript/#tooltips" target="_blank">Bootstrap
+					documentation</a> for a full list of options and events for tooltips.</p>
+
+			<div class="alert alert-info">
+				<strong>Script Requirements:</strong>
+				<ul>
+					<li>bootstrap/bootstrap-tooltip</li>
+					<li>bootstrap/bootstrap-transition</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+	<!-- /tooltips -->
+	<tr>
+		<td class="example">
+			<div id="modal-demo" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><i class="icon-ico_remove_sm"></i></button>
+							<h3>Modal Heading</h3>
+						</div>
+						<div class="modal-body">
+							<h4>Text in a modal</h4>
+
+							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+							<h4>Popover in a modal</h4>
+
+							<p>This <a class="btn btn-default popover-target"
+									   data-content="And here's some amazing content. It's very engaging. right?"
+									   data-original-title="A Title">button</a> should trigger a popover on hover.</p>
+							<h4>Tooltips in a modal</h4>
+
+							<p><a data-original-title="Tooltip" class="tooltip-target">This link</a> and <a data-original-title="Tooltip" class="tooltip-target">that
+									link</a> should have tooltips on hover.</p>
+							<hr>
+							<h4>Overflowing text to show optional scrollbar</h4>
+
+							<p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this
+								extra lorem ipsum text we've included.</p>
+
+							<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+								quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+								laoreet rutrum faucibus dolor auctor.</p>
+
+							<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+								consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+							<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+								quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+								laoreet rutrum faucibus dolor auctor.</p>
+
+							<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+								consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn btn-primary btn-lg" data-toggle="modal"  data-target="#modal-demo">Launch Modal</button>
+		</td>
+		<td class="description">Modals</td>
+		<td class="usage">
+			<p>To activate modals, set <code class="prettyprint">data-toggle="modal"</code> on a controller element with a <code
+						class="prettyprint">data-target="#foo"</code> or <code class="prettyprint">href="#foo"</code> which
+				corresponds to a modal element id, and when clicked, it will launch your modal.</p>
+
+			<p>Options may be added to the modal via script or as <code>data-</code> attributes on either the modal or the
+				control element.</p>
+
+			<p>To enable fade-in/-out transitions on a modal, include <code>.fade</code> on the <code>.modal</code> element.</p>
+
+			<p>Markup:</p>
+
+        <pre class="prettyprint linenums lang-html">
+        &lt;div id="modal-demo" class="modal fade"&gt;
+          &lt;div class="modal-dialog"&gt;
+            &lt;div class="modal-content"&gt;
+              &lt;div class="modal-header"&gt;
+                &lt;button type="button" class="close" data-dismiss="modal"&gt;&lt;i class="icon-ico_remove-sm"&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;h3&gt;Modal Heading&lt;/h3&gt;
+              &lt;/div&gt;
+              &lt;div class="modal-body"&gt;
+			&hellip;
+			&lt;/div&gt;
+              &lt;div class="modal-footer"&gt;
+                &lt;button class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-demo" &gt;Launch Modal&lt;/button&gt;
+        </pre>
+
+			<p>Options:</p>
+			<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td><code>backdrop</code></td>
+					<td>boolean or the string 'static'</td>
+					<td>true</td>
+					<td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't
+						close the modal on click.
+					</td>
+				</tr>
+				<tr>
+					<td><code>keyboard</code></td>
+					<td>boolean</td>
+					<td>true</td>
+					<td>Closes the modal when escape key is pressed</td>
+				</tr>
+				<tr>
+					<td><code>show</code></td>
+					<td>boolean</td>
+					<td>true</td>
+					<td>Shows the modal when initialized.</td>
+				</tr>
+				<tr>
+					<td><code>remote</code></td>
+					<td>path</td>
+					<td>false</td>
+					<td>If a remote url is provided, content will be loaded via jQuery's <code>load</code> method and injected into
+						the <code>.modal-content</code> div. If you're using the data api, you may alternatively use the <code>href</code>
+						tag to specify the remote source. An example of this is shown below:
+                <pre>
+                &lt;a data-toggle="modal" href="remote.html" data-target="#modal"&gt;Click me&lt;/a&gt;
+                </pre>
+
+					</td>
+				</tr>
+			</table>
+			<p class="note">NOTE: See <a href="http://getbootstrap.com/javascript/#modals" target="_blank">Bootstrap
+					documentation</a> for a full list of options and events for modals.</p>
+
+			<div class="alert alert-info">
+				<strong>Script Requirements:</strong>
+				<ul>
+					<li>bootstrap/bootstrap-modal</li>
+					<li>bootstrap/bootstrap-transition</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+	<!-- /modals -->
+
+	</tbody>
+</table>

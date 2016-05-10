@@ -1,0 +1,408 @@
+<table class="documentation">
+	<thead>
+	<tr>
+		<th>Example</th>
+		<th>Description</th>
+		<th>Usage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="example">
+			<div class="well">
+				<a class="btn btn-danger popover-target " data-trigger="focus" data-toggle="popover"
+				   data-content="And here's some amazing content. It's very engaging. right?" data-title="A Title">click for
+					popover</a>
+			</div>
+
+			<div class="well">
+				<a class="btn btn-danger popover-target " data-trigger="click " data-toggle="popover" tabindex="0"
+				   data-content="And here's some amazing content. It's very engaging. right? This popup will dismiss on next mouse click" data-title="A Title">click for dismissible
+					popover</a>
+				<br/>
+
+			</div>
+		</td>
+		<td class="description">Popovers</td>
+		<td class="usage">
+			<p>Markup:</p>
+
+        <pre class="prettyprint linenums lang-html">
+          &lt;a class="btn btn-danger popover-target" data-trigger="click"
+          data-content="And here's some amazing content. It's very engaging.
+          right?" data-title="A Title"&gt;click for popover&lt;/a&gt;
+        </pre>
+
+			<p>Script:</p>
+
+        <pre class="prettyprint linenums lang-javascript">
+          $(&hellip;).popover(options);
+        </pre>
+			<p> In general, clicking outside a popover will not close the popover. To have the popover dismiss on next mouse click, use <code>focus</code> trigger and include <code>tabindex</code> attribute.
+        <pre class="prettyprint linenums lang-html">
+          &lt;a class="btn btn-danger popover-target" data-trigger="focus" tabindex="0"
+          data-content="And here's some amazing content. It's very engaging.
+          right?  This popup will dismiss on next mouse click" data-title="A Title"&gt;click for dismissible  popover&lt;/a&gt;
+        </pre>
+
+			<p>Options:</p>
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td><code>animation</code></td>
+					<td>boolean</td>
+					<td>true</td>
+					<td>Apply a css fade transition to the tooltip</td>
+				</tr>
+				<tr>
+					<td><code>html</code></td>
+					<td>boolean</td>
+					<td>false</td>
+					<td>Insert HTML into the popover. If false, jquery's <code>text</code> method will be used to insert content
+						into the DOM. Use text if you're worried about XSS attacks.
+					</td>
+				</tr>
+				<tr>
+					<td><code>placement</code></td>
+					<td>string|function</td>
+					<td>'right'</td>
+					<td>
+						<p>how to position the popover - top | bottom | left | right | auto.</p>
+						<p>When "auto" is specified, it will dynamically reorient the popover. For example, if placement is "auto left", the popover will display to the left when possible, otherwise it will display right.</p>
+						<p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>selector</code></td>
+					<td>string</td>
+					<td>false</td>
+					<td>if a selector is provided, tooltip objects will be delegated to the specified targets</td>
+				</tr>
+				<tr>
+					<td><code>trigger</code></td>
+					<td>string</td>
+					<td>'click'</td>
+					<td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</td>
+				</tr>
+				<tr>
+					<td><code>title</code></td>
+					<td>string | function</td>
+					<td>''</td>
+					<td>
+						<p>Default title value if <code>title</code> attribute isn't present</p>
+						<p>If a function is given, it will be called with its this reference set to the element that the popover is attached to.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>content</code></td>
+					<td>string | function</td>
+					<td>''</td>
+					<td>
+						<P>Default content value if <code>data-content`</code> attribute isn't present</P>
+						<p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>delay</code></td>
+					<td>number | object</td>
+					<td>0</td>
+					<td>
+						<p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
+
+						<p>If a number is supplied, delay is applied to both hide/show</p>
+
+						<p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
+					</td>
+				</tr>
+				<tr>
+					<td><code>container</code></td>
+					<td>string | false</td>
+					<td>false</td>
+					<td>
+						<p>Appends the popover to a specific element <code>container: 'body'</code></p>
+						<p>This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
+					</td>
+				</tr>
+			</table>
+			<p>All of the above options may be applied independently as <code>data-</code> attributes.</p>
+
+			<p class="note">NOTE: For performance reasons, popovers are opt-in. They must be manually initialized to
+				function.</p>
+
+			<p class="note">NOTE: <code>hds.js</code> includes additional code snippets to allow easy dismissal of popovers and
+				to prevent default click behaviors.</p>
+
+        <pre class="prettyprint linenums lang-html">
+        $(...).popover({ trigger: 'click' }).on('click', function (e) {
+            e.preventDefault();
+        });
+        $(...).popover().on('blur', function (e) {
+            $(this).popover('hide');
+        });
+        </pre>
+			<p class="note">NOTE: See <a href="http://getbootstrap.com/javascript/#popovers" target="_blank">Bootstrap
+					documentation</a> for a full list of options and events for popovers.</p>
+			<div class="alert alert-info">
+				<strong>Script Requirements:</strong>
+				<ul>
+					<li>bootstrap/bootstrap-popover</li>
+					<li>bootstrap/bootstrap-transition</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+	<!-- /popover -->
+	</tbody>
+</table>
+<hr>
+<dl class="documentation">
+	<dt>Richpopover Example  </dt>
+	<dd class="example">
+		<div class="well" style="padding-left:350px;">
+			<a id="rich-popover-1" href="#" class="btn btn-danger popover-target" data-html="true" data-popover-type="rich"
+			   data-content-selector="#popover1-content-wrapper" data-placement="top">click for popover top   </a>
+			   <br/>
+			   <br/>
+			<a id="rich-popover-2" href="#" class="btn btn-danger popover-target" data-html="true" data-popover-type="rich"
+			   data-placement="left">click for popover left </a>
+			   <br/><br/>
+			<a  id="rich-popover-3" href="#" class="btn btn-danger popover-target" data-html="true" data-popover-type="rich"
+				data-content-selector="#popover3-content-wrapper" data-placement="right">click  for  popover right  </a>
+				<br/><br/>
+			<a  id="rich-popover-4" href="#" class="btn btn-danger popover-target" data-html="true" data-popover-type="rich"
+				data-content-selector="#popover4-content-wrapper" data-placement="bottom">click for popover bottom</a>
+
+		</div>
+
+		<div id="popover1-content-wrapper" style="display: none">
+			<h2>Suspendisse</h2>
+
+			<p>
+				Nullam quis risus <a href="#">eget urna</a> mollis ornare vel<br/>
+				eu leo. Cum sociis natoque penatibus et magnis<br/>
+				dis parturient montes, nascetur ridiculus mus.<br/>
+				Nullam id dolor id nibh ultricies vehicula.
+			</p>
+			<br/>
+
+			<p>
+				<button class="btn btn-rich">Button One</button>
+				<button class="btn btn-rich">Button Two</button>
+			</p>
+		</div>
+
+		<div id="popover2-content-wrapper" style="display: none">
+			<h2>Suspendisse</h2>
+
+			<p>
+				Nullam quis risus <a href="#">eget urna</a> mollis ornare vel<br/>
+				eu leo. Cum sociis natoque penatibus et magnis<br/>
+				dis parturient montes, nascetur ridiculus mus.<br/>
+				Nullam id dolor id nibh ultricies vehicula.
+			</p>
+			<br/>
+
+			<p>
+				<button class="btn btn-rich">Button One</button>
+				<button class="btn btn-rich">Button Two</button>
+			</p>
+		</div>
+
+
+
+		<div id="popover3-content-wrapper" style="display: none">
+			<h2>Suspendisse</h2>
+
+			<p>
+				Nullam quis risus <a href="#">eget urna</a> mollis ornare vel<br/>
+				eu leo. Cum sociis natoque penatibus et magnis<br/>
+				dis parturient montes, nascetur ridiculus mus.<br/>
+				Nullam id dolor id nibh ultricies vehicula.
+			</p>
+			<br/>
+
+			<p>
+				<button class="btn btn-rich">Button One</button>
+				<button class="btn btn-rich">Button Two</button>
+			</p>
+		</div>
+
+
+		<div id="popover4-content-wrapper" style="display: none">
+			<h2>Suspendisse</h2>
+
+			<p>
+				Nullam quis risus <a href="#">eget urna</a> mollis ornare vel<br/>
+				eu leo. Cum sociis natoque penatibus et magnis<br/>
+				dis parturient montes, nascetur ridiculus mus.<br/>
+				Nullam id dolor id nibh ultricies vehicula.
+			</p>
+			<br/>
+
+			<p>
+				<button class="btn btn-rich">Button One</button>
+				<button class="btn btn-rich">Button Two</button>
+			</p>
+		</div>
+
+
+
+	</dd>
+	<dt>Usage</dt>
+	<dd class="usage">
+		<p> The content to be displayed in the richpopover may be specified using <code>data-content-selector</code> in the markup:</p>
+        <pre class="prettyprint linenums lang-html">
+        &lt;a href="#" id = "rich-popover-1" class="btn btn-danger popover-target" data-html="true" data-popover-type="rich" data-content-selector="#popover1-content-wrapper" data-placement="right"&gt;click for popover 1&lt;/a&gt;
+        &lt;div id="popover1-content-wrapper" style="display: none"&gt;
+            &lt;h2&gt;Suspendisse&lt;/h2&gt;
+            &lt;p&gt;
+                Nullam quis risus &lt;a href="#"&gt;eget urna&lt;/a&gt; mollis ornare vel&lt;br /&gt;
+                eu leo. Cum sociis natoque penatibus et magnis&lt;br /&gt;
+                dis parturient montes, nascetur ridiculus mus.&lt;br /&gt;
+                Nullam id dolor id nibh ultricies vehicula.
+            &lt;/p&gt;
+            &lt;br /&gt;
+            &lt;p&gt;
+                &lt;button class="btn btn-rich"&gt;Button One&lt;/button&gt;
+                &lt;button class="btn btn-rich"&gt;Button Two&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        </pre>
+		<p> and initializing the richpopover using:</p>
+		<pre class="prettyprint linenums lang-javascript">
+        $('#popover1').richPopover();
+        </pre>
+		<br/>
+		<p>It is also  possible to not use the <code>data-content-selector</code> in the markup: </p>
+        <pre class="prettyprint linenums lang-html">
+        &lt;a href="#" id = "rich-popover-2"  class="btn btn-danger popover-target" data-html="true" data-popover-type="rich"  data-placement="right"&gt;click for popover 2&lt;/a&gt;
+        &lt;div id="popover2-content-wrapper" style="display: none"&gt;
+            &lt;h2>Suspendisse&lt;/h2&gt;
+            &lt;p&gt;
+                Nullam quis risus &lt;a href="#"&gt;eget urna&lt;/a&gt; mollis ornare vel&lt;br /&gt;
+                eu leo. Cum sociis natoque penatibus et magnis&lt;br /&gt;
+                dis parturient montes, nascetur ridiculus mus.&lt;br /&gt;
+                Nullam id dolor id nibh ultricies vehicula.
+            &lt;/p&gt;
+            &lt;br /&gt;
+            &lt;p&gt;
+                &lt;button class="btn btn-rich"&gt;Button One&lt;/button&gt;
+                &lt;button class="btn btn-rich"&gt;Button Two&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        </pre>
+		<p> and pass richpopover content as an option:</p>
+        <pre class="prettyprint linenums lang-javascript">
+        $('#popover2').richPopover({
+          content: function() {
+            return $('#popover2-content-wrapper').html();
+          }
+        }).on('click', function(e) {
+          e.preventDefault();
+        });
+        </pre>
+
+		<p>Options:</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>animation</code></td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Apply a css fade transition to the tooltip</td>
+            </tr>
+            <tr>
+                <td><code>html</code></td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Insert HTML into the popover. If false, jquery's <code>text</code> method will be used to insert content
+                    into the DOM. Use text if you're worried about XSS attacks.
+                </td>
+            </tr>
+            <tr>
+                <td><code>placement</code></td>
+                <td>string|function</td>
+                <td>'right'</td>
+                <td>
+                    <p>how to position the popover - top | bottom | left | right | auto.</p>
+                    <p>When "auto" is specified, it will dynamically reorient the popover. For example, if placement is "auto left", the popover will display to the left when possible, otherwise it will display right.</p>
+                    <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>selector</code></td>
+                <td>string</td>
+                <td>false</td>
+                <td>if a selector is provided, tooltip objects will be delegated to the specified targets</td>
+            </tr>
+            <tr>
+                <td><code>trigger</code></td>
+                <td>string</td>
+                <td>'click'</td>
+                <td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</td>
+            </tr>
+            <tr>
+                <td><code>title</code></td>
+                <td>string | function</td>
+                <td>''</td>
+                <td>
+                    <p>Default title value if <code>title</code> attribute isn't present</p>
+                    <p>If a function is given, it will be called with its this reference set to the element that the popover is attached to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>content</code></td>
+                <td>string | function</td>
+                <td>''</td>
+                <td>
+                    <P>Default content value if <code>data-content`</code> attribute isn't present</P>
+                    <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>delay</code></td>
+                <td>number | object</td>
+                <td>0</td>
+                <td>
+                    <p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
+
+                    <p>If a number is supplied, delay is applied to both hide/show</p>
+
+                    <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>container</code></td>
+                <td>string | false</td>
+                <td>false</td>
+                <td>
+                    <p>Appends the popover to a specific element <code>container: 'body'</code></p>
+                    <p>This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
+                </td>
+            </tr>
+        </table>
+		<p>All of the above options may be applied independently as <code>data-</code> attributes.</p>
+
+		<p class="note">NOTE: For performance reasons, popovers are opt-in. They must be manually initialized to
+			function.</p>
+
+		<div class="alert alert-info">
+			<strong>Script Requirements:</strong>
+			<ul>
+				<li>bootstrap/bootstrap-popover</li>
+				<li>bootstrap/bootstrap-transition</li>
+			</ul>
+		</div>
+	</dd>
+</dl>
+

@@ -1,0 +1,28 @@
+{
+  "name": "directional-pad",
+  "version": "0.5.2",
+  "main": [
+    "js/directional-pad.js",
+    "less/directional-pad.less",
+    "less/hdx-directional-pad.less",
+    "less/hdx-directional-pad-lights-off.less"
+  ],
+  "ignore": [
+    ".*",
+    "npm-debug.log",
+    "Gruntfile.js",
+    "package.json",
+    "components",
+    "css",
+    "node_modules",
+    "test",
+    "js/require.config.js"
+  ],
+  "dependencies": {
+    "ge-bootstrap": "git@github.sw.ge.com:DXC/ge-bootstrap#v1.10.3",
+    "requirejs": "https://github.com/jrburke/requirejs-bower.git#~2.1.11",
+    "jquery": "https://github.com/components/jquery.git#~1.10.2"
+  },
+  "devDependencies": {
+  }
+}

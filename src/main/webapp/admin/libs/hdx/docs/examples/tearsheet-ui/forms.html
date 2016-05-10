@@ -1,0 +1,624 @@
+<div>
+<p>In bootstrap3, form controls will have 100% width. To adjust the width, wrap controls in a div using Bootstrap3 grid system. For details, please refer to the horizontal forms example.</p>
+
+<table class="documentation">
+
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="example">
+        <input type="text" class="form-control">
+      </td>
+      <td class="description" id="controls-input">Input</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;input type="text" class="form-control"&gt;
+</pre>
+      </td><!-- /input -->
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="checkbox">
+        	<label>
+						<input type="checkbox" value="option1">
+						Option one is this and that
+					</label>
+        </div>
+      </td>
+      <td class="description" id="controls-checkbox">Checkbox</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value="option1"&gt;
+    Option one is this and that
+  &lt;/label&gt;
+&lt;/div&gt;
+</pre>
+      </td><!-- /checkbox -->
+    </tr>
+    <tr>
+      <td class="example">
+        <div class="radio">
+        	<label>
+          	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+          Option one is this and that
+        	</label>
+        </div>
+      </td>
+      <td class="description" id="controls-radio">Radio</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"&gt;
+    Option one is this and that
+  &lt;/label&gt;
+&lt;/div&gt;
+</pre>
+      </td><!-- /radio -->
+    </tr>
+    <tr>
+      <td class="example">
+        <select class="form-control">
+          <option>something</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </td>
+      <td class="description" id="controls-select">Select</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;select class="form-control"&gt;
+ &lt;option&gt;something&lt;/option&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+      <p>* Please note that a dotted line appears around the selection in Firefox. This is an accessibility feature, and should not be considered as part of the HDx style</p>
+      <p>* Also note that this menu UI is provided by the browser/rendering engine. The menu may look different on different browsers. If using this as a design reference, we recommend using the dropdown/combobox that is native to your target system and platform</p>
+      </td><!-- /input -->
+    </tr>
+    <tr>
+      <td class="example">
+        <select class="form-control" multiple="multiple" >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </td>
+      <td class="description" id="controls-multi-select">Multi-Select</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;select multiple="multiple" class="form-control"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+      <p>* Please note that a dotted line appears around the selection in Firefox. This is an accessibility feature, and should not be considered as part of the HDx style</p>
+      <p>* Also note that this menu UI is provided by the browser/rendering engine. The menu may look different on different browsers. If using this as a design reference, we recommend using the dropdown/combobox that is native to your target system and platform</p>
+      </td><!-- /multi-select -->
+    </tr>
+    <tr>
+      <td class="example">
+        <input class="input-file form-control" type="file">
+      </td>
+      <td class="description" id="controls-file-input">File Input</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;input class="input-file form-control" type="file"&gt;
+</pre>
+      </td><!-- /file -->
+    </tr>
+    <tr>
+      <td class="example">
+        <textarea class="form-control" rows="5"></textarea>
+      </td>
+      <td class="description" id="controls-textarea">Textarea</td>
+      <td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;textarea class="form-control" rows="5"&gt;&lt;/textarea&gt;
+</pre>
+      </td><!-- /textarea -->
+    </tr>
+  </tbody>
+</table>
+</div>
+<table class="documentation">
+	<thead>
+	<tr>
+		<th>Example</th>
+		<th>Description</th>
+		<th>Usage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="example">
+			<div class="col-md-6">
+				<input class="form-control" type="text" placeholder=".col-md-6">
+			</div>
+
+			<div class="col-md-9">
+				<input class="form-control" type="text" placeholder=".col-md-9">
+			</div>
+			<br>
+
+			<div class="col-md-12">
+				<input class="form-control" type="text" placeholder=".col-md-12">
+			</div>
+			<br>
+
+			<div class="col-md-6">
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<br>
+
+			<div class="col-md-9">
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<br>
+
+			<div class="col-md-12">
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+		</td>
+		<td class="description" id="form-grid-sizes">Form Grid Sizes</td>
+		<td class="usage">
+			<p>Add a div with <code>.col-md-*</code> classes from the grid system for form control sizes. '*' can have a value
+				from 1 to 12.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="col-md-3"&gt;
+	&lt;input class="form-control" type="text"&gt;
+&lt;/div &gt;
+
+&lt;div class="col-md-6"&gt;
+	&lt;select class="form-control"&gt;
+		&lt;option&gt;1&lt;/option&gt;
+		&lt;option&gt;2&lt;/option&gt;
+		&lt;option&gt;3&lt;/option&gt;
+		&lt;option&gt;4&lt;/option&gt;
+		&lt;option&gt;5&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+</pre>
+		</td>
+	</tr>
+	<!-- /grid sizes -->
+	<tr>
+		<td class="example">
+			<input class="form-control input-sm" type="text" placeholder=".input-sm">
+			<br>
+			<input class="form-control" type="text" placeholder="Default input">
+			<br>
+			<input class="form-control input-lg" type="text" placeholder=".input-lg">
+		</td>
+		<td class="description" id="alternate-sizes">Alternate Sizes</td>
+		<td class="usage">
+			<p>Additional input sizes are available:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;input class="form-control input-sm" type="text"&gt;
+&lt;input class="form-control" type="text"&gt;
+&lt;input class="form-control input-lg" type="text"&gt;
+
+</pre>
+			<p> the size applies to height of input element only. </p>
+		</td>
+	</tr>
+	<!-- /alternate sizes -->
+	<tr>
+		<td class="example">
+			<div class="input-group">
+				<span class="input-group-addon">@</span><input class="form-control" type="text">
+			</div>
+			<br/>
+
+			<div class="input-group">
+				<input class="form-control" type="text"><span class="input-group-addon">.00</span>
+			</div>
+			<br/>
+
+			<div class="input-group">
+				<span class="input-group-addon">$</span>
+				<input class="form-control" type="text">
+				<span class="input-group-addon">.00</span>
+			</div>
+			<br/>
+
+			<div class="input-group">
+				<input class="form-control input-sm" type="text">
+        <span class="input-group-btn">
+					<button class="btn btn-default" type="button">Go!</button>
+        </span>
+			</div>
+			<br/>
+
+			<div class="input-group">
+				<input type="text" class="input-sm form-control">
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-icon"><i class="icon-search"></i></button>
+				</span>
+			</div>
+
+			<br/>
+
+			<div class="input-group">
+				<input class="form-control input-sm" type="text">
+        <span class="input-group-btn">
+	        <button class="btn btn-default" type="button">Search</button>
+	        <button class="btn btn-default" type="button">Options</button>
+        </span>
+			</div>
+		</td>
+		<td class="description" id="append-and-prepend">Append and Prepend</td>
+		<td class="usage">
+			<p>Use the <code>.input-group</code> class to wrap form controls with add-on buttons.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="input-group"&gt;
+	&lt;input class="form-control" type="text"&gt;
+	&lt;span class="input-group-btn"&gt;
+		&lt;button type="submit" class="btn btn-icon"&gt;
+			&lt;i class="icon-search"&gt;&lt;/i&gt;
+		&lt;/button&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+			<hr>
+			<p>Apply <code>.input-group-addon</code> as a wrapper to text-only add-ons.</p>
+
+				<pre class="prettyprint linenums lang-html">
+&lt;div class="input-group"&gt;
+	&lt;span class="input-group-addon""&gt;@&lt;/span&gt;
+	&lt;input class="form-control" type="text"&gt;
+&lt;/div&gt;
+</pre>
+
+
+		</td>
+	</tr>
+	<!-- /append and prepend text -->
+	<tr>
+		<td class="example">
+			<input class="form-control" type="text">
+
+			<p class="help-block">Here's some help text</p>
+
+		</td>
+		<td class="description" id="helper-text">Helper Text</td>
+		<td class="usage">
+			<p>Use <code>.help-block</code> to attach helper text to form controls.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;input class="form-control" type="text"&gt;
+&lt;p class="help-block"&gt;help&lt;/p&gt;
+</pre>
+		</td>
+	</tr>
+	<!-- /helper text -->
+	</tbody>
+</table>
+
+<table class="documentation">
+	<thead>
+	<tr>
+		<th>Example</th>
+		<th>Description</th>
+		<th>Usage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="example">
+			<form onsubmit="return false;">
+				<label>Label name</label>
+				<input type="text" class="form-control" placeholder="Type something">
+
+				<p class="help-block">Example block-level help text here.</p>
+
+				<div class="checkbox" style="margin-bottom:9px">
+					<label class="">
+						<input type="checkbox"> Check me out
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</td>
+		<td class="description" id="basic-form">Basic Form</td>
+		<td class="usage">
+			<p>Smart and lightweight defaults without extra markup.</p>
+<pre class="prettyprint linenums lang-html">&lt;form&gt;
+  &lt;label&gt;Label name&lt;/label&gt;
+  &lt;input type="text" class="form-control" placeholder="Type something"&gt;
+  &lt;p class="help-block"&gt;Example block-level help text here.&lt;/p&gt;
+  &lt;label class=""&gt;
+    &lt;input type="checkbox"&gt; Check me out
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+		</td>
+		<!-- basic -->
+	</tr>
+	<tr>
+		<td class="example">
+
+			<form onsubmit="return false;" class="form-inline">
+				<div class="form-group">
+					<input type="text" class="input form-control" placeholder="Email" style="width:100px;">
+					<input type="password" class="input form-control" placeholder="Password" style="width:100px;">
+					<button type="submit" class="btn btn-default">Sign in</button>
+				</div>
+			</form>
+
+
+		</td>
+		<td class="description" id="inline-form">Inline Form</td>
+		<td class="usage">
+			<p>Add <code>.form-inline</code> to finesse the vertical alignment and spacing of form controls.</p>
+<pre class="prettyprint linenums lang-html">&lt;form class="form-inline"&gt;
+&lt;div class="form-group"&gt;
+  &lt;input type="text" class="input form-control" placeholder="Email"&gt;
+  &lt;input type="password" class="input form-control" placeholder="Password"&gt;
+  &lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+		</td>
+		<!-- inline -->
+	</tr>
+
+	<tr>
+		<td class="example">
+			<form onsubmit="return false;" class="form-horizontal">
+				<div class="form-group">
+					<label class="control-label col-md-4" for="input01">Text Label</label>
+
+					<div class="col-md-4">
+						<input type="text" class="input controls form-control" id="input01">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4" for="select01">Select Label</label>
+
+					<div class="controls col-md-4">
+						<select id="select01" class="form-control">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-actions" style="padding-left:110px;">
+					<button class="btn btn-default">Cancel</button>
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+			</form>
+		</td>
+		<td class="description" id="horizontal-forms">Horizontal Form</td>
+		<td class="usage">
+			<p>Add <code>.form-horizontal</code> to align all controls and labels horizontally.</p>
+
+			<p>Horizontal forms require the wrappers <code>.control-group</code>, <code>.control-label</code>, and <code>.controls</code>
+				for proper alignment and styling.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;form onsubmit="return false;" class="form-horizontal"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label class="control-label col-md-4" for="input01"&gt;Text Label&lt;/label&gt;
+		&lt;div class="col-md-4"&gt;
+			&lt;input type="text" class="input  controls form-control" id="input01"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label class="control-label col-md-4" for="select01" &gt;Select Label&lt;/label&gt;
+		&lt;div class="controls col-md-4"&gt;
+			&lt;select id="select01" class="form-control" &gt;
+				&lt;option&gt;1&lt;/option&gt;
+				&lt;option&gt;2&lt;/option&gt;
+				&lt;option&gt;3&lt;/option&gt;
+				&lt;option&gt;4&lt;/option&gt;
+				&lt;option&gt;5&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-actions" style="padding-left:110px;"&gt;
+		&lt;button class="btn btn-default"&gt;Cancel&lt;/button&gt;
+		&lt;button type="submit" class="btn btn-primary"&gt;Save&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+			<p>* Please note that a dotted line appears around the selection in Firefox. This is an accessibility feature, and
+				should not be considered as part of the HDx style</p>
+
+			<p>* Also note that this menu UI is provided by the browser/rendering engine. The menu may look different on
+				different browsers. If using this as a design reference, we recommend using the dropdown/combobox that is native
+				to your target system and platform</p>
+		</td>
+		<!-- horizontal -->
+	</tr>
+	</tbody>
+</table>
+
+<table class="documentation">
+	<thead>
+		<tr>
+			<th>Example</th>
+			<th>Description</th>
+			<th>Usage</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="example">
+				<input class="form-control" type="text" value="normal">
+			</td>
+			<td class="description" id="states-normal">Normal</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;input class="form-control" type="text"&gt;
+</pre>
+			</td><!-- /focused -->
+		</tr>
+		<tr>
+			<td class="example">
+				<input class="focused form-control" type="text" value="focused">
+			</td>
+			<td class="description" id="states-focused">Focused</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;input class="focused form-control" type="text" value="focused"&gt;
+</pre>
+			</td><!-- /focused -->
+		</tr>
+		<tr>
+			<td class="example">
+				<span class="uneditable-input form-control">uneditable</span>
+			</td>
+			<td class="description" id="states-uneditable">Uneditable</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;span class="uneditable-input form-control"&gt;uneditable&lt;/span&gt;
+</pre>
+			</td><!-- /uneditable -->
+		</tr>
+		<tr>
+			<td class="example">
+ 				<input class="disabled form-control" type="text" placeholder="disabled" disabled="">
+
+				<br>
+
+			 	<label class="disabled"><input type="checkbox" id="optionsCheckbox2" value="option1" disabled> disabled</label>
+			</td>
+			<td class="description" id="states-disabled">Disabled</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;input class="disabled form-control" type="text" placeholder="disabled" disabled&gt;
+&lt;label class="disabled"&gt;&lt;input type="checkbox" id="optionsCheckbox2" value="option1" disabled&gt; disabled&lt;/label&gt;
+</pre>
+			</td><!-- /disabled -->
+		</tr>
+		<tr>
+			<td class="example">
+				<div class="success form-group">
+				 	<input type="text" class="form-control" placeholder="Type something..."><i></i>
+				</div>
+			</td>
+			<td class="description" id="states-success">Success</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="success form-group"&gt;
+  &lt;input type="text" class="form-control" placeholder="Type something..." /&gt;&lt;i&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+			</td><!-- /focused -->
+		</tr>
+		<tr>
+			<td class="example">
+				<div class="warning form-group">
+				 	<input type="text" class="form-control" placeholder="Type something..."><i></i>
+				</div>
+			</td>
+			<td class="description" id="states-warning">Warning</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="warning form-group"&gt;
+  &lt;input type="text" class="form-control" placeholder="Type something..." /&gt;&lt;i&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+			</td><!-- /focused -->
+		</tr>
+		<tr>
+			<td class="example">
+				<div class="error form-group">
+				 	<input type="text" class="form-control" placeholder="Type something..."><i></i>
+				</div>
+			</td>
+			<td class="description" id="states-error">Error</td>
+			<td class="usage">
+<pre class="prettyprint linenums lang-html">
+&lt;div class="error form-group "&gt;
+  &lt;input type="text" class="form-control" placeholder="Type something..." /&gt;&lt;i&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+			</td><!-- /focused -->
+		</tr>
+		<tr>
+			<td class="example">
+				<div class="form-horizontal">
+					<div class="warning form-group">
+						<label class="control-label col-md-2" for="inputWarning" >Warning</label>
+						<div class="controls"  style="margin-left:30px">
+							<input type="text" id="inputWarning" class="form-control"><i></i><span class="help-block">helper</span>
+						</div>
+					</div>
+					<div class="error form-group">
+						<label class="control-label col-md-2" for="inputError" >Error</label>
+						<div class="controls" style="margin-left:30px">
+							<input type="text" id="inputError" class="form-control"><i></i><span class="help-block">helper</span>
+						</div>
+					</div>
+					<div class="success form-group">
+						<label class="control-label col-md-2" for="inputSuccess" >Success</label>
+						<div class="controls " style="margin-left:30px">
+							<input type="text" id="inputSuccess" class="form-control"><i></i><span class="help-block">helper</span>
+							<br>
+							<div >
+								<select id="selectError" class="form-control">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+								<span class="help-block">helper</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="description" id="states-validation">Validation</td>
+			<td class="usage">
+				<p>Apply <code>.warning</code>, <code>.error</code> or <code>.success</code> to <code>.form-group</code> in a horizontal form to trigger validation states.</p>
+<pre class="prettyprint linenums lang-html">
+&lt;div class="form-horizontal"&gt;
+	&lt;div class="error form-group"&gt;
+	  …
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <p>* Please note that a dotted line appears around the selection in Firefox. This is an accessibility feature, and should not be considered as part of the HDx style</p>
+            <p>* Also note that this menu UI is provided by the browser/rendering engine. The menu may look different on different browsers. If using this as a design reference, we recommend using the dropdown/combobox that is native to your target system and platform</p>
+            </td><!-- validation -->
+	</tr></tbody>
+</table>

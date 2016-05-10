@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>用户管理</title>	<meta name="description" content="">
+	<link type="text/css" href="admin/css/bootstrap.min.css" rel="stylesheet" />
+	<link type="text/css" href="admin/css/bootstrapSwitch.css" rel="stylesheet" />
+	<link type="text/css" href="admin/css/bootstrap-datepicker.css" rel="stylesheet" />
+	<link type="text/css" href="admin/css/common_cms.css" rel="stylesheet" />
+	<script type="text/javascript" src="admin/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="admin/js/bootstrapSwitch.js"></script>
+    <script type="text/javascript" src="admin/js/script.js"></script>
+    <script type="text/javascript" src="admin/js/ComfirmDialog.js"></script>
+	<script type="text/javascript" src="admin/js/bootstrap-paginator.js"></script>
+	<script type="text/javascript" src="admin/js/layer/layer.js"></script>
+	<script type="text/javascript" src="admin/js/angular.min.js"></script>
+	<script type="text/javascript" src="admin/js/user.js"></script>
+	
+    <style type="text/css">
+    	#page ul li{cursor: pointer;}
+    	.btn-xs, .btn-group-xs>.btn{padding: 0px 2px;margin: 0 1px 0 1px;}
+    	#keyDiv{word-wrap:break-word;}
+    </style>
+</head>
+<body>
+<!-- 顶部 header -->
+	<header>
+		<h1><a href="javascript:void(0)" style="color: white;font-size: 30px;text-decoration: none;"><img alt="" src="images/logo_cms.png">后台登录系统</a></h1>
+	</header>
+
+<!-- 主体部分 -->
+	<div class="main">
+		<div class="left_menu">
+			<ul>
+				<li class="active" onclick="location.href='userInfo.html'"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</li>
+				<li onclick="location.href='userCase.html'"><span class="glyphicon glyphicon-inbox active"></span>&nbsp;&nbsp;用例管理</li>
+				<li onclick="location.href='sugarMedicalCase.html'"><span class="glyphicon glyphicon-inbox"></span>&nbsp;&nbsp;糖医网用例管理</li>
+				<li  onclick="location.href='banner.html'"><span class="glyphicon glyphicon-inbox"></span>&nbsp;&nbsp;糖医网Banner管理</li>
+				<li id="logout"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;注销</li>
+			</ul>
+		</div>
+		<div class="content_wrap">
+			<h2>用户列表</h2>
+			<div class="func_wrap">
+				<div class="addbtn"><button type="button" class="btn-success btn btn-add-record fl mr15">添加</button></div>
+				<div class="search_filter">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="请输入要搜索的用户名称" id="searchUserName">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-search"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="list_wrap">
+				<table class="table table-bordered table-condensed">
+					<tr>
+						<th width="15%">登录名称</th>
+						<th width="15%">用户名称</th>
+						<th width="13%">创建时间</th>
+						<th width="13%">修改时间</th>
+						<th width="20%">操作</th>
+					</tr>
+					<tbody class="trValueList">
+					</tbody>
+				</table>
+				<div id="page" class="page_wrap" style="text-align: right; width: 100%;">
+				</div>
+				<input type="hidden" id="pageIndex" />
+				<input type="hidden" id="pageToal" />
+				<input type="hidden" id="pageEachNum" />
+			</div>
+		</div>
+		
+		<!-- 模态框（Modal） -->
+	<div class="modal fade" id="Goto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				</div>
+				<div class="modal-body">
+					<form>
+                        <input type="hidden" id="userId" value=""> 
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">登录名：</label>
+                            <input class="form-control patientdecribe" id="loginName">
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">用户：</label>
+                            <input class="form-control patientdecribe" id="userName">
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">密码：</label>
+                            <input class="form-control patientdecribe" type="password" id="userPwd">
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">确认密码：</label>
+                            <input class="form-control patientdecribe" type="password" id="cUserPwd">
+                        </div>
+                    </form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary btn-edit-info">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+   <!-- 模态框（Modal） -->
+	<div class="modal fade" id="hospital_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="hospitalModalLabel"></h4>
+				</div>
+				<div class="modal-body" style="height: 450px;overflow-y :auto">
+				   <form>
+				     <div class="form-group">
+                    <!--  <label for="name">可分配医院列表：</label> -->
+                     <div>
+                      <div style="width:260px;float:left;border-right: 1px solid;border-right-color: black;">
+                       <label for="name">可分配医院列表：</label>
+                       <ul style="width:260px;" id="assignHospitalList"></ul>
+                      </div>
+                      <div style="width:260px;float:left;border-left: 1px solid;border-left-color: black;padding-left: 5px;">
+                       <label for="name">已分配医院列表：</label>
+                       <ul style="width:260px;" id="selectedHospitalList"></ul>
+                      </div>
+                     </div>
+                     </div>
+				   </form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button id="saveSelectedHospital" type="button" class="btn btn-primary btn-edit-info">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	</script>
+</body>
+</html>

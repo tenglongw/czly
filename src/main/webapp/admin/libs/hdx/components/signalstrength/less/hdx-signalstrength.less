@@ -1,0 +1,32 @@
+// Dependencies
+// --------------------------------------------------
+@import "ge-bootstrap/less/hdx-bootstrap.less";
+@import "signalstrength.less";
+
+
+
+
+//---------------Lights on specific variables----------
+
+@dynamicTextColor: 	@grayDark;
+@dynamicValueColor: @black;
+@backgroundColor:	@offWhite;
+@borderColor:		@grayLighter;
+@emptyCircleColor: 	@grayLighter;
+
+// Styles
+// --------------------------------------------------
+.signalstrength{
+	background-color:@backgroundColor;
+	border: 1px solid @borderColor;
+	& .title{
+  	 color:@dynamicTextColor;
+	}
+	& .dynamictext{
+		color:@dynamicTextColor;		
+	}
+	& .dynamicvalue{
+		color:@dynamicValueColor;
+	}	
+}
+

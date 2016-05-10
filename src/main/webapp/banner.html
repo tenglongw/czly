@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>糖医网Banner管理</title>	<meta name="description" content="">
+	<link type="text/css" href="admin/css/bootstrap.min.css" rel="stylesheet" />
+	<link type="text/css" href="admin/css/bootstrapSwitch.css" rel="stylesheet" />
+	<link type="text/css" href="admin/css/bootstrap-datepicker.css" rel="stylesheet" />
+	<link type="text/css" href="admin/css/common_cms.css" rel="stylesheet" />
+	<script type="text/javascript" src="admin/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="admin/js/bootstrapSwitch.js"></script>
+    <script type="text/javascript" src="admin/js/script.js"></script>
+    <script type="text/javascript" src="admin/js/ComfirmDialog.js"></script>
+	<script type="text/javascript" src="admin/js/bootstrap-paginator.js"></script>
+	<script type="text/javascript" src="admin/js/layer/layer.js"></script>
+	<script type="text/javascript" src="admin/js/angular.min.js"></script>
+	<script type="text/javascript" src="admin/js/banner.js"></script>
+	<script type="text/javascript" src="admin/js/jquery.upload.js"></script>
+	
+    <style type="text/css">
+    	#page ul li{cursor: pointer;}
+    	.btn-xs, .btn-group-xs>.btn{padding: 0px 2px;margin: 0 1px 0 1px;}
+    	#keyDiv{word-wrap:break-word;}
+    </style>
+</head>
+<body>
+<!-- 顶部 header -->
+	<header>
+		<h1><a href="javascript:void(0)" style="color: white;font-size: 30px;text-decoration: none;"><img alt="" src="images/logo_cms.png">后台登录系统</a></h1>
+	</header>
+
+<!-- 主体部分 -->
+	<div class="main">
+		<div class="left_menu">
+			<ul>
+				<li  onclick="location.href='userInfo.html'"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</li>
+				<li  onclick="location.href='userCase.html'"><span class="glyphicon glyphicon-inbox"></span>&nbsp;&nbsp;用例管理</li>
+				<li  onclick="location.href='sugarMedicalCase.html'"><span class="glyphicon glyphicon-inbox"></span>&nbsp;&nbsp;糖医网用例管理</li>
+				<li  class="active" onclick="location.href='banner.html'"><span class="glyphicon glyphicon-inbox active"></span>&nbsp;&nbsp;糖医网Banner管理</li>
+				<li id="logout"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;注销</li>
+			</ul>
+		</div>
+		<div class="content_wrap">
+			<h2>糖医网Banner列表</h2>
+			<div class="func_wrap">
+				<div class="addbtn"><button type="button" class="btn-success btn btn-add-record fl mr15">添加</button></div>
+				<div class="search_filter">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="请输入要搜索的用例名称" id="searchUserName">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-search"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="list_wrap">
+				<table class="table table-bordered table-condensed">
+					<tr>
+						<th width="15%">标题</th>
+						<th width="15%">描述</th>
+						<th width="13%">创建时间</th>
+						<th width="13%">修改时间</th>
+						<th width="20%">操作</th>
+					</tr>
+					<tbody class="trValueList">
+					</tbody>
+				</table>
+				<div id="page" class="page_wrap" style="text-align: right; width: 100%;">
+				</div>
+				<input type="hidden" id="pageIndex" />
+				<input type="hidden" id="pageToal" />
+				<input type="hidden" id="pageEachNum" />
+			</div>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="Goto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				</div>
+				<div class="modal-body">
+					<form>
+                        <input type="hidden" id="userId" value=""> 
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">类型：</label>
+                            <div>
+                              <select class="form-control patientdecribe" id="bannerType">
+                               	<option value="0" selected="selected">头条</option>
+                                <option value="1" >病例</option>
+                                <option value="2">学术</option>
+                                <option value="3">收藏</option>
+                                <option value="4">人文</option>
+                                <option value="5">独家</option>
+                                <option value="6">糖医工具</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">标题：</label>
+                            <input class="form-control patientdecribe" id="title">
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">描述：</label>
+                            <input class="form-control patientdecribe" id="description">
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">Banner：</label>
+                            <img id="icon" src="" style="width: 100px;">
+                            <input type="button" onclick="doUpload()" value="点击上传">
+                        </div>
+                        <div class="form-group" style="height:50px;">
+                            <label for="name">是否启用：</label>
+                             <div>
+                              <select class="form-control patientdecribe" id="displayFlag">
+                                <option value="0" selected="selected">启用</option>
+                                <option value="1">禁用</option>
+                              </select>
+                            </div>
+                        </div>
+                    </form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary btn-edit-info">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+   <!-- 模态框（Modal） -->
+	</div>
+	
+	<script type="text/javascript">
+	</script>
+</body>
+</html>

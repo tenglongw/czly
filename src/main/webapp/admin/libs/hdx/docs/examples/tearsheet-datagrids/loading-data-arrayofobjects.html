@@ -1,0 +1,270 @@
+<!-- AJAX, Array of Objects -->
+
+<dl class="documentation">
+<dt>Data loading: ajax array of object</dt>
+<dd class="description">
+    <p>A Datagrid loading data with AJAX. <strong>Array of Objects JSON response.</strong></p>
+</dd>
+<dt>Example</dt>
+<dd class="example">
+    <form class="pull-right form-inline" style="margin-bottom:20px;">
+            <div class="input-group pull-right">
+                <input type="text" class="form-control input-sm" data-filter-table="dt-ajax-objects">
+                <div class="input-group-btn">
+                	<button class="btn btn-icon btn-default" type="button"><i class="icon-search"></i></button>
+                </div>
+            </div>
+        </form>
+    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-ajax-objects"></table>
+</dd>
+<dt class="hidden-sm">Usage</dt>
+<dd class="usage hidden-sm">
+<p>Markup:</p>
+<pre class="prettyprint linenums lang-html">
+&lt;form class="form-inline pull-right"&gt;
+  &lt;div class="input-group pull-right"&gt;
+     &lt;input type="text" class="form-control input-sm" data-filter-table="dt-ajax-objects"&gt;
+     &lt;div class=input-group-btn"&gt;
+         &lt;button class="btn btn-icon"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="dt-ajax-objects"&gt;&lt;/table&gt;
+</pre>
+<p>Script:</p>
+<pre class="prettyprint linenums lang-javascript">
+// Ajax with DataTables, array of objects
+$('table[data-table-name="dt-ajax-objects"]').basicdatagrid({
+  'aoColumns': [
+    { 'sTitle': 'Rendering engine', 'mData': 'engine', 'sClass': 'essential' },
+    { 'sTitle': 'Browser', 'mData': 'browser', 'sClass': 'essential' },
+    { 'sTitle': 'Platform(s)', 'mData': 'platform', 'sClass': 'optional' },
+    { 'sTitle': 'Engine version', 'mData': 'version' },
+    { 'sTitle': 'CSS grade', 'mData': 'grade', 'sClass': 'essential' }
+  ],
+  'sAjaxSource': '../assets/data/ao.browsers.json',
+  'useFloater': false,
+  'isResponsive': true
+});
+</pre>
+<p>Response:</p>
+<pre class="prettyprint linenums lang-javascript">
+// JSON Array of Objects
+{
+  "aaData": [
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 7",
+      "platform": "Win XP SP2+",
+      "version": "7",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 4.0",
+      "platform": "Win 95+",
+      "version": "4",
+      "grade": "X"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.0",
+      "platform": "Win 95+",
+      "version": "5",
+      "grade": "C"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 5.5",
+      "platform": "Win 95+",
+      "version": "5.5",
+      "grade": "A"
+    },
+    {
+      "engine": "Trident",
+      "browser": "Internet Explorer 6",
+      "platform": "Win 98+",
+      "version": "6",
+      "grade": "A"
+    }
+  ]
+}
+</pre>
+<div class="alert alert-info">
+    <strong>Script Requirements:</strong>
+    <ul>
+        <li>datagrids</li>
+    </ul>
+</div>
+</dd>
+</dl>
+
+<!-- /AJAX, Array of Objects -->

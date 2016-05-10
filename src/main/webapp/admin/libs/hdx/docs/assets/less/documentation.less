@@ -1,0 +1,407 @@
+//-------------------
+// HDS DOCUMENTATION
+//-------------------
+//
+// What's happening here?
+//
+// This is an override file to apply specific HDS-themed styles
+// to "/documentation/" pages in the HDS application.
+//
+
+
+// IMPORTS
+// -------
+
+
+@componentsPath:  "../../../components";
+
+@import (reference) "brandkit/less/ge-iconography-webfont.less";
+@import (reference) "brandkit/less/hdx-variables.less";
+@import (reference) "ge-bootstrap/less/hdx-bootstrap.less";
+
+#build_number {
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+  font-style: italic;
+  color: black;
+  background-color: peru;
+  z-index: 100;
+  opacity: 0.7;
+}
+
+
+// Index styles
+.documentation-index {
+  h4 { font-size: @fontSizeLarge; }
+  h2 + h3,
+  h3 + h4 { margin-top: 10px; }
+  p small { font-size: @baseFontSize; }
+}
+
+// Tearsheet styles
+.navbar-default {
+  .btn-toolbar, .btn-toolbar.btn-group {
+    margin: 15px 0 0 0;
+  }
+}
+
+.sdh-wrapper {
+  overflow: hidden;
+  padding-top: 120px;
+
+  .page-header > h1 {
+    font-weight: bold;
+  }
+
+  > h2 {
+    font-size: @fontSizeLarge * 2;
+    font-weight: normal;
+    margin-bottom: 30px;
+    padding-top: 20px;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 6px;
+      width: 100%;
+      background: @grayLighter;
+      .border-radius(@baseBorderRadius);
+    }
+  }
+
+  > h2:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  > h3 {
+    border-top: 2px solid @grayLighter;
+    font-size: @fontSizeLarge;
+    font-weight: normal;
+    padding-top: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  > h3:before {
+    background-color: @cyan;
+    content: '.';
+    border-radius: 16px;
+    display: inline-block;
+    height: 16px;
+    margin-right: 8px;
+    position: relative;
+    text-indent: -9999px;
+    vertical-align: baseline;
+    width: 16px;
+    line-height: 16px;
+  }
+
+  > h2 + h3 {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  > p {
+    font-size: @baseFontSize;
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+} // .sdh-wrapper
+
+.description {
+  color: @grayDark;
+  font-size: @baseFontSize - 1;
+}
+
+.example {
+  // Force lower z-index on sample faceted search block
+  & .typeahead {
+    z-index: @zindexFixedNavbar - 25;
+  }
+}
+
+// Fixes for table grid sizes being applied to thumbnails.
+.example .thumbnails .span {
+  &2 {
+width: 140px;
+}
+&4 {
+  width: 300px;
+}
+  }
+
+// Force datatables in to submission for documentation purposes.
+.example .dataTables_wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  
+}
+
+.example {
+  .checkbox, .radio {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+//dashboard table column icons
+.dataTable  [class^="icon-"]{
+	&.error {
+   		color:@red;
+  	}
+  	&.success{
+  		color:@green;
+  	}
+  	&.warning{
+  		color:@orange;
+  		font-size:@baseFontSize;
+  	}
+  }
+  
+ h4 {
+ 	 i.color-danger  {
+  		font-size:@baseFontSize + 6;
+  	}
+  	.color-danger {
+  		font-size:@baseFontSize + 2;
+  		vertical-align:middle;
+  		i{ 
+  		font-size:@baseFontSize + 6;
+  		}
+  	}  	
+  }
+ 
+ //todo: remove when replaced tables with datagrids from tables.ejs
+ table tr td i[class^= "icon-ico_warning_sm"].error{
+ 	font-size:@baseFontSize + 6; 	
+ }
+
+.usage {
+  color: @grayDark;
+  font-size: @baseFontSize - 1;
+  padding-right: 2px;
+  hr {
+    border-top-color: @grayLightest;
+  }
+  code,
+  pre {
+    font-size: inherit;
+  }
+  .prettyprint {
+    padding: 2px 4px;
+  }
+  pre.linenums {
+    display: block;
+    margin: 5px 0;
+    max-height: 300px;
+    padding: 8px;
+    overflow: auto;
+    + div.alert {
+      margin-top: 10px;
+    }
+  }
+  p,
+  table {
+    margin: 10px 0;
+  }
+  > p {
+    margin-right: 20%;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid @grayLightest;
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+    code {
+      white-space: nowrap;
+    }
+  }
+  .note {
+    color: @gray;
+  }
+  .span12 + .span3 {
+    clear: left;
+    margin-left: 0;
+  }
+  *:first-child {
+    margin-top: 0 !important;
+  }
+  *:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.documentation {
+  background-color: @white;
+  border-bottom: 1px solid @white;
+  margin-bottom: 80px;
+
+  &.end-section {
+    margin-bottom: 80px;
+  }
+}
+
+div.documentation {
+  color: @grayDark;
+  margin-bottom: 0;
+
+  #grid > .core > .span(9);
+  > h2 {
+    font-size: @fontSizeLarge;
+    line-height: 1;
+    margin: 0 0 5px;
+    font-weight: 600;
+    color: @grayDark;
+  }
+  > p,
+  > pre {
+    font-size: @baseFontSize - 2;
+    margin-bottom: 10px;
+  }
+
+  + dl.documentation {
+    border-top: 1px solid @grayLightest;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+}
+
+dl.documentation {
+  margin-bottom: 0;
+
+  > dt {
+    #voice > .brand( @baseFontSize + 2 );
+    margin-bottom: 10px;
+  }
+
+  > dd {
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    .clearfix();
+    &.usage + dt {
+      border-top: 1px solid @grayLightest;
+      margin-top: 25px;
+      padding-top: 20px;
+    }
+  }
+  + div.documentation {
+    border-top: 2px solid @grayLightest;
+    margin-top: 5px;
+    padding-top: 20px;
+    width: 100%;
+  }
+}
+
+table.documentation {
+  width: 100%;
+
+  > thead > tr > th {
+    background-color: @white;
+    border-bottom: 1px solid @grayLighter;
+    #voice > .brand( @baseFontSize + 2 );
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  > tbody > tr > td {
+    border-top: 1px solid @grayLightest;
+    padding: 20px 20px 20px 2px;
+    vertical-align: top;
+    width: 30%;
+    &.description {
+      width: 20%;
+    }
+    &.usage {
+      width: 50%;
+    }
+  }
+  // Shift right to allow for arrow image hovers that get cut-off by the sdh-wrapper's override:hidden;
+  table.table {
+    margin-left: 5px;
+  }
+}
+
+// TODO scope this tightly or remove
+.typeahead {
+  z-index:100;
+}
+
+
+
+// Navigation Examples
+
+.navbar {
+  .masthead .btn.notification {
+    background-image: url(../../../img/hds/masthead-notifications.png);
+  }
+}
+
+
+// Signin Examples
+.signin-content{
+  background: url('@{imagesPath}/login_tile.png') repeat-x top left;
+  min-height:823px; padding-top: 50px;
+}
+
+.signin{
+  /*.control-group.error input[type="text"] input[type="password"]{
+   padding-right: 5px !important; //overriding padding to fix error icon padding issue
+  }*/
+  .panel {
+    background-color: @white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    &-body{
+      padding: 10px;
+
+      &-in{
+        margin:5px;
+      }
+    }
+
+    &-inverse{
+      background-color: @grayLighter;
+      input[type="text"], input[type="password"]{
+        background-color: @white;
+      }
+    }
+  }
+  .new-link{
+    > a {
+      color: @green;
+      text-decoration: none;
+      &:hover{
+        color: @greenDark;
+      }
+    }
+  }
+  .progress{
+    height:2px;
+    width:80%;
+    margin-left:10%;
+    margin-top:10px;
+  }
+  .bar{
+    width: 45% !important;
+  }
+
+}
+
+
+.content-top{
+  background-color: @grayLightest;
+}
+
+
+

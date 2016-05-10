@@ -1,0 +1,96 @@
+// Dependencies
+// --------------------------------------------------
+
+@import "variables.less";
+
+
+// Styles
+// --------------------------------------------------
+
+//
+// Rich Popovers
+// --------------------------------------------------
+.popover {
+  border: 1px solid @grayLighter;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  .border-radius(@borderRadiusLarge);
+
+  .popover-inner {
+    .border-radius(@borderRadiusLarge);
+    background-color: @white;
+    position: relative;
+    z-index: 0;
+    margin:0;
+
+    .popover-title {
+      .border-radius(@borderRadiusLarge @borderRadiusLarge 0 0);
+      margin:0;
+      border-width: 0;
+      #voice > #family > .brand;
+      font-size: @baseFontSize + 5px;
+      font-weight:bold;
+    }
+
+    .popover-content {
+      .border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
+    }
+  }
+}
+
+.popover.popover-rich {
+  padding:5px;
+  border:0;
+  background:transparent;
+
+  &.top .arrow {
+    #popoverArrow > .top(10px, @rich-popover-border-color);
+
+    &:after {
+      border-top-color: @rich-popover-border-color;
+    }
+  }
+
+  &.right .arrow{
+    #popoverArrow > .right(10px, @rich-popover-border-color);
+
+    &:after {
+      border-right-color: @rich-popover-border-color;
+    }
+  }
+
+  &.bottom .arrow {
+    #popoverArrow > .bottom(10px, @rich-popover-border-color);
+
+    &:after {
+      border-bottom-color: @rich-popover-border-color;
+    }
+  }
+
+  &.left .arrow   {
+    #popoverArrow > .left(10px, @rich-popover-border-color);
+
+    &:after {
+      border-left-color: @rich-popover-border-color;
+    }
+  }
+
+  .popover-inner{
+    border: 4px solid @rich-popover-border-color;
+    background-color: @white;
+    width: auto;
+
+    .popover-content {
+      border: none;
+      .border-radius(0);
+
+      h1,h2,h3 {
+        line-height: 1em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+.popover-rich-content {
+  display: none;
+}
