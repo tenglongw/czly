@@ -9,12 +9,14 @@ public class BaseSugarMedicalCase {
 	private Integer id;
 	private String caseType;
 	private String icon;
+	private String icon1;
 	private String title;
 	private String description;
 	private String brand;
 	private int readNum;
 	private int displayFlag;
 	private String url;
+	private String keyword;
 	private int isIndex;
 	private String createdby;
 	private String updatedby;
@@ -110,6 +112,18 @@ public class BaseSugarMedicalCase {
 	}
 	public void setCreationDate(String creationDate) {
 		this.creationDate = creationDate;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+	public String getIcon1() {
+		return icon1;
+	}
+	public void setIcon1(String icon1) {
+		this.icon1 = icon1;
 	}
 	
 }

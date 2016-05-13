@@ -159,10 +159,12 @@ public class SugarMedicalCaseController extends BaseController {
 	@RequestMapping(value = "/addSugarMedicalCase", method = RequestMethod.POST)
 	protected Object addUserCase(@RequestParam(value = "id",required=false) Integer id,
 			@RequestParam(value = "caseType") String caseType,
-			@RequestParam(value = "icon") String icon,@RequestParam(value = "title") String title,
+			@RequestParam(value = "icon") String icon,
+			@RequestParam(value = "icon1") String icon1,@RequestParam(value = "title") String title,
 			@RequestParam(value = "description") String description,
 			@RequestParam(value = "displayFlag") Integer displayFlag,
-			@RequestParam(value = "url") String url,HttpServletRequest request) {
+			@RequestParam(value = "url") String url,
+			@RequestParam(value = "keyword") String keyword,HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		User crUser = (User) session.getAttribute("user");
 		Root root = new Root();
@@ -175,6 +177,7 @@ public class SugarMedicalCaseController extends BaseController {
 		sugarMedicalCase.setId(id);
 		sugarMedicalCase.setCaseType(caseType);
 		sugarMedicalCase.setIcon(icon);
+		sugarMedicalCase.setIcon1(icon1);
 		sugarMedicalCase.setTitle(title);
 		sugarMedicalCase.setDescription(description);
 		sugarMedicalCase.setReadNum(0);
@@ -183,6 +186,7 @@ public class SugarMedicalCaseController extends BaseController {
 		//sugarMedicalCase.setIsIndex(isIndex);
 		sugarMedicalCase.setCreatedby(crUser.getLoginName());
 		sugarMedicalCase.setUpdatedby(crUser.getLoginName());
+		sugarMedicalCase.setKeyword(keyword);
 		if(null == id){
 			sugarMedicalCase.setCreationtime(new Date());
 		}

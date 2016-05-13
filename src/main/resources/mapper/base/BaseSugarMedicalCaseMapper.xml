@@ -5,20 +5,22 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="caseType" property="caseType" jdbcType="VARCHAR" />
     <result column="icon" property="icon" jdbcType="VARCHAR" />
+     <result column="icon1" property="icon1" jdbcType="VARCHAR" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="brand" property="brand" jdbcType="VARCHAR" />
     <result column="readNum" property="readNum" jdbcType="INTEGER" />
     <result column="displayFlag" property="displayFlag" jdbcType="INTEGER" />
     <result column="url" property="url" jdbcType="VARCHAR" />
-     <result column="isIndex" property="isIndex" jdbcType="INTEGER" />
+    <result column="isIndex" property="isIndex" jdbcType="INTEGER" />
+    <result column="keyword" property="keyword" jdbcType="VARCHAR" />
     <result column="createdby" property="createdby" jdbcType="VARCHAR" />
     <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
     <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
     <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, caseType, icon,title, description, brand,  readNum, displayFlag, url,isIndex,
+    id, caseType, icon,icon1,title, description, brand,  readNum, displayFlag, url,keyword,isIndex,
       createdby, updatedby, creationtime,updatetime
   </sql>
    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
@@ -26,13 +28,13 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.czly.entity.SugarMedicalCase" >
-    insert into t_sugar_medical_case (id, caseType, icon, 
-      title, description, brand,  readNum, displayFlag, url,isIndex, 
+    insert into t_sugar_medical_case (id, caseType, icon, icon1,
+      title, description, brand,  readNum, displayFlag, url,keyword,isIndex, 
       createdby, updatedby, creationtime, 
       updatetime)
-    values (#{id,jdbcType=INTEGER}, #{caseType,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{caseType,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{icon1,jdbcType=VARCHAR}, 
       #{title,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, 
-      #{readNum,jdbcType=INTEGER}, #{displayFlag,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},#{isIndex,jdbcType=INTEGER}, 
+      #{readNum,jdbcType=INTEGER}, #{displayFlag,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{keyword,jdbcType=VARCHAR},#{isIndex,jdbcType=INTEGER}, 
       #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
       #{updatetime,jdbcType=TIMESTAMP})
   </insert>
@@ -54,6 +56,9 @@
       <if test="icon != null" >
         icon = #{icon,jdbcType=VARCHAR},
       </if>
+      <if test="icon1 != null" >
+        icon1 = #{icon1,jdbcType=VARCHAR},
+      </if>
       <if test="description != null" >
         description = #{description,jdbcType=VARCHAR},
       </if>
@@ -68,6 +73,9 @@
       </if>
       <if test="url != null" >
         url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="keyword != null" >
+        url = #{keyword,jdbcType=VARCHAR},
       </if>
       <if test="isIndex != null" >
         isIndex = #{isIndex,jdbcType=INTEGER},
@@ -92,11 +100,13 @@
     set caseType = #{caseType,jdbcType=INTEGER},
      	title = #{title,jdbcType=VARCHAR},
       	icon = #{icon,jdbcType=VARCHAR},
+      	icon1 = #{icon1,jdbcType=VARCHAR},
       	description = #{description,jdbcType=VARCHAR},
        	brand = #{brand,jdbcType=VARCHAR},
        	readNum = #{readNum,jdbcType=INTEGER},
        	displayFlag = #{displayFlag,jdbcType=INTEGER},
        	url = #{url,jdbcType=VARCHAR},
+       	keyword = #{keyword,jdbcType=VARCHAR},
        	isIndex = #{isIndex,jdbcType=INTEGER},
        	createdby = #{createdby,jdbcType=VARCHAR},
        	updatedby = #{updatedby,jdbcType=VARCHAR},
@@ -116,6 +126,9 @@
       <if test="icon != null" >
         icon,
       </if>
+      <if test="icon1 != null" >
+        icon1,
+      </if>
       <if test="title != null" >
         title,
       </if>
@@ -133,6 +146,9 @@
       </if>
       <if test="url != null" >
         url,
+      </if>
+      <if test="keyword != null" >
+        keyword,
       </if>
       <if test="isIndex != null" >
         isIndex,
@@ -160,6 +176,9 @@
       <if test="icon != null" >
         #{icon,jdbcType=VARCHAR},
       </if>
+       <if test="icon1 != null" >
+        #{icon1,jdbcType=VARCHAR},
+      </if>
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
       </if>
@@ -177,6 +196,9 @@
       </if>
       <if test="url != null" >
         #{url,jdbcType=VARCHAR},
+      </if>
+       <if test="keyword != null" >
+        #{keyword,jdbcType=VARCHAR},
       </if>
       <if test="isIndex != null" >
         #{isIndex,jdbcType=INTEGER},

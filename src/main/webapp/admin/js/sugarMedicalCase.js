@@ -55,7 +55,7 @@ $(function(){
 	
 });
 
-function doUpload() {
+function doUpload(obj) {
 	// 上传方法
 	$.upload({
 			// 上传地址
@@ -63,7 +63,7 @@ function doUpload() {
 			// 文件域名字
 			fileName: 'file', 
 			// 其他表单数据
-			params: {formData: 'pxblog'},
+			params: {formData: obj},
 			// 上传完成后, 返回json, text
 			dataType: 'json',
 			// 上传之前回调,return true表示可继续上传
@@ -72,7 +72,11 @@ function doUpload() {
 			},
 			// 上传之后回调
 			onComplate: function(data) {
-				$("#icon").attr("src",data.data);
+				if(obj=='icon'){
+					$("#icon").attr("src",data.data);
+				}else{
+					$("#icon1").attr("src",data.data);
+				}
 			}
 	});
 }
@@ -81,10 +85,21 @@ function saveUserCase(id) {
 	var caseType = $("#caseType").val();
 	var orderNum = $("#orderNum").val();
 	var displayFlag = $("#displayFlag").val();
+	var keyword='';
+	$("#keyword input").each(function(n,obj){
+		if(""!=$(obj).val()){
+			keyword = keyword +$(obj).val()+',';
+		}
+	});
 	//var isIndex = $("#isIndex").val();
 	var icon = $("#icon").attr("src");
 	if (null === icon || "" === $.trim(icon)) {
 		alert("ICON不能为空");
+		return false;
+	}
+	var icon1 = $("#icon1").attr("src");
+	if (null === icon1 || "" === $.trim(icon1)) {
+		alert("ICON1不能为空");
 		return false;
 	}
 	var title = $("#title").val();
@@ -106,10 +121,12 @@ function saveUserCase(id) {
 		"id":id,
 		"caseType" : caseType,
 		"icon" : icon,
+		"icon1" : icon1,
 		"title" : title,
 		"description" : description,
 		"displayFlag" : displayFlag,
-		"url" : url
+		"url" : url,
+		"keyword" : keyword
 	};
 	$.ajax({
 		url : "sugarMedical/addSugarMedicalCase",

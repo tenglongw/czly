@@ -33,9 +33,9 @@ public class SugarMedicalCaseServiceImpl extends BaseServiceImpl<SugarMedicalCas
 		}
 	}
 	@Override
-	public List<SugarMedicalCase> querySugarMedicalCaseList(String caseType,String description) {
+	public List<SugarMedicalCase> querySugarMedicalCaseList(String caseType,String searchName) {
 		// TODO Auto-generated method stub
-		return sugarMedicalCaseMapper.querySugarMedicalCaseList(caseType,description);
+		return sugarMedicalCaseMapper.querySugarMedicalCaseList(caseType,searchName);
 	}
 	@Override
 	public PageResult<SugarMedicalCase> getAllSugarMedicalCaseList(String title,

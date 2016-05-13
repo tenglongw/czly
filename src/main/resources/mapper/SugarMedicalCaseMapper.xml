@@ -9,8 +9,8 @@
 		<if test="caseType != null">
 			and caseType = #{caseType}
 		</if>
-		<if test="description != null">
-			and description LIKE CONCAT('%', #{description} ,'%')
+		<if test="searchName != null">
+			and (title LIKE CONCAT('%', #{searchName} ,'%') or description LIKE CONCAT('%', #{searchName} ,'%') or keyword LIKE CONCAT('%', #{searchName} ,'%'))
 		</if>
 	</select>
 	<select id="querySugarMedicalCaseIndex" resultMap="BaseResultMap">
@@ -26,7 +26,7 @@
 		FROM t_sugar_medical_case uc
 		<where>
 			<if test="title != null">
-				uc.title LIKE CONCAT('%', #{title} ,'%')
+				(uc.title LIKE CONCAT('%', #{title} ,'%') or uc.description LIKE CONCAT('%', #{title} ,'%') or uc.keyword LIKE CONCAT('%', #{searchName} ,'%'))
 			</if>
 		</where>
 		ORDER BY creationtime,readNum
@@ -36,7 +36,7 @@
 		SELECT COUNT("id") FROM t_sugar_medical_case uc
 		<where>
 			<if test="title != null">
-				uc.title LIKE CONCAT('%', #{title} ,'%')
+				(uc.title LIKE CONCAT('%', #{title} ,'%') or uc.description LIKE CONCAT('%', #{title} ,'%') or uc.keyword LIKE CONCAT('%', #{searchName} ,'%'))
 			</if>
 		</where>
 	</select>

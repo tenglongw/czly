@@ -10,7 +10,7 @@ import com.czly.mapper.base.BaseSugarMedicalCaseMapper;
 
 public interface SugarMedicalCaseMapper extends BaseSugarMedicalCaseMapper {
 
-	public List<SugarMedicalCase> querySugarMedicalCaseList(@Param("caseType") String caseType,@Param("description") String description);
+	public List<SugarMedicalCase> querySugarMedicalCaseList(@Param("caseType") String caseType,@Param("searchName") String searchName);
 	
 	public List<SugarMedicalCase> querySugarMedicalCaseIndex();
 	

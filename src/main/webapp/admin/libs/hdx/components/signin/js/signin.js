@@ -61,14 +61,12 @@ define([
           '<h1 class="title voice voice-brand name">' + this.$signinAppname + '</h1>' +
           '</div>' +
           '<div class="signin-margin40" >' +
-          '<h3>GE Healthcare </h3>' +
           '</div></div>';
         } else {
           headerContent = '<div class="header text-center"><div>' +
           '<span class="ge-logo signin-margin20">General Electric</span>' +
           '</div>' +
           '<div class="signin-margin40" >' +
-          '<h3>GE Healthcare </h3>' +
           '</div></div>';
         }
       }

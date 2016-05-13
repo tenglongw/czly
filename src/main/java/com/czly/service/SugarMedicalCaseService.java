@@ -16,7 +16,7 @@ public interface SugarMedicalCaseService extends BaseService<SugarMedicalCase> {
 	
 	public void addSugarMedicalCase(SugarMedicalCase sugarMedicalCase);
 	
-	public List<SugarMedicalCase> querySugarMedicalCaseList(String caseType,String description);
+	public List<SugarMedicalCase> querySugarMedicalCaseList(String caseType,String searchName);
 	
 	public List<SugarMedicalCase> querySugarMedicalCaseIndex();
 	
