@@ -165,12 +165,16 @@ function initButton(){
 	                 var userCase = data.data;
 	            	 $("#myModalLabel").text('修改用例信息');
 		     	     $("#icon").attr("src",userCase.icon);
+		     	     $("#icon1").attr("src",userCase.icon1);
 		           	 $("#title").val(userCase.title);
 		           	 $("#description").val(userCase.description);
 		             $("#brand").val(userCase.brand);
 		           	 $("#url").val(userCase.url);
 		           	 $("#caseType option[value='"+userCase.caseType+"']").attr("selected","selected");
 		           	 $("#description option[value='"+userCase.description+"']").attr("selected","selected");
+		           	$("#keyword input").each(function(n,obj){
+	        			$(obj).val(userCase.keyword.split(",")[n]);
+		           	 });
 	                 $('#Goto').modal('show');
 	                 $(".btn-edit-info").unbind("click");
 	                 $(".btn-edit-info").click(function(){

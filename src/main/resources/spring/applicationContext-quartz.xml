@@ -15,35 +15,36 @@
 	<!-- 使用MethodInvokingJobDetailFactoryBean，任务类可以不实现Job接口，通过targetMethod指定调用方法-->
 	
 	<!-- network,每10秒检测一次网络 -->
-	<!-- <bean id="netWorkConnectTask" class="com.czly.task.NetWorkConnectTask">
+	 <bean id="weChatArticleGetTask" class="com.czly.task.WeChatArticleGetTask">
 	</bean>
-	<bean id="netWorkConnectTaskJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	<bean id="sugarMedicalCaseService" class="com.czly.service.impl.SugarMedicalCaseServiceImpl"></bean>
+	<bean id="weChatArticleGetTaskJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 	    <property name="targetObject">
-	        <ref bean="netWorkConnectTask"/>
+	        <ref bean="weChatArticleGetTask"/>
 	    </property>
 	    <property name="targetMethod">
 	        <value>run</value>
 	    </property>
 	</bean>
-	<bean id="netWorkConnectTaskTrigger"
+	<bean id="weChatArticleGetTaskTrigger"
 	      class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 	    <property name="jobDetail">
-	        <ref bean="netWorkConnectTaskJobDetail" />
+	        <ref bean="weChatArticleGetTaskJobDetail" />
 	    </property>
 	    <property name="cronExpression">
-	        <value>*/30 * * * * ?</value>
+	        <value>0 50 23 * * ?</value>
 	    </property>
-	</bean> -->
+	</bean>
 	
 	
 	<!-- 调度工厂 -->
-	<!-- <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="startupDelay" value="15"/>  
 	    <property name="triggers">
 	        <list>
-	         <ref bean="netWorkConnectTaskTrigger"/>
+	         <ref bean="weChatArticleGetTaskTrigger"/>
 	        </list>
 	    </property>
-	</bean> -->
+	</bean> 
     
 </beans>

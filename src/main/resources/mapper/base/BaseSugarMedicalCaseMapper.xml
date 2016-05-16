@@ -75,7 +75,7 @@
         url = #{url,jdbcType=VARCHAR},
       </if>
       <if test="keyword != null" >
-        url = #{keyword,jdbcType=VARCHAR},
+        keyword = #{keyword,jdbcType=VARCHAR},
       </if>
       <if test="isIndex != null" >
         isIndex = #{isIndex,jdbcType=INTEGER},

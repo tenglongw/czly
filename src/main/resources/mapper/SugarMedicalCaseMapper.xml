@@ -29,7 +29,7 @@
 				(uc.title LIKE CONCAT('%', #{title} ,'%') or uc.description LIKE CONCAT('%', #{title} ,'%') or uc.keyword LIKE CONCAT('%', #{searchName} ,'%'))
 			</if>
 		</where>
-		ORDER BY creationtime,readNum
+		ORDER BY creationtime desc
 		LIMIT #{pageQuery.pageOffset},#{pageQuery.limit}
 	</select>
 	<select id="getCountByConditions" resultType="int">

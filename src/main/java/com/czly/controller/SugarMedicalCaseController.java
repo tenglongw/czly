@@ -2,6 +2,7 @@ package com.czly.controller;
 
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -64,7 +65,8 @@ public class SugarMedicalCaseController extends BaseController {
 		Root root = new Root();
 		try {
 			root.setStatus(Root.STATUS_OK);
-			root.setData(sugarMedicalCaseService.querySugarMedicalCaseList(caseType,Strings.trimStringSearch(searchName)));
+			List<SugarMedicalCase> smcList = sugarMedicalCaseService.querySugarMedicalCaseList(caseType,Strings.trimStringSearch(searchName));
+			root.setData(smcList);
 		} catch (Exception e) {
 			logger.error("getSugarMedicalCaseList error !!!!",e);
 		}
@@ -85,7 +87,7 @@ public class SugarMedicalCaseController extends BaseController {
 			HttpServletRequest request) {
 		Root root = new Root();
 		logger.info("----------/sugarMedical/uploadFile----------parameters{fileName:"+file.getOriginalFilename()+",formData:"+formData+"}");
-		String fileName = String.valueOf(System.currentTimeMillis())+file.getOriginalFilename().substring(file.getOriginalFilename().indexOf("."));
+		String fileName = String.valueOf(System.currentTimeMillis())+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
 		try {
 			String path = request.getSession().getServletContext().getRealPath("upload/case");
 			File targetFile = new File(path, fileName);  

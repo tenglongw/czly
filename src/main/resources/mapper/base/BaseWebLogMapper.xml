@@ -3,14 +3,14 @@
 <mapper namespace="com.czly.mapper.WebLogMapper" >
   <resultMap id="BaseResultMap" type="com.czly.entity.WebLog" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="remotAddr" property="remotAddr" jdbcType="VARCHAR" />
     <result column="createdby" property="createdby" jdbcType="VARCHAR" />
     <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
     <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
     <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, type,  
+    id, remotAddr,  
       createdby, updatedby, creationtime,updatetime
   </sql>
    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
@@ -18,10 +18,10 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.czly.entity.WebLog" >
-    insert into t_weblog (id, type,
+    insert into t_weblog (id, remotAddr,
       createdby, updatedby, creationtime, 
       updatetime)
-    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR},
+    values (#{id,jdbcType=INTEGER}, #{remotAddr,jdbcType=VARCHAR},
       #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
       #{updatetime,jdbcType=TIMESTAMP})
   </insert>
@@ -34,8 +34,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.czly.entity.WebLog" >
     update t_weblog
     <set >
-      <if test="type != null" >
-        type = #{type,jdbcType=INTEGER},
+      <if test="remotAddr != null" >
+        remotAddr = #{remotAddr,jdbcType=INTEGER},
       </if>
       <if test="createdby != null" >
         createdby = #{createdby,jdbcType=VARCHAR},
@@ -58,8 +58,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="type != null" >
-        type,
+      <if test="remotAddr != null" >
+        remotAddr,
       </if>
       <if test="createdby != null" >
         createdby,
@@ -78,8 +78,8 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="type != null" >
-        #{type,jdbcType=VARCHAR},
+      <if test="remotAddr != null" >
+        #{remotAddr,jdbcType=VARCHAR},
       </if>
       <if test="createdby != null" >
         #{createdby,jdbcType=VARCHAR},

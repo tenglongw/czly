@@ -76,4 +76,3 @@ CREATE TABLE `t_banner` (
   `updatetime` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
-

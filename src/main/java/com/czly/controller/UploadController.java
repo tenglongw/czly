@@ -57,13 +57,13 @@ public class UploadController extends BaseController {
 
 	@ResponseBody
 	@RequestMapping(value = "/insertLog", method = RequestMethod.GET)
-	protected Object insertLog(@RequestParam(value = "type",required = false) String type,HttpServletRequest request) {
+	protected Object insertLog(HttpServletRequest request) {
 		Root root = new Root();
 		try {
 			WebLog wl = new WebLog();
-			wl.setType(type);
-			wl.setCreatedby("wx");
-			wl.setUpdatedby("wx");
+			wl.setRemotAddr(request.getRemoteAddr());
+			wl.setCreatedby("tyw");
+			wl.setUpdatedby("tyw");
 			wl.setUpdatetime(new Date());
 			wl.setCreationtime(new Date());
 			webLogService.add(wl);

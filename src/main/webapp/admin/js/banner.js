@@ -139,6 +139,7 @@ function initButton(){
 	             success: function (data) {
 	                 var banner = data.data;
 	            	 $("#myModalLabel").text('修改Banner信息');
+	            	 $("#bannerType option[value='"+banner.type+"']").attr("selected","selected");
 		     	     $("#icon").attr("src",banner.path);
 		           	 $("#title").val(banner.title);
 		           	 $("#description").val(banner.description);

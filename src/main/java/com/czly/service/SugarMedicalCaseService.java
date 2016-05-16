@@ -18,6 +18,8 @@ public interface SugarMedicalCaseService extends BaseService<SugarMedicalCase> {
 	
 	public List<SugarMedicalCase> querySugarMedicalCaseList(String caseType,String searchName);
 	
+	public List<SugarMedicalCase> querySugarMecicalReadNum(List<SugarMedicalCase> smcList);
+	
 	public List<SugarMedicalCase> querySugarMedicalCaseIndex();
 	
 	public PageResult<SugarMedicalCase> getAllSugarMedicalCaseList(String title, PageQuery pageQuery);

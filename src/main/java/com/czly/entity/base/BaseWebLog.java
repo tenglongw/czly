@@ -5,7 +5,7 @@ import java.util.Date;
 public class BaseWebLog {
 
 	private Integer id;
-	private String Type;
+	private String remotAddr;
 	private String createdby;
 	private String updatedby;
 	private Date creationtime;
@@ -16,11 +16,11 @@ public class BaseWebLog {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getType() {
-		return Type;
+	public String getRemotAddr() {
+		return remotAddr;
 	}
-	public void setType(String type) {
-		Type = type;
+	public void setRemotAddr(String remotAddr) {
+		this.remotAddr = remotAddr;
 	}
 	public String getCreatedby() {
 		return createdby;

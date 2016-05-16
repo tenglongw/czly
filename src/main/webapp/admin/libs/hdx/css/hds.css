@@ -7465,7 +7465,7 @@ input[type=text]::-ms-clear {
   background: transparent url("../components/brandkit/img/GE_black_monogram.png") no-repeat;
   display: inline-block;
   vertical-align: inherit;
-  width: 80px;
+  width: 110px;
   height: 80px;
 }
 .signin .span2 {
