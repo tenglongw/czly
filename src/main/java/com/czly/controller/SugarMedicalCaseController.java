@@ -1,8 +1,12 @@
 package com.czly.controller;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.czly.common.util.HttpUtil;
 import com.czly.common.util.Root;
 import com.czly.common.util.lang.Strings;
 import com.czly.common.util.page.PageQuery;
@@ -24,6 +29,8 @@ import com.czly.common.util.page.PageResult;
 import com.czly.entity.SugarMedicalCase;
 import com.czly.entity.User;
 import com.czly.service.SugarMedicalCaseService;
+
+import net.sf.json.JSONObject;
 
 /**
  * @author wtl
@@ -36,6 +43,10 @@ public class SugarMedicalCaseController extends BaseController {
 	static Logger logger = LogManager.getLogger(SugarMedicalCaseController.class);
 	@Resource
 	private SugarMedicalCaseService sugarMedicalCaseService;
+	private static final String BASE_URL = "http://query.qoofan.com";
+	private static final String SINGLE_URL = "/single";
+	private static final String ARTICLE_CONTENT = "/article/content";
+	private static final String TOKEN = "ede7f79bc7ca9149e0a0a4bb160a6080";
 
 	@ResponseBody
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
@@ -193,6 +204,34 @@ public class SugarMedicalCaseController extends BaseController {
 			sugarMedicalCase.setCreationtime(new Date());
 		}
 		sugarMedicalCase.setUpdatetime(new Date());
+		Map<String,String> param = new HashMap<String,String>();
+		param.put("token", TOKEN);
+		param.put("url", sugarMedicalCase.getUrl());
+		//获取文章阅读量
+		JSONObject singleObject = new JSONObject();
+		singleObject = JSONObject.fromObject(HttpUtil.post(BASE_URL+SINGLE_URL, param));
+		if(singleObject.get("msg").equals("success")){
+			Map<String,Integer> dataMap = (Map<String, Integer>) singleObject.get("data");
+			if(null != dataMap){
+				Integer readNum = dataMap.get("read_num");
+				sugarMedicalCase.setReadNum(readNum);
+			}
+		}
+		//获取文章创建日期
+		JSONObject contentObject = new JSONObject();
+		contentObject = JSONObject.fromObject(HttpUtil.post(BASE_URL+ARTICLE_CONTENT, param));
+		try {
+			if(contentObject.get("msg").equals("success")){
+				Map<String,String> dataMap = (Map<String, String>) contentObject.get("data");
+				if(null != dataMap){
+					String createTime = dataMap.get("create_time");
+					SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+					sugarMedicalCase.setCreationtime(df.parse(createTime));
+				}
+			}
+		} catch (ParseException e) {
+			logger.error("add sugarMedicalCase error",e);
+		}
 		sugarMedicalCaseService.addSugarMedicalCase(sugarMedicalCase);
 		root = Root.getRootOKAndSimpleMsg();
 		return root.toJsonString();
