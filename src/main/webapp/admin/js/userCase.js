@@ -118,7 +118,7 @@ function saveUserCase(id) {
 
 function initButton(){
 	//修改
-	$("a.btn-success").each(function(){debugger;
+	$("a.btn-success").each(function(){
 		$(this).unbind("click");
 		$(this).click(function(){
 			var caseid = $(this).attr("value");
