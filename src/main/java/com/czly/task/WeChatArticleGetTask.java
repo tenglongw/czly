@@ -50,7 +50,7 @@ public class WeChatArticleGetTask {
 					}
 				}
 				//获取文章创建日期
-				JSONObject contentObject = new JSONObject();
+				/*JSONObject contentObject = new JSONObject();
 				contentObject = JSONObject.fromObject(HttpUtil.post(BASE_URL+ARTICLE_CONTENT, param));
 				if(contentObject.get("msg").equals("success")){
 					Map<String,String> dataMap = (Map<String, String>) contentObject.get("data");
@@ -59,11 +59,11 @@ public class WeChatArticleGetTask {
 						SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 						smc.setCreationtime(df.parse(createTime));
 					}
-				}
-				System.out.println("read_num"+smc.getReadNum()+"create_time"+smc.getCreationtime());
+				}*/
+//				System.out.println("read_num"+smc.getReadNum()+"create_time"+smc.getCreationtime());
 				sugarMedicalCaseService.update(smc);
 			}
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
