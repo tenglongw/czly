@@ -193,7 +193,6 @@ public class SugarMedicalCaseController extends BaseController {
 		sugarMedicalCase.setIcon1(icon1);
 		sugarMedicalCase.setTitle(title);
 		sugarMedicalCase.setDescription(description);
-		sugarMedicalCase.setReadNum(0);
 		sugarMedicalCase.setDisplayFlag(displayFlag);
 		sugarMedicalCase.setUrl(url);
 		//sugarMedicalCase.setIsIndex(isIndex);

@@ -12,6 +12,7 @@
 		<if test="searchName != null">
 			and (title LIKE CONCAT('%', #{searchName} ,'%') or description LIKE CONCAT('%', #{searchName} ,'%') or keyword LIKE CONCAT('%', #{searchName} ,'%'))
 		</if>
+		ORDER BY creationtime desc
 	</select>
 	<select id="querySugarMedicalCaseIndex" resultMap="BaseResultMap">
 		SELECT

@@ -28,7 +28,7 @@ require(['signin'], function() {
                 error : function(){
                     alert("服务器访问错误");
                 },
-                success: function (data) {debugger;
+                success: function (data) {
                     if (data.status == 1){
                 		window.location.href = "userInfo.html";
                     }else{
