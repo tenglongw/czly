@@ -38,13 +38,13 @@
 	
 	
 	<!-- 调度工厂 -->
-	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<!-- <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="startupDelay" value="15"/>  
 	    <property name="triggers">
 	        <list>
 	         <ref bean="weChatArticleGetTaskTrigger"/>
 	        </list>
 	    </property>
-	</bean> 
+	</bean>  -->
     
 </beans>

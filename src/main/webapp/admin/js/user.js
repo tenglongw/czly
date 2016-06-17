@@ -81,17 +81,11 @@ function saveUser(id){
    	    alert("2次密码输入不一致，请重新输入！");
    	    return false;
     } 
-    if (null === hospitalId || "" === $.trim(hospitalId)){
-   		alert("请选择所属医院!");
-   	    return false;
-    } 
     var json = {
     		 userId : id,
    		 	 loginName : loginName,
    		 	 userName : userName,
-   		 	 userPwd : userPwd,
-   		 	 type:type,
-   		 	 hospitalId:hospitalId
+   		 	 userPwd : userPwd
                };
     $.ajax({
             url: "checkLoginName",

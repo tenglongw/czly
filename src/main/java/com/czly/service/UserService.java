@@ -11,7 +11,7 @@ public interface UserService extends BaseService<User> {
 	public boolean checkLoginName(String loginName, Integer id);
 
 	public boolean addUser(User user, String loginName, String userName,
-			String userPwd,Byte type,Integer hospitalId, String optUser);
+			String userPwd, String optUser);
 	
 	public User getById(Integer id);
 	

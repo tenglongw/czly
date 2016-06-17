@@ -257,8 +257,6 @@ public class UserController extends BaseController {
 			@RequestParam("userName") String userName,
 			@RequestParam("loginName") String loginName,
 			@RequestParam("userId") Integer userId,
-			@RequestParam("type") Byte type,
-			@RequestParam("hospitalId") Integer hospitalId,
 			HttpServletRequest request)
 			throws Exception {
 		User user = userService.getById(userId);
@@ -274,7 +272,7 @@ public class UserController extends BaseController {
 			return root.toJsonString();
 		}
 		boolean resultBoolean = userService.addUser(user, loginName, userName,
-				DES.encrypt(userPwd, DES.PASSWORD_CRYPT_KEY),type,hospitalId,
+				DES.encrypt(userPwd, DES.PASSWORD_CRYPT_KEY),
 				crUser.getUserName());
 		if (resultBoolean) {
 			root = Root.getRootOKAndSimpleMsg();

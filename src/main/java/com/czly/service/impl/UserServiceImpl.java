@@ -55,7 +55,7 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements
 
 	
 	public boolean addUser(User user, String loginName, String userName,
-			String userPwd,Byte type,Integer hospitalId, String optUser) {
+			String userPwd, String optUser) {
 		boolean resultBoolean = true;
 		try{
 			user.setLoginName(loginName);
