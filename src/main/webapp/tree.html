@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简单树形菜单</title>
+
+<link rel="stylesheet" type="text/css" href="css/SimpleTree.css"/>
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/tree.js"></script>
+<script type="text/javascript" src="js/SimpleTree.js"></script>
+<link rel="stylesheet" type="text/css" href="css/webuploader.css">
+<!--引入JS-->
+<script type="text/javascript" src="js/webuploader.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+</style>
+<script type="text/javascript">
+$(function(){
+	loaddata();
+	$(".st_tree").SimpleTree({
+	
+		/* 可无视代码部分*/
+		click:function(a){
+			if(!$(a).attr("hasChild")){
+			}
+		}
+		
+	});
+	
+});
+</script>
+
+</head>
+<body>
+
+
+
+<div class="st_tree" style="width:30%;float: left;">
+	<ul id="htmlTree">
+	</ul>
+</div>
+<div id="chapters" style="width:30%;border: 1px solid;height: 400px;float: left;">
+</div>
+<div id="attachments" style="width:30%;border: 1px solid;height: 400px;float: left;">
+</div>
+<div id="uploader" class="wu-example" >
+    <!--用来存放文件信息-->
+    <div id="thelist" class="uploader-list"></div>
+    <div class="btns">
+        <div id="picker">选择文件</div>
+        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+    </div>
+</div>
+</body>
+</html>
