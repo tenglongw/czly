@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.PartyOrganizationMapper" >
+  <resultMap id="BaseResultMap" type="com.czly.entity.PartyOrganization" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="partyBranchName" property="partyBranchName" jdbcType="VARCHAR" />
+    <result column="communityPartyCommittee" property="communityPartyCommittee" jdbcType="VARCHAR" />
+    <result column="isNonPublicPartyBranch" property="isNonPublicPartyBranch" jdbcType="INTEGER" />
+    <result column="partyMemberNum" property="partyMemberNum" jdbcType="INTEGER" />
+    <result column="branchSecretary" property="branchSecretary" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="createdby" property="createdby" jdbcType="VARCHAR" />
+    <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
+    <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, partyBranchName, communityPartyCommittee,isNonPublicPartyBranch, partyMemberNum, branchSecretary, remark, createdby, updatedby, creationtime, 
+    updatetime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_party_organization
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_party_organization
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.czly.entity.PartyOrganization" >
+    insert into t_party_organization (id, partyBranchName, communityPartyCommittee,isNonPublicPartyBranch, 
+      partyMemberNum,  branchSecretary,remark,
+      createdby, updatedby, creationtime, 
+      updatetime)
+    values (#{id,jdbcType=INTEGER}, #{partyBranchName,jdbcType=VARCHAR}, #{communityPartyCommittee,jdbcType=VARCHAR}, 
+      #{isNonPublicPartyBranch,jdbcType=INTEGER},#{partyMemberNum,jdbcType=INTEGER},  #{branchSecretary,jdbcType=VARCHAR},
+      #{remark,jdbcType=VARCHAR},#{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.czly.entity.PartyOrganization" >
+    insert into t_party_organization
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="partyBranchName != null" >
+        partyBranchName,
+      </if>
+      <if test="communityPartyCommittee != null" >
+        communityPartyCommittee,
+      </if>
+      <if test="isNonPublicPartyBranch != null" >
+        isNonPublicPartyBranch,
+      </if>
+      <if test="partyMemberNum != null" >
+        partyMemberNum,
+      </if>
+      <if test="branchSecretary != null" >
+        branchSecretary,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createdby != null" >
+        createdby,
+      </if>
+      <if test="updatedby != null" >
+        updatedby,
+      </if>
+      <if test="creationtime != null" >
+        creationtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="partyBranchName != null" >
+        #{partyBranchName,jdbcType=VARCHAR},
+      </if>
+      <if test="communityPartyCommittee != null" >
+        #{communityPartyCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="isNonPublicPartyBranch != null" >
+        #{isNonPublicPartyBranch,jdbcType=INTEGER},
+      </if>
+      <if test="partyMemberNum != null" >
+        #{partyMemberNum,jdbcType=INTEGER},
+      </if>
+      <if test="branchSecretary != null" >
+        #{branchSecretary,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.czly.entity.PartyOrganization" >
+    update t_party_organization
+    <set >
+      <if test="partyBranchName != null" >
+        partyBranchName = #{partyBranchName,jdbcType=VARCHAR},
+      </if>
+      <if test="communityPartyCommittee != null" >
+        communityPartyCommittee = #{communityPartyCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="isNonPublicPartyBranch != null" >
+        isNonPublicPartyBranch = #{isNonPublicPartyBranch,jdbcType=INTEGER},
+      </if>
+      <if test="partyMemberNum != null" >
+        partyMemberNum = #{partyMemberNum,jdbcType=INTEGER},
+      </if>
+       <if test="branchSecretary != null" >
+        branchSecretary = #{branchSecretary,jdbcType=VARCHAR},
+      </if>
+       <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        createdby = #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        updatedby = #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.czly.entity.PartyOrganization" >
+    update t_party_organization
+    set partyBranchName = #{partyBranchName,jdbcType=VARCHAR},
+      communityPartyCommittee = #{communityPartyCommittee,jdbcType=VARCHAR},
+      isNonPublicPartyBranch = #{isNonPublicPartyBranch,jdbcType=INTEGER},
+      partyMemberNum = #{partyMemberNum,jdbcType=INTEGER},
+      branchSecretary = #{branchSecretary,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      createdby = #{createdby,jdbcType=VARCHAR},
+      updatedby = #{updatedby,jdbcType=VARCHAR},
+      creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
