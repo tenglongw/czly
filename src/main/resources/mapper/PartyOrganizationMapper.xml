@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.PartyOrganizationMapper">
+	<select id="queryPartyOrganizationList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_party_organization
+		WHERE 1=1
+		ORDER BY creationtime desc
+	</select>
+	<select id="getPartyOrganizationListByConditions" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_party_organization uc
+		<where>
+			<if test="title != null">
+				uc.partyBranchName LIKE CONCAT('%', #{title} ,'%')
+			</if>
+		</where>
+		ORDER BY creationtime desc
+		LIMIT #{pageQuery.pageOffset},#{pageQuery.limit}
+	</select>
+	<select id="getCountByConditions" resultType="int">
+		SELECT COUNT("id") FROM t_party_organization uc
+		<where>
+			<if test="title != null">
+				uc.partyBranchName LIKE CONCAT('%', #{title} ,'%')
+			</if>
+		</where>
+	</select>
+	<select id="queryByName" resultMap="BaseResultMap">
+	SELECT
+		<include refid="Base_Column_List" />
+		FROM T_PARTY_ORGANIZATION
+		WHERE 1=1
+		AND LTRIM(PARTYBRANCHNAME) = #{name}
+		ORDER BY CREATIONTIME desc
+	</select>
+</mapper>

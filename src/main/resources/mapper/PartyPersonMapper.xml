@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.PartyPersonMapper">
+	<select id="queryPartyPersonList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM t_party_person tpp join t_party_organization tpo
+		on tpp.communityBranch = tpo.partyBranchName
+		WHERE 1=1
+		<if test="status != null">
+		and status = #{status}
+		</if>
+		<if test="partyOrganizationId != null">
+		 and tpo.id = #{partyOrganizationId}
+		</if>
+		ORDER BY creationtime desc
+	</select>
+</mapper>

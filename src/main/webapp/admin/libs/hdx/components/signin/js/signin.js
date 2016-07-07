@@ -57,14 +57,12 @@ define([
       if (this.$signinHeader === 'true') {
         if (this.$signinAppname && this.$signinAppname !== "" && this.$signinAppname != null && this.$signinAppname !== 'undefined') {
           headerContent = '<div class="header text-center"><div>' +
-          '<span class="ge-logo signin-margin20">General Electric</span>' +
           '<h1 class="title voice voice-brand name">' + this.$signinAppname + '</h1>' +
           '</div>' +
           '<div class="signin-margin40" >' +
           '</div></div>';
         } else {
           headerContent = '<div class="header text-center"><div>' +
-          '<span class="ge-logo signin-margin20">General Electric</span>' +
           '</div>' +
           '<div class="signin-margin40" >' +
           '</div></div>';

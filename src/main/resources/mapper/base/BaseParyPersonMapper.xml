@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.czly.mapper.PartyPersonMapper" >
+  <resultMap id="BaseResultMap" type="com.czly.entity.PartyPerson" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="residentialAddress" property="residentialAddress" jdbcType="VARCHAR" />
+    <result column="workAddress" property="workAddress" jdbcType="VARCHAR" />
+    <result column="partyCommittee" property="partyCommittee" jdbcType="VARCHAR" />
+    <result column="communityBranch" property="communityBranch" jdbcType="VARCHAR" />
+    <result column="communityBranchId" property="communityBranchId" jdbcType="INTEGER" />
+    <result column="partyPosition" property="partyPosition" jdbcType="VARCHAR" />
+    <result column="identityCard" property="identityCard" jdbcType="VARCHAR" />
+    <result column="phoneNumber" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="createdby" property="createdby" jdbcType="VARCHAR" />
+    <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
+    <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tpp.id, name, sex, residentialAddress, workAddress,partyCommittee,communityBranch,communityBranchId,phoneNumber
+     partyPosition,partyPosition,identityCard,status,tpp.createdby, tpp.updatedby, tpp.creationtime, tpp.updatetime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_party_person tpp
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_party_person
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.czly.entity.PartyPerson" >
+    insert into t_party_person (id, name, sex,residentialAddress,workAddress,partyCommittee, 
+      communityBranch, communityBranchId, partyPosition,identityCard,phoneNumber,status,
+      createdby, updatedby, creationtime, 
+      updatetime)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
+      #{residentialAddress,jdbcType=VARCHAR},  #{workAddress,jdbcType=VARCHAR}, #{partyCommittee,jdbcType=VARCHAR}, 
+      #{communityBranch,jdbcType=VARCHAR}, #{communityBranchId,jdbcType=INTEGER}, #{partyPosition,jdbcType=VARCHAR}, #{identityCard,jdbcType=VARCHAR}, 
+      #{phoneNumber,jdbcType=VARCHAR},  #{status,jdbcType=INTEGER},
+      #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.czly.entity.PartyPerson" >
+    insert into t_party_person
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="residentialAddress != null" >
+        residentialAddress,
+      </if>
+      <if test="workAddress != null" >
+        workAddress,
+      </if>
+      <if test="partyCommittee != null" >
+        partyCommittee,
+      </if>
+      <if test="communityBranch != null" >
+        communityBranch,
+      </if>
+      <if test="communityBranchId != null" >
+        communityBranchId,
+      </if>
+      <if test="partyPosition != null" >
+        partyPosition,
+      </if>
+      <if test="identityCard != null" >
+        identityCard,
+      </if>
+      <if test="phoneNumber != null" >
+        phoneNumber,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createdby != null" >
+        createdby,
+      </if>
+      <if test="updatedby != null" >
+        updatedby,
+      </if>
+      <if test="creationtime != null" >
+        creationtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="residentialAddress != null" >
+        #{residentialAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="workAddress != null" >
+        #{workAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="partyCommittee != null" >
+        #{partyCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="communityBranch != null" >
+        #{communityBranch,jdbcType=VARCHAR},
+      </if>
+      <if test="communityBranchId != null" >
+        #{communityBranchId,jdbcType=INTEGER},
+      </if>
+      <if test="partyPosition != null" >
+        #{partyPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="identityCard != null" >
+        #{identityCard,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNumber != null" >
+        #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.czly.entity.PartyPerson" >
+    update t_party_person
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="residentialAddress != null" >
+        residentialAddress = #{residentialAddress,jdbcType=VARCHAR},
+      </if>
+       <if test="workAddress != null" >
+        workAddress = #{workAddress,jdbcType=VARCHAR},
+      </if>
+       <if test="partyCommittee != null" >
+        partyCommittee = #{partyCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="communityBranch != null" >
+        communityBranch = #{communityBranch,jdbcType=VARCHAR},
+      </if>
+      <if test="communityBranchId != null" >
+        communityBranchId = #{communityBranchId,jdbcType=INTEGER},
+      </if>
+       <if test="partyPosition != null" >
+        partyPosition = #{partyPosition,jdbcType=VARCHAR},
+      </if>
+       <if test="identityCard != null" >
+        identityCard = #{identityCard,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNumber != null" >
+        phoneNumber = #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+       <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdby != null" >
+        createdby = #{createdby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedby != null" >
+        updatedby = #{updatedby,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null" >
+        creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.czly.entity.PartyPerson" >
+    update t_party_person
+    set name = #{name,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=INTEGER},
+      residentialAddress = #{residentialAddress,jdbcType=VARCHAR},
+      workAddress = #{workAddress,jdbcType=VARCHAR},
+      partyCommittee = #{partyCommittee,jdbcType=VARCHAR},
+      communityBranch = #{communityBranch,jdbcType=VARCHAR},
+      communityBranchId = #{communityBranchId,jdbcType=INTEGER},
+      partyPosition = #{partyPosition,jdbcType=VARCHAR},
+      identityCard = #{identityCard,jdbcType=VARCHAR},
+      phoneNumber = #{phoneNumber,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      createdby = #{createdby,jdbcType=VARCHAR},
+      updatedby = #{updatedby,jdbcType=VARCHAR},
+      creationtime = #{creationtime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
