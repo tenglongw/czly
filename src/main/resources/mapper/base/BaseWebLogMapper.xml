@@ -4,24 +4,34 @@
   <resultMap id="BaseResultMap" type="com.czly.entity.WebLog" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="remotAddr" property="remotAddr" jdbcType="VARCHAR" />
+    <result column="module" property="module" jdbcType="VARCHAR" />
     <result column="createdby" property="createdby" jdbcType="VARCHAR" />
     <result column="updatedby" property="updatedby" jdbcType="VARCHAR" />
     <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
     <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
   </resultMap>
+   <resultMap id="BaseUVPVResultMap" type="com.czly.entity.UVPVLog" >
+    <result column="uv" property="uv" jdbcType="INTEGER" />
+    <result column="pv" property="pv" jdbcType="INTEGER" />
+    <result column="module" property="module" jdbcType="VARCHAR" />
+    <result column="creationtime" property="creationtime" jdbcType="TIMESTAMP" />
+  </resultMap>
   <sql id="Base_Column_List" >
-    id, remotAddr,  
+    id, remotAddr, module, 
       createdby, updatedby, creationtime,updatetime
+  </sql>
+  <sql id="Base_UVPV_Column_List" >
+    uv, pv,creationtime
   </sql>
    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from t_weblog
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.czly.entity.WebLog" >
-    insert into t_weblog (id, remotAddr,
+    insert into t_weblog (id, remotAddr,remotAddr,
       createdby, updatedby, creationtime, 
       updatetime)
-    values (#{id,jdbcType=INTEGER}, #{remotAddr,jdbcType=VARCHAR},
+    values (#{id,jdbcType=INTEGER}, #{remotAddr,jdbcType=VARCHAR},#{remotAddr,jdbcType=VARCHAR},
       #{createdby,jdbcType=VARCHAR}, #{updatedby,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP}, 
       #{updatetime,jdbcType=TIMESTAMP})
   </insert>
@@ -36,6 +46,9 @@
     <set >
       <if test="remotAddr != null" >
         remotAddr = #{remotAddr,jdbcType=INTEGER},
+      </if>
+      <if test="module != null" >
+        module = #{module,jdbcType=INTEGER},
       </if>
       <if test="createdby != null" >
         createdby = #{createdby,jdbcType=VARCHAR},
@@ -61,6 +74,9 @@
       <if test="remotAddr != null" >
         remotAddr,
       </if>
+       <if test="module != null" >
+        module,
+      </if>
       <if test="createdby != null" >
         createdby,
       </if>
@@ -80,6 +96,9 @@
       </if>
       <if test="remotAddr != null" >
         #{remotAddr,jdbcType=VARCHAR},
+      </if>
+       <if test="module != null" >
+        #{module,jdbcType=VARCHAR},
       </if>
       <if test="createdby != null" >
         #{createdby,jdbcType=VARCHAR},

@@ -16,6 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.czly.common.util.Root;
+import com.czly.common.util.lang.Strings;
+import com.czly.common.util.page.PageQuery;
+import com.czly.common.util.page.PageResult;
+import com.czly.entity.UVPVLog;
 import com.czly.entity.WebLog;
 import com.czly.service.WebLogService;
 
@@ -57,21 +61,41 @@ public class UploadController extends BaseController {
 
 	@ResponseBody
 	@RequestMapping(value = "/insertLog", method = RequestMethod.GET)
-	protected Object insertLog(HttpServletRequest request) {
+	protected Object insertLog(@RequestParam(value = "module", required = false) String module,HttpServletRequest request) {
 		Root root = new Root();
+		logger.info("------insertLog------parame{module: "+module+"}");
 		try {
 			WebLog wl = new WebLog();
 			wl.setRemotAddr(request.getRemoteAddr());
 			wl.setCreatedby("tyw");
 			wl.setUpdatedby("tyw");
+			wl.setModule(module);
 			wl.setUpdatetime(new Date());
 			wl.setCreationtime(new Date());
 			webLogService.add(wl);
 			root.setStatus(Root.STATUS_OK);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			logger.error("insertLog error !!",e);
 		}
 		return root;
 	} 
+	
+	@ResponseBody
+	@RequestMapping(value = "/queryWebLog", method = RequestMethod.POST)
+	protected Object queryWebLog(
+			@RequestParam(value = "module", required = false) String module,
+			@RequestParam(value = "pageIndex") Integer pageIndex) {
+		logger.info("----------querySugarMedicalCasList------------parameters{searcTitle:"
+				+ module + ",pageIndex:"+pageIndex+"}");
+		String userName = Strings.trimStringSearch(module);
+		PageQuery pageQuery = new PageQuery();
+		if (pageIndex != null) {
+			pageQuery.setPageIndex(pageIndex);
+		}
+		PageResult<UVPVLog> cases = webLogService.getWebLogList(module, pageQuery);
+		Root root = Root.getRootOKAndSimpleMsg();
+		root.setData(cases);
+		return root.toJsonString();
+	}
 }

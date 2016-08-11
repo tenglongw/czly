@@ -6,6 +6,7 @@ public class BaseWebLog {
 
 	private Integer id;
 	private String remotAddr;
+	private String module;
 	private String createdby;
 	private String updatedby;
 	private Date creationtime;
@@ -45,6 +46,12 @@ public class BaseWebLog {
 	}
 	public void setUpdatetime(Date updatetime) {
 		this.updatetime = updatetime;
+	}
+	public String getModule() {
+		return module;
+	}
+	public void setModule(String module) {
+		this.module = module;
 	}
 	
 }

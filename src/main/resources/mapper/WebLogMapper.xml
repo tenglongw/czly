@@ -6,28 +6,31 @@
 		<include refid="Base_Column_List" />
 		FROM t_weblog
 		WHERE 1=1
-		<if test="type != null">
-			and type = #{type}
+		<if test="module != null">
+			and module = #{module}
 		</if>
-			and displayFlag = '0'
 	</select>
-	<select id="getWebLogListByConditions" resultMap="BaseResultMap">
-		SELECT
-		<include refid="Base_Column_List" />
-		FROM t_weblog uc
-		<where>
-			<if test="title != null">
-				uc.title LIKE CONCAT('%', #{title} ,'%')
-			</if>
-		</where>
-		ORDER BY creationtime
+	<select id="getWebLogByConditions" resultMap="BaseUVPVResultMap">
+		select b.pv, c.uv, b.module, c.rq creationtime from (select
+		count(date_format(tw.creationtime,'%Y-%m-%d')) pv,
+		date_format(tw.creationtime,'%Y-%m-%d') rq ,tw.module from t_weblog tw 
+		where tw.module LIKE CONCAT('%', #{module} ,'%') GROUP BY
+		date_format(tw.creationtime,'%Y-%m-%d'),tw.module)b,
+		(select count(a.rq) uv,a.rq,a.module from (select count(tw1.remotAddr)
+		uv,date_format(tw1.creationtime,'%Y-%m-%d') rq,tw1.module from t_weblog tw1 
+		where tw1.module LIKE CONCAT('%', #{module} ,'%') GROUP
+		BY date_format(tw1.creationtime,'%Y-%m-%d'),tw1.remotAddr,tw1.module) a GROUP BY
+		a.rq) c
+		where b.rq = c.rq
+		and b.module = c.module
+		ORDER BY c.rq desc
 		LIMIT #{pageQuery.pageOffset},#{pageQuery.limit}
 	</select>
 	<select id="getCountByConditions" resultType="int">
 		SELECT COUNT("id") FROM t_WebLog uc
 		<where>
-			<if test="title != null">
-				uc.title LIKE CONCAT('%', #{title} ,'%')
+			<if test="module != null">
+				uc.module LIKE CONCAT('%', #{module} ,'%')
 			</if>
 		</where>
 	</select>
