@@ -1,7 +1,12 @@
 package com.czly.controller;
 
 import java.io.File;
+import java.net.InetAddress;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.czly.common.util.Root;
 import com.czly.common.util.lang.Strings;
@@ -67,6 +73,7 @@ public class BannerController extends BaseController {
 	public Object uploadFile(@RequestParam(value = "file", required = false) MultipartFile file,
 			@RequestParam(value = "formData", required = false) String formData,
 			HttpServletRequest request) {
+		
 		Root root = new Root();
 		logger.info("----------uploadFile----------parameters{fileName:"+file.getOriginalFilename()+",formData:"+formData+"}");
 		String fileName = String.valueOf(System.currentTimeMillis())+file.getOriginalFilename().substring(file.getOriginalFilename().indexOf("."));
@@ -87,6 +94,54 @@ public class BannerController extends BaseController {
 		return root;
 
 	}
+	
+	@RequestMapping(value = "/upload" ,method = RequestMethod.POST)
+	@ResponseBody
+	public Object upload(@RequestParam(value = "file", required = false) CommonsMultipartFile[] files,HttpServletRequest request){
+		System.out.println("upload begin");
+//		String path = "d:/test/";
+		String path = request.getSession().getServletContext().getRealPath("upload/Android");
+		for(int i = 0;i<files.length;i++){
+			System.out.println("fileName---------->" + files[i].getOriginalFilename());
+			if(!files[i].isEmpty()){
+				try {
+					File targetFile = new File(path,  files[i].getOriginalFilename());  
+			        if(!targetFile.exists()){  
+			            targetFile.mkdirs();  
+			        }  
+			        //保存  
+			        files[i].transferTo(targetFile);  
+				} catch (Exception e) {
+					e.printStackTrace();
+					logger.error("文件上传失败", e);
+				}
+		}
+		}
+		return "/success";
+	}
+	
+	@RequestMapping(value = "/fileList" ,method = RequestMethod.POST)
+	@ResponseBody
+	public Object fileList(HttpServletRequest request){
+		Root root = new Root();
+		String path = request.getSession().getServletContext().getRealPath("upload/Android");
+		String localAddr = "http://"+request.getLocalAddr()+":"+request.getLocalPort()+request.getContextPath()+"/upload/Android/";
+		File file = new File(path);
+		String[] fileNames = file.list();
+		List<Map<String,Object>> resultList = new ArrayList<Map<String,Object>>();
+		for(String name : fileNames){
+			Map<String,Object> result = new HashMap<String,Object>();
+			result.put("name", name);
+			result.put("addr", localAddr+name);
+			resultList.add(result);
+			
+		}
+		root.setStatus(Root.STATUS_OK);
+		root.setData(resultList);
+		root.setMsg("请求数据成功");
+		return root;
+	}
+	
 	
 	@ResponseBody
 	@RequestMapping(value = "/deleteBannerByid", method = RequestMethod.POST)

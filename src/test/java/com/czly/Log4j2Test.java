@@ -1,14 +1,11 @@
 package com.czly;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
-import com.czly.entity.SugarMedicalCase;
+import com.czly.common.util.HttpUtil;
 
 public class Log4j2Test {
 	
@@ -18,12 +15,8 @@ public class Log4j2Test {
 	public void test() {
 		
 		try {
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-			String value="2015-04-05";
-			df.parse(value);
-			SugarMedicalCase smc = new SugarMedicalCase();
-			smc.setCreationtime(df.parse(value));
-			System.out.println(smc.getCreationtime());
+			String url = "http://10.102.1.61/cms//cms/website/NWMH/nbmh/index.jsp?siteId=10";
+			System.out.println(HttpUtil.get(url));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
